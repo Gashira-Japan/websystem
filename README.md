@@ -1,8 +1,8 @@
-# 10-5.jp Website Redesign Project
+# Website Redesign Project
 
 ## プロジェクト概要
 
-10-5.jpのWebサイトリデザインプロジェクト
+Webサイトリデザインプロジェクト
 
 ### フロー
 1. MDファイル作成（アスキーアート形式で既存サイト構造を文書化）
@@ -25,7 +25,7 @@
 ### 対象ページ
 
 #### 主要ページ
-- トップページ（完成済み: https://shiroiro-web.xyz/10-5/）
+- トップページ
 - /service/
 - /news/
 - /contact/
@@ -51,6 +51,5 @@
 
 ## 次のステップ
 
-1. old-tenfive-wordpress.zip をアップロード
 2. 既存サイト構造の分析
 3. 各ページのアスキーアート文書作成
