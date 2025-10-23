@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+ホーム
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ヘッダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+#members-slider .image{
+    background-position:top;
+}
+
+section#members-slider {
+    background-image: none;
+}
+
+.slider-members{
+	width:540px;
+	margin:0 auto;
+}
+
+@media(max-width:550px){
+	.slider-members{
+	width:290px;
+	margin:0 auto;
+}
+}
+
+#members-slider h3.heading span {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+#members-slider .position {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+#members-slider .image-outer {
+   	width:250px;
+	height:350px;
+}
+
+
+
+ul.post-ul.slider li.post-li {
+    padding: 0 20px;
+}
+
+ul.slick-dots {
+    display: flex;
+    justify-content: center;
+}
+
+ul.slick-dots li button {border-radius: 100%;width: 15px;height: 15px;color: transparent;font-size: 5px;background-color: #ccc;}
+
+section, .section {
+    padding: 60px 0;
+}
+
+ul.slick-dots li {
+    padding: 0 5px;
+}
+
+ul.slick-dots li.slick-active button {
+    background-color: #000;
+}
+
+.home-header {
+	display: flex;
+	overflow: hidden;
+	position: relative;
+	padding: 90px 0 50px;
+	/* background: linear-gradient(135deg, #0088b7, #0b4363 70%, #0e2d49); */
+	background-image: url("../img/home/tenfive_main_bg.jpg");
+	color: #55555;
+/* 	background-position: bottom; */
+		background-position: center;
+	margin:0 auto;
+	background-size:cover;
+}
+
+.home-header-particles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 100vh;
+}
+
+.home-header .inner {
+	display: flex;
+	max-width: 1160px;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.home-header .text {
+	margin-bottom: 50px;
+}
+
+.home-header .heading {
+	/* margin-bottom: 0.5em; */
+	font-size: 3.3rem;
+}
+
+.home-header .section-description {
+	max-width: 560px;
+	font-size: 0.9em;
+}
+
+.home-header .logo {
+	display: block;
+	max-width: 30%;
+	margin-left: auto;
+	flex: none;
+}
+
+.home-header .scroll {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	padding-top: 120px;
+	transform: translateX(-50%);
+}
+
+@keyframes scroll {
+0% {
+	opacity: 0;
+	top: 0;
+	height: 0;
+}
+
+30% {
+	opacity: 1;
+	height: 50px;
+}
+
+100% {
+	opacity: 0;
+	top: 100px;
+	height: 0;
+}
+}
+
+.home-header .scroll::before {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 77px;
+	border-right: 1px solid;
+	content: "";
+	transform: translateX(-50%);
+	animation: scroll 2s ease-in-out infinite;
+}
+
+.home-header .scroll-heading {
+	display: inline-block;
+	font-size: 1.2rem;
+	transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+.home-header {
+	padding: 120px 0 70px;
+}
+
+.home-header .heading {
+	font-size: 5rem;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ミッション
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-mission .inner {
+	max-width: 1400px;
+	background: url("../img/home/mission-background.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+.home-mission-dl {
+	max-width: 720px;
+	margin: 0 auto;
+	font-weight: 700;
+}
+
+.home-mission-dt {
+	color: #0088b7;
+	font-size: 2.6rem;
+}
+
+.home-mission-dt:not(:first-child) {
+	margin-top: 30px;
+}
+
+.home-mission-dd {
+	font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+.home-mission-dt {
+	font-size: 5rem;
+}
+
+.home-mission-dt:not(:first-child) {
+	margin-top: 75px;
+}
+
+.home-mission-dd {
+	font-size: 2.4rem;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- お知らせ
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-news .inner,.home-strength .inner {
+	max-width: 930px;
+}
+
+.home-news-li .image-outer {
+	height: 145px;
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 事業内容
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-service .inner{
+	max-width: 930px;
+}
+
+.home-service {
+	position: relative;
+	background-image: url("../img/home/home-service.jpg");;
+	/* background: linear-gradient(135deg, #0088b7, #0b4363 70%, #0e2d49); */
+	/* color: #fff; */
+	background-position: top;
+    background-size: cover;
+}
+
+.home-service-particles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.home-service .section-heading {
+	color: inherit;
+}
+
+.home-service .section-description {
+	margin-bottom: 40px;
+}
+
+.home-service-li:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.home-service-li .number {
+	display: block;
+	font-weight: 700;
+	font-size: 2rem;
+	font-family: var(--font-english);
+}
+
+.home-service-li .number::before {
+	display: inline-block;
+	width: 2.6em;
+	margin: 0 0.6em 0.1em 0;
+	border-top: 1px solid;
+	content: "";
+}
+
+.home-service-li .heading {
+	margin-bottom: 1.1em;
+	font-size: 2.6rem;
+}
+
+@media (min-width: 768px) {
+.home-service .section-description {
+	margin-bottom: 85px;
+}
+
+.home-service-li {
+	display: flex;
+	align-items: center;
+}
+
+.home-service-li:nth-child(2n) {
+	flex-flow: row-reverse;
+}
+
+.home-service-li:nth-child(2n+1) .text {
+	margin-right: 5%;
+}
+
+.home-service-li:nth-child(2n) .text {
+	margin-left: 5%;
+}
+
+.home-service-li .number {
+	font-size: 2.4rem;
+}
+
+.home-service-li .heading {
+	font-size: 3.5rem;
+}
+
+.home-service-li .image {
+	width: 47.5%;
+	flex: none;
+}
+}
+
+@media (max-width: 767.9px) {
+.home-service-li .text {
+	margin-bottom: 20px;
+}
+
+.home-service-li .image {
+	display: block;
+	margin: 0 auto;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 私たちの強み
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-strength-li {
+	display: flex;
+	position: relative;
+	z-index: 0;
+	height: 200px;
+	padding: 0 1em;
+	background: center center no-repeat;
+	background-size: cover;
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	text-align: center;
+	counter-increment: number;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.home-strength-li::before {
+	margin-bottom: 0.2em;
+	font-size: 6rem;
+	font-family: var(--font-english);
+	line-height: 1;
+	content: counter(number);
+}
+
+.home-strength-li::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	background: navajowhite;
+	mix-blend-mode: multiply;
+	content: "";
+	transition: background 0.3s ease-in-out;
+}
+
+.home-strength-li:nth-child(1) {
+	background-image: url("../img/home/strength01.jpg");
+}
+
+.home-strength-li:nth-child(2) {
+	background-image: url("../img/home/strength02.jpg");
+}
+
+.home-strength-li:nth-child(3) {
+	background-image: url("../img/home/strength03.jpg");
+}
+
+@media screen\0 {
+.home-strength-li::after {
+	opacity: 0.6;
+}
+}
+
+.home-strength-li:hover::after {
+	background: none;
+}
+
+@media (min-width: 768px) {
+.home-strength-ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.home-strength-li {
+	width: 32%;
+	height: 300px;
+	font-size: 1.8rem;
+}
+
+.home-strength-li::before {
+	font-size: 10.6rem;
+}
+
+.home-strength-li:nth-child(2) {
+	animation-delay: 0.5s;
+}
+
+.home-strength-li:nth-child(3) {
+	animation-delay: 0.7s;
+}
+}
+
+@media (max-width: 767.9px) {
+.home-strength-li:not(:last-child) {
+	margin-bottom: 30px;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- メンバー紹介
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-member {
+	background: #f2f4f4;
+}
+
+.home-member .inner {
+	max-width: 940px;
+}
+
+.home-member-ul {
+	display: flex;
+	margin-bottom: -30px;
+	flex-flow: wrap;
+	justify-content: center;
+}
+
+.home-member-li {
+	max-width: 250px;
+	margin-bottom: 30px;
+}
+
+.home-member-li .image {
+	margin-bottom: 10px;
+}
+
+.home-member-li .position {
+	font-size: 1.2rem;
+}
+
+.home-member-li .heading {
+	font-size: 2rem;
+}
+
+.home-member-li .heading-english {
+	display: inline-block;
+	font-size: 1.3rem;
+}
+
+@media (max-width: 568px) {
+	.home-header {
+		background-image: url("../img/home/tenfive_main_bg_sp.jpg");
+		  padding: 0px 0 50px;
+	}	
+}
+@media (min-width: 480px) {
+.home-member-ul {
+	margin-right: -3%;
+	margin-left: -3%;
+}
+
+.home-member-li {
+	width: 44%;
+	margin-right: 3%;
+	margin-left: 3%;
+}
+}
+
+@media (min-width: 768px) {
+.home-member-li {
+	width: 27%;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 代表ブログ
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-blog {
+	background: url("../img/home/blog-background.jpg") center center no-repeat;
+	background-size: cover;
+}
+
+.home-blog .inner {
+	max-width: 930px;
+}
+
+.home-blog-li .image-outer {
+	height: 145px;
+}
+
+.blog-post-li .image {
+	background-color: #fff;
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 会社概要
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-company .inner {
+	max-width: 750px;
+}
+
+@media (min-width: 768px) {
+.home-company table {
+	font-size: 1.8rem;
+}
+
+.home-company th {
+	width: 150px;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- アクセス
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-access .inner {
+	max-width: 750px;
+}
+
+.home-access iframe {
+	width: 100%;
+	height: 300px;
+}
+
+@media (min-width: 768px) {
+.home-access iframe {
+	height: 350px;
+}
+}
