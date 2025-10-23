@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヒストリー - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブの歩みと成長の歴史をご紹介。創業から現在まで、どのような挑戦と成果を積み重ねてきたのかを振り返ります。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../css/news-system.css">
+    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/company-history.css">
+    
+    <!-- ナビゲーションリンクの強制リセット -->
+    <style>
+        .header .nav__link,
+        .header .nav__link:hover,
+        .header .nav__link:focus,
+        .header .nav__link:active,
+        .header .nav__link:visited {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-color: transparent !important;
+        }
+        
+        .header .nav__link::after,
+        .header .nav__link::before {
+            display: none !important;
+            content: none !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク -->
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a href="./" class="breadcrumb__link">会社紹介</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    ヒストリー
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--subpage hero--company" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">ヒストリー</h1>
+                    <p class="hero__subtitle">History</p>
+                    <p class="hero__description">テンファイブの歩みと成長の歴史をご紹介。創業から現在まで、どのような挑戦と成果を積み重ねてきたのかを振り返ります。</p>
+                </div>
+                
+                <!-- デジタル調のアクセント要素 -->
+                <div class="hero__accent"></div>
+            </div>
+        </section>
+
+        <!-- タイムラインセクション -->
+        <section class="history-timeline" data-section="timeline">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">テンファイブの歴史</h2>
+                    <p class="section__subtitle">Our History</p>
+                </div>
+                
+                <div class="timeline">
+                    <!-- 2009年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2009年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">設立</h3>
+                            <p class="timeline-content__description">
+                                テンファイブ株式会社を設立。創業者のビジョンと共に歩みを始めました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2010年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2010年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">SES事業スタート！</h3>
+                            <p class="timeline-content__description">
+                                システムエンジニアリングサービス事業を開始。売上高と従業員数が急増し、事業基盤を確立しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2011年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2011年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">チームビルディング強化</h3>
+                            <div class="timeline-content__image">
+                                <img src="../assets/images/company-history.jpg" alt="2011年のチームビルディング" class="timeline-content__img">
+                            </div>
+                            <p class="timeline-content__description">
+                                社員の結束を深めるためのチームビルディング活動を強化。屋外での活動を通じて、強いチームワークを築きました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2014年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2014年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">システム部設立</h3>
+                            <p class="timeline-content__description">
+                                10月、システム部を設立。技術力の向上と組織体制の強化を図りました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2015年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2015年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">クライアント多様化</h3>
+                            <p class="timeline-content__description">
+                                クライアントの多様化を推進。5月、システム部初の中途採用を実施し、人材の多様性を高めました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2016年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2016年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">国際展開開始</h3>
+                            <p class="timeline-content__description">
+                                6月、システム部初の長期海外出張（ニューヨーク）を実施。グローバルな視点での事業展開を開始しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2017年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2017年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">事業拡大と組織強化</h3>
+                            <p class="timeline-content__description">
+                                事業規模の拡大に伴い、組織体制の強化を推進。新たなプロジェクトの受注と技術力向上を図りました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2018年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2018年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">デジタル変革への取り組み</h3>
+                            <p class="timeline-content__description">
+                                デジタル技術を活用した業務効率化と新たなサービス開発に着手。クライアントの DX 推進を支援しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2019年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2019年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">COVID-19パンデミック対応</h3>
+                            <p class="timeline-content__description">
+                                COVID-19パンデミックに対応し、リモートワークを導入。新しい働き方への適応と事業継続を実現しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2020年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2020年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">リモートワーク体制確立</h3>
+                            <p class="timeline-content__description">
+                                リモートワーク環境の整備と新しい働き方の定着を図り、チームワークの維持と生産性向上を両立させました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2021年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2021年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">新技術への投資加速</h3>
+                            <p class="timeline-content__description">
+                                AI・機械学習技術への投資を加速し、最新技術を活用したソリューション開発に注力しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2022年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2022年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">売上高過去最高達成</h3>
+                            <p class="timeline-content__description">
+                                売上高過去最高を達成。10月には日中EC系プロジェクトを受諾し、国際的な事業展開をさらに拡大しました。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023年 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">
+                            <span class="timeline-year__number">2023年</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-content__title">新オフィスへの移転</h3>
+                            <p class="timeline-content__description">
+                                新オフィスに移転し、より快適な働き環境を整備。チームワークとイノベーションを促進する新しい拠点で事業を展開しています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 現在の取り組みセクション -->
+        <section class="current-initiatives" data-section="current">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">現在の取り組み</h2>
+                    <p class="section__subtitle">Current Initiatives</p>
+                </div>
+                
+                <div class="initiatives-content">
+                    <p class="initiatives-text">
+                        創業から現在まで、テンファイブは常に変化し続けています。最新のテクノロジーを取り入れながら、
+                        お客様のニーズに応えるソリューションを提供し続けています。
+                    </p>
+                    
+                    <div class="initiatives-grid">
+                        <div class="initiative-item">
+                            <div class="initiative-item__icon">
+                                <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="initiative-item__title">AI技術の活用</h3>
+                            <p class="initiative-item__description">
+                                最新のAI技術を活用したソリューション開発に取り組んでいます。
+                            </p>
+                        </div>
+                        
+                        <div class="initiative-item">
+                            <div class="initiative-item__icon">🌍</div>
+                            <h3 class="initiative-item__title">グローバル展開</h3>
+                            <p class="initiative-item__description">
+                                海外プロジェクトの拡大とグローバルな人材育成を推進しています。
+                            </p>
+                        </div>
+                        
+                        <div class="initiative-item">
+                            <div class="initiative-item__icon">
+                                <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <h3 class="initiative-item__title">イノベーション創出</h3>
+                            <p class="initiative-item__description">
+                                新しい技術とアイデアで社会課題の解決に取り組んでいます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

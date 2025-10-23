@@ -1,0 +1,320 @@
+/* ========================================
+   求める人物像ページ - 専用スタイル
+   ======================================== */
+
+/* 企業理念セクション */
+.company-values {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+}
+
+.value-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.value-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+  position: relative;
+  padding-bottom: var(--spacing-3);
+}
+
+.value-card__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary-500);
+  border-radius: var(--radius-full);
+}
+
+.value-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* 時代の転換点セクション */
+.era-transition {
+  padding: var(--spacing-16) 0;
+}
+
+.transition-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.transition-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* 基本的な求める人材像セクション */
+.basic-requirements {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.requirement-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  border-left: 4px solid var(--color-primary-500);
+}
+
+.requirement-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.requirement-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.requirement-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* AI時代の具体的能力セクション */
+.ai-capabilities {
+  padding: var(--spacing-16) 0;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.capability-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.capability-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.capability-card:nth-child(1)::before {
+  background: var(--color-primary-500);
+}
+
+.capability-card:nth-child(2)::before {
+  background: var(--color-secondary-500);
+}
+
+.capability-card:nth-child(3)::before {
+  background: var(--color-accent-500);
+}
+
+.capability-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.capability-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-6);
+}
+
+.capability-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.capability-card__list li {
+  padding: var(--spacing-3) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+  position: relative;
+  padding-left: var(--spacing-6);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+}
+
+.capability-card__list li:last-child {
+  border-bottom: none;
+}
+
+.capability-card__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.value-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.value-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.requirement-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.requirement-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.capability-card {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.capability-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.capability-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .requirements-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .value-card,
+  .requirement-card,
+  .capability-card {
+    padding: var(--spacing-6);
+  }
+  
+  .value-card__title,
+  .requirement-card__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .capability-card__title {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid,
+  .requirements-grid,
+  .capabilities-grid {
+    gap: var(--spacing-4);
+  }
+  
+  .value-card,
+  .requirement-card,
+  .capability-card {
+    padding: var(--spacing-4);
+  }
+  
+  .value-card__title,
+  .requirement-card__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .value-card__title::after {
+    width: 40px;
+    height: 2px;
+  }
+  
+  .transition-text {
+    font-size: var(--font-size-base);
+  }
+  
+  .capability-card__list li {
+    padding: var(--spacing-2) 0;
+    padding-left: var(--spacing-4);
+    font-size: var(--font-size-sm);
+  }
+}

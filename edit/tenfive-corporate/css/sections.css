@@ -1,0 +1,654 @@
+/* ========================================
+   テンファイブコーポレートサイト - セクション
+   ======================================== */
+
+/* ヒーローセクション - 基本構造は shared-sections.css で管理 */
+
+/* コーポレートサイト専用のヒーロー調整 - ヘッダー調整は shared-sections.css で統一管理 */
+
+/* コーポレートサイト専用のヒーロー調整 */
+@media (max-width: 768px) {
+  /* コーポレートサイト専用のタイトル調整 */
+  .hero__content {
+    padding-top: 20vh; /* margin-topではなくpadding-topで調整 */
+  }
+  
+  .hero__title {
+    margin-bottom: var(--spacing-8); /* より下に配置 */
+  }
+  
+  .hero__description {
+    margin-bottom: var(--spacing-6); /* 説明文の下余白も調整 */
+  }
+}
+
+
+/* コーポレートサイト専用のヒーローコンテンツ調整 */
+.hero__content {
+  text-align: left;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: var(--spacing-1);
+}
+
+.hero__title {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-4);
+  max-width: 500px;
+}
+
+.hero__description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-4);
+  max-width: 800px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* セクション共通スタイルは shared-sections.css を参照 */
+
+/* ニュースセクション */
+.news {
+  background-color: #e2e8f0; /* 明示的な値でフォールバック */
+  background-color: var(--color-neutral-200);
+}
+
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.news__item {
+  background-color: #ffffff; /* フォールバック */
+  background-color: var(--color-bg-primary);
+  border: 1px solid #e2e8f0; /* フォールバック */
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.news__item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.news__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.news__date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.news__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.news__badge--notice {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+}
+
+.news__badge--update {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.news__badge--important {
+  background-color: var(--color-warning);
+  color: white;
+}
+
+.news__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: #1f2937; /* フォールバック */
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* .news__link のスタイルは shared-news-system.css で統一管理 */
+
+/* .news__excerpt は削除されました */
+
+/* セクションフッター共通スタイル */
+.tech-blog__footer,
+.curriculum__footer,
+.glossary__footer,
+.news__footer {
+  text-align: right;
+  margin-top: var(--spacing-6) !important;
+}
+
+/* ピックアップコンテンツセクション */
+.pickup-content {
+  background-color: var(--color-neutral-white);
+}
+
+.pickup-content__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.pickup-item {
+  background-color: var(--color-bg-secondary);
+  /* border: 1px solid var(--color-border-primary); */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  text-align: left;
+}
+
+.pickup-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-200);
+}
+
+.pickup-item__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.pickup-item__description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.pickup-item__link {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.pickup-item__link:hover {
+  color: var(--color-primary-700);
+}
+
+.pickup-item__link::after {
+  content: '→';
+  margin-left: var(--spacing-xs);
+  transition: transform var(--transition-fast);
+}
+
+.pickup-item__link:hover::after {
+  transform: translateX(4px);
+}
+
+/* カリキュラムセクション */
+.curriculum {
+  background-color: var(--color-neutral-white);
+}
+
+.curriculum .blog-card-container {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.curriculum__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.curriculum__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.curriculum-item {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+}
+
+.curriculum-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-accent-200);
+}
+
+.curriculum-item__date {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-600);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-accent-50);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-md);
+}
+
+.curriculum-item__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.curriculum-item__description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+
+
+
+/* セクション共通スタイルは shared-sections.css を参照 */
+
+/* セクション共通のレスポンシブ対応は shared-sections.css を参照 */
+
+/* ニュース・ピックアップコンテンツのレスポンシブ対応 */
+@media (max-width: 1024px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .curriculum .blog-card-container {
+    margin-bottom: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    padding: var(--spacing-8) 0;
+  }
+  
+  .news__list {
+    gap: var(--spacing-lg);
+  }
+  
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .pickup-content__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .curriculum .blog-card-container {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .news__list {
+    gap: var(--spacing-md);
+  }
+  
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .pickup-content__grid {
+    gap: var(--spacing-md);
+  }
+  
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .curriculum .blog-card-container {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: var(--font-size-6xl);
+    padding: var(--spacing-1);
+  }
+}
+
+@media (min-width: 768px) {
+  .news__header {
+    justify-content: flex-start;
+  }
+  
+  .pickup-content__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 80vh;
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .hero__title {
+    /* font-size: var(--font-size-5xl); */
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .hero__description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .pickup-content__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .section__subtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ========================================
+   STRENGTH セクション
+   ======================================== */
+
+.strengths {
+  background-color: var(--color-primary-50);
+}
+
+.strengths__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-8);
+}
+
+.strength-item {
+  /* background-color: var(--color-bg-primary); */
+  /* border: 1px solid var(--color-border-primary); */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: left;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-500), var(--color-primary-500));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.strength-item:hover {
+  /* リンクがないカードのためホバー効果を無効化 */
+  /* box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-200); */
+}
+
+.strength-item:hover::before {
+  transform: scaleX(1);
+}
+
+.strength-item__icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 var(--spacing-md) 0 0;
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-accent-500));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.strength-item__icon-svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-neutral-white);
+}
+
+.strength-item__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.strength-item__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: var(--line-height-tight);
+  flex: 1;
+}
+
+.strength-item__description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .strengths__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .strengths__grid {
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+  
+  .strength-item {
+    padding: var(--spacing-lg);
+  }
+  
+  .strength-item__icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 var(--spacing-sm) 0 0;
+  }
+  
+  .strength-item__icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .strength-item__title {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ========================================
+   COMPANY OVERVIEW セクション
+   ======================================== */
+
+.company-overview {
+  background-color: var(--color-neutral-white);
+}
+
+.company-info {
+  margin-top: var(--spacing-12);
+}
+
+.company-info__table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-info__row {
+  display: flex;
+  padding: var(--spacing-xs) 0;
+  border: 1px solid var(--color-border-neutral);
+  align-items: flex-start;
+}
+
+.company-info__row:last-child {
+  border-bottom: none;
+}
+
+.company-info__label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  min-width: 120px;
+  margin: 0;
+  padding-right: var(--spacing-lg);
+  flex-shrink: 0;
+}
+
+.company-info__value {
+  color: var(--color-text-secondary);
+  margin: 0;
+  flex: 1;
+  line-height: var(--line-height-relaxed);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .company-info {
+    margin-top: var(--spacing-6);
+  }
+  
+  .company-info__row {
+    flex-direction: column;
+    padding: var(--spacing-1) 0;
+  }
+  
+  .company-info__label {
+    min-width: auto;
+    padding-right: 0;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+  }
+  
+  .company-info__value {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ========================================
+   CTA セクション
+   ======================================== */
+
+.cta {
+  background-color: var(--color-primary-50);
+}
+
+/* CTAカードの特別なスタイル */
+.cta__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent; /* デフォルトでは透明 */
+  transition: all var(--transition-normal);
+  z-index: 1;
+}
+
+.cta__card:hover::before {
+  /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)); */ /* ホバー時に暗転 */
+}
+
+.cta__card .image-card__content {
+  position: relative;
+  z-index: 2;
+  background: transparent; /* 背景を透明に */
+}
+
+.cta__card .image-card__title {
+  color: var(--color-neutral-900); /* 白背景でも見えるように黒に変更 */
+  text-align: left; /* 他のカードタイプと同様に左寄せ */
+  font-size: var(--font-size-base); /* 事業内容と同じサイズ */
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-tight);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400); /* 事業内容と同じ下線色 */
+  text-underline-offset: 2px; /* 事業内容と同じオフセット */
+  transition: all 0.2s ease; /* 事業内容と同じトランジション */
+}
+
+.cta__card:hover .image-card__title {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .cta__card .image-card__title {
+    font-size: var(--font-size-base); /* 事業内容と同じサイズを維持 */
+  }
+}

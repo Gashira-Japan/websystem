@@ -1,0 +1,1566 @@
+{
+  "color": {
+    "success": {
+      "50": {
+        "value": "#f0fdf4",
+        "type": "color",
+        "description": "成功50 - 成功状態の背景色、軽い成功表示用"
+      },
+      "100": {
+        "value": "#dcfce7",
+        "type": "color",
+        "description": "成功100 - 成功状態の薄い背景色"
+      },
+      "200": {
+        "value": "#bbf7d0",
+        "type": "color",
+        "description": "成功200 - 成功状態のボーダー色"
+      },
+      "300": {
+        "value": "#86efac",
+        "type": "color",
+        "description": "成功300 - 成功状態のホバー色"
+      },
+      "400": {
+        "value": "#4ade80",
+        "type": "color",
+        "description": "成功400 - 成功状態のアクセント色"
+      },
+      "500": {
+        "value": "#2ecc71",
+        "type": "color",
+        "description": "成功500 - テンファイブの成功カラー（メイン）"
+      },
+      "600": {
+        "value": "#16a34a",
+        "type": "color",
+        "description": "成功600 - 成功状態のホバー時色"
+      },
+      "700": {
+        "value": "#15803d",
+        "type": "color",
+        "description": "成功700 - 成功状態のアクティブ時色"
+      },
+      "800": {
+        "value": "#166534",
+        "type": "color",
+        "description": "成功800 - 成功状態の濃い色"
+      },
+      "900": {
+        "value": "#14532d",
+        "type": "color",
+        "description": "成功900 - 成功状態の最濃色"
+      },
+      "value": "#2ecc71",
+      "type": "color",
+      "description": "成功メッセージ、完了状態、ポジティブフィードバック - フォーム完了、操作成功時の表示"
+    },
+    "warning": {
+      "50": {
+        "value": "#fffbeb",
+        "type": "color",
+        "description": "警告50 - 警告状態の背景色、軽い警告表示用"
+      },
+      "100": {
+        "value": "#fef3c7",
+        "type": "color",
+        "description": "警告100 - 警告状態の薄い背景色"
+      },
+      "200": {
+        "value": "#fde68a",
+        "type": "color",
+        "description": "警告200 - 警告状態のボーダー色"
+      },
+      "300": {
+        "value": "#fcd34d",
+        "type": "color",
+        "description": "警告300 - 警告状態のホバー色"
+      },
+      "400": {
+        "value": "#fbbf24",
+        "type": "color",
+        "description": "警告400 - 警告状態のアクセント色"
+      },
+      "500": {
+        "value": "#f39c12",
+        "type": "color",
+        "description": "警告500 - テンファイブの警告カラー（メイン）"
+      },
+      "600": {
+        "value": "#d97706",
+        "type": "color",
+        "description": "警告600 - 警告状態のホバー時色"
+      },
+      "700": {
+        "value": "#b45309",
+        "type": "color",
+        "description": "警告700 - 警告状態のアクティブ時色"
+      },
+      "800": {
+        "value": "#92400e",
+        "type": "color",
+        "description": "警告800 - 警告状態の濃い色"
+      },
+      "900": {
+        "value": "#78350f",
+        "type": "color",
+        "description": "警告900 - 警告状態の最濃色"
+      },
+      "value": "#f39c12",
+      "type": "color",
+      "description": "注意喚起、確認が必要な状態 - フォームバリデーション、注意が必要な操作"
+    },
+    "error": {
+      "50": {
+        "value": "#fef2f2",
+        "type": "color",
+        "description": "エラー50 - エラー状態の背景色、軽いエラー表示用"
+      },
+      "100": {
+        "value": "#fee2e2",
+        "type": "color",
+        "description": "エラー100 - エラー状態の薄い背景色"
+      },
+      "200": {
+        "value": "#fecaca",
+        "type": "color",
+        "description": "エラー200 - エラー状態のボーダー色"
+      },
+      "300": {
+        "value": "#fca5a5",
+        "type": "color",
+        "description": "エラー300 - エラー状態のホバー色"
+      },
+      "400": {
+        "value": "#f87171",
+        "type": "color",
+        "description": "エラー400 - エラー状態のアクセント色"
+      },
+      "500": {
+        "value": "#d01d1a",
+        "type": "color",
+        "description": "エラー500 - テンファイブの情熱レッド（メイン）"
+      },
+      "600": {
+        "value": "#dc2626",
+        "type": "color",
+        "description": "エラー600 - エラー状態のホバー時色"
+      },
+      "700": {
+        "value": "#b91c1c",
+        "type": "color",
+        "description": "エラー700 - エラー状態のアクティブ時色"
+      },
+      "800": {
+        "value": "#991b1b",
+        "type": "color",
+        "description": "エラー800 - エラー状態の濃い色"
+      },
+      "900": {
+        "value": "#7f1d1d",
+        "type": "color",
+        "description": "エラー900 - エラー状態の最濃色"
+      },
+      "value": "#e74c3c",
+      "type": "color",
+      "description": "エラーメッセージ、削除アクション、危険な操作 - フォームエラー、削除確認、危険な操作の警告"
+    },
+    "info": {
+      "value": "#3498db",
+      "type": "color",
+      "description": "情報メッセージ、ヒント、通知"
+    },
+    "primary": {
+      "50": {
+        "value": "#eff6ff",
+        "type": "color",
+        "description": "プライマリ50 - 信頼の青の薄い色、プライマリ要素の背景色"
+      },
+      "100": {
+        "value": "#dbeafe",
+        "type": "color",
+        "description": "プライマリ100 - プライマリ要素の薄い背景色"
+      },
+      "200": {
+        "value": "#bfdbfe",
+        "type": "color",
+        "description": "プライマリ200 - プライマリ要素のボーダー色"
+      },
+      "300": {
+        "value": "#93c5fd",
+        "type": "color",
+        "description": "プライマリ300 - プライマリ要素のホバー色"
+      },
+      "400": {
+        "value": "#60a5fa",
+        "type": "color",
+        "description": "プライマリ400 - プライマリ要素のアクセント色"
+      },
+      "500": {
+        "value": "#228dc4",
+        "type": "color",
+        "description": "プライマリ500 - テンファイブの信頼の青（メイン）"
+      },
+      "600": {
+        "value": "#0d679e",
+        "type": "color",
+        "description": "プライマリ600 - テンファイブの専門性ブルー"
+      },
+      "700": {
+        "value": "#1d4ed8",
+        "type": "color",
+        "description": "プライマリ700 - プライマリ要素のアクティブ時色"
+      },
+      "800": {
+        "value": "#1e40af",
+        "type": "color",
+        "description": "プライマリ800 - プライマリ要素の濃い色"
+      },
+      "900": {
+        "value": "#1e3a8a",
+        "type": "color",
+        "description": "プライマリ900 - プライマリ要素の最濃色"
+      },
+      "trust-blue": {
+        "value": "#228dc4",
+        "type": "color",
+        "description": "信頼の青 - テンファイブのメインブランドカラー、メインCTA、重要なリンク"
+      },
+      "deep-blue": {
+        "value": "#0d679e",
+        "type": "color",
+        "description": "専門性ブルー - 見出し、強調テキスト用、セカンダリCTA"
+      }
+    },
+    "secondary": {
+      "50": {
+        "value": "#f0fdf4",
+        "type": "color",
+        "description": "セカンダリ50 - 成長グリーンの薄い色、セカンダリ要素の背景色"
+      },
+      "100": {
+        "value": "#dcfce7",
+        "type": "color",
+        "description": "セカンダリ100 - セカンダリ要素の薄い背景色"
+      },
+      "200": {
+        "value": "#bbf7d0",
+        "type": "color",
+        "description": "セカンダリ200 - セカンダリ要素のボーダー色"
+      },
+      "300": {
+        "value": "#86efac",
+        "type": "color",
+        "description": "セカンダリ300 - セカンダリ要素のホバー色"
+      },
+      "400": {
+        "value": "#4ade80",
+        "type": "color",
+        "description": "セカンダリ400 - セカンダリ要素のアクセント色"
+      },
+      "500": {
+        "value": "#90b425",
+        "type": "color",
+        "description": "セカンダリ500 - テンファイブの成長グリーン（メイン）"
+      },
+      "600": {
+        "value": "#138f8f",
+        "type": "color",
+        "description": "セカンダリ600 - テンファイブの革新ティール"
+      },
+      "700": {
+        "value": "#15803d",
+        "type": "color",
+        "description": "セカンダリ700 - セカンダリ要素のアクティブ時色"
+      },
+      "800": {
+        "value": "#166534",
+        "type": "color",
+        "description": "セカンダリ800 - セカンダリ要素の濃い色"
+      },
+      "900": {
+        "value": "#14532d",
+        "type": "color",
+        "description": "セカンダリ900 - セカンダリ要素の最濃色"
+      },
+      "teal-green": {
+        "value": "#138f8f",
+        "type": "color",
+        "description": "革新ティール - サブビジュアル、情報パネル用、サブCTA"
+      },
+      "fresh-green": {
+        "value": "#90b425",
+        "type": "color",
+        "description": "成長グリーン - 成功表示、進捗表示用、成長関連の要素"
+      },
+      "warm-yellow": {
+        "value": "#e9e13a",
+        "type": "color",
+        "description": "温もりイエロー - アクセント専用（テキスト不可）、ハイライト表示"
+      }
+    },
+    "accent": {
+      "50": {
+        "value": "#fef3c7",
+        "type": "color",
+        "description": "アクセント50 - 活力オレンジの薄い色、アクセント要素の背景色"
+      },
+      "100": {
+        "value": "#fde68a",
+        "type": "color",
+        "description": "アクセント100 - アクセント要素の薄い背景色"
+      },
+      "200": {
+        "value": "#fcd34d",
+        "type": "color",
+        "description": "アクセント200 - アクセント要素のボーダー色"
+      },
+      "300": {
+        "value": "#fbbf24",
+        "type": "color",
+        "description": "アクセント300 - アクセント要素のホバー色"
+      },
+      "400": {
+        "value": "#f59e0b",
+        "type": "color",
+        "description": "アクセント400 - アクセント要素のアクセント色"
+      },
+      "500": {
+        "value": "#e6951e",
+        "type": "color",
+        "description": "アクセント500 - テンファイブの活力オレンジ（メイン）"
+      },
+      "600": {
+        "value": "#d97706",
+        "type": "color",
+        "description": "アクセント600 - アクセント要素のホバー時色"
+      },
+      "700": {
+        "value": "#b45309",
+        "type": "color",
+        "description": "アクセント700 - アクセント要素のアクティブ時色"
+      },
+      "800": {
+        "value": "#92400e",
+        "type": "color",
+        "description": "アクセント800 - アクセント要素の濃い色"
+      },
+      "900": {
+        "value": "#78350f",
+        "type": "color",
+        "description": "アクセント900 - アクセント要素の最濃色"
+      },
+      "orange": {
+        "value": "#e6951e",
+        "type": "color",
+        "description": "活力オレンジ - 注目要素用、CTA、重要なアクション"
+      },
+      "purple": {
+        "value": "#8b1970",
+        "type": "color",
+        "description": "創造性パープル - 特別なアクセント用、クリエイティブ要素"
+      },
+      "red": {
+        "value": "#d01d1a",
+        "type": "color",
+        "description": "情熱レッド - 重要なアクション、警告用、緊急度の高い要素"
+      }
+    },
+    "neutral": {
+      "50": {
+        "value": "#f8fafc",
+        "type": "color",
+        "description": "ニュートラル50 - 最薄いグレー、ページ背景色"
+      },
+      "100": {
+        "value": "#f1f5f9",
+        "type": "color",
+        "description": "ニュートラル100 - 薄いグレー、カード背景色"
+      },
+      "200": {
+        "value": "#e2e8f0",
+        "type": "color",
+        "description": "ニュートラル200 - ボーダー色、区切り線"
+      },
+      "300": {
+        "value": "#cbd5e1",
+        "type": "color",
+        "description": "ニュートラル300 - 無効状態の背景色"
+      },
+      "400": {
+        "value": "#7f8c8d",
+        "type": "color",
+        "description": "ニュートラル400 - テンファイブのミディアムグレー、補助テキスト"
+      },
+      "500": {
+        "value": "#64748b",
+        "type": "color",
+        "description": "ニュートラル500 - 中程度のグレー、セカンダリテキスト"
+      },
+      "600": {
+        "value": "#475569",
+        "type": "color",
+        "description": "ニュートラル600 - 濃いグレー、セカンダリテキスト"
+      },
+      "700": {
+        "value": "#2c3e50",
+        "type": "color",
+        "description": "ニュートラル700 - テンファイブのダークグレー、本文テキスト"
+      },
+      "800": {
+        "value": "#1e293b",
+        "type": "color",
+        "description": "ニュートラル800 - 非常に濃いグレー、見出しテキスト"
+      },
+      "900": {
+        "value": "#0f172a",
+        "type": "color",
+        "description": "ニュートラル900 - 最濃グレー、強調テキスト"
+      },
+      "white": {
+        "value": "#ffffff",
+        "type": "color",
+        "description": "白 - メイン背景、カード背景、テキスト色"
+      },
+      "light-grey": {
+        "value": "#ecf0f1",
+        "type": "color",
+        "description": "ライトグレー - 背景、区切り線用、セカンダリ背景"
+      },
+      "medium-grey": {
+        "value": "#7f8c8d",
+        "type": "color",
+        "description": "ミディアムグレー - 補助テキスト、ボーダー用、プレースホルダー"
+      },
+      "dark-grey": {
+        "value": "#2c3e50",
+        "type": "color",
+        "description": "ダークグレー - 本文テキスト用、メインコンテンツ"
+      },
+      "black": {
+        "value": "#000000",
+        "type": "color",
+        "description": "黒 - 最大コントラスト用、見出し、重要なテキスト"
+      }
+    }
+  },
+  "spacing": {
+    "0": {
+      "value": "0px",
+      "type": "spacing",
+      "description": "なし"
+    },
+    "1": {
+      "value": "4px",
+      "type": "spacing",
+      "description": "最小スペース"
+    },
+    "2": {
+      "value": "8px",
+      "type": "spacing",
+      "description": "基本スペース（8pxベース）"
+    },
+    "3": {
+      "value": "12px",
+      "type": "spacing",
+      "description": "小スペース"
+    },
+    "4": {
+      "value": "16px",
+      "type": "spacing",
+      "description": "中スペース"
+    },
+    "5": {
+      "value": "20px",
+      "type": "spacing",
+      "description": "中大スペース"
+    },
+    "6": {
+      "value": "24px",
+      "type": "spacing",
+      "description": "大スペース"
+    },
+    "8": {
+      "value": "32px",
+      "type": "spacing",
+      "description": "特大スペース"
+    },
+    "10": {
+      "value": "40px",
+      "type": "spacing",
+      "description": "巨大スペース"
+    },
+    "12": {
+      "value": "48px",
+      "type": "spacing",
+      "description": "最大スペース"
+    },
+    "16": {
+      "value": "64px",
+      "type": "spacing",
+      "description": "セクション間スペース"
+    },
+    "20": {
+      "value": "80px",
+      "type": "spacing",
+      "description": "ページ間スペース"
+    },
+    "24": {
+      "value": "96px",
+      "type": "spacing",
+      "description": "最大ページ間スペース"
+    },
+    "hero-padding-bottom": {
+      "value": "0.2em",
+      "type": "spacing",
+      "description": "ヒーロータイトル用パディング（descender対応）"
+    },
+    "hero-underline-offset": {
+      "value": "12px",
+      "type": "spacing",
+      "description": "ヒーロータイトル下線のオフセット"
+    },
+    "hero-underline-offset-tablet": {
+      "value": "10px",
+      "type": "spacing",
+      "description": "ヒーロータイトル下線のオフセット（タブレット）"
+    },
+    "hero-underline-offset-mobile": {
+      "value": "8px",
+      "type": "spacing",
+      "description": "ヒーロータイトル下線のオフセット（モバイル）"
+    },
+    "hero-underline-offset-small": {
+      "value": "6px",
+      "type": "spacing",
+      "description": "ヒーロータイトル下線のオフセット（極小モバイル）"
+    },
+    "icon-padding": {
+      "value": "8px",
+      "type": "spacing",
+      "description": "アイコン背景のパディング"
+    },
+    "icon-padding-small": {
+      "value": "4px",
+      "type": "spacing",
+      "description": "アイコン背景のパディング（小）"
+    },
+    "card-3-layout-tablet": {
+      "value": "1fr",
+      "type": "spacing",
+      "description": "3カードレイアウトのタブレット用グリッド（1列）"
+    },
+    "card-3-layout-tablet-alt": {
+      "value": "repeat(3, minmax(280px, 1fr))",
+      "type": "spacing",
+      "description": "3カードレイアウトのタブレット用グリッド（3列維持）"
+    },
+    "news-item-padding": {
+      "value": "16px",
+      "type": "spacing",
+      "description": "お知らせアイテムのパディング"
+    },
+    "news-item-gap": {
+      "value": "12px",
+      "type": "spacing",
+      "description": "お知らせアイテム間の間隔"
+    },
+    "featured-card-padding": {
+      "value": "24px",
+      "type": "spacing",
+      "description": "フィーチャードカードのパディング"
+    },
+    "featured-card-media-height": {
+      "value": "200px",
+      "type": "spacing",
+      "description": "フィーチャードカードメディアエリアの高さ"
+    },
+    "card-3-third-width": {
+      "value": "50%",
+      "type": "spacing",
+      "description": "3カードレイアウトの3つ目のカードの幅"
+    }
+  },
+  "borderRadius": {
+    "none": {
+      "value": "0px",
+      "type": "borderRadius",
+      "description": "角なし"
+    },
+    "sm": {
+      "value": "4px",
+      "type": "borderRadius",
+      "description": "小角丸"
+    },
+    "base": {
+      "value": "8px",
+      "type": "borderRadius",
+      "description": "基本角丸（8pxベース）"
+    },
+    "md": {
+      "value": "12px",
+      "type": "borderRadius",
+      "description": "中角丸"
+    },
+    "lg": {
+      "value": "16px",
+      "type": "borderRadius",
+      "description": "大角丸"
+    },
+    "xl": {
+      "value": "24px",
+      "type": "borderRadius",
+      "description": "特大角丸"
+    },
+    "full": {
+      "value": "9999px",
+      "type": "borderRadius",
+      "description": "完全角丸"
+    }
+  },
+  "fontFamilies": {
+    "noto-sans-jp": {
+      "value": "Noto Sans JP",
+      "type": "fontFamilies",
+      "description": "日本語メインフォント"
+    },
+    "inter": {
+      "value": "Inter",
+      "type": "fontFamilies",
+      "description": "英語・数字用フォント"
+    }
+  },
+  "fontWeights": {
+    "light": {
+      "value": "300",
+      "type": "fontWeights",
+      "description": "ライト"
+    },
+    "regular": {
+      "value": "400",
+      "type": "fontWeights",
+      "description": "レギュラー"
+    },
+    "medium": {
+      "value": "500",
+      "type": "fontWeights",
+      "description": "ミディアム"
+    },
+    "semibold": {
+      "value": "600",
+      "type": "fontWeights",
+      "description": "セミボールド"
+    },
+    "bold": {
+      "value": "700",
+      "type": "fontWeights",
+      "description": "ボールド"
+    }
+  },
+  "fontSize": {
+    "xs": {
+      "value": "12px",
+      "type": "fontSizes",
+      "description": "最小サイズ"
+    },
+    "sm": {
+      "value": "14px",
+      "type": "fontSizes",
+      "description": "小サイズ"
+    },
+    "base": {
+      "value": "16px",
+      "type": "fontSizes",
+      "description": "基本サイズ（8pxベース）"
+    },
+    "lg": {
+      "value": "18px",
+      "type": "fontSizes",
+      "description": "大サイズ"
+    },
+    "xl": {
+      "value": "20px",
+      "type": "fontSizes",
+      "description": "特大サイズ"
+    },
+    "2xl": {
+      "value": "24px",
+      "type": "fontSizes",
+      "description": "2倍特大サイズ"
+    },
+    "3xl": {
+      "value": "32px",
+      "type": "fontSizes",
+      "description": "3倍特大サイズ"
+    },
+    "4xl": {
+      "value": "40px",
+      "type": "fontSizes",
+      "description": "4倍特大サイズ"
+    },
+    "5xl": {
+      "value": "48px",
+      "type": "fontSizes",
+      "description": "5倍特大サイズ"
+    },
+    "6xl": {
+      "value": "64px",
+      "type": "fontSizes",
+      "description": "6倍特大サイズ"
+    }
+  },
+  "lineHeights": {
+    "tight": {
+      "value": "1.2",
+      "type": "lineHeights",
+      "description": "タイト（見出し用）"
+    },
+    "normal": {
+      "value": "1.5",
+      "type": "lineHeights",
+      "description": "ノーマル（本文用）"
+    },
+    "relaxed": {
+      "value": "1.75",
+      "type": "lineHeights",
+      "description": "リラックス（長文用）"
+    },
+    "hero": {
+      "value": "1.2",
+      "type": "lineHeights",
+      "description": "ヒーロータイトル用（descender対応）"
+    }
+  },
+  "letterSpacing": {
+    "tight": {
+      "value": "-0.025em",
+      "type": "letterSpacing",
+      "description": "タイト"
+    },
+    "normal": {
+      "value": "0em",
+      "type": "letterSpacing",
+      "description": "ノーマル"
+    },
+    "wide": {
+      "value": "0.025em",
+      "type": "letterSpacing",
+      "description": "ワイド"
+    }
+  },
+  "elevation": {
+    "none": {
+      "value": "none",
+      "type": "boxShadow",
+      "description": "影なし"
+    },
+    "sm": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "type": "boxShadow",
+      "description": "小影"
+    },
+    "base": {
+      "value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+      "type": "boxShadow",
+      "description": "基本影"
+    },
+    "md": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "type": "boxShadow",
+      "description": "中影"
+    },
+    "lg": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "type": "boxShadow",
+      "description": "大影"
+    },
+    "xl": {
+      "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+      "type": "boxShadow",
+      "description": "特大影"
+    },
+    "2xl": {
+      "value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      "type": "boxShadow",
+      "description": "最大影"
+    }
+  },
+  "typography": {
+    "heading": {
+      "h1": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.bold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.6xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.6}"
+        },
+        "type": "typography",
+        "description": "ページタイトル - 64px/1.2"
+      },
+      "h2": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.bold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.5xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.6}"
+        },
+        "type": "typography",
+        "description": "セクション見出し - 48px/1.2"
+      },
+      "h3": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.bold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.4xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.4}"
+        },
+        "type": "typography",
+        "description": "サブセクション見出し - 40px/1.2"
+      },
+      "h4": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.3xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.4}"
+        },
+        "type": "typography",
+        "description": "小見出し - 32px/1.2"
+      },
+      "h5": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.2xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.3}"
+        },
+        "type": "typography",
+        "description": "カード見出し - 24px/1.2"
+      },
+      "h6": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.xl}",
+          "letterSpacing": "{letterSpacing.tight}",
+          "paragraphSpacing": "{spacing.3}"
+        },
+        "type": "typography",
+        "description": "最小見出し - 20px/1.2"
+      }
+    },
+    "body": {
+      "large": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.relaxed}",
+          "fontSize": "{fontSize.lg}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "{spacing.4}"
+        },
+        "type": "typography",
+        "description": "リード文 - 18px/1.75"
+      },
+      "regular": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.normal}",
+          "fontSize": "{fontSize.base}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "{spacing.4}"
+        },
+        "type": "typography",
+        "description": "本文 - 16px/1.5"
+      },
+      "small": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.normal}",
+          "fontSize": "{fontSize.sm}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "{spacing.3}"
+        },
+        "type": "typography",
+        "description": "補足文 - 14px/1.5"
+      },
+      "caption": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.normal}",
+          "fontSize": "{fontSize.xs}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "{spacing.2}"
+        },
+        "type": "typography",
+        "description": "キャプション - 12px/1.5"
+      }
+    },
+    "button": {
+      "large": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.lg}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "0"
+        },
+        "type": "typography",
+        "description": "大ボタン - 18px/1.2"
+      },
+      "medium": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.base}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "0"
+        },
+        "type": "typography",
+        "description": "中ボタン - 16px/1.2"
+      },
+      "small": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.semibold}",
+          "lineHeight": "{lineHeights.tight}",
+          "fontSize": "{fontSize.sm}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "paragraphSpacing": "0"
+        },
+        "type": "typography",
+        "description": "小ボタン - 14px/1.2"
+      }
+    },
+    "link": {
+      "default": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.normal}",
+          "fontSize": "{fontSize.base}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "textDecoration": "underline",
+          "paragraphSpacing": "0"
+        },
+        "type": "typography",
+        "description": "リンク - 16px/1.5"
+      },
+      "small": {
+        "value": {
+          "fontFamily": "{fontFamilies.noto-sans-jp}",
+          "fontWeight": "{fontWeights.regular}",
+          "lineHeight": "{lineHeights.normal}",
+          "fontSize": "{fontSize.sm}",
+          "letterSpacing": "{letterSpacing.normal}",
+          "textDecoration": "underline",
+          "paragraphSpacing": "0"
+        },
+        "type": "typography",
+        "description": "小リンク - 14px/1.5"
+      }
+    }
+  },
+  "interactive": {
+    "link": {
+      "default": {
+        "value": "{color.primary.500}",
+        "type": "color",
+        "description": "リンクのデフォルトカラー"
+      },
+      "hover": {
+        "value": "{color.primary.600}",
+        "type": "color",
+        "description": "リンクのホバー時カラー"
+      },
+      "visited": {
+        "value": "{color.secondary.600}",
+        "type": "color",
+        "description": "リンクの訪問済みカラー"
+      },
+      "active": {
+        "value": "{color.primary.700}",
+        "type": "color",
+        "description": "リンクのアクティブ時カラー"
+      },
+      "focus": {
+        "value": "{color.primary.500}",
+        "type": "color",
+        "description": "リンクのフォーカス時カラー"
+      }
+    },
+    "button": {
+      "primary": {
+        "default": {
+          "value": "{color.primary.500}",
+          "type": "color",
+          "description": "プライマリボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.primary.600}",
+          "type": "color",
+          "description": "プライマリボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.primary.700}",
+          "type": "color",
+          "description": "プライマリボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "プライマリボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.neutral.white}",
+          "type": "color",
+          "description": "プライマリボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "プライマリボタンの無効時テキストカラー"
+        }
+      },
+      "secondary": {
+        "default": {
+          "value": "{color.secondary.500}",
+          "type": "color",
+          "description": "セカンダリボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.secondary.600}",
+          "type": "color",
+          "description": "セカンダリボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.secondary.700}",
+          "type": "color",
+          "description": "セカンダリボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "セカンダリボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.neutral.white}",
+          "type": "color",
+          "description": "セカンダリボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "セカンダリボタンの無効時テキストカラー"
+        }
+      },
+      "accent": {
+        "default": {
+          "value": "{color.accent.500}",
+          "type": "color",
+          "description": "アクセントボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.accent.600}",
+          "type": "color",
+          "description": "アクセントボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.accent.700}",
+          "type": "color",
+          "description": "アクセントボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "アクセントボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.neutral.white}",
+          "type": "color",
+          "description": "アクセントボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "アクセントボタンの無効時テキストカラー"
+        }
+      },
+      "neutral": {
+        "default": {
+          "value": "{color.neutral.100}",
+          "type": "color",
+          "description": "ニュートラルボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.neutral.200}",
+          "type": "color",
+          "description": "ニュートラルボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "ニュートラルボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.100}",
+          "type": "color",
+          "description": "ニュートラルボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.neutral.700}",
+          "type": "color",
+          "description": "ニュートラルボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "ニュートラルボタンの無効時テキストカラー"
+        }
+      },
+      "outline": {
+        "default": {
+          "value": "transparent",
+          "type": "color",
+          "description": "アウトラインボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.primary.50}",
+          "type": "color",
+          "description": "アウトラインボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.primary.100}",
+          "type": "color",
+          "description": "アウトラインボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "transparent",
+          "type": "color",
+          "description": "アウトラインボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.primary.500}",
+          "type": "color",
+          "description": "アウトラインボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "アウトラインボタンの無効時テキストカラー"
+        },
+        "border": {
+          "value": "{color.primary.500}",
+          "type": "color",
+          "description": "アウトラインボタンのボーダーカラー"
+        },
+        "borderDisabled": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "アウトラインボタンの無効時ボーダーカラー"
+        }
+      },
+      "ghost": {
+        "default": {
+          "value": "transparent",
+          "type": "color",
+          "description": "ゴーストボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.primary.50}",
+          "type": "color",
+          "description": "ゴーストボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.primary.100}",
+          "type": "color",
+          "description": "ゴーストボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "transparent",
+          "type": "color",
+          "description": "ゴーストボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.primary.500}",
+          "type": "color",
+          "description": "ゴーストボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "ゴーストボタンの無効時テキストカラー"
+        }
+      },
+      "danger": {
+        "default": {
+          "value": "{color.error.500}",
+          "type": "color",
+          "description": "危険ボタンのデフォルトカラー"
+        },
+        "hover": {
+          "value": "{color.error.600}",
+          "type": "color",
+          "description": "危険ボタンのホバー時カラー"
+        },
+        "active": {
+          "value": "{color.error.700}",
+          "type": "color",
+          "description": "危険ボタンのアクティブ時カラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "危険ボタンの無効時カラー"
+        },
+        "text": {
+          "value": "{color.neutral.white}",
+          "type": "color",
+          "description": "危険ボタンのテキストカラー"
+        },
+        "textDisabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "危険ボタンの無効時テキストカラー"
+        }
+      }
+    },
+    "input": {
+      "default": {
+        "value": "{color.neutral.white}",
+        "type": "color",
+        "description": "入力フィールドのデフォルトカラー"
+      },
+      "focus": {
+        "value": "{color.neutral.white}",
+        "type": "color",
+        "description": "入力フィールドのフォーカス時カラー"
+      },
+      "error": {
+        "value": "{color.error.50}",
+        "type": "color",
+        "description": "入力フィールドのエラー時カラー"
+      },
+      "disabled": {
+        "value": "{color.neutral.100}",
+        "type": "color",
+        "description": "入力フィールドの無効時カラー"
+      },
+      "border": {
+        "default": {
+          "value": "{color.neutral.300}",
+          "type": "color",
+          "description": "入力フィールドのデフォルトボーダーカラー"
+        },
+        "focus": {
+          "value": "{color.primary.500}",
+          "type": "color",
+          "description": "入力フィールドのフォーカス時ボーダーカラー"
+        },
+        "error": {
+          "value": "{color.error.500}",
+          "type": "color",
+          "description": "入力フィールドのエラー時ボーダーカラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.200}",
+          "type": "color",
+          "description": "入力フィールドの無効時ボーダーカラー"
+        }
+      },
+      "text": {
+        "default": {
+          "value": "{color.neutral.700}",
+          "type": "color",
+          "description": "入力フィールドのデフォルトテキストカラー"
+        },
+        "placeholder": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "入力フィールドのプレースホルダーテキストカラー"
+        },
+        "disabled": {
+          "value": "{color.neutral.400}",
+          "type": "color",
+          "description": "入力フィールドの無効時テキストカラー"
+        }
+      }
+    },
+    "card": {
+      "default": {
+        "value": "{color.neutral.white}",
+        "type": "color",
+        "description": "カードのデフォルトカラー"
+      },
+      "hover": {
+        "value": "{color.neutral.white}",
+        "type": "color",
+        "description": "カードのホバー時カラー"
+      },
+      "border": {
+        "value": "{color.neutral.200}",
+        "type": "color",
+        "description": "カードのボーダーカラー"
+      }
+    }
+  },
+  "component": {
+    "button": {
+      "height": {
+        "small": {
+          "value": "32px",
+          "type": "dimension",
+          "description": "小ボタン高さ"
+        },
+        "medium": {
+          "value": "40px",
+          "type": "dimension",
+          "description": "中ボタン高さ"
+        },
+        "large": {
+          "value": "48px",
+          "type": "dimension",
+          "description": "大ボタン高さ"
+        }
+      },
+      "padding": {
+        "small": {
+          "value": "{spacing.2} {spacing.3}",
+          "type": "spacing",
+          "description": "小ボタンパディング"
+        },
+        "medium": {
+          "value": "{spacing.3} {spacing.4}",
+          "type": "spacing",
+          "description": "中ボタンパディング"
+        },
+        "large": {
+          "value": "{spacing.4} {spacing.6}",
+          "type": "spacing",
+          "description": "大ボタンパディング"
+        }
+      },
+      "borderRadius": {
+        "small": {
+          "value": "{borderRadius.sm}",
+          "type": "borderRadius",
+          "description": "小ボタンの角丸"
+        },
+        "medium": {
+          "value": "{borderRadius.base}",
+          "type": "borderRadius",
+          "description": "中ボタンの角丸"
+        },
+        "large": {
+          "value": "{borderRadius.md}",
+          "type": "borderRadius",
+          "description": "大ボタンの角丸"
+        }
+      }
+    },
+    "input": {
+      "height": {
+        "small": {
+          "value": "32px",
+          "type": "dimension",
+          "description": "小入力フィールド高さ"
+        },
+        "medium": {
+          "value": "40px",
+          "type": "dimension",
+          "description": "中入力フィールド高さ"
+        },
+        "large": {
+          "value": "48px",
+          "type": "dimension",
+          "description": "大入力フィールド高さ"
+        }
+      },
+      "padding": {
+        "small": {
+          "value": "{spacing.2}",
+          "type": "spacing",
+          "description": "小入力フィールドパディング"
+        },
+        "medium": {
+          "value": "{spacing.3}",
+          "type": "spacing",
+          "description": "中入力フィールドパディング"
+        },
+        "large": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "大入力フィールドパディング"
+        }
+      },
+      "borderRadius": {
+        "small": {
+          "value": "{borderRadius.sm}",
+          "type": "borderRadius",
+          "description": "小入力フィールドの角丸"
+        },
+        "medium": {
+          "value": "{borderRadius.base}",
+          "type": "borderRadius",
+          "description": "中入力フィールドの角丸"
+        },
+        "large": {
+          "value": "{borderRadius.md}",
+          "type": "borderRadius",
+          "description": "大入力フィールドの角丸"
+        }
+      }
+    },
+    "card": {
+      "padding": {
+        "small": {
+          "value": "{spacing.4}",
+          "type": "spacing",
+          "description": "小カードパディング"
+        },
+        "medium": {
+          "value": "{spacing.6}",
+          "type": "spacing",
+          "description": "中カードパディング"
+        },
+        "large": {
+          "value": "{spacing.8}",
+          "type": "spacing",
+          "description": "大カードパディング"
+        }
+      },
+      "borderRadius": {
+        "small": {
+          "value": "{borderRadius.base}",
+          "type": "borderRadius",
+          "description": "小カードの角丸"
+        },
+        "medium": {
+          "value": "{borderRadius.md}",
+          "type": "borderRadius",
+          "description": "中カードの角丸"
+        },
+        "large": {
+          "value": "{borderRadius.lg}",
+          "type": "borderRadius",
+          "description": "大カードの角丸"
+        }
+      }
+    }
+  },
+  "animation": {
+    "duration": {
+      "fast": {
+        "value": "0.15s",
+        "type": "duration",
+        "description": "高速アニメーション - ボタンホバーなど"
+      },
+      "base": {
+        "value": "0.3s",
+        "type": "duration",
+        "description": "基本アニメーション - 一般的なトランジション"
+      },
+      "slow": {
+        "value": "0.5s",
+        "type": "duration",
+        "description": "低速アニメーション - モーダル表示など"
+      },
+      "very-slow": {
+        "value": "30s",
+        "type": "duration",
+        "description": "非常に低速 - 背景アニメーション、スクロール表示"
+      }
+    },
+    "easing": {
+      "linear": {
+        "value": "linear",
+        "type": "easing",
+        "description": "線形 - スクロールアニメーション"
+      },
+      "ease": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "type": "easing",
+        "description": "標準イージング - 一般的なUI要素"
+      },
+      "ease-in": {
+        "value": "cubic-bezier(0.4, 0, 1, 1)",
+        "type": "easing",
+        "description": "イーズイン - フェードインなど"
+      },
+      "ease-out": {
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "type": "easing",
+        "description": "イーズアウト - フェードアウトなど"
+      }
+    }
+  },
+  "megaMenu": {
+    "spacing": {
+      "padding": {
+        "value": "{spacing.3}",
+        "type": "spacing",
+        "description": "メガメニューのパディング"
+      },
+      "gap": {
+        "value": "{spacing.2}",
+        "type": "spacing",
+        "description": "メガメニュー内の要素間隔"
+      },
+      "linkPadding": {
+        "value": "{spacing.2} {spacing.3}",
+        "type": "spacing",
+        "description": "メガメニューリンクのパディング"
+      },
+      "linkPaddingHover": {
+        "value": "{spacing.4}",
+        "type": "spacing",
+        "description": "メガメニューリンクのホバー時パディング"
+      }
+    },
+    "sizing": {
+      "minWidth": {
+        "value": "280px",
+        "type": "sizing",
+        "description": "メガメニューの最小幅"
+      },
+      "maxWidth": {
+        "value": "320px",
+        "type": "sizing",
+        "description": "メガメニューの最大幅"
+      }
+    },
+    "animation": {
+      "duration": {
+        "value": "{animation.duration.base}",
+        "type": "duration",
+        "description": "メガメニューのアニメーション時間"
+      },
+      "easing": {
+        "value": "{animation.easing.ease}",
+        "type": "easing",
+        "description": "メガメニューのイージング"
+      },
+      "transform": {
+        "value": "translateX(2px)",
+        "type": "transform",
+        "description": "メガメニューリンクのホバー時移動"
+      }
+    }
+  }
+}

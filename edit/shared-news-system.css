@@ -1,0 +1,336 @@
+/* ========================================
+   ãƒ†ãƒ³ãƒ•ã‚¡ã‚¤ãƒ–çµ±ä¸€ãƒ‹ãƒ¥ãƒ¼ã‚¹ã‚·ã‚¹ãƒ†ãƒ 
+   ã‚³ãƒ¼ãƒãƒ¬ãƒ¼ãƒˆã‚µã‚¤ãƒˆãƒ»æŽ¡ç”¨ã‚µã‚¤ãƒˆå…±é€š
+   WordPressç§»è¡Œå¯¾å¿œ
+   ======================================== */
+
+/* ãƒ‹ãƒ¥ãƒ¼ã‚¹ã‚»ã‚¯ã‚·ãƒ§ãƒ³ */
+.news {
+  /* paddingは.sectionで統一管理 */
+   /* æ˜Žç¤ºçš„ãªãƒ©ã‚¤ãƒˆãƒ†ãƒ¼ãƒžèƒŒæ™¯ */
+  background-color: var(--color-primary-50);
+}
+
+/* ãƒ‹ãƒ¥ãƒ¼ã‚¹ãƒªã‚¹ãƒˆ */
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-0);
+  margin-bottom: var(--spacing-2);
+}
+
+/* ãƒ‹ãƒ¥ãƒ¼ã‚¹ã‚¢ã‚¤ãƒ†ãƒ  */
+.news .news__item {
+  padding: var(--spacing-1) 0 !important;
+  position: relative;
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--spacing-2) !important;
+}
+
+.news .news__item:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  /* カードタイプのホバー時の浮き上がり効果を無効化 */
+}
+
+.news .news__item:hover .news__title a {
+  color: var(--color-primary-600) !important;
+}
+
+/* ãƒ‹ãƒ¥ãƒ¼ã‚¹ãƒ‡ã‚£ãƒã‚¤ãƒ€ãƒ¼ */
+.news .news__divider {
+  border: none !important;
+  height: 1px !important;
+  background-color: var(--color-neutral-200) !important;
+  margin: var(--spacing-1) 0 !important;
+  opacity: 0.6 !important;
+}
+
+/* ãƒ¡ã‚¿æƒ…å ±è¡Œï¼ˆæ—¥ä»˜ã¨ãƒãƒƒã‚¸ã®æ¨ªä¸¦ã³ï¼‰ */
+.news .news__meta-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--spacing-3) !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+  min-width: 160px !important;
+}
+
+/* æ—¥ä»˜ã‚¨ãƒªã‚¢ */
+.news .news__date {
+  flex-shrink: 0 !important;
+}
+
+.news .news__date time {
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-medium) !important;
+  color: var(--color-neutral-600) !important;
+  white-space: nowrap !important;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* ãƒãƒƒã‚¸ã‚¨ãƒªã‚¢ */
+.news .news__badge {
+  flex-shrink: 0 !important;
+}
+
+.news .news__badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: var(--spacing-1) var(--spacing-2) !important;
+  font-size: var(--font-size-xs) !important;
+  font-weight: var(--font-weight-medium) !important;
+  border-radius: var(--radius-full) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  white-space: nowrap !important;
+}
+
+.news .news__badge--important {
+  background-color: var(--color-error) !important;
+  color: var(--color-neutral-white) !important;
+}
+
+.news .news__badge--notice {
+  background-color: var(--color-accent-100) !important;
+  color: var(--color-accent-800) !important;
+}
+
+.news .news__badge--update {
+  background-color: var(--color-primary-100) !important;
+  color: var(--color-primary-800) !important;
+}
+
+.news .news__badge--event {
+  background-color: var(--color-info) !important;
+  color: var(--color-neutral-white) !important;
+}
+
+.news .news__badge--recruitment {
+  background-color: var(--color-secondary-100) !important;
+  color: var(--color-secondary-800) !important;
+}
+
+.news .news__badge--corporate {
+  background-color: var(--color-secondary-100) !important;
+  color: var(--color-secondary-800) !important;
+}
+
+/* ã‚³ãƒ³ãƒ†ãƒ³ãƒ„ã‚¨ãƒªã‚¢ */
+.news .news__content {
+  /* ç‰¹åˆ¥ãªã‚¹ã‚¿ã‚¤ãƒ«ã¯ä¸è¦ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ–ãƒ­ãƒƒã‚¯è¡¨ç¤º */
+}
+
+/* ã‚¿ã‚¤ãƒˆãƒ« */
+.news .news__title {
+  margin: 0 !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  line-height: var(--line-height-tight) !important;
+  flex: 1 !important;
+}
+
+.news .news__link {
+  color: var(--color-neutral-900) !important;
+  text-decoration: none !important;
+  transition: color var(--transition-fast) !important;
+  border-bottom: 1px solid var(--color-neutral-600);
+  line-height: var(--line-height-normal);
+}
+
+.news .news__link:hover {
+  color: var(--color-primary-600) !important;
+}
+
+.news .news__link:focus {
+  outline: 2px solid var(--color-primary-500) !important;
+  outline-offset: 2px !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* .news__excerpt は削除されました */
+
+/* ãƒ•ãƒƒã‚¿ãƒ¼ */
+.news .news__footer {
+  text-align: right !important;
+  margin-top: var(--spacing-2) !important;
+}
+
+.news .news__footer .link-text {
+  color: var(--color-neutral-900) !important;
+  text-decoration: underline !important;
+  text-decoration-color: var(--color-neutral-400) !important;
+  text-underline-offset: 2px !important;
+  font-size: var(--font-size-sm) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: var(--spacing-1) !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.news .news__footer .link-text:hover {
+  color: var(--color-primary-600) !important;
+  text-decoration-color: var(--color-primary-600) !important;
+}
+
+.news .news__footer .link-text::after {
+  content: '>' !important;
+  transition: transform var(--transition-fast) !important;
+}
+
+.news .news__footer .link-text:hover::after {
+  transform: translateX(2px) !important;
+}
+
+/* WordPresså¯¾å¿œã‚¯ãƒ©ã‚¹ */
+.news__item.wp-post {
+  /* WordPressæŠ•ç¨¿ç”¨ã®è¿½åŠ ã‚¹ã‚¿ã‚¤ãƒ« */
+}
+
+.news__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+}
+
+.news__author {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+}
+
+.news__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.news__category-link {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-600);
+  text-decoration: none;
+  padding: var(--spacing-1) var(--spacing-2);
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.news__category-link:hover {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+/* ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–å¯¾å¿œ */
+@media (max-width: 1024px) {
+  .news .news__item {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--spacing-2) !important;
+  }
+  
+  .news .news__meta-row {
+    min-width: auto !important;
+  }
+  
+  .news .news__title {
+    flex: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .news .news__meta-row {
+    /* æ¨ªä¸¦ã³ã‚’ç¶­æŒã€gapã®ã¿èª¿æ•´ */
+    gap: var(--spacing-2) !important;
+  }
+  
+  .news .news__date {
+    text-align: left !important;
+  }
+  
+  .news .news__badge {
+    flex-shrink: 1 !important;
+  }
+  
+  /* .news .news__footer {
+    text-align: center !important;
+  } */
+}
+
+@media (max-width: 480px) {
+  .news .news__date time {
+    font-size: var(--font-size-xs) !important;
+  }
+  
+  .news .news__title {
+    font-size: var(--font-size-sm) !important;
+  }
+  
+  /* .news__excerpt は削除されました */
+  
+  .news .news__meta-row {
+    /* ã‚¹ãƒžãƒ›ã§ã‚‚æ¨ªä¸¦ã³ã‚’ç¶­æŒã€gapã‚’æœ€å°ã« */
+    gap: var(--spacing-1) !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .news .news__badge {
+    font-size: var(--font-size-xs) !important;
+    padding: var(--spacing-1) !important;
+    min-width: fit-content !important;
+  }
+  
+  /* æ—¥ä»˜ã¨ãƒãƒƒã‚¸ãŒæŠ˜ã‚Šè¿”ã•ã‚Œã¦ã‚‚è¦‹ã‚„ã™ãã™ã‚‹ */
+  .news .news__date {
+    min-width: fit-content !important;
+  }
+}
+
+/* ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ */
+@keyframes news-item-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news__item {
+  animation: news-item-fade-in 0.6s ease-out;
+}
+
+.news__item:nth-child(1) { animation-delay: 0.1s; }
+.news__item:nth-child(2) { animation-delay: 0.2s; }
+.news__item:nth-child(3) { animation-delay: 0.3s; }
+.news__item:nth-child(4) { animation-delay: 0.4s; }
+.news__item:nth-child(5) { animation-delay: 0.5s; }
+
+/* ãƒ—ãƒªãƒ³ãƒˆç”¨ã‚¹ã‚¿ã‚¤ãƒ« */
+@media print {
+  .news__item {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--color-neutral-300);
+  }
+  
+  .news__item:hover {
+    transform: none;
+  }
+  
+  .news__badge {
+    background-color: var(--color-neutral-100) !important;
+    color: var(--color-neutral-800) !important;
+  }
+}
+

@@ -1,0 +1,301 @@
+{
+  "name": "Content Marketing Layout",
+  "description": "コンテンツマーケティング用レイアウト定義",
+  "version": "1.0.0",
+  
+  "articleLayout": {
+    "singlePost": {
+      "name": "記事ページレイアウト",
+      "structure": {
+        "header": "サイトヘッダー",
+        "breadcrumb": "パンくずリスト",
+        "articleHeader": "記事ヘッダー",
+        "articleContent": "記事本文",
+        "authorBio": "著者情報",
+        "relatedArticles": "関連記事",
+        "socialShare": "ソーシャルシェア",
+        "footer": "サイトフッター"
+      },
+      "responsive": {
+        "mobile": {
+          "layout": "single-column",
+          "maxWidth": "100%",
+          "padding": "16px"
+        },
+        "tablet": {
+          "layout": "main-sidebar",
+          "maxWidth": "100%",
+          "padding": "24px"
+        },
+        "desktop": {
+          "layout": "main-sidebar",
+          "maxWidth": "1200px",
+          "padding": "32px"
+        }
+      }
+    },
+    
+    "articleList": {
+      "name": "記事一覧レイアウト",
+      "structure": {
+        "header": "サイトヘッダー",
+        "pageTitle": "ページタイトル",
+        "filterSearch": "フィルタ・検索",
+        "articleGrid": "記事グリッド",
+        "pagination": "ページネーション",
+        "footer": "サイトフッター"
+      },
+      "responsive": {
+        "mobile": {
+          "columns": 1,
+          "gap": "16px"
+        },
+        "tablet": {
+          "columns": 2,
+          "gap": "24px"
+        },
+        "desktop": {
+          "columns": 3,
+          "gap": "32px"
+        }
+      }
+    }
+  },
+  
+  "contentElements": {
+    "articleHeader": {
+      "name": "記事ヘッダー",
+      "elements": [
+        "breadcrumb",
+        "title",
+        "metaInfo",
+        "featuredImage"
+      ],
+      "spacing": {
+        "mobile": {
+          "paddingTop": "32px",
+          "paddingBottom": "24px"
+        },
+        "tablet": {
+          "paddingTop": "48px",
+          "paddingBottom": "32px"
+        },
+        "desktop": {
+          "paddingTop": "64px",
+          "paddingBottom": "40px"
+        }
+      }
+    },
+    
+    "articleContent": {
+      "name": "記事本文",
+      "elements": [
+        "headings",
+        "paragraphs",
+        "lists",
+        "quotes",
+        "images",
+        "codeBlocks"
+      ],
+      "typography": {
+        "maxWidth": "65ch",
+        "lineHeight": "1.7",
+        "fontSize": {
+          "mobile": "16px",
+          "tablet": "18px",
+          "desktop": "20px"
+        }
+      }
+    },
+    
+    "authorBio": {
+      "name": "著者情報",
+      "elements": [
+        "avatar",
+        "name",
+        "title",
+        "bio",
+        "socialLinks"
+      ],
+      "layout": {
+        "mobile": "stacked",
+        "tablet": "side-by-side",
+        "desktop": "side-by-side"
+      }
+    },
+    
+    "relatedArticles": {
+      "name": "関連記事",
+      "elements": [
+        "sectionTitle",
+        "articleCards"
+      ],
+      "layout": {
+        "mobile": "single-column",
+        "tablet": "two-columns",
+        "desktop": "three-columns"
+      }
+    },
+    
+    "socialShare": {
+      "name": "ソーシャルシェア",
+      "platforms": [
+        "twitter",
+        "facebook",
+        "linkedin",
+        "hatena"
+      ],
+      "layout": {
+        "mobile": "horizontal",
+        "tablet": "vertical",
+        "desktop": "vertical"
+      }
+    }
+  },
+  
+  "articleCard": {
+    "variants": {
+      "featured": {
+        "name": "注目記事カード",
+        "size": "large",
+        "elements": [
+          "featuredImage",
+          "title",
+          "excerpt",
+          "metaInfo",
+          "readMoreButton"
+        ]
+      },
+      "standard": {
+        "name": "標準記事カード",
+        "size": "medium",
+        "elements": [
+          "featuredImage",
+          "title",
+          "excerpt",
+          "metaInfo",
+          "readMoreButton"
+        ]
+      },
+      "compact": {
+        "name": "コンパクト記事カード",
+        "size": "small",
+        "elements": [
+          "featuredImage",
+          "title",
+          "metaInfo"
+        ]
+      }
+    },
+    
+    "spacing": {
+      "featured": {
+        "padding": "24px",
+        "margin": "16px"
+      },
+      "standard": {
+        "padding": "20px",
+        "margin": "12px"
+      },
+      "compact": {
+        "padding": "16px",
+        "margin": "8px"
+      }
+    }
+  },
+  
+  "navigation": {
+    "categoryNav": {
+      "name": "カテゴリナビゲーション",
+      "variants": {
+        "horizontal": "水平ナビゲーション",
+        "vertical": "垂直ナビゲーション",
+        "dropdown": "ドロップダウンナビゲーション"
+      }
+    },
+    
+    "tagCloud": {
+      "name": "タグクラウド",
+      "variants": {
+        "standard": "標準タグクラウド",
+        "compact": "コンパクトタグクラウド"
+      }
+    },
+    
+    "pagination": {
+      "name": "ページネーション",
+      "elements": [
+        "previousButton",
+        "pageNumbers",
+        "nextButton"
+      ]
+    }
+  },
+  
+  "searchFilter": {
+    "searchBox": {
+      "name": "検索ボックス",
+      "features": [
+        "autocomplete",
+        "suggestions",
+        "recentSearches"
+      ]
+    },
+    
+    "filterOptions": {
+      "name": "フィルタオプション",
+      "options": [
+        "category",
+        "date",
+        "author",
+        "tags"
+      ]
+    }
+  },
+  
+  "seoElements": {
+    "structuredData": {
+      "article": "記事の構造化データ",
+      "author": "著者情報の構造化データ",
+      "organization": "組織情報の構造化データ",
+      "breadcrumbList": "パンくずリストの構造化データ"
+    },
+    
+    "metaTags": {
+      "title": "最適化されたタイトルタグ",
+      "description": "魅力的なメタディスクリプション",
+      "keywords": "適切なキーワード設定",
+      "canonical": "正規URLの設定"
+    }
+  },
+  
+  "socialSharing": {
+    "ogp": {
+      "title": "OGPタイトル",
+      "description": "OGPディスクリプション",
+      "image": "OGP画像",
+      "url": "OGP URL"
+    },
+    
+    "twitterCards": {
+      "card": "summary_large_image",
+      "title": "Twitter Cardタイトル",
+      "description": "Twitter Cardディスクリプション",
+      "image": "Twitter Card画像"
+    }
+  },
+  
+  "performance": {
+    "imageOptimization": {
+      "lazyLoading": true,
+      "webpSupport": true,
+      "responsiveImages": true
+    },
+    
+    "caching": {
+      "articleCache": true,
+      "relatedArticlesCache": true,
+      "metaDataCache": true
+    }
+  }
+}

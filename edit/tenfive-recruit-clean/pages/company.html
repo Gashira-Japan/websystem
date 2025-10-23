@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブの代表メッセージ、企業理念についてご紹介します。私たちが目指す未来と、その実現に向けた取り組みをご覧ください。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../css/news-system.css">
+    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/company-overview.css">
+    
+    <!-- ナビゲーションリンクの強制リセット -->
+    <style>
+        .header .nav__link,
+        .header .nav__link:hover,
+        .header .nav__link:focus,
+        .header .nav__link:active,
+        .header .nav__link:visited {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-color: transparent !important;
+        }
+        
+        .header .nav__link::after,
+        .header .nav__link::before {
+            display: none !important;
+            content: none !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク -->
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a href="./" class="breadcrumb__link">会社紹介</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    会社概要
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--subpage hero--company" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">会社概要</h1>
+                    <p class="hero__subtitle">Company Overview</p>
+                    <p class="hero__description">テンファイブの代表メッセージ、企業理念についてご紹介します。私たちが目指す未来と、その実現に向けた取り組みをご覧ください。</p>
+                </div>
+                
+                <!-- デジタル調のアクセント要素 -->
+                <div class="hero__accent"></div>
+            </div>
+        </section>
+
+        <!-- About TenFiveセクション -->
+        <section class="about-section" data-section="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="about-title">About TenFive</h2>
+                        <div class="about-tagline">
+                            <span class="about-tagline__main">Tech × Wealth × Well-being</span>
+                            <p class="about-tagline__sub">より良い社会と未来の豊かさをデザインする。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="../assets/images/company-overview.jpg" alt="テンファイブのオフィス" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代表挨拶セクション -->
+        <section class="ceo-message" data-section="ceo-message">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">代表挨拶</h2>
+                    <p class="section__subtitle">CEO Message</p>
+                </div>
+                
+                <div class="message-content">
+                    <div class="message-text">
+                        <p class="message-paragraph">
+                            「豊かさとは何か」という根源的な問いから始まり、テクノロジーの進化が社会を前進させてきた歴史に触れ、
+                            「Wealth」と「Well-being」の接続に目的を置いている。
+                        </p>
+                        <p class="message-paragraph">
+                            私たちテンファイブは、テクノロジーの力を活用して、より良い社会と未来の豊かさをデザインすることを使命としています。
+                            単なる技術提供ではなく、人々の生活を豊かにし、社会の課題を解決するソリューションを創造していきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 企業理念セクション -->
+        <section class="company-philosophy" data-section="philosophy">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">企業理念</h2>
+                    <p class="section__subtitle">Company Philosophy</p>
+                </div>
+                
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__content">
+                            <h3 class="philosophy-card__title">Mission</h3>
+                            <p class="philosophy-card__description">
+                                テクノロジーで富を再設計し、幸せの循環を創る。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__content">
+                            <h3 class="philosophy-card__title">Vision</h3>
+                            <p class="philosophy-card__description">
+                                WealthとWell-beingが調和する社会の実現
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-card__content">
+                            <h3 class="philosophy-card__title">Values</h3>
+                            <ul class="philosophy-card__list">
+                                <li>1. 問いを持ち続ける力</li>
+                                <li>2. しくみでつなぐ誠実さ</li>
+                                <li>3. 豊かさの再定義に挑む</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会社概要セクション -->
+        <section class="company-details" data-section="details">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">会社概要</h2>
+                    <p class="section__subtitle">Company Details</p>
+                </div>
+                
+                <div class="details-table">
+                    <table class="company-table">
+                        <tbody>
+                            <tr>
+                                <th class="company-table__label">会社名</th>
+                                <td class="company-table__value">テンファイブ株式会社</td>
+                            </tr>
+                            <tr>
+                                <th class="company-table__label">代表者</th>
+                                <td class="company-table__value">山城 祐也</td>
+                            </tr>
+                            <tr>
+                                <th class="company-table__label">設立日</th>
+                                <td class="company-table__value">2009年1月8日</td>
+                            </tr>
+                            <tr>
+                                <th class="company-table__label">所在地</th>
+                                <td class="company-table__value">東京都渋谷区神宮前2-13-9 BIRTH神宮前2F(202)</td>
+                            </tr>
+                            <tr>
+                                <th class="company-table__label">事業内容</th>
+                                <td class="company-table__value">システム開発支援、IT課題解決支援、ブランド向上支援</td>
+                            </tr>
+                            <tr>
+                                <th class="company-table__label">主要取引先</th>
+                                <td class="company-table__value">TISインテックグループ / 株式会社東京スター銀行 / 株式会社ミンカブ・ジ・インフォノイド / etc.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- メンバー紹介セクション -->
+        <section class="members-intro" data-section="members">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">メンバー紹介</h2>
+                    <p class="section__subtitle">Our Members</p>
+                </div>
+                
+                <div class="members-grid">
+                    <div class="member-card">
+                        <div class="member-card__image">
+                            <img src="../assets/images/ceo-yamashiro.jpg" alt="代表取締役社長 山城 祐也" class="member-card__img">
+                        </div>
+                        <div class="member-card__content">
+                            <h3 class="member-card__name">代表取締役社長</h3>
+                            <p class="member-card__title">山城 祐也</p>
+                            <p class="member-card__subtitle">(Yuya Yamashiro)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="member-card">
+                        <div class="member-card__image">
+                            <img src="../assets/images/kudo-gaku.jpg" alt="CTO 工藤 岳" class="member-card__img">
+                        </div>
+                        <div class="member-card__content">
+                            <h3 class="member-card__name">CTO</h3>
+                            <p class="member-card__title">工藤 岳</p>
+                            <p class="member-card__subtitle">(Gaku Kudo)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 一緒に未来を創造セクション -->
+        <section class="join-us" data-section="join-us">
+            <div class="container">
+                <div class="join-content">
+                    <h2 class="join-title">一緒に未来を創造しませんか？</h2>
+                    <p class="join-description">
+                        AI時代の新しい働き方を実践し、価値ある事業を創造できる人材を募集しています。
+                    </p>
+                    <div class="join-buttons">
+                        <a href="./new-grad/" class="btn btn--primary btn--large">新卒採用</a>
+                        <a href="./mid-career/" class="btn btn--secondary btn--large">キャリア採用</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* ========================================
+   テンファイブコーポレートサイト - ケーススタディセクション
+   ======================================== */
+
+/* ケーススタディセクションの詳細スタイル */
+.case-studies {
+  position: relative;
+}
+
+/* .case-studies::before の線は削除 */
+
+.case-study {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+.case-study::after {
+  content: '';
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2364748b" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>') no-repeat center;
+  background-size: contain;
+  opacity: 0.3;
+  transition: all var(--transition-normal);
+}
+
+.case-study:hover::after {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+.case-study__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.case-study__date {
+  background: linear-gradient(135deg, var(--color-accent-500), var(--color-accent-600));
+  color: white;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+}
+
+.case-study__title {
+  position: relative;
+  padding-right: var(--spacing-2xl);
+}
+
+.case-study__description {
+  position: relative;
+  z-index: 1;
+}
+
+.case-study__tags {
+  position: relative;
+  z-index: 1;
+}
+
+/* プロジェクトタイプ別のタグスタイル */
+.case-study__tag {
+  transition: all var(--transition-fast);
+}
+
+.case-study__tag:nth-child(1) {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+  border-color: var(--color-primary-200);
+}
+
+.case-study__tag:nth-child(2) {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-800);
+  border-color: var(--color-accent-200);
+}
+
+.case-study__tag:nth-child(3) {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+  border-color: var(--color-secondary-200);
+}
+
+.case-study:hover .case-study__tag {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ケーススタディの詳細表示用のモーダルスタイル（将来の拡張用） */
+.case-study-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.case-study-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.case-study-modal__content {
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-3xl);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: scale(0.9);
+  transition: transform var(--transition-normal);
+}
+
+.case-study-modal.is-open .case-study-modal__content {
+  transform: scale(1);
+}
+
+.case-study-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xl);
+}
+
+.case-study-modal__close {
+  background: none;
+  border: none;
+  font-size: var(--font-size-xl);
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.case-study-modal__close:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+/* アニメーション効果 */
+@keyframes case-study-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-study {
+  animation: case-study-fade-in 0.6s ease-out;
+}
+
+.case-study:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.case-study:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.case-study:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 767px) {
+  .case-study__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .case-study__title {
+    padding-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .case-study::after {
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* プリント用スタイル */
+@media print {
+  .case-study {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--color-neutral-300);
+  }
+  
+  .case-study:hover {
+    transform: none;
+  }
+  
+  .case-study::before,
+  .case-study::after {
+    display: none;
+  }
+}

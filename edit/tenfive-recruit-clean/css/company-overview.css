@@ -1,0 +1,422 @@
+/* ========================================
+   会社概要ページ - 専用スタイル
+   ======================================== */
+
+/* About TenFiveセクション */
+.about-section {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-6);
+}
+
+.about-tagline__main {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.about-tagline__sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-md);
+}
+
+/* 代表挨拶セクション */
+.ceo-message {
+  padding: var(--spacing-16) 0;
+}
+
+.message-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message-text {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+}
+
+.message-paragraph {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-6);
+}
+
+.message-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* 企業理念セクション */
+.company-philosophy {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  text-align: center;
+}
+
+.philosophy-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.philosophy-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.philosophy-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.philosophy-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.philosophy-card__list li {
+  padding: var(--spacing-2) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+}
+
+/* 会社概要セクション */
+.company-details {
+  padding: var(--spacing-16) 0;
+}
+
+.details-table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--elevation-md);
+}
+
+.company-table__label {
+  background: var(--color-primary-50);
+  padding: var(--spacing-6);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-900);
+  text-align: left;
+  width: 200px;
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.company-table__value {
+  padding: var(--spacing-6);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.company-table tr:last-child .company-table__label,
+.company-table tr:last-child .company-table__value {
+  border-bottom: none;
+}
+
+/* メンバー紹介セクション */
+.members-intro {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  text-align: center;
+}
+
+.member-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.member-card__image {
+  margin-bottom: var(--spacing-6);
+}
+
+.member-card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  box-shadow: var(--elevation-sm);
+}
+
+.member-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.member-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-1);
+}
+
+.member-card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin: 0;
+}
+
+/* 一緒に未来を創造セクション */
+.join-us {
+  padding: var(--spacing-16) 0;
+  background: var(--color-primary-50);
+}
+
+.join-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.join-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.join-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-8);
+}
+
+.join-buttons {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.philosophy-card {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.philosophy-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.philosophy-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.member-card {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.member-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.join-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .about-tagline__main {
+    font-size: var(--font-size-xl);
+  }
+  
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .company-table__label {
+    width: 150px;
+    padding: var(--spacing-4);
+  }
+  
+  .company-table__value {
+    padding: var(--spacing-4);
+  }
+  
+  .join-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .join-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .about-tagline__main {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about-tagline__sub {
+    font-size: var(--font-size-base);
+  }
+  
+  .message-text {
+    padding: var(--spacing-6);
+  }
+  
+  .message-paragraph {
+    font-size: var(--font-size-base);
+  }
+  
+  .philosophy-card {
+    padding: var(--spacing-6);
+  }
+  
+  .member-card {
+    padding: var(--spacing-6);
+  }
+  
+  .member-card__img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .company-table__label {
+    width: 120px;
+    padding: var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .company-table__value {
+    padding: var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .join-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .join-description {
+    font-size: var(--font-size-base);
+  }
+}
