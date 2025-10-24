@@ -1,0 +1,35 @@
+/* 
+ * ナビゲーションリンクのアンダーラインリセット
+ * ブラウザのデフォルトスタイルとの競合を防ぐ
+ */
+
+/* ナビゲーションリンクの基本的なリセット */
+.header .nav__link {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+}
+
+/* ナビゲーションリンクの状態別リセット */
+.header .nav__link:hover,
+.header .nav__link:focus,
+.header .nav__link:active,
+.header .nav__link:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  text-decoration-line: none !important;
+  text-decoration-style: none !important;
+  text-decoration-color: transparent !important;
+}
+
+/* 疑似要素のリセット（根本的な解決） */
+.header .nav__link::after,
+.header .nav__link::before {
+  display: none !important;
+  content: none !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+

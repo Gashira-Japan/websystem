@@ -1,0 +1,120 @@
+{
+  "name": "Recruitment Theme",
+  "description": "採用サイト用カラーテーマ",
+  "version": "1.0.0",
+  "extends": "base-colors.json",
+  
+  "colors": {
+    "primary": {
+      "50": {
+        "value": "#F0FDF4",
+        "description": "プライマリ50"
+      },
+      "100": {
+        "value": "#DCFCE7",
+        "description": "プライマリ100"
+      },
+      "200": {
+        "value": "#BBF7D0",
+        "description": "プライマリ200"
+      },
+      "300": {
+        "value": "#86EFAC",
+        "description": "プライマリ300"
+      },
+      "400": {
+        "value": "#4ADE80",
+        "description": "プライマリ400"
+      },
+      "500": {
+        "value": "#22C55E",
+        "description": "プライマリ500（メイン）"
+      },
+      "600": {
+        "value": "#16A34A",
+        "description": "プライマリ600"
+      },
+      "700": {
+        "value": "#15803D",
+        "description": "プライマリ700"
+      },
+      "800": {
+        "value": "#166534",
+        "description": "プライマリ800"
+      },
+      "900": {
+        "value": "#14532D",
+        "description": "プライマリ900"
+      }
+    },
+    
+    "secondary": {
+      "50": {
+        "value": "#FEF7FF",
+        "description": "セカンダリ50"
+      },
+      "100": {
+        "value": "#FCE7FF",
+        "description": "セカンダリ100"
+      },
+      "200": {
+        "value": "#F8D4FE",
+        "description": "セカンダリ200"
+      },
+      "300": {
+        "value": "#F2B5FC",
+        "description": "セカンダリ300"
+      },
+      "400": {
+        "value": "#E879F9",
+        "description": "セカンダリ400"
+      },
+      "500": {
+        "value": "#D946EF",
+        "description": "セカンダリ500（メイン）"
+      },
+      "600": {
+        "value": "#C026D3",
+        "description": "セカンダリ600"
+      },
+      "700": {
+        "value": "#A21CAF",
+        "description": "セカンダリ700"
+      },
+      "800": {
+        "value": "#86198F",
+        "description": "セカンダリ800"
+      },
+      "900": {
+        "value": "#701A75",
+        "description": "セカンダリ900"
+      }
+    }
+  },
+  
+  "brand": {
+    "recruitment": {
+      "primary": "#22C55E",
+      "secondary": "#D946EF",
+      "accent": "#F59E0B"
+    }
+  },
+  
+  "usage": {
+    "primary": "採用関連のCTA、重要な要素に使用",
+    "secondary": "補助的な情報、装飾要素に使用",
+    "brand": "採用ブランドの表現に使用"
+  },
+  
+  "accessibility": {
+    "contrast": {
+      "primary-500": "AA準拠（4.5:1以上）",
+      "primary-600": "AAA準拠（7:1以上）"
+    }
+  },
+  
+  "psychology": {
+    "green": "成長、可能性、新しいスタートを表現",
+    "purple": "創造性、革新性、個性を表現"
+  }
+}

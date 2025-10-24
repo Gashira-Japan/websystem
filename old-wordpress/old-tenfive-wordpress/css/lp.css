@@ -1,0 +1,765 @@
+section, .section {
+  padding: 60px 0 0 0;
+}
+p:not([class]) + p:not([class]) {
+  margin-top: 0.5em;
+}
+
+
+.first-view {
+  display: flex;
+  align-items: start; /* 上揃えに変更 */
+  justify-content: space-between;
+}
+section.first-view {
+  height: 100vh;
+  background-size: cover;
+}
+.first-view {
+  display: flex;
+  justify-content: space-between;
+  position: relative; /* 子要素の絶対位置の基準となる */
+}
+
+/* 統合された左側と中央のセクションのスタイリング */
+.left-and-center-section {
+  width: 65%;
+  /* 以前の装飾スタイルを反映 */
+}
+.text-content {
+  padding: 50px 20px;
+}
+/* テキストコンテンツの装飾スタイル */
+.text-content .future-erp {
+  /* 以前の装飾スタイルを反映 */
+}
+
+.text-content .core-system-solution {
+  /* 以前の装飾スタイルを反映 */
+}
+
+/* テキストのリボンカット装飾 */
+
+
+/* 画像コンテンツのスタイリング */
+/* .image-content {
+  position: absolute;
+  bottom: 0;
+  right: 35%; 
+  max-width: 48%;
+} */
+.image-content {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  max-width: 35%;
+}
+
+/* 右側のコンタクトフォームセクションのスタイリング */
+.right-section {
+  width: 35%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.ribbon-cut-text {
+  position: relative;
+  padding: 8px 0;
+}
+
+.ribbon-content {
+  background-color: #1B224C;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  display: inline-block;
+  padding: 0 10rem 0 3rem;
+  position: relative;
+  font-size: 2.5rem;
+}
+.future-erp {
+  font-size: 1.5em; /* フォントサイズを大きくする */
+  font-weight: bold; /* フォントを太くする */
+  /* その他のスタイルをここに追加 */
+}
+
+.core-system-solution {
+  font-size: 3.5em;
+  font-weight: bold;
+  width: 80%;
+  z-index: 1;
+  position: relative;
+  line-height: 7rem;
+}
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .first-view {
+    flex-direction: column;
+  }
+  section.first-view {
+    height: auto;
+    background-size: cover;
+    padding: 0;
+}
+.section-heading-japanese {
+  font-size: 1.2em;
+
+}
+  .left-and-center-section,
+  .right-section {
+    width: 100%;
+  }
+
+
+  .text-content{
+    z-index: 1;
+    position: relative;
+  }
+  .image-content {
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    right: 0;
+    max-width: 100%;
+  }
+  .core-system-solution {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
+    color: black; /* Black text for better visibility against a light background */
+}
+
+  .ribbon-cut-text {
+    clip-path: none; /* リボンカットスタイルを解除 */
+  }
+  .core-system-solution {
+    font-size: 2.5em;
+    font-weight: bold;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+.ribbon-content {
+    background-color: #1B224C;
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    display: inline-block;
+    padding: 0 6rem 0 1rem;
+    position: relative;
+    font-size: 2rem;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1193.9px){
+.header-nav {
+    width: 85%;
+}
+}
+
+.header-inner {
+  height: 64px;
+  color: black;
+}
+/* Contact FV */
+/* エラー時 */
+.screen-reader-response {
+  display: none;
+}
+.wpcf7-not-valid-tip{
+  color: red;
+}
+/* Contact Form 7のスタイリング */
+.wpcf7 {
+  font-weight: bold; /* 全体の文字を太字にする */
+}
+p.contact-title {
+  text-align: center;
+  font-size: 28px;
+  color: #1B224C;
+}
+
+/* 入力フィールドとテキストエリアの背景色を白に設定 */
+.wpcf7-form-control {
+  background-color: #fff; /* 背景色を白に設定 */
+}
+
+/* チェックボックスの背景色を透明に設定 */
+span.wpcf7-form-control.wpcf7-checkbox {
+  background-color: transparent;
+}
+/* 各フォーム項目のマージン設定 */
+.wpcf7-form p {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* 送信ボタンのスタイリング */
+.wpcf7-submit {
+  background-color: #F53C3C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wpcf7-submit:hover {
+  background-color: #E63232;
+}
+
+/* プライバシーポリシー同意文のスタイリング */
+.wpcf7-acceptance {
+  font-size: 0.8em;
+}
+
+/* プライバシーポリシー同意文のリンクスタイリング */
+.wpcf7-acceptance a {
+  color: #F53C3C;
+  text-decoration: underline;
+}
+
+/* 姓名のフィールドを横並びに表示するためのスタイル */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 半分の幅を持つフィールドのスタイリング */
+.half-width {
+  width: 48%;
+  text-align: center;
+}
+
+/* プライバシーポリシーのチェックボックスとリンクのスタイリング */
+.wpcf7-acceptance {
+  font-size: 0.9em;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .half-width {
+    width: 100%;
+  }
+  
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 課題
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.problem-section .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-heading-japanese {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.section-heading-english {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.problems-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.problem-item {
+  width: calc(25% - 20px); /* PCで4列 */
+  margin-bottom: 20px;
+}
+
+.problem-item img {
+  border-radius: 50%; /* 画像を円形に */
+  width: 200px; /* 画像の幅を指定 */
+  height: 200px; /* 画像の高さを指定 */
+  object-fit: cover; /* 画像が枠に収まるように */
+}
+
+.problem-item p {
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* スマホとタブレットでのスタイル */
+@media (max-width: 768px) {
+  .problem-item {
+    width: calc(50% - 20px); /* スマホとタブレットで2列 */
+  }
+}
+.efficiency-section {
+  background-color: #1B224C; /* 背景色を設定 */
+  color: white; /* 文字色を白に設定 */
+  text-align: center; /* 中央文字寄せ */
+  padding: 20px 0; /* 上下にパディングを設定 */
+}
+
+.efficiency-section .inner {
+  max-width: 1200px; /* 最大幅を設定 */
+  margin: 0 auto; /* 中央寄せ */
+}
+
+.efficiency-heading {
+  margin: 0; /* マージンをリセット */
+  padding: 10px 0; /* 上下にパディングを設定 */
+  font-size: 1.5em; /* フォントサイズを大きくする */
+}
+
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- CTA セクション
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.cta-section {
+  background-size: cover;
+  background-position: center;
+  text-align: center; /* 見出しとボタンを中央寄せ */
+  height: 250px;
+  position: relative; /* 画像の絶対位置指定の基点となる */
+}
+
+.cta-section .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cta-heading {
+  color: #1B224C; /* 見出しの文字色を白に */
+  margin-bottom: 20px; /* ボタンとの間隔 */
+  font-size: 1.5em; /* 見出しのフォントサイズ */
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: #C43939; /* ボタンの背景色 */
+  color: white; /* ボタンの文字色 */
+  padding: 10px 30px; /* ボタンの内側の余白 */
+  border-radius: 5px; /* ボタンの角を丸める */
+  text-decoration: none; /* テキストの下線を除去 */
+  display: inline-block; /* インラインブロック要素として表示 */
+  margin-bottom: 20px; /* 画像との間隔 */
+}
+
+.cta-button:hover {
+  background-color: #AA3330; /* ホバー時のボタンの背景色を変更 */
+}
+
+.cta-image {
+  position: absolute;
+  right: 0;
+  bottom: -70px;
+  width: auto;
+	max-width: 260px;
+  height: auto;
+}
+
+.contract-step {
+
+  padding: 12px;
+  margin-bottom: 4px; /* ステップ間のマージン */
+  text-align: center;
+}
+
+.contract-step h3 {
+  font-size: 1.6em;
+  color: #333; /* 見出しの色 */
+  margin-bottom: 5px;
+}
+
+.contract-step p {
+  font-size: 1em;
+  color: #666; /* 説明テキストの色 */
+  margin-bottom: 12px;
+}
+
+.step-arrow {
+  font-size: 2em;
+  color: #333; /* 矢印の色 */
+  text-align: center;
+  margin-bottom: 12px; /* 矢印と次のステップの間のマージン */
+}
+
+@media (max-width: 768px) {
+  .cta-image {
+    position: static; /* スマホでは絶対位置を解除 */
+    /* display: block; */ /* ブロック要素として表示 */
+    /* margin: 20px auto; */ /* 上下のマージンを追加し、左右を中央揃え */
+    width: 50%; /* スマホでの画像の幅を50%に */
+    /* height: auto; */ /* 高さは自動調整 */
+    display: none;
+  }
+
+  .cta-section {
+    padding: 20px; /* スマホでのセクションのパディングを小さく調整 */
+  }
+
+  .cta-heading {
+    font-size: 1.2em; /* スマホでの見出しのフォントサイズを小さく調整 */
+  }
+
+  .cta-button {
+    font-size: 0.9em; /* スマホでのボタンのフォントサイズを小さく調整 */
+    padding: 8px 20px; /* スマホでのボタンのパディングを小さく調整 */
+  }
+  .cta-section {
+    height: 290px;
+
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 特徴
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+.home-service .section-heading {
+	color: inherit;
+}
+
+.home-service .section-description {
+	margin-bottom: 40px;
+}
+
+.home-service-li:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.home-service-li .number {
+	display: block;
+	font-weight: 700;
+	font-size: 2rem;
+	font-family: var(--font-english);
+}
+
+.home-service-li .number::before {
+	display: inline-block;
+	width: 2.6em;
+	margin: 0 0.6em 0.1em 0;
+	border-top: 1px solid;
+	content: "";
+}
+
+.home-service-li .heading {
+	margin-bottom: 1.1em;
+	font-size: 2.6rem;
+}
+form.wpcf7-form.init {
+  background: #FFF;
+  padding: 8px;
+}
+@media (min-width: 768px) {
+.home-service .section-description {
+	margin-bottom: 85px;
+}
+
+.home-service-li {
+	display: flex;
+	align-items: center;
+}
+
+.home-service-li:nth-child(2n) {
+	flex-flow: row-reverse;
+}
+
+.home-service-li:nth-child(2n+1) .text {
+	margin-right: 5%;
+}
+
+.home-service-li:nth-child(2n) .text {
+	margin-left: 5%;
+}
+
+.home-service-li .number {
+	font-size: 2.4rem;
+}
+
+.home-service-li .heading {
+	font-size: 3rem;
+}
+
+.home-service-li .image {
+	width: 47.5%;
+	flex: none;
+}
+form.wpcf7-form.init {
+  background: #FFF;
+  padding: 8px;
+  top: 8px;
+  position: relative;
+  right: 8px;
+}
+}
+
+@media (max-width: 767.9px) {
+.home-service-li .text {
+	margin-bottom: 20px;
+}
+
+.home-service-li .image {
+	display: block;
+	margin: 0 auto;
+}
+}
+
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 連携サービス
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.function-section {
+  padding: 40px 0;
+}
+
+.function-section .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading-english {
+  font-size: 1.2em;
+}
+
+.section-heading-japanese {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.functions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.function-item {
+  width: calc(25% - 20px); /* PCで4列 */
+}
+
+.function-heading {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.function-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* 画像の角を丸くする */
+}
+
+.function-description {
+  font-size: 1em;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* タブレットビュー */
+@media (max-width: 1024px) {
+  .function-item {
+    width: calc(50% - 20px); /* タブレットで2列 */
+  }
+}
+
+/* スマホビュー */
+@media (max-width: 768px) {
+  .function-item {
+    width: 100%; /* スマホでは1列 */
+  }
+}
+
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- クラウド連携サービス
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.cloud-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.cloud-section .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading-english {
+  font-size: 1.2em;
+}
+
+.section-heading-japanese {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+.cloud-services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.cloud-service.six-logo {
+  width: calc(16.66% - 20px); /* PCで6列 */
+  margin-bottom: 20px;
+}
+.cloud-service.three-logo {
+  width: calc(31% - 20px); /* PCで6列 */
+  margin-bottom: 20px;
+}
+
+.cloud-logo {
+  width: 100%; /* ロゴの幅を親要素に合わせる */
+  height: auto; /* 高さは自動調整 */
+  border-radius: 50%; /* 画像を円形に */
+  margin-bottom: 10px;
+}
+
+.cloud-service h3 {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+/* スマートフォンビュー */
+@media (max-width: 768px) {
+  .cloud-service {
+    width: calc(33.33% - 20px); /* スマホで3列 */
+  }
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- よくある質問
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.faq .faq-item {
+  background-color: white; /* 背景色を白に */
+  border-left: 4px solid #5b9bd5; /* 左側にカラーボーダーを追加 */
+  padding: 15px;
+  margin-bottom: 30px; /* 各項目間のマージンを広げる */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウを追加 */
+  border-radius: 5px; /* 角を丸める */
+  transition: all 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.faq .faq-question {
+  color: #1B224C; /* 質問のテキストカラー */
+  margin-bottom: 10px; /* 質問と回答の間隔を調整 */
+  position: relative; /* アイコンを配置するための相対位置 */
+  padding-left: 30px; /* アイコンのスペースを確保 */
+}
+
+.faq .faq-question::before {
+  content: '?'; /* 質問のアイコン */
+  position: absolute; /* 絶対位置 */
+  left: 0; /* 左端 */
+  top: 50%; /* 上から50%の位置 */
+  transform: translateY(-50%); /* Y軸で中央揃え */
+  color: #1B224C; /* アイコンの色 */
+  font-weight: bold; /* アイコンを太字に */
+  font-size: 24px; /* アイコンのサイズ */
+}
+
+.faq .faq-answer {
+  background-color: #f7f7f7; /* 回答の背景色を薄く */
+  padding: 10px;
+  border-radius: 5px; /* 角を丸める */
+}
+
+/* ホバー時のスタイル */
+.faq .faq-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* ホバー時のボックスシャドウを強調 */
+  transform: translateY(-5px); /* 少し持ち上がるエフェクト */
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- メンバー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.post-li .image-outer {
+  overflow: hidden;
+  height: 400px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+section.member-archive.archive {
+  margin-bottom: 20px;
+}
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 会社概要
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.company-overview .inner {
+  max-width: 930px;
+}
+
+.company-overview tr {
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.company-overview tr:first-child {
+  border-top: 1px solid #d5d5d5;
+}
+
+.company-overview th {
+  padding-top: 0.7em;
+}
+
+.company-overview td {
+  padding-bottom: 0.7em;
+}
+
+@media (min-width: 768px) {
+.company-overview table {
+	font-size: 1.8rem;
+}
+
+.company-overview th {
+  width: 150px;
+	padding-bottom: 0.7em;
+}
+
+.company-overview td {
+  padding-top: 0.7em;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- SEOコンテンツ
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.company-overview {
+  background-color: #ffffff; /* 背景色を設定 */
+  padding: 40px 0;
+}
+
+.lp-introduction {
+  margin-bottom: 20px;
+  /* border-left: 5px solid #1B224C; */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lp-introduction h3 {
+  color: #1B224C; /* 見出し（h3）の色を設定 */
+  margin-bottom: 10px; /* 見出しの下のマージン */
+  font-size: 2rem;
+}
+
+.lp-introduction h4 {
+  font-weight: bold; /* 見出し（h4）を太字に */
+  color: #333333; /* 見出し（h4）の色を設定 */
+  margin-top: 20px; /* 見出し（h4）の上のマージン */
+  margin-bottom: 5px; /* 見出し（h4）の下のマージン */
+}
+
+.lp-introduction p {
+  font-size: 1em; /* パラグラフのフォントサイズを設定 */
+  line-height: 1.6; /* 行間を設定 */
+  text-align: justify; /* テキストを両端揃えに */
+  color: #666666; /* テキストの色を設定 */
+}
+@media (max-width: 768px) {
+
+}

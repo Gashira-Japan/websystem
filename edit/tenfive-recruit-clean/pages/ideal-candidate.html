@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求める人物像 - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="AI時代をリードする次世代のプロフェッショナル集団として、私たちのビジョンに共感し、共に未来を創造できる人材を求めています。新卒・中途・共通して求める人物像をご紹介します。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../css/news-system.css">
+    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/ideal-candidate.css">
+    
+    <!-- ナビゲーションリンクの強制リセット -->
+    <style>
+        .header .nav__link,
+        .header .nav__link:hover,
+        .header .nav__link:focus,
+        .header .nav__link:active,
+        .header .nav__link:visited {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-color: transparent !important;
+        }
+        
+        .header .nav__link::after,
+        .header .nav__link::before {
+            display: none !important;
+            content: none !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク -->
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a href="./" class="breadcrumb__link">選考について</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    求める人物像
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--subpage hero--selection" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">求める人物像</h1>
+                    <p class="hero__subtitle">Ideal Candidate</p>
+                    <p class="hero__description">AI時代をリードする次世代のプロフェッショナル集団として、私たちのビジョンに共感し、共に未来を創造できる人材を求めています。</p>
+                </div>
+                
+                <!-- デジタル調のアクセント要素 -->
+                <div class="hero__accent"></div>
+            </div>
+        </section>
+
+        <!-- 採用情報カードセクション -->
+        <section class="recruitment-cards" data-section="recruitment-cards">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">採用情報</h2>
+                    <p class="section__subtitle">Recruitment Information</p>
+                </div>
+                
+                <div class="recruitment-cards__grid">
+                    <div class="recruitment-card">
+                        <div class="recruitment-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                                <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
+                                <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="recruitment-card__content">
+                            <h3 class="recruitment-card__title">新卒採用</h3>
+                            <p class="recruitment-card__description">
+                                新卒の皆様には、テンファイブの価値観を深く理解し、長期的な成長を共に歩んでいただける方を求めています。技術的なスキルよりも、学習意欲と成長マインドセットを重視します。
+                            </p>
+                            <div class="recruitment-card__features">
+                                <span class="feature-tag">未経験歓迎</span>
+                                <span class="feature-tag">成長支援</span>
+                                <span class="feature-tag">メンター制度</span>
+                            </div>
+                        </div>
+                        <div class="recruitment-card__action">
+                            <a href="./new-grad-jobs.html" class="btn btn--primary">詳細を見る</a>
+                        </div>
+                    </div>
+                    
+                    <div class="recruitment-card">
+                        <div class="recruitment-card__icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
+                                <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
+                                <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="recruitment-card__content">
+                            <h3 class="recruitment-card__title">中途採用</h3>
+                            <p class="recruitment-card__description">
+                                経験豊富な皆様には、既存のスキルを活かしながら、テンファイブの新しい挑戦に参加していただける方を求めています。専門性とリーダーシップを発揮できる環境を提供します。
+                            </p>
+                            <div class="recruitment-card__features">
+                                <span class="feature-tag">経験重視</span>
+                                <span class="feature-tag">即戦力</span>
+                                <span class="feature-tag">リーダーシップ</span>
+                            </div>
+                        </div>
+                        <div class="recruitment-card__action">
+                            <a href="./mid-career-jobs.html" class="btn btn--primary">詳細を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 企業理念セクション -->
+        <section class="company-values" data-section="company-values">
+            <div class="container">
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-card__content">
+                            <h3 class="value-card__title">十人十色の価値観を大切に</h3>
+                            <p class="value-card__description">
+                                私たちは、多様な価値観や個性を尊重します。「十人十色」の言葉通り、それぞれの違いを認め合い、新たな価値を創造する力に変えていきます。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-card__content">
+                            <h3 class="value-card__title">中継する存在として</h3>
+                            <p class="value-card__description">
+                                社名「10-5」は、無線用語で「中継」を意味します。私たちは、人と人、技術と社会、現在と未来を「中継」する存在でありたいと考えています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 時代の転換点セクション -->
+        <section class="era-transition" data-section="era-transition">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">時代の転換点における人材戦略</h2>
+                    <p class="section__subtitle">Talent Strategy in the Era of Change</p>
+                </div>
+                
+                <div class="transition-content">
+                    <p class="transition-text">
+                        従来のSES/SIモデルからの脱却を目指し、「大量の人材」ではなく「少数精鋭のプロフェッショナル」を求めています。
+                        AI技術の進歩により、テクノロジーを活用して一人で複数人分の価値を創出できる人材が必要です。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 基本的な求める人材像セクション -->
+        <section class="basic-requirements" data-section="basic-requirements">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">基本的な求める人材像</h2>
+                    <p class="section__subtitle">Basic Requirements</p>
+                </div>
+                
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="requirement-card__content">
+                            <h3 class="requirement-card__title">最新テクノロジー活用人材</h3>
+                            <p class="requirement-card__description">
+                                AI技術を積極的に活用し、業務効率を向上させ、意思決定や戦略立案といった価値創造に集中できる人材。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-card">
+                        <div class="requirement-card__content">
+                            <h3 class="requirement-card__title">コミュニケーション能力</h3>
+                            <p class="requirement-card__description">
+                                エンジニアとしてだけでなく、課題解決のためにクライアント、メンバー、パートナーと協力できるコミュニケーション能力が重要です。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI時代の具体的能力セクション -->
+        <section class="ai-capabilities" data-section="ai-capabilities">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">AI時代に弊社が求める具体的能力</h2>
+                    <p class="section__subtitle">Specific Capabilities in the AI Era</p>
+                </div>
+                
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <div class="capability-card__content">
+                            <h3 class="capability-card__title">意思決定力・戦略思考</h3>
+                            <ul class="capability-card__list">
+                                <li>AIデータに基づいた経営判断</li>
+                                <li>論理的思考力</li>
+                                <li>リスク検知と対応策立案能力</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <div class="capability-card__content">
+                            <h3 class="capability-card__title">AI・機械学習の理解と活用</h3>
+                            <ul class="capability-card__list">
+                                <li>AI技術の基本理解と限界</li>
+                                <li>機械学習モデルの選択と最適化</li>
+                                <li>AIツールの効果的な活用</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <div class="capability-card__content">
+                            <h3 class="capability-card__title">データ分析・解釈能力</h3>
+                            <ul class="capability-card__list">
+                                <li>データからの洞察抽出</li>
+                                <li>統計分析手法の理解と適用</li>
+                                <li>データの可視化による情報伝達能力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "name": "Spacing Scale v2",
+  "description": "実務運用重視のスペーシングスケール - 8pxグリッド主軸、4px補助",
+  "version": "2.0.0",
+  
+  "baseUnit": {
+    "primary": "8px",
+    "secondary": "4px",
+    "description": "Google Material Design準拠、実務で最も安定"
+  },
+  
+  "spacing": {
+    "xs": {
+      "value": "4px",
+      "clamp": "clamp(2px, 0.5vw, 4px)",
+      "description": "最小単位、細かい調整",
+      "usage": "アイコン間隔、微細な調整"
+    },
+    "sm": {
+      "value": "8px",
+      "clamp": "clamp(4px, 1vw, 8px)",
+      "description": "小さい余白、コンポーネント間",
+      "usage": "ボタンマージン、小要素間"
+    },
+    "md": {
+      "value": "16px",
+      "clamp": "clamp(8px, 2vw, 16px)",
+      "description": "標準余白、一般的な要素間",
+      "usage": "カードパディング、標準要素間"
+    },
+    "lg": {
+      "value": "24px",
+      "clamp": "clamp(16px, 3vw, 24px)",
+      "description": "大きい余白、セクション内",
+      "usage": "カードマージン、見出し間"
+    },
+    "xl": {
+      "value": "40px",
+      "clamp": "clamp(24px, 4vw, 40px)",
+      "description": "特大余白、セクション間",
+      "usage": "H1と本文間、大要素間"
+    },
+    "2xl": {
+      "value": "64px",
+      "clamp": "clamp(32px, 6vw, 64px)",
+      "description": "セクション間、大要素間",
+      "usage": "セクション間、見出し同士"
+    },
+    "3xl": {
+      "value": "96px",
+      "clamp": "clamp(48px, 8vw, 96px)",
+      "description": "大セクション間、ページ間",
+      "usage": "ヒーローセクション、大セクション間"
+    }
+  },
+  
+  "semanticRules": {
+    "button": {
+      "padding": "spacing.md",
+      "margin": "spacing.sm",
+      "minHeight": "44px",
+      "description": "ボタンの余白ルール"
+    },
+    "card": {
+      "padding": "spacing.md",
+      "margin": "spacing.lg",
+      "gap": "spacing.md",
+      "description": "カードの余白ルール"
+    },
+    "form": {
+      "fieldGap": "spacing.md",
+      "labelGap": "spacing.sm",
+      "sectionGap": "spacing.lg",
+      "description": "フォームの余白ルール"
+    },
+    "heading": {
+      "h1Gap": "spacing.xl",
+      "h2Gap": "spacing.lg",
+      "h3Gap": "spacing.md",
+      "headingGap": "spacing.2xl",
+      "description": "見出しの余白ルール"
+    },
+    "section": {
+      "sectionGap": "spacing.2xl",
+      "largeSectionGap": "spacing.3xl",
+      "heroPadding": "spacing.3xl",
+      "description": "セクションの余白ルール"
+    }
+  },
+  
+  "exceptions": {
+    "tapTarget": {
+      "minHeight": "44px",
+      "reason": "アクセシビリティ要件",
+      "override": "spacing.md を超える場合あり"
+    },
+    "formField": {
+      "minHeight": "48px",
+      "reason": "フォームの使いやすさ",
+      "override": "spacing.md を超える場合あり"
+    },
+    "iconSpacing": {
+      "value": "4px",
+      "reason": "アイコンの視覚的バランス",
+      "override": "spacing.xs 固定"
+    }
+  },
+  
+  "responsive": {
+    "mobile": {
+      "scale": 0.75,
+      "description": "モバイル用の縮小スケール"
+    },
+    "tablet": {
+      "scale": 1.0,
+      "description": "タブレット用の標準スケール"
+    },
+    "desktop": {
+      "scale": 1.0,
+      "description": "デスクトップ用の標準スケール"
+    },
+    "largeDesktop": {
+      "scale": 1.25,
+      "description": "大型デスクトップ用の拡大スケール"
+    }
+  },
+  
+  "implementation": {
+    "css": "var(--spacing-md)",
+    "tailwind": "p-md",
+    "figma": "spacing.md",
+    "description": "各ツールでの実装方法"
+  },
+  
+  "usage": {
+    "xs": "最小単位、細かい調整、アイコン間隔",
+    "sm": "小さい余白、コンポーネント間、ボタンマージン",
+    "md": "標準余白、一般的な要素間、カードパディング",
+    "lg": "大きい余白、セクション内、カードマージン",
+    "xl": "特大余白、セクション間、H1と本文間",
+    "2xl": "セクション間、大要素間、見出し同士",
+    "3xl": "大セクション間、ページ間、ヒーローセクション"
+  }
+}

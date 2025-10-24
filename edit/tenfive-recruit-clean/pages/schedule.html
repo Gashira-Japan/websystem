@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1週間のスケジュール - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブで働くエンジニアの働き方や業務の流れをイメージしてもらうため、実際の社員の1週間のスケジュールをご紹介します。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../css/news-system.css">
+    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/schedule.css">
+    
+    <!-- ナビゲーションリンクの強制リセット -->
+    <style>
+        .header .nav__link,
+        .header .nav__link:hover,
+        .header .nav__link:focus,
+        .header .nav__link:active,
+        .header .nav__link:visited {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-color: transparent !important;
+        }
+        
+        .header .nav__link::after,
+        .header .nav__link::before {
+            display: none !important;
+            content: none !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク -->
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item">
+                    <a href="./" class="breadcrumb__link">働き方・キャリアパス</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    1週間のスケジュール
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--subpage hero--workstyle" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">1週間のスケジュール</h1>
+                    <p class="hero__subtitle">Weekly Schedule</p>
+                    <p class="hero__description">テンファイブで働くエンジニアの働き方や業務の流れをイメージしてもらうため、実際の社員の1週間のスケジュールをご紹介します。</p>
+                </div>
+                
+                <!-- デジタル調のアクセント要素 -->
+                <div class="hero__accent"></div>
+            </div>
+        </section>
+
+        <!-- 社員紹介セクション -->
+        <section class="staff-intro" data-section="staff-intro">
+            <div class="container">
+                <div class="staff-intro__content">
+                    <div class="staff-intro__image">
+                        <img src="../assets/images/kaine-yamashiro.jpg" alt="若手エンジニア 山城海音" class="staff-intro__img">
+                    </div>
+                    
+                    <div class="staff-intro__info">
+                        <h2 class="staff-intro__name">若手エンジニア 山城海音</h2>
+                        <div class="staff-intro__details">
+                            <div class="staff-detail">
+                                <span class="staff-detail__label">職域:</span>
+                                <span class="staff-detail__value">システムエンジニア</span>
+                            </div>
+                            <div class="staff-detail">
+                                <span class="staff-detail__label">略歴:</span>
+                                <span class="staff-detail__value">2022年4月入社... 2022年12月転職</span>
+                            </div>
+                            <div class="staff-detail">
+                                <span class="staff-detail__label">趣味:</span>
+                                <span class="staff-detail__value">フットボール観戦、ゲーム、アニメ鑑賞</span>
+                            </div>
+                            <div class="staff-detail">
+                                <span class="staff-detail__label">得意分野:</span>
+                                <span class="staff-detail__value">Pythonを用いたAI開発、データ分析</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- スケジュール表セクション -->
+        <section class="schedule-table" data-section="schedule-table">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">一週間スケジュール表</h2>
+                    <p class="section__subtitle">Weekly Schedule Overview</p>
+                </div>
+                
+                <div class="schedule-container">
+                    <div class="schedule-table-wrapper">
+                        <table class="schedule-table__table">
+                            <thead>
+                                <tr>
+                                    <th class="schedule-table__time">時間</th>
+                                    <th class="schedule-table__day">月曜日</th>
+                                    <th class="schedule-table__day">火曜日</th>
+                                    <th class="schedule-table__day">水曜日</th>
+                                    <th class="schedule-table__day">木曜日</th>
+                                    <th class="schedule-table__day">金曜日</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="schedule-table__time">8:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--office">出勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--office">出勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--remote">テレワーク用<br>PC起動</td>
+                                    <td class="schedule-table__cell schedule-table__cell--remote">テレワーク用<br>PC起動</td>
+                                    <td class="schedule-table__cell schedule-table__cell--office">出勤</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">9:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(現場)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(現場)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(現場)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(現場)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(現場)</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">10:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午前業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午前業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午前業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午前業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午前業務開始</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">11:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(自社)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(自社)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(自社)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(自社)</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">朝会(自社)</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">12:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--break">昼休憩</td>
+                                    <td class="schedule-table__cell schedule-table__cell--break">昼休憩</td>
+                                    <td class="schedule-table__cell schedule-table__cell--break">昼休憩</td>
+                                    <td class="schedule-table__cell schedule-table__cell--break">昼休憩</td>
+                                    <td class="schedule-table__cell schedule-table__cell--break">昼休憩</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">13:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午後業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午後業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">自社PJミーティング</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午後業務開始</td>
+                                    <td class="schedule-table__cell schedule-table__cell--work">午後業務開始</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">17:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">現場チーム相談会</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">現場チーム相談会</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">現場チーム相談会</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">現場チーム相談会</td>
+                                    <td class="schedule-table__cell schedule-table__cell--meeting">現場チーム相談会</td>
+                                </tr>
+                                <tr>
+                                    <td class="schedule-table__time">18:00</td>
+                                    <td class="schedule-table__cell schedule-table__cell--end">退勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--end">退勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--end">退勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--end">退勤</td>
+                                    <td class="schedule-table__cell schedule-table__cell--end">退勤</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- 社員メッセージセクション -->
+        <section class="staff-message" data-section="staff-message">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">社員メッセージ</h2>
+                    <p class="section__subtitle">Staff Message</p>
+                </div>
+                
+                <div class="message-content">
+                    <div class="message-item">
+                        <div class="message-item__icon">⏰</div>
+                        <div class="message-item__content">
+                            <p>毎週金曜日に定例の夕方会議があり、30分ほど退勤が遅れるが、基本的には17時半には会社を出る必要がある。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="message-item">
+                        <div class="message-item__icon">
+                            <svg class="message-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <div class="message-item__content">
+                            <p>残業ができないため、日中の業務時間内で効率よく成果を出すことが求められる。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="message-item">
+                        <div class="message-item__icon">
+                            <svg class="message-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="message-item__content">
+                            <p>SESはブラックな印象を持たれがちだが、当社では要件定義・設計段階から業務を提案しており、ホワイトな働き方ができている。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
