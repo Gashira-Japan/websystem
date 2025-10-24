@@ -1,0 +1,289 @@
+/* ========================================
+   イベントページ - 専用スタイル
+   ======================================== */
+
+/* イベント一覧セクション */
+.events-list {
+  padding: var(--spacing-16) 0;
+  background: var(--color-neutral-50);
+}
+
+.events-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+}
+
+.event-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.event-card--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.event-card--reverse .event-card__image {
+  order: -1;
+}
+
+.event-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.event-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.event-card__month {
+  background: var(--color-primary-500);
+  color: var(--color-neutral-white);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+}
+
+.event-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin: 0;
+}
+
+.event-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.event-card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-card__img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-sm);
+}
+
+/* イベントの意義セクション */
+.events-purpose {
+  padding: var(--spacing-16) 0;
+}
+
+.purpose-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.purpose-item {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+  box-shadow: var(--elevation-sm);
+  transition: var(--animation-transition);
+}
+
+.purpose-item:hover {
+  box-shadow: var(--elevation-md);
+  transform: translateY(-2px);
+}
+
+.purpose-item__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.purpose-item__icon-svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary-600);
+}
+
+.purpose-item__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.purpose-item__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.event-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.event-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.event-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.event-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.event-card:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.purpose-item {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.purpose-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.purpose-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.purpose-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .event-card {
+    grid-template-columns: 1fr;
+    padding: var(--spacing-6);
+    gap: var(--spacing-6);
+  }
+  
+  .event-card--reverse .event-card__image {
+    order: 0;
+  }
+  
+  .event-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  
+  .event-card__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .event-card__img {
+    height: 200px;
+  }
+  
+  .purpose-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .purpose-item {
+    padding: var(--spacing-6);
+  }
+  
+  .purpose-item__icon {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid {
+    gap: var(--spacing-8);
+  }
+  
+  .event-card {
+    padding: var(--spacing-4);
+    gap: var(--spacing-4);
+  }
+  
+  .event-card__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .event-card__description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .event-card__img {
+    height: 150px;
+  }
+  
+  .purpose-item {
+    padding: var(--spacing-4);
+  }
+  
+  .purpose-item__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .purpose-item__description {
+    font-size: var(--font-size-sm);
+  }
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SES・SIer業界構造から見た当社の強み - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="SES業界の多層構造を分析し、テンファイブの競争優位性をご紹介。上流工程から下流工程まで一貫して携われる環境で、エンジニアとしての理想的なキャリアパスを歩めます。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../css/news-system.css">
+    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/industry-analysis.css">
+    
+    <!-- ナビゲーションリンクの強制リセット -->
+    <style>
+        .header .nav__link,
+        .header .nav__link:hover,
+        .header .nav__link:focus,
+        .header .nav__link:active,
+        .header .nav__link:visited {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            text-decoration-line: none !important;
+            text-decoration-style: none !important;
+            text-decoration-color: transparent !important;
+        }
+        
+        .header .nav__link::after,
+        .header .nav__link::before {
+            display: none !important;
+            content: none !important;
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+    </style>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+            
+            <!-- ハンバーガーメニューボタン -->
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク -->
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    SES・SIer業界構造から見た当社の強み
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero hero--subpage hero--features" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title">SES・SIer業界構造から見た当社の強み</h1>
+                    <p class="hero__subtitle">Industry Analysis</p>
+                    <p class="hero__description">SESと一口に言っても、その業界構造は複雑で多層的です。末端の下流工程がメインの事業者と上流工程がメインの事業者では、業務内容、求められるスキル、そして報酬が全く異なります。</p>
+                </div>
+                
+                <!-- デジタル調のアクセント要素 -->
+                <div class="hero__accent"></div>
+            </div>
+        </section>
+
+        <!-- 業界構造セクション -->
+        <section class="industry-structure" data-section="industry-structure">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">SES業界の多層構造</h2>
+                    <p class="section__subtitle">Multi-layered Industry Structure</p>
+                </div>
+                
+                <!-- 業界構造ピラミッド -->
+                <div class="industry-pyramid">
+                    <div class="pyramid-structure">
+                        <!-- クライアント企業 -->
+                        <div class="pyramid-level pyramid-level--client">
+                            <div class="pyramid-level__content">
+                                <h4 class="pyramid-level__title">クライアント企業</h4>
+                                <p class="pyramid-level__description">銀行、証券、保険会社等</p>
+                            </div>
+                            <div class="pyramid-arrow">
+                                <span class="pyramid-arrow__text">発注</span>
+                                <div class="pyramid-arrow__line"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- 1次ベンダー -->
+                        <div class="pyramid-level pyramid-level--primary">
+                            <div class="pyramid-level__content">
+                                <h4 class="pyramid-level__title">1次ベンダー</h4>
+                                <p class="pyramid-level__subtitle">体制: 数千名以上</p>
+                                <ul class="pyramid-level__tasks">
+                                    <li>コンサルティング提案</li>
+                                    <li>全体企画・管理</li>
+                                    <li>システム要件定義</li>
+                                    <li>基本設計</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 2次ベンダー（テンファイブ） -->
+                        <div class="pyramid-level pyramid-level--secondary">
+                            <div class="pyramid-level__content">
+                                <h4 class="pyramid-level__title">2次ベンダー（テンファイブ）</h4>
+                                <p class="pyramid-level__subtitle">体制: 数十名～数百名</p>
+                                <ul class="pyramid-level__tasks">
+                                    <li>プロジェクト進行管理</li>
+                                    <li>プロジェクト詳細設計</li>
+                                    <li>プログラミング</li>
+                                </ul>
+                                <div class="pyramid-level__tags">
+                                    <span class="tag tag--primary">新卒採用</span>
+                                    <span class="tag tag--secondary">キャリア採用</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3次ベンダー -->
+                        <div class="pyramid-level pyramid-level--tertiary">
+                            <div class="pyramid-level__content">
+                                <h4 class="pyramid-level__title">3次ベンダー</h4>
+                                <p class="pyramid-level__subtitle">体制: 数名～数十名</p>
+                                <ul class="pyramid-level__tasks">
+                                    <li>プロジェクト進行管理</li>
+                                    <li>プロジェクト詳細設計</li>
+                                    <li>プログラミング</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 4次ベンダー -->
+                        <div class="pyramid-level pyramid-level--quaternary">
+                            <div class="pyramid-level__content">
+                                <h4 class="pyramid-level__title">4次ベンダー</h4>
+                                <p class="pyramid-level__subtitle">体制: 1～数名</p>
+                                <ul class="pyramid-level__tasks">
+                                    <li>プログラミング</li>
+                                    <li>テスト</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 工程レベル表示 -->
+                    <div class="process-levels">
+                        <div class="process-level process-level--upstream">
+                            <span class="process-level__label">上流工程</span>
+                        </div>
+                        <div class="process-level process-level--downstream">
+                            <span class="process-level__label">下流工程</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ベンダー比較セクション -->
+        <section class="vendor-comparison" data-section="vendor-comparison">
+            <div class="container">
+                <div class="comparison-grid">
+                    <!-- 1次ベンダー -->
+                    <div class="comparison-card comparison-card--primary">
+                        <div class="comparison-card__header">
+                            <span class="comparison-card__label comparison-card__label--green">1次ベンダー</span>
+                        </div>
+                        <div class="comparison-card__content">
+                            <h3 class="comparison-card__title">大手ITベンダーの役割</h3>
+                            <div class="comparison-card__description">
+                                <p><strong>役割:</strong></p>
+                                <p>プロジェクト全体の把握と管理、二次ベンダーのコントロールを担当。「森を見る」視点が重要。</p>
+                                
+                                <p><strong>主な業務:</strong></p>
+                                <ul>
+                                    <li>コンサルティング提案</li>
+                                    <li>全体企画・管理</li>
+                                    <li>システム要件定義</li>
+                                    <li>基本設計</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="comparison-card__image">
+                            <img src="../../assets/images/industry.png" alt="1次ベンダーの業務イメージ" class="comparison-card__img">
+                        </div>
+                    </div>
+                    
+                    <!-- 2次ベンダー（テンファイブ） -->
+                    <div class="comparison-card comparison-card--secondary">
+                        <div class="comparison-card__image">
+                            <img src="../../assets/images/industry.png" alt="2次ベンダーの業務イメージ" class="comparison-card__img">
+                        </div>
+                        <div class="comparison-card__content">
+                            <div class="comparison-card__header">
+                                <span class="comparison-card__label comparison-card__label--blue">2次ベンダー</span>
+                            </div>
+                            <h3 class="comparison-card__title">テンファイブのポジション</h3>
+                            <div class="comparison-card__description">
+                                <p><strong>役割:</strong></p>
+                                <p>上流工程から「モノ造り」に携わり、「木を見て森を見る」視点を持ちながらプロジェクトの俯瞰と成果創出を行います。</p>
+                                
+                                <p><strong>主な業務:</strong></p>
+                                <ul>
+                                    <li>プロジェクト進行管理</li>
+                                    <li>プロジェクト詳細設計</li>
+                                    <li>プログラミング</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- テンファイブの立ち位置と強み -->
+        <section class="company-strengths" data-section="company-strengths">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">テンファイブの立ち位置と強み</h2>
+                    <p class="section__subtitle">Our Position & Strengths</p>
+                </div>
+                
+                <div class="strengths-content">
+                    <p class="strengths-text">
+                        テンファイブは、主に「二次ベンダー」として業界内で機能しています。この立ち位置により、
+                        上流工程の企画・設計から下流工程の実装まで、幅広い業務に携わることができます。
+                    </p>
+                    
+                    <div class="strengths-list">
+                        <div class="strength-item">
+                            <div class="strength-item__icon">
+                                <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                            </div>
+                            <div class="strength-item__content">
+                                <h4 class="strength-item__title">金融領域におけるIT技術・セキュリティ技術の深い知見</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="strength-item">
+                            <div class="strength-item__icon">
+                                <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                                    <path d="M21 3v5h-5"></path>
+                                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                                    <path d="M3 21v-5h5"></path>
+                                </svg>
+                            </div>
+                            <div class="strength-item__content">
+                                <h4 class="strength-item__title">上流から下流まで一貫して携われる環境</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="strength-item">
+                            <div class="strength-item__icon">
+                                <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="8.5" cy="7" r="4"></circle>
+                                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                                </svg>
+                            </div>
+                            <div class="strength-item__content">
+                                <h4 class="strength-item__title">大手ITベンダーからの信頼と長年の実績</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="strength-item">
+                            <div class="strength-item__icon">
+                                <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <div class="strength-item__content">
+                                <h4 class="strength-item__title">少数精鋭のプロフェッショナル集団としての専門性</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- キャリアパスとしてのSES -->
+        <section class="career-path-section" data-section="career-path">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">キャリアパスとしてのSES</h2>
+                    <p class="section__subtitle">Career Path in SES</p>
+                </div>
+                
+                <div class="career-path-content">
+                    <p class="career-path-text">
+                        SES業界、特に二次ベンダーの業務範囲は、エンジニアとしてのキャリアパスを考える上で理想的な環境を提供します。
+                    </p>
+                    
+                    <div class="career-path-diagram">
+                        <div class="career-level career-level--senior">
+                            <div class="career-level__content">
+                                <h4 class="career-level__title">シニア</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="career-arrow">↓</div>
+                        
+                        <div class="career-level career-level--middle">
+                            <div class="career-level__content">
+                                <h4 class="career-level__title">ミドル</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="career-arrow">↓</div>
+                        
+                        <div class="career-specializations">
+                            <div class="career-spec career-spec--technical">
+                                <h5 class="career-spec__title">高度技術専門家</h5>
+                            </div>
+                            <div class="career-spec career-spec--cto">
+                                <h5 class="career-spec__title">最高技術責任者</h5>
+                            </div>
+                            <div class="career-spec career-spec--strategic">
+                                <h5 class="career-spec__title">高度技術戦略家</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="career-path-note">
+                        <p>
+                            テンファイブのキャリアパスについて<a href="../workstyle/career-path.html" class="text-link">入社後3年のキャリアパス</a>で詳しく記載しております。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="../selection/new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="../selection/mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="../company/company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="../company/members/" class="footer__link">メンバー</a></li>
+                            <li><a href="../company/history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

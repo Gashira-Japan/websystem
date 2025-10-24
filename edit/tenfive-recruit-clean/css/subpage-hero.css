@@ -1,0 +1,358 @@
+/* ========================================
+   下層ページ用ヘローデザイン - デジタル調デザインシステム
+   トップページのヒーローセクションとは完全に分離されたスタイル
+   ======================================== */
+
+/* 下層ページヘローのベーススタイル - コンパクト版（余裕を持たせた版） */
+.hero--subpage {
+  position: relative;
+  background: linear-gradient(135deg, 
+    var(--color-primary-50) 0%, 
+    var(--color-neutral-50) 50%, 
+    var(--color-primary-50) 100%);
+  padding: var(--spacing-12) 0 var(--spacing-16); /* 上下の余白を増加 */
+  margin-bottom: var(--spacing-12); /* 下層ページ共通のマージンボトムを追加 */
+  overflow: hidden;
+  min-height: auto;
+  /* トップページのヒーロースタイルをリセット */
+  display: block;
+  align-items: initial;
+  text-align: center;
+}
+
+/* トップページのヒーロー要素を非表示にする */
+.hero--subpage .hero__staff-background,
+.hero--subpage .hero__main-copy,
+.hero--subpage .hero__scroll-indicator {
+  display: none !important;
+}
+
+/* デジタル調の背景パターン */
+.hero--subpage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--color-primary-100) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--color-secondary-100) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, var(--color-neutral-100) 50%, transparent 70%);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* グリッドパターンのオーバーレイ - 削除（打ち消し線の原因となるため） */
+.hero--subpage::after {
+  display: none; /* グリッドパターンを完全に非表示にして打ち消し線を防ぐ */
+}
+
+/* ヘローコンテンツのコンテナ */
+.hero--subpage .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* 下層ページヘローのコンテンツレイアウト - コンパクト版（余裕を持たせた版） */
+.hero--subpage .hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  /* トップページの絶対位置指定をリセット */
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  padding: var(--spacing-4) 0; /* 内部パディングを増加 */
+  /* トップページの背景オーバーレイをリセット */
+  background: none !important;
+  /* アクセント要素より上に表示 */
+  position: relative;
+  z-index: 3;
+}
+
+/* トップページのヒーローコンテンツ背景オーバーレイを無効化 */
+.hero--subpage .hero__content::before {
+  display: none !important;
+}
+
+/* デジタル調のタイトルデザイン - コンパクト版（余裕を持たせた版） */
+.hero--subpage .hero__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4); /* 下の余白を増加 */
+  position: relative;
+  display: inline-block;
+  z-index: 4; /* アクセント要素より上に表示 */
+}
+
+/* タイトルのアンダーライン（デジタル調） */
+.hero--subpage .hero__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--color-primary-500) 0%, 
+    var(--color-secondary-500) 100%);
+  border-radius: var(--radius-full);
+}
+
+/* サブタイトルのデザイン - コンパクト版（余裕を持たせた版） */
+.hero--subpage .hero__subtitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-5); /* 下の余白を増加 */
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 4; /* アクセント要素より上に表示 */
+}
+
+/* サブタイトルの装飾線 - 削除（打ち消し線の原因となるため） */
+.hero--subpage .hero__subtitle::before,
+.hero--subpage .hero__subtitle::after {
+  display: none; /* 装飾線を非表示にして打ち消し線を防ぐ */
+}
+
+/* 説明文のデザイン - コンパクト版（16px、左寄せ、余裕を持たせた版） */
+.hero--subpage .hero__description {
+  font-size: var(--font-size-base); /* 16px */
+  line-height: var(--line-height-relaxed);
+  color: var(--color-neutral-700);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left; /* 左寄せに変更 */
+  position: relative;
+  z-index: 4; /* アクセント要素より上に表示 */
+  margin-bottom: var(--spacing-4); /* 下の余白を追加 */
+}
+
+/* デジタル調のアクセント要素 - コンパクト版 */
+.hero--subpage .hero__accent {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, 
+    var(--color-primary-200) 0%, 
+    var(--color-secondary-200) 100%);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 1; /* 文字より下に配置 */
+}
+
+.hero--subpage .hero__accent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: var(--color-neutral-white);
+  border-radius: 50%;
+  box-shadow: var(--elevation-sm);
+}
+
+/* レスポンシブデザイン - コンパクト版（余裕を持たせた版） */
+@media (max-width: 768px) {
+  .hero--subpage {
+    padding: var(--spacing-8) 0 var(--spacing-10); /* 上下の余白を適度に保持 */
+    margin-bottom: var(--spacing-8); /* タブレット以下のマージンボトム */
+  }
+  
+  /* モバイルでもトップページのスタイルをリセット */
+  .hero--subpage .hero__content {
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero--subpage .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero--subpage .hero__subtitle {
+    font-size: var(--font-size-sm);
+  }
+  
+  .hero--subpage .hero__subtitle::before,
+  .hero--subpage .hero__subtitle::after {
+    display: none;
+  }
+  
+  .hero--subpage .hero__description {
+    font-size: var(--font-size-sm); /* 16pxを維持 */
+  }
+  
+  .hero--subpage .hero__accent {
+    width: 60px;
+    height: 60px;
+    top: 8%;
+    right: 3%;
+  }
+  
+  .hero--subpage .hero__accent::before {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero--subpage {
+    padding: var(--spacing-6) 0 var(--spacing-8); /* 適度な余白を保持 */
+    margin-bottom: var(--spacing-6); /* スマートフォンでのマージンボトム */
+  }
+  
+  /* スマートフォンでもトップページのスタイルをリセット */
+  .hero--subpage .hero__content {
+    position: static !important;
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero--subpage .hero__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hero--subpage .hero__title::after {
+    width: 30px;
+    height: 2px;
+  }
+  
+  .hero--subpage .hero__accent {
+    width: 50px;
+    height: 50px;
+    top: 5%;
+    right: 2%;
+  }
+  
+  .hero--subpage .hero__accent::before {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* カテゴリ別のヘローバリエーション */
+
+/* 特徴ページ用 */
+.hero--features {
+  background: linear-gradient(135deg, 
+    var(--color-primary-50) 0%, 
+    var(--color-primary-100) 100%);
+}
+
+.hero--features::before {
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--color-primary-200) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, var(--color-primary-300) 0%, transparent 40%);
+}
+
+/* 働き方ページ用 */
+.hero--workstyle {
+  background: linear-gradient(135deg, 
+    var(--color-primary-50) 0%, 
+    var(--color-secondary-100) 100%);
+}
+
+.hero--workstyle::before {
+  background-image: 
+    radial-gradient(circle at 30% 30%, var(--color-secondary-200) 0%, transparent 40%),
+    radial-gradient(circle at 70% 70%, var(--color-secondary-300) 0%, transparent 40%);
+}
+
+/* 選考ページ用 */
+.hero--selection {
+  background: linear-gradient(135deg, 
+    var(--color-accent-50) 0%, 
+    var(--color-accent-100) 100%);
+}
+
+.hero--selection::before {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--color-accent-200) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, var(--color-accent-300) 0%, transparent 40%);
+}
+
+/* 会社紹介ページ用 */
+.hero--company {
+  background: linear-gradient(135deg, 
+    var(--color-neutral-50) 0%, 
+    var(--color-neutral-100) 100%);
+}
+
+.hero--company::before {
+  background-image: 
+    radial-gradient(circle at 20% 20%, var(--color-neutral-200) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, var(--color-neutral-300) 0%, transparent 40%);
+}
+
+/* アニメーション効果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero--subpage .hero__content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero--subpage .hero__accent {
+  animation: fadeInScale 1s ease-out 0.3s both;
+}
+
+/* ホバー効果 */
+.hero--subpage .hero__title:hover::after {
+  width: 80px;
+  transition: width 0.3s ease;
+}
+
+/* ダークモード対応（将来の拡張用） */
+@media (prefers-color-scheme: dark) {
+  .hero--subpage {
+    background: linear-gradient(135deg, 
+      var(--color-neutral-800) 0%, 
+      var(--color-neutral-900) 100%);
+  }
+  
+  .hero--subpage .hero__title {
+    color: var(--color-neutral-100);
+  }
+  
+  .hero--subpage .hero__description {
+    color: var(--color-neutral-300);
+  }
+}

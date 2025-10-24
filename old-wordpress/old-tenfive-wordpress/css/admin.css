@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+WordPress
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	margin: 10px;
+	padding-top: 4px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	background-color: #f3f3f3;
+	text-align: center;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding: 0 4px 5px;
+	font-size: 11px;
+	line-height: 17px;
+}
+
+@font-face {
+	font-family: "Hiragino Sans";
+	src: local("HiraginoSans-W3");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Hiragino Sans";
+	src: local("HiraginoSans-W6");
+	font-weight: 700;
+}
+
+.editor-styles-wrapper {
+	font-size: 15px !important;
+	font-family: "Helvetica Neue", Arial, Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "BIZ UDPGothic", "Noto Sans CJK JP", Meiryo, sans-serif !important;
+}
+
+.block-editor-writing-flow .editor-post-title {
+	width: calc(100% - 40px);
+	margin: auto;
+}
+
+.edit-post-visual-editor .editor-post-title__block {
+	max-width: 1200px;
+}
+
+.wp-block {
+	width: calc(100% - 40px);
+	max-width: 1200px;
+}
+
+.block-editor-plain-text {
+	max-height: none !important;
+	line-height: 1.8;
+}
+
+.edit-post-text-editor .editor-post-title__block {
+	max-width: none;
+}
+
+.edit-post-text-editor__body {
+	width: calc(100% - 40px);
+	max-width: none;
+}
+
+.editor-styles-wrapper h2 {
+	font-size: 1.8em;
+}
+
+.editor-styles-wrapper h3 {
+	font-size: 1.6em;
+}
+
+.editor-styles-wrapper h4 {
+	font-size: 1.4em;
+}
+
+.editor-styles-wrapper h5 {
+	font-size: 1.3em;
+}
+
+.editor-styles-wrapper h6 {
+	font-size: 1.2em;
+}
+
+.wp-block img {
+	max-height: 640px;
+}
+
+.wp-block-image figcaption {
+	font-size: inherit;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+	padding: 0;
+}
+
+@media (min-width: 768px) {
+.wp-block[data-align="right"] > .wp-block-image,
+.wp-block[data-align="left"] > .wp-block-image {
+	max-width: 50%;
+}
+}

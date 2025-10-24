@@ -1,0 +1,598 @@
+/* ========================================
+   テンファイブコーポレートサイト - 技術ブログセクション
+   ======================================== */
+
+/* 技術ブログセクション */
+.tech-blog {
+  background-color: var(--color-primary-50);
+}
+
+/* ブログスライダー */
+.blog-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.tech-blog__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.tech-blog__item {
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-blog__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary-500), var(--color-accent-500));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.tech-blog__item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-200);
+}
+
+.tech-blog__item:hover::before {
+  transform: scaleX(1);
+}
+
+.tech-blog__content {
+  position: relative;
+  z-index: 1;
+}
+
+.tech-blog__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-snug);
+}
+
+.tech-blog__link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.tech-blog__link:hover {
+  color: var(--color-primary-600);
+}
+
+.tech-blog__excerpt {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tech-blog__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.tech-blog__date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-medium);
+}
+
+.tech-blog__category {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+
+.tech-blog__footer {
+  text-align: right;
+}
+
+/* ケーススタディセクション */
+.case-studies {
+  background-color: var(--color-neutral-white);
+}
+
+.case-studies .blog-card-container {
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* スライダーコンテナ */
+.case-studies__slider {
+  position: relative;
+  margin-bottom: var(--spacing-0);
+  /* margin-bottom: var(--spacing-2); */
+}
+
+.case-studies__slider-container {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.case-studies__slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: var(--spacing-xl);
+}
+
+.case-studies__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* スライダーコントロール */
+.case-studies__controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-6);
+}
+
+.case-studies__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--color-primary-200);
+  border-radius: 50%;
+  background-color: var(--color-neutral-white);
+  color: var(--color-primary-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.case-studies__btn:hover {
+  background-color: var(--color-primary-50);
+  border-color: var(--color-primary-300);
+  transform: scale(1.05);
+}
+
+.case-studies__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* インジケーター */
+.case-studies__indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.case-studies__indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-neutral-300);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.case-studies__indicator.active {
+  background-color: var(--color-primary-600);
+  transform: scale(1.2);
+}
+
+.case-studies__indicator:hover {
+  background-color: var(--color-primary-400);
+}
+
+/* グリッド表示（フォールバック） */
+.case-studies__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 769px以上でも1列表示 */
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+  justify-items: start; /* 左寄せ */
+}
+
+.case-studies__grid .blog-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+  height: auto;
+  min-height: 240px; /* デザインシステムに準拠した高さ */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+/* カードホバー効果 - 統一スタイル */
+.case-studies__grid .blog-card:hover,
+.glossary-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.case-studies__grid .blog-card__link {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-studies__grid .blog-card__image-area {
+  width: 320px; /* デザインシステムに準拠した幅 */
+  min-width: 320px;
+  height: 240px; /* カード全体の高さに合わせる */
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-studies__grid .blog-card__main-area {
+  flex: 1;
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 240px; /* カード全体の高さに合わせる */
+}
+
+/* カードタイトル - 統一スタイル */
+.case-studies__grid .blog-card__title,
+.glossary-item__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-tight);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.case-studies__grid .blog-card__title:hover,
+.glossary-item__title:hover {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.case-studies__grid .blog-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-4);
+  flex: 1;
+}
+
+.case-studies__grid .blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: auto;
+}
+
+.case-studies__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.case-study {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.case-study::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent-500), var(--color-primary-500));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+.case-study:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-accent-200);
+}
+
+.case-study:hover::before {
+  transform: scaleX(1);
+}
+
+.case-study__content {
+  position: relative;
+  z-index: 1;
+}
+
+.case-study__date {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-600);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-accent-50);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-md);
+}
+
+.case-study__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-snug);
+}
+
+.case-study__description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.case-study__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.case-study__tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+  border: 1px solid var(--color-secondary-200);
+}
+
+/* 用語集セクション */
+.glossary {
+  background-color: var(--color-primary-50);
+}
+
+.glossary__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.glossary-item {
+  background-color: var(--color-bg-primary);
+  /* border: 1px solid var(--color-border-primary); */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.glossary-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-secondary-500), var(--color-primary-500));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-normal);
+}
+
+/* 重複削除 - 上記の統一ホバー効果を使用 */
+
+.glossary-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* 重複削除 - 上記の統一スタイルを使用 */
+
+.glossary-item__link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.glossary-item__link:hover {
+  color: var(--color-primary-600);
+}
+
+.glossary-item__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.glossary__footer {
+  /* text-align: center; */
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+  .tech-blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .glossary__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tech-blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .glossary__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* デスクトップでは2列表示 */
+  .case-studies__slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .blog-slider,
+  .case-studies .blog-card-container {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .case-studies__grid {
+    grid-template-columns: 1fr; /* 1024px以下でも1列表示 */
+  }
+  
+  .case-studies__grid .blog-card__image-area {
+    width: 280px;
+    min-width: 280px;
+    height: 200px;
+  }
+  
+  .case-studies__grid .blog-card,
+  .case-studies__grid .blog-card__main-area {
+    min-height: 200px;
+  }
+  
+  .case-studies__grid .blog-card__main-area {
+    padding: var(--spacing-5);
+  }
+}
+
+@media (max-width: 768px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .blog-slider,
+  .case-studies .blog-card-container {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  /* スマホでは1枚表示 */
+  .case-studies__slide {
+    flex: 0 0 100%;
+  }
+  
+  .tech-blog__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .glossary__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-studies__grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-studies__grid .blog-card {
+    flex-direction: column;
+    min-height: auto; /* モバイルでは自動高さ */
+  }
+  
+  .case-studies__grid .blog-card__link {
+    flex-direction: column;
+  }
+  
+  .case-studies__grid .blog-card__image-area {
+    width: 100%;
+    min-width: auto;
+    height: 180px; /* モバイル用の適切な高さ */
+  }
+  
+  .case-studies__grid .blog-card__main-area {
+    padding: var(--spacing-4);
+    min-height: auto; /* モバイルでは自動高さ */
+  }
+  
+  .tech-blog__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+  
+  .case-study__tags {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  /* セクションパディングはデザインシステムで統一 */
+  
+  .blog-slider,
+  .case-studies .blog-card-container {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .case-studies__grid .blog-card__image-area {
+    height: 160px;
+  }
+  
+  .case-studies__grid .blog-card__main-area {
+    padding: var(--spacing-3);
+  }
+  
+  .case-studies__grid .blog-card__title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .case-studies__grid .blog-card__description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-3);
+  }
+}

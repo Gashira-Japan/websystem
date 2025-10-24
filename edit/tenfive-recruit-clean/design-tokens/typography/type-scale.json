@@ -1,0 +1,202 @@
+{
+  "name": "Type Scale",
+  "description": "タイポグラフィスケール - フォントサイズと行間の定義",
+  "version": "1.0.0",
+  
+  "fontSizes": {
+    "xs": {
+      "value": "12px",
+      "lineHeight": "16px",
+      "description": "極小サイズ",
+      "usage": "キャプション、注釈、小さなラベル"
+    },
+    "sm": {
+      "value": "14px",
+      "lineHeight": "20px",
+      "description": "小サイズ",
+      "usage": "サブテキスト、補足情報"
+    },
+    "base": {
+      "value": "16px",
+      "lineHeight": "24px",
+      "description": "ベースサイズ",
+      "usage": "本文テキスト、標準的なテキスト"
+    },
+    "lg": {
+      "value": "18px",
+      "lineHeight": "28px",
+      "description": "大サイズ",
+      "usage": "リード文、重要な本文"
+    },
+    "xl": {
+      "value": "20px",
+      "lineHeight": "28px",
+      "description": "特大サイズ",
+      "usage": "小見出し、セクションタイトル"
+    },
+    "2xl": {
+      "value": "24px",
+      "lineHeight": "32px",
+      "description": "2倍サイズ",
+      "usage": "中見出し、サブタイトル"
+    },
+    "3xl": {
+      "value": "30px",
+      "lineHeight": "36px",
+      "description": "3倍サイズ",
+      "usage": "大見出し、ページタイトル"
+    },
+    "4xl": {
+      "value": "36px",
+      "lineHeight": "40px",
+      "description": "4倍サイズ",
+      "usage": "特大見出し、ヒーロータイトル"
+    },
+    "5xl": {
+      "value": "48px",
+      "lineHeight": "48px",
+      "description": "5倍サイズ",
+      "usage": "最大見出し、メインタイトル"
+    },
+    "6xl": {
+      "value": "60px",
+      "lineHeight": "60px",
+      "description": "6倍サイズ",
+      "usage": "ディスプレイタイトル、特大見出し"
+    }
+  },
+  
+  "fontWeights": {
+    "thin": {
+      "value": "100",
+      "description": "極細",
+      "usage": "装飾的なテキスト"
+    },
+    "extralight": {
+      "value": "200",
+      "description": "超細",
+      "usage": "軽い印象のテキスト"
+    },
+    "light": {
+      "value": "300",
+      "description": "細",
+      "usage": "軽やかなテキスト"
+    },
+    "normal": {
+      "value": "400",
+      "description": "標準",
+      "usage": "通常のテキスト"
+    },
+    "medium": {
+      "value": "500",
+      "description": "中太",
+      "usage": "やや強調されたテキスト"
+    },
+    "semibold": {
+      "value": "600",
+      "description": "半太",
+      "usage": "強調されたテキスト"
+    },
+    "bold": {
+      "value": "700",
+      "description": "太",
+      "usage": "重要なテキスト"
+    },
+    "extrabold": {
+      "value": "800",
+      "description": "超太",
+      "usage": "非常に重要なテキスト"
+    },
+    "black": {
+      "value": "900",
+      "description": "極太",
+      "usage": "最大限強調されたテキスト"
+    }
+  },
+  
+  "lineHeights": {
+    "tight": {
+      "value": "1.25",
+      "description": "詰め",
+      "usage": "見出し、タイトル"
+    },
+    "snug": {
+      "value": "1.375",
+      "description": "やや詰め",
+      "usage": "小見出し"
+    },
+    "normal": {
+      "value": "1.5",
+      "description": "標準",
+      "usage": "一般的なテキスト"
+    },
+    "relaxed": {
+      "value": "1.625",
+      "description": "ゆったり",
+      "usage": "読みやすい本文"
+    },
+    "loose": {
+      "value": "2",
+      "description": "広め",
+      "usage": "特別な読みやすさが必要なテキスト"
+    }
+  },
+  
+  "letterSpacing": {
+    "tighter": {
+      "value": "-0.05em",
+      "description": "より詰め",
+      "usage": "大見出し"
+    },
+    "tight": {
+      "value": "-0.025em",
+      "description": "詰め",
+      "usage": "見出し"
+    },
+    "normal": {
+      "value": "0em",
+      "description": "標準",
+      "usage": "通常のテキスト"
+    },
+    "wide": {
+      "value": "0.025em",
+      "description": "広め",
+      "usage": "小文字のテキスト"
+    },
+    "wider": {
+      "value": "0.05em",
+      "description": "より広め",
+      "usage": "大文字のテキスト"
+    },
+    "widest": {
+      "value": "0.1em",
+      "description": "最大広め",
+      "usage": "装飾的なテキスト"
+    }
+  },
+  
+  "responsive": {
+    "mobile": {
+      "base": "14px",
+      "scale": 0.875,
+      "description": "モバイル用の縮小スケール"
+    },
+    "tablet": {
+      "base": "16px",
+      "scale": 1,
+      "description": "タブレット用の標準スケール"
+    },
+    "desktop": {
+      "base": "18px",
+      "scale": 1.125,
+      "description": "デスクトップ用の拡大スケール"
+    }
+  },
+  
+  "usage": {
+    "headings": "見出し用のサイズとウェイト",
+    "body": "本文用のサイズと行間",
+    "captions": "キャプション用の小さなサイズ",
+    "display": "ディスプレイ用の大きなサイズ"
+  }
+}
