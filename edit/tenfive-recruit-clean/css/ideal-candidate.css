@@ -4,7 +4,6 @@
 
 /* 企業理念セクション */
 .company-values {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -12,21 +11,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--spacing-8);
-  max-width: 1000px;
   margin: 0 auto;
+  max-width: 1000px;
 }
 
 .value-card {
-  background: var(--color-neutral-white);
   border-radius: var(--radius-lg);
   padding: var(--spacing-8);
-  box-shadow: var(--elevation-md);
   transition: var(--animation-transition);
 }
 
 .value-card:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-4px);
+  /* ホバーエフェクトは必要に応じて追加 */
 }
 
 .value-card__title {
@@ -58,14 +54,10 @@
 
 /* 時代の転換点セクション */
 .era-transition {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
-.transition-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* .transition-content は .section__content に統一 */
 
 .transition-text {
   font-size: var(--font-size-lg);
@@ -76,7 +68,6 @@
 
 /* 基本的な求める人材像セクション */
 .basic-requirements {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -89,17 +80,11 @@
 }
 
 .requirement-card {
-  background: var(--color-neutral-white);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-8);
-  box-shadow: var(--elevation-md);
-  transition: var(--animation-transition);
-  border-left: 4px solid var(--color-primary-500);
+  /* シンプルなカードスタイル */
 }
 
 .requirement-card:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-4px);
+  /* ホバーエフェクトは必要に応じて追加 */
 }
 
 .requirement-card__title {
@@ -118,14 +103,14 @@
 
 /* AI時代の具体的能力セクション */
 .ai-capabilities {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
 .capabilities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-8);
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -161,8 +146,7 @@
 }
 
 .capability-card:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-4px);
+  /* ホバーエフェクトは必要に応じて追加 */
 }
 
 .capability-card__title {
@@ -224,32 +208,33 @@
   }
 }
 
+/* 下層ページでのスクロール問題を防ぐためアニメーションを無効化 */
 .value-card {
-  animation: fadeInUp 0.8s ease-out;
+  animation: none;
 }
 
 .value-card:nth-child(2) {
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 .requirement-card {
-  animation: fadeInUp 0.8s ease-out;
+  animation: none;
 }
 
 .requirement-card:nth-child(2) {
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 .capability-card {
-  animation: fadeInScale 0.8s ease-out;
+  animation: none;
 }
 
 .capability-card:nth-child(2) {
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 .capability-card:nth-child(3) {
-  animation-delay: 0.4s;
+  animation: none;
 }
 
 /* レスポンシブデザイン */

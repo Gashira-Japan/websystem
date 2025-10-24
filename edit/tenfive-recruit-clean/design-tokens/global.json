@@ -3084,5 +3084,28 @@
       "value": "0px",
       "type": "dimension"
     }
+  },
+  "layout": {
+    "container": {
+      "maxWidth": {
+        "value": "1200px",
+        "type": "dimension",
+        "description": "メインコンテナの最大幅"
+      }
+    },
+    "content": {
+      "maxWidth": {
+        "value": "1000px",
+        "type": "dimension",
+        "description": "コンテンツエリアの最大幅（統一値）"
+      }
+    },
+    "message": {
+      "maxWidth": {
+        "value": "1000px",
+        "type": "dimension",
+        "description": "メッセージコンテンツの最大幅"
+      }
+    }
   }
 }

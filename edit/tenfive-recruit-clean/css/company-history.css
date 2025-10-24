@@ -4,11 +4,11 @@
 
 /* タイムラインセクション */
 .history-timeline {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
 .timeline {
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   position: relative;
 }
@@ -104,12 +104,11 @@
 
 /* 現在の取り組みセクション */
 .current-initiatives {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
 .initiatives-content {
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -123,22 +122,32 @@
 
 .initiatives-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-8);
 }
 
 .initiative-item {
-  background: var(--color-neutral-white);
+  /* background: var(--color-neutral-white); */
   border-radius: var(--radius-lg);
   padding: var(--spacing-8);
-  text-align: center;
-  box-shadow: var(--elevation-md);
+  text-align: left;
+  /* box-shadow: var(--elevation-sm); */
   transition: var(--animation-transition);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
 }
 
 .initiative-item:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-4px);
+  box-shadow: var(--elevation-md);
+  transform: translateY(-2px);
+}
+
+.initiative-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
 }
 
 .initiative-item__icon {
@@ -149,7 +158,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-4);
+  flex-shrink: 0;
 }
 
 .initiative-item__icon-svg {
@@ -159,10 +168,10 @@
 }
 
 .initiative-item__title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-neutral-900);
-  margin-bottom: var(--spacing-3);
+  margin: 0;
 }
 
 .initiative-item__description {
@@ -291,6 +300,12 @@
   
   .initiative-item {
     padding: var(--spacing-6);
+  }
+  
+  .initiative-item__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
   }
   
   .initiative-item__icon {

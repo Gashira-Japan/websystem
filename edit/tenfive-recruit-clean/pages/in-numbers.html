@@ -9,37 +9,18 @@
     <!-- デザインシステムCSS -->
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
     <link rel="stylesheet" href="../css/sections.css">
     <link rel="stylesheet" href="../css/selection-system.css">
-    <link rel="stylesheet" href="../css/news-system.css">
-    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
     <link rel="stylesheet" href="../css/subpage-hero.css">
     <link rel="stylesheet" href="../css/numbers.css">
     
-    <!-- ナビゲーションリンクの強制リセット -->
-    <style>
-        .header .nav__link,
-        .header .nav__link:hover,
-        .header .nav__link:focus,
-        .header .nav__link:active,
-        .header .nav__link:visited {
-            text-decoration: none !important;
-            border-bottom: none !important;
-            text-decoration-line: none !important;
-            text-decoration-style: none !important;
-            text-decoration-color: transparent !important;
-        }
-        
-        .header .nav__link::after,
-        .header .nav__link::before {
-            display: none !important;
-            content: none !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-        }
-    </style>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,20 +31,15 @@
     <!-- Header Component -->
     <header class="header" data-component="header">
         <div class="container">
-            <div class="header__brand">
-                <a href="../index.html" class="header__logo-link">
-                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
-                </a>
-            </div>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            
-            <nav class="header__nav" id="main-navigation">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
                 <ul class="nav__list">
                     <li class="nav__item" data-dropdown="features">
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
@@ -84,8 +60,9 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad-jobs.html" class="dropdown__link">新卒採用ページトップ</a>
+                            <a href="./mid-career-jobs.html" class="dropdown__link">中途採用ページトップ</a>
                             <a href="./faq.html" class="dropdown__link">よくある質問</a>
-                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
@@ -98,11 +75,26 @@
                     </li>
                 </ul>
                 
-                <!-- コーポレートサイトへのリンク -->
-                <div class="header__cta">
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
                     <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
                 </div>
-            </nav>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -123,16 +115,15 @@
     <!-- メインコンテンツ -->
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero hero--subpage hero--features" data-section="hero">
+        <section class="hero--subpage" data-section="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">数字で見るテンファイブ</h1>
-                    <p class="hero__subtitle">In Numbers</p>
+                    <div class="hero__header">
+                        <h1 class="hero__title">数字で見るテンファイブ</h1>
+                        <p class="hero__subtitle">In Numbers</p>
+                    </div>
                     <p class="hero__description">テンファイブの実績と成長を数字でご紹介します。</p>
                 </div>
-                
-                <!-- デジタル調のアクセント要素 -->
-                <div class="hero__accent"></div>
             </div>
         </section>
 
@@ -143,65 +134,77 @@
                 <!-- 第1行: 顧客構成比、新卒・中途割合、年間休日 -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <div class="stat-card__content">
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
                             <h3 class="stat-card__title">顧客構成比（業種）</h3>
-                            <div class="stat-card__numbers">
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 86"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
                                 <div class="stat-number">
-                                    <span class="stat-number__value">86%</span>
                                     <span class="stat-number__label">金融系</span>
+                                    <span class="stat-number__value stat-number__value--primary">86%</span>
                                 </div>
                                 <div class="stat-number">
-                                    <span class="stat-number__value">14%</span>
                                     <span class="stat-number__label">その他</span>
+                                    <span class="stat-number__value stat-number__value--secondary">14%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-card__content">
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
                             <h3 class="stat-card__title">新卒・中途の割合</h3>
-                            <div class="stat-card__numbers">
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 13"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
                                 <div class="stat-number">
-                                    <span class="stat-number__value">13%</span>
                                     <span class="stat-number__label">新卒</span>
+                                    <span class="stat-number__value stat-number__value--primary">13%</span>
                                 </div>
                                 <div class="stat-number">
-                                    <span class="stat-number__value">87%</span>
                                     <span class="stat-number__label">中途</span>
+                                    <span class="stat-number__value stat-number__value--secondary">87%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12,6 12,12 16,14"></polyline>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12,6 12,12 16,14"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">年間休日日数</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">年間休日日数</h3>
                             <div class="stat-card__numbers">
                                 <div class="stat-number stat-number--large">
                                     <span class="stat-number__value">120日</span>
-                                    <span class="stat-number__label">年間休日</span>
+
                                 </div>
                             </div>
                         </div>
@@ -211,14 +214,16 @@
                 <!-- 第2行: 休暇取得率、離職率、平均残業時間 -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">休暇取得率</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">休暇取得率</h3>
                             <div class="stat-card__numbers">
                                 <div class="stat-number stat-number--large">
                                     <span class="stat-number__value">60%</span>
@@ -229,35 +234,40 @@
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">離職率</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">離職率</h3>
                             <div class="stat-card__numbers">
                                 <div class="stat-number stat-number--large">
                                     <span class="stat-number__value">0%</span>
-                                    <span class="stat-number__label">新体制移行後の直近2年間</span>
                                 </div>
+                            </div>
+                            <div class="stat-card__description">
+                                <p class="stat-description">新体制移行後の直近2年間</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12,6 12,12 16,14"></polyline>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12,6 12,12 16,14"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">月平均残業時間</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">平均残業時間</h3>
                             <div class="stat-card__numbers">
                                 <div class="stat-number stat-number--large">
                                     <span class="stat-number__value">20時間</span>
-                                    <span class="stat-number__label">月</span>
                                 </div>
                             </div>
                         </div>
@@ -267,65 +277,90 @@
                 <!-- 第3行: 男女比率、技術者比率、前職業種比率 -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <div class="stat-card__content">
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
                             <h3 class="stat-card__title">男女比率</h3>
-                            <div class="stat-card__numbers">
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 80"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
                                 <div class="stat-number">
-                                    <span class="stat-number__value">80%</span>
                                     <span class="stat-number__label">男性</span>
+                                    <span class="stat-number__value stat-number__value--primary">80%</span>
                                 </div>
                                 <div class="stat-number">
-                                    <span class="stat-number__value">20%</span>
                                     <span class="stat-number__label">女性</span>
+                                    <span class="stat-number__value stat-number__value--secondary">20%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14,2 14,8 20,8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
-                        </div>
-                        <div class="stat-card__content">
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                            </div>
                             <h3 class="stat-card__title">9割エンジニアの技術者集団</h3>
-                            <div class="stat-card__numbers">
+                        </div>
+                        <div class="stat-card__content">
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 90"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
                                 <div class="stat-number">
-                                    <span class="stat-number__value">90%</span>
                                     <span class="stat-number__label">エンジニア</span>
+                                    <span class="stat-number__value stat-number__value--primary">90%</span>
                                 </div>
                                 <div class="stat-number">
-                                    <span class="stat-number__value">10%</span>
                                     <span class="stat-number__label">非エンジニア</span>
+                                    <span class="stat-number__value stat-number__value--secondary">10%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 21h18"></path>
+                                    <path d="M5 21V7l8-4v18"></path>
+                                    <path d="M19 21V11l-6-4"></path>
+                                    <path d="M9 9v.01"></path>
+                                    <path d="M9 12v.01"></path>
+                                    <path d="M9 15v.01"></path>
+                                    <path d="M9 18v.01"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">前職の業種比率</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">前職の業種比率</h3>
-                            <div class="stat-card__numbers">
-                                <div class="stat-number stat-number--large">
-                                    <span class="stat-number__value">70%</span>
-                                    <span class="stat-number__label">他業種から</span>
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 70"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
+                                <div class="stat-number">
+                                    <span class="stat-number__label">他業種</span>
+                                    <span class="stat-number__value stat-number__value--primary">70%</span>
+                                </div>
+                                <div class="stat-number">
+                                    <span class="stat-number__label">同業種</span>
+                                    <span class="stat-number__value stat-number__value--secondary">30%</span>
                                 </div>
                             </div>
                         </div>
@@ -335,14 +370,19 @@
                 <!-- 第4行: 通勤方法、リモートワーク率、出身地 -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 15h16v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-5z"></path>
+                                    <path d="M4 15l-2-6h20l-2 6"></path>
+                                    <path d="M8 19h8"></path>
+                                    <circle cx="7" cy="19" r="2"></circle>
+                                    <circle cx="17" cy="19" r="2"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">通勤方法</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">通勤方法</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">電車通勤:</span>
@@ -357,15 +397,17 @@
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">リモートワーク率（出社率）</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">リモートワーク率（出社率）</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">週に数回出社:</span>
@@ -388,14 +430,16 @@
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">出身地</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">出身地</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">東京都:</span>
@@ -429,49 +473,59 @@
                 <!-- 第5行: 最終学歴、血液型 -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">最終学歴</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">最終学歴</h3>
-                            <div class="stat-card__details">
-                                <div class="stat-detail">
-                                    <span class="stat-detail__label">大学:</span>
-                                    <span class="stat-detail__value">80%</span>
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--three-col"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--three-col">
+                                <div class="stat-number">
+                                    <span class="stat-number__label">大学</span>
+                                    <span class="stat-number__value stat-number__value--primary">80%</span>
                                 </div>
-                                <div class="stat-detail">
-                                    <span class="stat-detail__label">高校:</span>
-                                    <span class="stat-detail__value">10%</span>
+                                <div class="stat-number">
+                                    <span class="stat-number__label">専門学校</span>
+                                    <span class="stat-number__value stat-number__value--secondary">10%</span>
                                 </div>
-                                <div class="stat-detail">
-                                    <span class="stat-detail__label">専門学校:</span>
-                                    <span class="stat-detail__value">10%</span>
+                                <div class="stat-number">
+                                    <span class="stat-number__label">高校</span>
+                                    <span class="stat-number__value stat-number__value--neutral">10%</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M8 12h8"></path>
-                                <path d="M12 8v8"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 12h8"></path>
+                                    <path d="M12 8v8"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">血液型</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">血液型</h3>
-                            <div class="stat-card__numbers">
+                            <div class="stat-chart">
+                                <div class="pie-chart pie-chart--two-col" style="--percentage: 70"></div>
+                            </div>
+                            <div class="stat-card__numbers stat-card__numbers--horizontal">
                                 <div class="stat-number">
-                                    <span class="stat-number__value">70%</span>
                                     <span class="stat-number__label">A型</span>
+                                    <span class="stat-number__value stat-number__value--primary">70%</span>
                                 </div>
                                 <div class="stat-number">
-                                    <span class="stat-number__value">30%</span>
                                     <span class="stat-number__label">B型</span>
+                                    <span class="stat-number__value stat-number__value--secondary">30%</span>
                                 </div>
                             </div>
                         </div>
@@ -481,16 +535,18 @@
                 <!-- 第6行: 学生時代の得意科目、部活動、好きなスポーツ -->
                 <div class="stats-grid">
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14,2 14,8 20,8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14,2 14,8 20,8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">学生時代の得意科目</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">学生時代の得意科目</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">数学:</span>
@@ -517,14 +573,16 @@
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="3"></circle>
-                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">学生時代の部活動</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">学生時代の部活動</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">テニス部:</span>
@@ -567,15 +625,17 @@
                     </div>
                     
                     <div class="stat-card stat-card--blue">
-                        <div class="stat-card__icon">
-                            <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M8 12h8"></path>
-                                <path d="M12 8v8"></path>
-                            </svg>
+                        <div class="stat-card__header">
+                            <div class="stat-card__icon">
+                                <svg class="stat-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 12h8"></path>
+                                    <path d="M12 8v8"></path>
+                                </svg>
+                            </div>
+                            <h3 class="stat-card__title">好きなスポーツ</h3>
                         </div>
                         <div class="stat-card__content">
-                            <h3 class="stat-card__title">好きなスポーツ</h3>
                             <div class="stat-card__details">
                                 <div class="stat-detail">
                                     <span class="stat-detail__label">テニス</span>

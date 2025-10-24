@@ -9,38 +9,20 @@
     <!-- デザインシステムCSS -->
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
     <link rel="stylesheet" href="../css/sections.css">
     <link rel="stylesheet" href="../css/selection-system.css">
-    <link rel="stylesheet" href="../css/news-system.css">
-    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
     <link rel="stylesheet" href="../css/subpage-hero.css">
     <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/section-description.css">
     <link rel="stylesheet" href="../css/company-history.css">
     
-    <!-- ナビゲーションリンクの強制リセット -->
-    <style>
-        .header .nav__link,
-        .header .nav__link:hover,
-        .header .nav__link:focus,
-        .header .nav__link:active,
-        .header .nav__link:visited {
-            text-decoration: none !important;
-            border-bottom: none !important;
-            text-decoration-line: none !important;
-            text-decoration-style: none !important;
-            text-decoration-color: transparent !important;
-        }
-        
-        .header .nav__link::after,
-        .header .nav__link::before {
-            display: none !important;
-            content: none !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-        }
-    </style>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,20 +33,15 @@
     <!-- Header Component -->
     <header class="header" data-component="header">
         <div class="container">
-            <div class="header__brand">
-                <a href="../index.html" class="header__logo-link">
-                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
-                </a>
-            </div>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            
-            <nav class="header__nav" id="main-navigation">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
                 <ul class="nav__list">
                     <li class="nav__item" data-dropdown="features">
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
@@ -85,8 +62,9 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用ページトップ</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">中途採用ページトップ</a>
                             <a href="./faq.html" class="dropdown__link">よくある質問</a>
-                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
@@ -99,11 +77,26 @@
                     </li>
                 </ul>
                 
-                <!-- コーポレートサイトへのリンク -->
-                <div class="header__cta">
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
                     <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
                 </div>
-            </nav>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -127,16 +120,15 @@
     <!-- メインコンテンツ -->
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero hero--subpage hero--company" data-section="hero">
+        <section class="hero--subpage" data-section="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">ヒストリー</h1>
-                    <p class="hero__subtitle">History</p>
+                    <div class="hero__header">
+                        <h1 class="hero__title">ヒストリー</h1>
+                        <p class="hero__subtitle">History</p>
+                    </div>
                     <p class="hero__description">テンファイブの歩みと成長の歴史をご紹介。創業から現在まで、どのような挑戦と成果を積み重ねてきたのかを振り返ります。</p>
                 </div>
-                
-                <!-- デジタル調のアクセント要素 -->
-                <div class="hero__accent"></div>
             </div>
         </section>
 
@@ -333,41 +325,52 @@
                 </div>
                 
                 <div class="initiatives-content">
-                    <p class="initiatives-text">
+                    <p class="section__description">
                         創業から現在まで、テンファイブは常に変化し続けています。最新のテクノロジーを取り入れながら、
                         お客様のニーズに応えるソリューションを提供し続けています。
                     </p>
                     
                     <div class="initiatives-grid">
                         <div class="initiative-item">
-                            <div class="initiative-item__icon">
-                                <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                                </svg>
+                            <div class="initiative-item__header">
+                                <div class="initiative-item__icon">
+                                    <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1 .34-4.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"></path>
+                                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0-.34-4.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="initiative-item__title">AI技術の活用</h3>
                             </div>
-                            <h3 class="initiative-item__title">AI技術の活用</h3>
                             <p class="initiative-item__description">
                                 最新のAI技術を活用したソリューション開発に取り組んでいます。
                             </p>
                         </div>
                         
                         <div class="initiative-item">
-                            <div class="initiative-item__icon">🌍</div>
-                            <h3 class="initiative-item__title">グローバル展開</h3>
+                            <div class="initiative-item__header">
+                                <div class="initiative-item__icon">
+                                    <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M2 12h20"></path>
+                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="initiative-item__title">グローバル展開</h3>
+                            </div>
                             <p class="initiative-item__description">
                                 海外プロジェクトの拡大とグローバルな人材育成を推進しています。
                             </p>
                         </div>
                         
                         <div class="initiative-item">
-                            <div class="initiative-item__icon">
-                                <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                </svg>
+                            <div class="initiative-item__header">
+                                <div class="initiative-item__icon">
+                                    <svg class="initiative-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="initiative-item__title">イノベーション創出</h3>
                             </div>
-                            <h3 class="initiative-item__title">イノベーション創出</h3>
                             <p class="initiative-item__description">
                                 新しい技術とアイデアで社会課題の解決に取り組んでいます。
                             </p>

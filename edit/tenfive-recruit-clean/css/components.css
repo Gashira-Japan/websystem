@@ -717,6 +717,7 @@
     display: flex;
     align-items: center;
     padding: var(--mega-menu-link-padding); /* デザインシステム変数を使用 */
+    padding-right: calc(var(--spacing-3) + 1.5em); /* 矢印のスペースを確保 */
     border-radius: var(--radius-base);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
@@ -773,11 +774,15 @@
   /* ドロップダウンリンクのアイコン */
   .dropdown__link::after {
     content: '→';
-    margin-left: auto;
+    position: absolute;
+    right: var(--spacing-3);
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0;
     transition: all 0.2s ease;
     font-size: var(--font-size-xs);
     color: var(--color-primary-500);
+    pointer-events: none;
   }
   
   .dropdown__link:hover::after {
@@ -890,6 +895,11 @@
   color: var(--color-primary-400);
 }
 
+.footer__link:visited {
+  color: var(--color-neutral-400);
+  opacity: 0.8;
+}
+
 .footer__bottom {
   border-top: 1px solid var(--color-neutral-white);
   padding-top: var(--spacing-6);
@@ -962,7 +972,8 @@
 }
 
 .link-text:visited {
-  color: var(--color-primary-600);
+  color: var(--color-neutral-600);
+  opacity: 0.8;
 }
 
 /* リンクテキストの矢印アイコン */

@@ -4,7 +4,6 @@
 
 /* 社員紹介セクション */
 .staff-intro {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -13,7 +12,7 @@
   grid-template-columns: 300px 1fr;
   gap: var(--spacing-8);
   align-items: center;
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -63,7 +62,7 @@
 
 /* スケジュール表セクション */
 .schedule-table {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
 .schedule-container {
@@ -153,7 +152,6 @@
 
 /* 社員メッセージセクション */
 .staff-message {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -161,7 +159,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-6);
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -214,49 +212,7 @@
   line-height: var(--line-height-relaxed);
 }
 
-/* アニメーション */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.staff-intro__content {
-  animation: slideInLeft 0.8s ease-out;
-}
-
-.schedule-table-wrapper {
-  animation: fadeInUp 0.8s ease-out 0.2s both;
-}
-
-
-.message-item {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.message-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.message-item:nth-child(3) {
-  animation-delay: 0.4s;
-}
+/* アニメーション - 統一システムを使用 */
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {

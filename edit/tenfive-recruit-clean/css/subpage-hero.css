@@ -1,23 +1,75 @@
 /* ========================================
-   下層ページ用ヘローデザイン - デジタル調デザインシステム
-   トップページのヒーローセクションとは完全に分離されたスタイル
+   下層ページ用スタイル - 統合版
+   ヒーローセクション、パンくずリスト、オーバーライドを統合管理
    ======================================== */
 
-/* 下層ページヘローのベーススタイル - コンパクト版（余裕を持たせた版） */
+/* パンくずリストのスタイル */
+.breadcrumb {
+  background: transparent !important;
+  padding: var(--spacing-2) 0 !important;
+  border: none !important;
+  margin-top: var(--header-height) !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: '>';
+  margin-left: var(--spacing-2);
+  color: var(--color-neutral-400);
+}
+
+.breadcrumb__link {
+  color: var(--color-primary-500);
+  text-decoration: none;
+  transition: color var(--animation-duration-base) var(--animation-easing-ease);
+}
+
+.breadcrumb__link:hover {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+}
+
+.breadcrumb__item--current {
+  color: var(--color-neutral-700);
+  font-weight: 500;
+}
+
+/* 下層ページヘローのベーススタイル - 統合版 */
 .hero--subpage {
   position: relative;
   background: linear-gradient(135deg, 
     var(--color-primary-50) 0%, 
     var(--color-neutral-50) 50%, 
     var(--color-primary-50) 100%);
-  padding: var(--spacing-12) 0 var(--spacing-16); /* 上下の余白を増加 */
-  margin-bottom: var(--spacing-12); /* 下層ページ共通のマージンボトムを追加 */
+  /* 縦幅を最小化 */
+  padding: var(--spacing-6) 0 var(--spacing-8);
   overflow: hidden;
+  /* 下層ページ専用：高さを最小限に制限 */
   min-height: auto;
-  /* トップページのヒーロースタイルをリセット */
-  display: block;
-  align-items: initial;
-  text-align: center;
+  max-height: none;
+  /* トップページのフルスクリーンヒーローを無効化 */
+  height: auto !important;
+  /* レイアウト設定 */
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
 
 /* トップページのヒーロー要素を非表示にする */
@@ -54,23 +106,55 @@
   z-index: 3;
 }
 
-/* 下層ページヘローのコンテンツレイアウト - コンパクト版（余裕を持たせた版） */
+/* 下層ページヘローのコンテンツレイアウト - 統合版 */
 .hero--subpage .hero__content {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  /* トップページの絶対位置指定をリセット */
-  position: static !important;
-  top: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  right: auto !important;
-  padding: var(--spacing-4) 0; /* 内部パディングを増加 */
-  /* トップページの背景オーバーレイをリセット */
-  background: none !important;
-  /* アクセント要素より上に表示 */
+  /* レイアウト設定 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  
+  /* サイズ設定 - デスクトップ版のみ1200px、レスポンシブ対応 */
+  width: 1200px;
+  max-width: 1200px;
+  min-height: 200px;
+  box-sizing: border-box;
+  
+  /* 位置・余白設定 */
   position: relative;
-  z-index: 3;
+  margin: 0;
+  padding: 0;
+  
+  /* 表示設定 */
+  text-align: left;
+  z-index: 10;
+  background: none;
+  
+  /* アニメーション */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* デスクトップ版の幅制限を適切に設定 */
+@media (min-width: 769px) {
+  .hero--subpage .hero__content {
+    width: 1200px;
+    max-width: 1200px;
+  }
+}
+
+/* ヒーローヘッダーを横並びレイアウトにする */
+.hero--subpage .hero__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+/* タイトルとサブタイトルの基本設定 */
+.hero--subpage .hero__title,
+.hero--subpage .hero__subtitle {
+  margin-bottom: 0;
 }
 
 /* トップページのヒーローコンテンツ背景オーバーレイを無効化 */
@@ -78,16 +162,15 @@
   display: none !important;
 }
 
-/* デジタル調のタイトルデザイン - コンパクト版（余裕を持たせた版） */
+/* 下層ページタイトルデザイン - 統合版 */
 .hero--subpage .hero__title {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  color: var(--color-neutral-900);
-  margin-bottom: var(--spacing-4); /* 下の余白を増加 */
+  color: var(--color-primary-500); /* トップページのセクションタイトルと同様のカラー */
+  margin-bottom: 0;
   position: relative;
-  display: inline-block;
-  z-index: 4; /* アクセント要素より上に表示 */
+  z-index: 15;
 }
 
 /* タイトルのアンダーライン（デジタル調） */
@@ -105,16 +188,21 @@
   border-radius: var(--radius-full);
 }
 
-/* サブタイトルのデザイン - コンパクト版（余裕を持たせた版） */
+/* 下層ページサブタイトルデザイン - 統合版 */
 .hero--subpage .hero__subtitle {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  color: var(--color-primary-600);
-  margin-bottom: var(--spacing-5); /* 下の余白を増加 */
+  color: var(--color-neutral-500); /* 背景色なしで読みやすく */
+  margin-bottom: 0;
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
   position: relative;
-  z-index: 4; /* アクセント要素より上に表示 */
+  z-index: 15;
+  /* 背景色を削除 */
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
 }
 
 /* サブタイトルの装飾線 - 削除（打ち消し線の原因となるため） */
@@ -123,70 +211,71 @@
   display: none; /* 装飾線を非表示にして打ち消し線を防ぐ */
 }
 
-/* 説明文のデザイン - コンパクト版（16px、左寄せ、余裕を持たせた版） */
+/* 下層ページ説明文デザイン - 統合版 */
 .hero--subpage .hero__description {
-  font-size: var(--font-size-base); /* 16px */
+  font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
   color: var(--color-neutral-700);
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left; /* 左寄せに変更 */
+  max-width: 1000px; /* 幅制限を1000pxに変更 */
+  margin: 0;
+  word-wrap: break-word; /* 長い単語の改行を許可 */
+  overflow-wrap: break-word; /* より確実な改行 */
+  text-align: left;
   position: relative;
-  z-index: 4; /* アクセント要素より上に表示 */
-  margin-bottom: var(--spacing-4); /* 下の余白を追加 */
+  z-index: 15;
+  display: block;
+  width: 100%;
+  /* レスポンシブ対応 */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  /* 背景色を削除 */
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
 }
 
-/* デジタル調のアクセント要素 - コンパクト版 */
-.hero--subpage .hero__accent {
-  position: absolute;
-  top: 10%;
-  right: 8%;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(45deg, 
-    var(--color-primary-200) 0%, 
-    var(--color-secondary-200) 100%);
-  border-radius: 50%;
-  opacity: 0.3;
-  z-index: 1; /* 文字より下に配置 */
-}
 
-.hero--subpage .hero__accent::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  background: var(--color-neutral-white);
-  border-radius: 50%;
-  box-shadow: var(--elevation-sm);
-}
-
-/* レスポンシブデザイン - コンパクト版（余裕を持たせた版） */
+/* レスポンシブデザイン - 統合版 */
 @media (max-width: 768px) {
-  .hero--subpage {
-    padding: var(--spacing-8) 0 var(--spacing-10); /* 上下の余白を適度に保持 */
-    margin-bottom: var(--spacing-8); /* タブレット以下のマージンボトム */
+  /* パンくずリストのレスポンシブ調整 */
+  .breadcrumb {
+    padding: var(--spacing-1) 0 !important;
+    margin-top: var(--header-height-tablet) !important;
   }
   
-  /* モバイルでもトップページのスタイルをリセット */
+  .breadcrumb__item {
+    font-size: var(--font-size-xs) !important;
+  }
+  
+  .hero--subpage {
+    padding: var(--spacing-4) 0 var(--spacing-6);
+    /* タブレット版：縦幅を最小化 */
+    min-height: auto;
+    max-height: none;
+    height: auto;
+  }
+  
+  /* タブレット版ヒーローコンテンツ */
   .hero--subpage .hero__content {
-    position: static !important;
     width: 100% !important;
-    padding: 0 !important;
-    text-align: center !important;
-    max-width: 700px !important;
-    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+  
+  .hero--subpage .hero__header {
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-1);
   }
   
   .hero--subpage .hero__title {
     font-size: var(--font-size-2xl);
+    z-index: 15;
   }
   
   .hero--subpage .hero__subtitle {
     font-size: var(--font-size-sm);
+    z-index: 15;
   }
   
   .hero--subpage .hero__subtitle::before,
@@ -195,40 +284,47 @@
   }
   
   .hero--subpage .hero__description {
-    font-size: var(--font-size-sm); /* 16pxを維持 */
+    font-size: var(--font-size-sm);
+    z-index: 15;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
   
-  .hero--subpage .hero__accent {
-    width: 60px;
-    height: 60px;
-    top: 8%;
-    right: 3%;
-  }
-  
-  .hero--subpage .hero__accent::before {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 @media (max-width: 480px) {
-  .hero--subpage {
-    padding: var(--spacing-6) 0 var(--spacing-8); /* 適度な余白を保持 */
-    margin-bottom: var(--spacing-6); /* スマートフォンでのマージンボトム */
+  /* パンくずリストのスマートフォン調整 */
+  .breadcrumb {
+    padding: var(--spacing-1) 0 !important;
+    margin-top: var(--header-height-mobile) !important;
   }
   
-  /* スマートフォンでもトップページのスタイルをリセット */
+  .hero--subpage {
+    padding: var(--spacing-3) 0 var(--spacing-4);
+    /* スマートフォン版：縦幅を最小化 */
+    min-height: auto;
+    max-height: none;
+    height: auto;
+  }
+  
+  /* スマートフォン版ヒーローコンテンツ */
   .hero--subpage .hero__content {
-    position: static !important;
     width: 100% !important;
-    padding: 0 !important;
-    text-align: center !important;
     max-width: 100% !important;
-    margin: 0 auto !important;
+  }
+  
+  .hero--subpage .hero__header {
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-1);
   }
   
   .hero--subpage .hero__title {
     font-size: var(--font-size-xl);
+    z-index: 15;
   }
   
   .hero--subpage .hero__title::after {
@@ -236,71 +332,27 @@
     height: 2px;
   }
   
-  .hero--subpage .hero__accent {
-    width: 50px;
-    height: 50px;
-    top: 5%;
-    right: 2%;
+  .hero--subpage .hero__description {
+    font-size: var(--font-size-sm);
+    z-index: 15;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.5;
   }
   
-  .hero--subpage .hero__accent::before {
-    width: 25px;
-    height: 25px;
-  }
 }
 
-/* カテゴリ別のヘローバリエーション */
+/* 統一されたヒーローセクションスタイル */
+/* カテゴリ別のバリエーションは削除し、すべての下層ページで統一されたスタイルを使用 */
 
-/* 特徴ページ用 */
-.hero--features {
-  background: linear-gradient(135deg, 
-    var(--color-primary-50) 0%, 
-    var(--color-primary-100) 100%);
-}
-
-.hero--features::before {
-  background-image: 
-    radial-gradient(circle at 20% 20%, var(--color-primary-200) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, var(--color-primary-300) 0%, transparent 40%);
-}
-
-/* 働き方ページ用 */
-.hero--workstyle {
-  background: linear-gradient(135deg, 
-    var(--color-primary-50) 0%, 
-    var(--color-secondary-100) 100%);
-}
-
-.hero--workstyle::before {
-  background-image: 
-    radial-gradient(circle at 30% 30%, var(--color-secondary-200) 0%, transparent 40%),
-    radial-gradient(circle at 70% 70%, var(--color-secondary-300) 0%, transparent 40%);
-}
-
-/* 選考ページ用 */
-.hero--selection {
-  background: linear-gradient(135deg, 
-    var(--color-accent-50) 0%, 
-    var(--color-accent-100) 100%);
-}
-
-.hero--selection::before {
-  background-image: 
-    radial-gradient(circle at 25% 25%, var(--color-accent-200) 0%, transparent 40%),
-    radial-gradient(circle at 75% 75%, var(--color-accent-300) 0%, transparent 40%);
-}
-
-/* 会社紹介ページ用 */
-.hero--company {
-  background: linear-gradient(135deg, 
-    var(--color-neutral-50) 0%, 
-    var(--color-neutral-100) 100%);
-}
-
-.hero--company::before {
-  background-image: 
-    radial-gradient(circle at 20% 20%, var(--color-neutral-200) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, var(--color-neutral-300) 0%, transparent 40%);
+/* コンテンツ表示の確実性を保証 */
+.hero--subpage .hero__content * {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* アニメーション効果 */
@@ -315,24 +367,7 @@
   }
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
-.hero--subpage .hero__content {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.hero--subpage .hero__accent {
-  animation: fadeInScale 1s ease-out 0.3s both;
-}
 
 /* ホバー効果 */
 .hero--subpage .hero__title:hover::after {

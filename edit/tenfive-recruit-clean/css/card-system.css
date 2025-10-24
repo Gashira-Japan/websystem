@@ -496,7 +496,8 @@ a:focus {
 }
 
 .card__link-text:visited {
-  color: var(--link-visited);
+  color: var(--color-neutral-600);
+  opacity: 0.8;
 }
 
 .card__link-text:active {

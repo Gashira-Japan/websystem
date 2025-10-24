@@ -9,38 +9,20 @@
     <!-- デザインシステムCSS -->
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
     <link rel="stylesheet" href="../css/sections.css">
     <link rel="stylesheet" href="../css/selection-system.css">
-    <link rel="stylesheet" href="../css/news-system.css">
-    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
     <link rel="stylesheet" href="../css/subpage-hero.css">
     <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/section-description.css">
     <link rel="stylesheet" href="../css/events.css">
     
-    <!-- ナビゲーションリンクの強制リセット -->
-    <style>
-        .header .nav__link,
-        .header .nav__link:hover,
-        .header .nav__link:focus,
-        .header .nav__link:active,
-        .header .nav__link:visited {
-            text-decoration: none !important;
-            border-bottom: none !important;
-            text-decoration-line: none !important;
-            text-decoration-style: none !important;
-            text-decoration-color: transparent !important;
-        }
-        
-        .header .nav__link::after,
-        .header .nav__link::before {
-            display: none !important;
-            content: none !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-        }
-    </style>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,20 +33,15 @@
     <!-- Header Component -->
     <header class="header" data-component="header">
         <div class="container">
-            <div class="header__brand">
-                <a href="../index.html" class="header__logo-link">
-                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
-                </a>
-            </div>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            
-            <nav class="header__nav" id="main-navigation">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
                 <ul class="nav__list">
                     <li class="nav__item" data-dropdown="features">
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
@@ -85,8 +62,9 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用ページトップ</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">中途採用ページトップ</a>
                             <a href="./faq.html" class="dropdown__link">よくある質問</a>
-                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
@@ -99,11 +77,26 @@
                     </li>
                 </ul>
                 
-                <!-- コーポレートサイトへのリンク -->
-                <div class="header__cta">
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
                     <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
                 </div>
-            </nav>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -127,16 +120,15 @@
     <!-- メインコンテンツ -->
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero hero--subpage hero--workstyle" data-section="hero">
+        <section class="hero--subpage" data-section="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">社内イベント</h1>
-                    <p class="hero__subtitle">Company Events</p>
+                    <div class="hero__header">
+                        <h1 class="hero__title">社内イベント</h1>
+                        <p class="hero__subtitle">Company Events</p>
+                    </div>
                     <p class="hero__description">テンファイブで働くメンバーたちと定期的に開催している社内イベントを紹介。活動のシェア、つながりの場、入社後のキャリア形成、情報提供などを目的とし、普段顔を合わせないメンバーとも交流できる場を提供している。</p>
                 </div>
-                
-                <!-- デジタル調のアクセント要素 -->
-                <div class="hero__accent"></div>
             </div>
         </section>
 
@@ -238,57 +230,65 @@
                 <div class="purpose-content">
                     <div class="purpose-grid">
                         <div class="purpose-item">
-                            <div class="purpose-item__icon">
-                                <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="8.5" cy="7" r="4"></circle>
-                                    <line x1="20" y1="8" x2="20" y2="14"></line>
-                                    <line x1="23" y1="11" x2="17" y2="11"></line>
-                                </svg>
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">活動のシェア</h3>
                             </div>
-                            <h3 class="purpose-item__title">活動のシェア</h3>
                             <p class="purpose-item__description">
                                 普段の業務では見えない、メンバーの活動や成果を共有する場として機能しています。
                             </p>
                         </div>
                         
                         <div class="purpose-item">
-                            <div class="purpose-item__icon">
-                                <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">つながりの場</h3>
                             </div>
-                            <h3 class="purpose-item__title">つながりの場</h3>
                             <p class="purpose-item__description">
                                 普段顔を合わせないメンバー同士が交流し、チームワークを深める機会を提供します。
                             </p>
                         </div>
                         
                         <div class="purpose-item">
-                            <div class="purpose-item__icon">
-                                <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                                    <polyline points="17 6 23 6 23 12"></polyline>
-                                </svg>
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">キャリア形成</h3>
                             </div>
-                            <h3 class="purpose-item__title">キャリア形成</h3>
                             <p class="purpose-item__description">
                                 先輩社員との交流を通じて、入社後のキャリア形成に関する情報やアドバイスを得られます。
                             </p>
                         </div>
                         
                         <div class="purpose-item">
-                            <div class="purpose-item__icon">
-                                <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                </svg>
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">情報提供</h3>
                             </div>
-                            <h3 class="purpose-item__title">情報提供</h3>
                             <p class="purpose-item__description">
                                 会社の最新情報や今後の方針について、メンバー全体で共有する場として活用されています。
                             </p>

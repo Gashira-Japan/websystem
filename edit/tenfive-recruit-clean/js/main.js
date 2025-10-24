@@ -109,9 +109,14 @@ function initHeaderScroll() {
 }
 
 /**
- * スクロールアニメーション
+ * スクロールアニメーション - 統一されたフワッとした下から上への表示
+ * 下層ページでのスクロール問題を防ぐため、条件付きで実行
  */
 function initScrollAnimations() {
+    // 下層ページでのスクロール問題を防ぐため、アニメーションを無効化
+    // 必要に応じて、特定のページでのみ有効化する場合は以下のコメントアウトを解除
+    return;
+    
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -125,9 +130,26 @@ function initScrollAnimations() {
         });
     }, observerOptions);
     
-    // アニメーション対象要素を監視
-    const animateElements = document.querySelectorAll('.feature-card, .workstyle-card, .job-card, .section__header');
+    // 統一されたアニメーション対象要素を監視
+    const animateElements = document.querySelectorAll(`
+        .section__header,
+        .feature-card,
+        .workstyle-card,
+        .job-card,
+        .stat-card,
+        .role-card,
+        .timeline-item,
+        .message-item,
+        .faq-item,
+        .staff-intro__content,
+        .schedule-table-wrapper,
+        .contact-content,
+        .description-column
+    `);
+    
     animateElements.forEach(el => {
+        // アニメーション用のクラスを追加
+        el.classList.add('animate-element');
         observer.observe(el);
     });
 }

@@ -4,7 +4,7 @@
 
 /* FAQセクション */
 .faq-section {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
 .faq-section--alt {
@@ -12,7 +12,7 @@
 }
 
 .faq-list {
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .faq-question__text {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-neutral-900);
   line-height: var(--line-height-relaxed);
@@ -94,7 +94,6 @@
 
 /* お問い合わせセクション */
 .contact-section {
-  padding: var(--spacing-16) 0;
   background: var(--color-primary-50);
 }
 
@@ -125,41 +124,7 @@
   flex-wrap: wrap;
 }
 
-/* アニメーション */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.faq-item {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.faq-item:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.faq-item:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.faq-item:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-.faq-item:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-.contact-content {
-  animation: fadeInUp 0.8s ease-out;
-}
+/* アニメーション - 統一システムを使用 */
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {

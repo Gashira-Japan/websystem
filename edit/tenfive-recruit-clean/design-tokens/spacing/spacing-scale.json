@@ -99,7 +99,7 @@
       "description": "デスクトップデバイス",
       "layout": "multi-column",
       "container": {
-        "maxWidth": "1200px",
+        "maxWidth": "1000px",
         "padding": "32px"
       },
       "spacing": {

@@ -9,38 +9,20 @@
     <!-- デザインシステムCSS -->
     <link rel="stylesheet" href="../css/design-system.css">
     <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
     <link rel="stylesheet" href="../css/sections.css">
     <link rel="stylesheet" href="../css/selection-system.css">
-    <link rel="stylesheet" href="../css/news-system.css">
-    <link rel="stylesheet" href="../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
     <link rel="stylesheet" href="../css/subpage-hero.css">
     <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/section-description.css">
     <link rel="stylesheet" href="../css/ideal-candidate.css">
     
-    <!-- ナビゲーションリンクの強制リセット -->
-    <style>
-        .header .nav__link,
-        .header .nav__link:hover,
-        .header .nav__link:focus,
-        .header .nav__link:active,
-        .header .nav__link:visited {
-            text-decoration: none !important;
-            border-bottom: none !important;
-            text-decoration-line: none !important;
-            text-decoration-style: none !important;
-            text-decoration-color: transparent !important;
-        }
-        
-        .header .nav__link::after,
-        .header .nav__link::before {
-            display: none !important;
-            content: none !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-        }
-    </style>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,20 +33,15 @@
     <!-- Header Component -->
     <header class="header" data-component="header">
         <div class="container">
-            <div class="header__brand">
-                <a href="../index.html" class="header__logo-link">
-                    <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
-                </a>
-            </div>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            
-            <nav class="header__nav" id="main-navigation">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
                 <ul class="nav__list">
                     <li class="nav__item" data-dropdown="features">
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
@@ -85,8 +62,9 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用ページトップ</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">中途採用ページトップ</a>
                             <a href="./faq.html" class="dropdown__link">よくある質問</a>
-                            <a href="./new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
@@ -99,11 +77,26 @@
                     </li>
                 </ul>
                 
-                <!-- コーポレートサイトへのリンク -->
-                <div class="header__cta">
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
                     <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
                 </div>
-            </nav>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -127,82 +120,26 @@
     <!-- メインコンテンツ -->
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero hero--subpage hero--selection" data-section="hero">
+        <section class="hero--subpage" data-section="hero">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">求める人物像</h1>
-                    <p class="hero__subtitle">Ideal Candidate</p>
-                    <p class="hero__description">AI時代をリードする次世代のプロフェッショナル集団として、私たちのビジョンに共感し、共に未来を創造できる人材を求めています。</p>
+                    <div class="hero__header">
+                        <h1 class="hero__title">求める人物像</h1>
+                        <p class="hero__subtitle">Ideal Candidate</p>
+                    </div>
+                    <p class="hero__description">従来のSES/SIモデルからの脱却を目指し、「大量の人材」ではなく「少数精鋭のプロフェッショナル」を求めています。 AI技術の進歩により、テクノロジーを活用して一人で複数人分の価値を創出できる人材が必要です。</p>
                 </div>
-                
-                <!-- デジタル調のアクセント要素 -->
-                <div class="hero__accent"></div>
             </div>
         </section>
 
-        <!-- 採用情報カードセクション -->
-        <section class="recruitment-cards" data-section="recruitment-cards">
+        <!-- 価値観セクション -->
+        <section class="values" data-section="values">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">採用情報</h2>
-                    <p class="section__subtitle">Recruitment Information</p>
+                    <h2 class="section__title">価値観</h2>
+                    <p class="section__subtitle">Value</p>
                 </div>
                 
-                <div class="recruitment-cards__grid">
-                    <div class="recruitment-card">
-                        <div class="recruitment-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                                <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
-                                <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="recruitment-card__content">
-                            <h3 class="recruitment-card__title">新卒採用</h3>
-                            <p class="recruitment-card__description">
-                                新卒の皆様には、テンファイブの価値観を深く理解し、長期的な成長を共に歩んでいただける方を求めています。技術的なスキルよりも、学習意欲と成長マインドセットを重視します。
-                            </p>
-                            <div class="recruitment-card__features">
-                                <span class="feature-tag">未経験歓迎</span>
-                                <span class="feature-tag">成長支援</span>
-                                <span class="feature-tag">メンター制度</span>
-                            </div>
-                        </div>
-                        <div class="recruitment-card__action">
-                            <a href="./new-grad-jobs.html" class="btn btn--primary">詳細を見る</a>
-                        </div>
-                    </div>
-                    
-                    <div class="recruitment-card">
-                        <div class="recruitment-card__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" fill="currentColor"/>
-                                <path d="M19 15L20.09 18.26L24 19L20.09 19.74L19 23L17.91 19.74L14 19L17.91 18.26L19 15Z" fill="currentColor"/>
-                                <path d="M5 15L6.09 18.26L10 19L6.09 19.74L5 23L3.91 19.74L0 19L3.91 18.26L5 15Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                        <div class="recruitment-card__content">
-                            <h3 class="recruitment-card__title">中途採用</h3>
-                            <p class="recruitment-card__description">
-                                経験豊富な皆様には、既存のスキルを活かしながら、テンファイブの新しい挑戦に参加していただける方を求めています。専門性とリーダーシップを発揮できる環境を提供します。
-                            </p>
-                            <div class="recruitment-card__features">
-                                <span class="feature-tag">経験重視</span>
-                                <span class="feature-tag">即戦力</span>
-                                <span class="feature-tag">リーダーシップ</span>
-                            </div>
-                        </div>
-                        <div class="recruitment-card__action">
-                            <a href="./mid-career-jobs.html" class="btn btn--primary">詳細を見る</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 企業理念セクション -->
-        <section class="company-values" data-section="company-values">
-            <div class="container">
                 <div class="values-grid">
                     <div class="value-card">
                         <div class="value-card__content">
@@ -225,22 +162,7 @@
             </div>
         </section>
 
-        <!-- 時代の転換点セクション -->
-        <section class="era-transition" data-section="era-transition">
-            <div class="container">
-                <div class="section__header">
-                    <h2 class="section__title">時代の転換点における人材戦略</h2>
-                    <p class="section__subtitle">Talent Strategy in the Era of Change</p>
-                </div>
-                
-                <div class="transition-content">
-                    <p class="transition-text">
-                        従来のSES/SIモデルからの脱却を目指し、「大量の人材」ではなく「少数精鋭のプロフェッショナル」を求めています。
-                        AI技術の進歩により、テクノロジーを活用して一人で複数人分の価値を創出できる人材が必要です。
-                    </p>
-                </div>
-            </div>
-        </section>
+
 
         <!-- 基本的な求める人材像セクション -->
         <section class="basic-requirements" data-section="basic-requirements">
@@ -276,8 +198,8 @@
         <section class="ai-capabilities" data-section="ai-capabilities">
             <div class="container">
                 <div class="section__header">
-                    <h2 class="section__title">AI時代に弊社が求める具体的能力</h2>
-                    <p class="section__subtitle">Specific Capabilities in the AI Era</p>
+                    <h2 class="section__title">AI時代に求められる能力</h2>
+                    <p class="section__subtitle">Capabilities in the AI Era</p>
                 </div>
                 
                 <div class="capabilities-grid">
@@ -316,6 +238,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer Component -->

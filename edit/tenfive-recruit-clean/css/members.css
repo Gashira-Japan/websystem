@@ -1,0 +1,182 @@
+/* メンバーページ専用スタイル */
+
+/* メンバーカードコンポーネント */
+.member-card {
+    display: block;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    /* background: var(--color-neutral-white); */
+    /* box-shadow: var(--elevation-base); */
+    transition: all var(--animation-duration-base) var(--animation-easing-ease);
+    text-decoration: none;
+    color: inherit;
+    /* text-align: left; */
+}
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--elevation-lg);
+}
+
+.member-card__media {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+    background: var(--color-neutral-100);
+}
+
+.member-card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-card__content {
+    padding: var(--spacing-6);
+    text-align: left;
+}
+
+.member-card__name {
+    margin: 0 0 var(--spacing-2);
+    font-weight: 600;
+}
+
+.member-card__name-ja {
+    display: block;
+    font-size: var(--font-size-lg);
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-1);
+}
+
+.member-card__name-en {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-700);
+    font-family: var(--font-family-secondary);
+}
+
+.member-card__role {
+    margin: 0 0 var(--spacing-4);
+    font-size: var(--font-size-base);
+}
+
+.member-card__role-ja {
+    display: block;
+    color: var(--color-primary-600);
+    font-weight: 500;
+    margin-bottom: var(--spacing-1);
+}
+
+.member-card__role-en {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-600);
+    font-family: var(--font-family-secondary);
+}
+
+.member-card__link-text {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-neutral-900);
+    text-decoration: underline;
+    text-decoration-color: var(--color-neutral-400);
+    text-underline-offset: 2px;
+    font-weight: var(--font-weight-semibold);
+    transition: all 0.2s ease;
+}
+
+.member-card__link-text:hover {
+    color: var(--color-primary-600);
+    text-decoration-color: var(--color-primary-600);
+}
+
+.member-card__link-text:visited {
+    color: var(--color-neutral-600);
+    opacity: 0.8;
+}
+
+.member-card__link-text::after {
+    content: '→';
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-8);
+    /* margin-top: var(--spacing-12); */
+}
+
+@media (max-width: 768px) {
+    .members-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.diversity-section {
+    /* background: var(--color-neutral-50); */
+    /* padding: var(--spacing-16) 0; */
+    /* margin-top: var(--spacing-16); */
+}
+
+/* ヘッダー固定時の調整 */
+body {
+    padding-top: 0 !important;
+}
+
+/* メンバーセクションのレイアウト修正 */
+.section[data-section="members"] {
+    /* padding: var(--spacing-16) 0; */
+    background: var(--color-neutral-white);
+}
+
+/* 多様性セクションのスタイル調整 */
+.diversity-section {
+    /* background: var(--color-neutral-50); */
+    /* padding: var(--spacing-16) 0; */
+    /* margin-top: 0; */
+}
+
+.diversity-section .section__header {
+    text-align: center;
+    margin-bottom: var(--spacing-8);
+}
+
+.diversity-section .section__title {
+    /* font-size: var(--font-size-2xl); */
+    /* font-weight: var(--font-weight-bold); */
+    /* color: var(--color-neutral-900); */
+    /* margin: 0 0 var(--spacing-2); */
+}
+
+.diversity-section .section__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-neutral-600);
+    font-family: var(--font-family-secondary);
+    margin: 0 0 var(--spacing-6);
+}
+
+.diversity-section .section__content {
+    text-align: left;
+    /* max-width: 600px; */
+    margin: 0 auto;
+}
+
+.diversity-section .section__content p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    margin: 0;
+}

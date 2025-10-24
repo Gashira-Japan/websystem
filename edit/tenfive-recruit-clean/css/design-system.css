@@ -4,6 +4,11 @@
 
 /* CSS Custom Properties - デザインシステムのトークン */
 :root {
+  /* レイアウトトークン */
+  --container-max-width: 1200px;
+  --content-max-width: 1000px;
+  --message-max-width: 1000px;
+  
   /* カラーパレット */
   /* プライマリカラー */
   --color-primary-50: #eff6ff;
@@ -222,6 +227,11 @@
 --animation-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
 --animation-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
 
+/* 統一アニメーション - フワッとした下から上への表示 */
+--animation-fade-in-up-duration: 0.6s;
+--animation-fade-in-up-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+--animation-fade-in-up-delay: 0.1s;
+
   /* グローバルナビゲーション - デザイン庁ベストプラクティス準拠 */
   --nav-default: var(--color-neutral-700);
   --nav-hover: var(--color-primary-600);
@@ -262,8 +272,8 @@
 
   /* レイアウト関連の変数 */
   --header-height: 64px; /* デスクトップのヘッダー高さ */
-  --header-height-tablet: 56px; /* タブレットのヘッダー高さ */
-  --header-height-mobile: 48px; /* モバイルのヘッダー高さ */
+  --header-height-tablet: 64px; /* タブレットのヘッダー高さ */
+  --header-height-mobile: 64px; /* モバイルのヘッダー高さ */
   
   /* パンくずリストの調整用変数（ヘッダー高さ + 追加マージン） */
   --breadcrumb-offset: 6px; /* ヘッダーとの追加間隔 */
@@ -304,14 +314,34 @@ body {
   padding: 0 var(--spacing-4);
 }
 
+/* コンテンツ幅統一クラス */
+.content-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.message-content {
+  max-width: var(--message-max-width);
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .container {
+    padding: 0 var(--spacing-6);
+  }
+  
+  .content-container {
     padding: 0 var(--spacing-6);
   }
 }
 
 @media (min-width: 1024px) {
   .container {
+    padding: 0 var(--spacing-8);
+  }
+  
+  .content-container {
     padding: 0 var(--spacing-8);
   }
 }
@@ -462,6 +492,13 @@ body {
   padding: var(--spacing-section-padding) 0;
 }
 
+/* セクションコンテンツの統一スタイル */
+.section__content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1000px;
+}
+
 .section__header {
   text-align: left;
   margin-bottom: var(--spacing-12);
@@ -552,5 +589,80 @@ body {
 @media (max-width: 480px) {
   .breadcrumb {
     margin-top: var(--breadcrumb-margin-top-mobile); /* モバイルのヘッダー高さ + 追加マージン */
+  }
+}
+
+/* ========================================
+   統一アニメーションシステム
+   ======================================== */
+
+/* アニメーション前の状態 - 下層ページでのスクロール問題を防ぐため無効化 */
+.animate-element {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* アニメーション実行時の状態 - 下層ページでのスクロール問題を防ぐため無効化 */
+.animate-element.animate-in {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* 段階的なアニメーション遅延 */
+.animate-element:nth-child(1) { animation-delay: 0s; }
+.animate-element:nth-child(2) { animation-delay: 0.1s; }
+.animate-element:nth-child(3) { animation-delay: 0.2s; }
+.animate-element:nth-child(4) { animation-delay: 0.3s; }
+.animate-element:nth-child(5) { animation-delay: 0.4s; }
+.animate-element:nth-child(6) { animation-delay: 0.5s; }
+.animate-element:nth-child(7) { animation-delay: 0.6s; }
+.animate-element:nth-child(8) { animation-delay: 0.7s; }
+
+/* セクションヘッダーの特別なアニメーション */
+.section__header.animate-element {
+  transform: translateY(30px);
+}
+
+.section__header.animate-element.animate-in {
+  transform: translateY(0);
+}
+
+/* カード要素のアニメーション */
+.feature-card.animate-element,
+.workstyle-card.animate-element,
+.job-card.animate-element,
+.stat-card.animate-element,
+.role-card.animate-element,
+.timeline-item.animate-element,
+.message-item.animate-element,
+.faq-item.animate-element {
+  transform: translateY(30px);
+}
+
+.feature-card.animate-element.animate-in,
+.workstyle-card.animate-element.animate-in,
+.job-card.animate-element.animate-in,
+.stat-card.animate-element.animate-in,
+.role-card.animate-element.animate-in,
+.timeline-item.animate-element.animate-in,
+.message-item.animate-element.animate-in,
+.faq-item.animate-element.animate-in {
+  transform: translateY(0);
+}
+
+/* アクセシビリティ対応 - モーションを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+  .animate-element {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .animate-element.animate-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

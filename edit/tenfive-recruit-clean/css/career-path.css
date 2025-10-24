@@ -4,7 +4,6 @@
 
 /* キャリアタイムライン */
 .career-timeline {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -13,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-8);
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -22,16 +21,16 @@
   align-items: center;
   gap: var(--spacing-8);
   width: 100%;
-  background: var(--color-neutral-white);
+  /* background: var(--color-neutral-white); */
   border-radius: var(--radius-lg);
-  padding: var(--spacing-8);
-  box-shadow: var(--elevation-md);
+  padding: var(--spacing-4);
+  /* box-shadow: var(--elevation-md); */
   transition: var(--animation-transition);
 }
 
 .timeline-item:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-2px);
+  /* box-shadow: var(--elevation-lg); */
+  /* transform: translateY(-2px); */
 }
 
 .timeline-item__year {
@@ -53,10 +52,34 @@
 
 .timeline-item__content {
   flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-6);
+  align-items: center;
+}
+
+.timeline-item__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-item__img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-sm);
+  object-fit: cover;
 }
 
 .timeline-item__title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   color: var(--color-neutral-900);
   margin-bottom: var(--spacing-4);
@@ -99,11 +122,11 @@
 
 /* キャリア概要セクション */
 .career-overview {
-  padding: var(--spacing-16) 0;
+  /* セクション共通のpaddingは.sectionで管理 */
 }
 
 .career-overview__content {
-  max-width: 800px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   text-align: center;
 }
@@ -116,14 +139,13 @@
 
 /* キャリアロールセクション */
 .career-roles {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
 .roles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: var(--spacing-8);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
 }
 
 .role-card {
@@ -246,58 +268,20 @@
   font-size: var(--font-size-sm);
 }
 
-/* アニメーション */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.timeline-item {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.timeline-item:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.timeline-item:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.timeline-item:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.role-card {
-  animation: fadeInScale 0.8s ease-out;
-}
-
-.role-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.role-card:nth-child(3) {
-  animation-delay: 0.4s;
-}
+/* アニメーション - 統一システムを使用 */
 
 /* レスポンシブデザイン */
+@media (max-width: 1024px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .role-card {
+    padding: var(--spacing-6);
+  }
+}
+
 @media (max-width: 768px) {
   .timeline-item {
     flex-direction: column;
@@ -309,13 +293,22 @@
     width: auto;
   }
   
+  .timeline-item__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .timeline-item__img {
+    max-height: 150px;
+  }
+  
   .timeline-item__title {
     font-size: var(--font-size-lg);
   }
   
   .roles-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-6);
+    gap: var(--spacing-4);
   }
   
   .role-card {
@@ -329,12 +322,16 @@
 
 @media (max-width: 480px) {
   .timeline-item {
-    padding: var(--spacing-6);
+    padding: var(--spacing-4);
   }
   
   .timeline-year {
     font-size: var(--font-size-base);
     padding: var(--spacing-2) var(--spacing-4);
+  }
+  
+  .timeline-item__img {
+    max-height: 120px;
   }
   
   .timeline-item__title {

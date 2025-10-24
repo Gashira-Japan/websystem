@@ -15,6 +15,76 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-4);
   }
+  
+  .stat-card {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    gap: var(--spacing-3);
+  }
+  
+  .stat-card {
+    padding: var(--spacing-3);
+  }
+  
+  .stat-card__header {
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .stat-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stat-card__icon-svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .stat-card__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .stat-number__value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .stat-number__label {
+    font-size: var(--font-size-sm);
+  }
+  
+  /* 横並びレイアウトのモバイル対応 */
+  .stat-card__numbers--horizontal {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .stat-card__numbers--horizontal .stat-number {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pie-chart {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* 3色レイアウトのモバイル対応 */
+  .stat-card__numbers--three-col {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2);
+  }
+  
+  .stat-card__numbers--three-col .stat-number {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /* 統計カード */
@@ -50,16 +120,24 @@
   border-left: 4px solid var(--color-secondary-500);
 }
 
+/* 統計カードのヘッダー（アイコン + タイトル） */
+.stat-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
 /* 統計カードのアイコン */
 .stat-card__icon {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: var(--color-neutral-100);
   border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-4);
+  flex-shrink: 0;
 }
 
 .stat-card--green .stat-card__icon {
@@ -83,8 +161,8 @@
 }
 
 .stat-card__icon-svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 /* 統計カードのタイトル */
@@ -92,8 +170,9 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   color: var(--color-neutral-900);
-  margin-bottom: var(--spacing-4);
   line-height: var(--line-height-tight);
+  margin: 0;
+  flex: 1;
 }
 
 /* 統計数字 */
@@ -101,6 +180,14 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3);
+}
+
+/* 横並びレイアウト */
+.stat-card__numbers--horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
 }
 
 .stat-number {
@@ -114,12 +201,45 @@
   text-align: center;
 }
 
+/* 横並びレイアウト用のstat-number */
+.stat-card__numbers--horizontal .stat-number {
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* 3色対応レイアウト */
+.stat-card__numbers--three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3);
+  text-align: center;
+}
+
+.stat-card__numbers--three-col .stat-number {
+  align-items: center;
+  text-align: center;
+}
+
 .stat-number__value {
   font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-neutral-900);
   line-height: 1;
   margin-bottom: var(--spacing-1);
+}
+
+/* 数字の色をグラフの色と一致させる */
+.stat-number__value--primary {
+  color: var(--color-primary-500);
+}
+
+.stat-number__value--secondary {
+  color: var(--color-secondary-500);
+}
+
+.stat-number__value--neutral {
+  color: var(--color-neutral-500);
 }
 
 .stat-number__label {
@@ -159,6 +279,64 @@
   font-weight: var(--font-weight-semibold);
 }
 
+/* 円グラフ */
+.stat-chart {
+  margin-top: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+}
+
+.pie-chart {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2色円グラフ - 動的な角度計算 */
+.pie-chart--two-col {
+  background: conic-gradient(
+    var(--color-primary-500) 0deg calc(var(--percentage) * 3.6deg),
+    var(--color-secondary-500) calc(var(--percentage) * 3.6deg) 360deg
+  );
+  border: 2px solid var(--color-neutral-white);
+  box-shadow: 0 0 0 1px var(--color-neutral-200);
+}
+
+/* 3色円グラフ */
+.pie-chart--three-col {
+  background: conic-gradient(
+    var(--color-primary-500) 0deg 288deg,
+    var(--color-secondary-500) 288deg 324deg,
+    var(--color-neutral-500) 324deg 360deg
+  );
+  border: 2px solid var(--color-neutral-white);
+  box-shadow: 0 0 0 1px var(--color-neutral-200);
+}
+
+.pie-chart__segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 説明文 */
+.stat-card__description {
+  margin-top: var(--spacing-3);
+  text-align: center;
+}
+
+.stat-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin: 0;
+  font-style: italic;
+}
+
 /* タグ */
 .stat-card__tags {
   display: flex;
@@ -189,7 +367,6 @@
 
 /* 説明セクション */
 .company-description {
-  padding: var(--spacing-16) 0;
   background: var(--color-neutral-50);
 }
 
@@ -208,10 +385,8 @@
 }
 
 .description-column {
-  background: var(--color-neutral-white);
   border-radius: var(--radius-lg);
   padding: var(--spacing-8);
-  box-shadow: var(--elevation-sm);
 }
 
 .description-column__title {
@@ -264,60 +439,7 @@
   font-size: var(--font-size-lg);
 }
 
-/* アニメーション */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.stat-card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.stat-card:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.stat-card:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.stat-card:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-.stat-card:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-.stat-card:nth-child(6) {
-  animation-delay: 0.5s;
-}
-
-.description-column {
-  animation: fadeInScale 0.8s ease-out;
-}
-
-.description-column:nth-child(2) {
-  animation-delay: 0.2s;
-}
+/* アニメーション - 統一システムを使用 */
 
 /* レスポンシブ調整 */
 @media (max-width: 480px) {

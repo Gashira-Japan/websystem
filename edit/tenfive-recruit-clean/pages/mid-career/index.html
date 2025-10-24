@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* キャリア採用ページ専用スタイル */
+        /* キャリア採用ページ専用スタイル - デザインシステム準拠 */
         .hero-mid-career {
             background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
             min-height: 100vh;
@@ -30,7 +30,8 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            color: white;
+            color: var(--color-neutral-white);
+            padding: calc(var(--spacing-24) + 72px) 0 var(--spacing-24);
         }
         
         .hero-mid-career::before {
@@ -41,9 +42,9 @@
             right: 0;
             bottom: 0;
             background-image: 
-                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(46, 204, 113, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(230, 149, 30, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, var(--color-primary-100) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--color-secondary-100) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, var(--color-accent-100) 0%, transparent 50%);
             pointer-events: none;
         }
         
@@ -52,7 +53,7 @@
             z-index: 2;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: var(--spacing-16);
             align-items: center;
         }
         
@@ -63,30 +64,30 @@
         .hero-mid-career__tag {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
-            color: white;
+            color: var(--color-neutral-white);
             padding: var(--spacing-2) var(--spacing-4);
             border-radius: 20px;
             font-size: var(--font-size-sm);
             font-weight: 600;
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
         }
         
         .hero-mid-career__title {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-size: var(--font-size-5xl);
             font-weight: 700;
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
             line-height: 1.2;
         }
         
         .hero-mid-career__subtitle {
-            font-size: clamp(1.125rem, 2vw, 1.25rem);
-            margin-bottom: 3rem;
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-12);
             line-height: 1.6;
             opacity: 0.9;
         }
         
         .hero-mid-career__cta {
-            margin-top: 2rem;
+            margin-top: var(--spacing-8);
         }
         
         .hero-mid-career__image {
@@ -98,46 +99,46 @@
             width: 100%;
             max-width: 500px;
             height: auto;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--elevation-xl);
         }
         
         /* Jobs セクション */
         .jobs-section {
-            background: white;
+            background: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
         .jobs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
         }
         
         .job-card {
-            background: white;
+            background: var(--color-neutral-white);
             border: 2px solid var(--color-neutral-200);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: var(--spacing-10);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: var(--animation-transition);
         }
         
         .job-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-xl);
             border-color: var(--color-primary-600);
         }
         
         .job-card__header {
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
         }
         
         .job-card__title {
             font-size: var(--font-size-2xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--spacing-2);
         }
         
         .job-card__salary {
@@ -147,24 +148,24 @@
         }
         
         .job-card__requirements {
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
         }
         
         .job-card__section {
-            margin-bottom: 1.5rem;
+            margin-bottom: var(--spacing-6);
         }
         
         .job-card__section-title {
             font-size: var(--font-size-base);
             font-weight: 600;
             color: var(--color-neutral-700);
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--spacing-2);
         }
         
         .job-card__tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: var(--spacing-2);
         }
         
         .job-card__tag {
@@ -201,21 +202,27 @@
         .conversation-blocks {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
         }
         
         .conversation-block {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-lg);
+            transition: var(--animation-transition);
+        }
+        
+        .conversation-block:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--elevation-xl);
         }
         
         .conversation-block__header {
             display: flex;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: var(--spacing-6);
         }
         
         .conversation-block__avatar {
@@ -223,7 +230,7 @@
             height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 1rem;
+            margin-right: var(--spacing-4);
         }
         
         .conversation-block__role {
@@ -235,7 +242,7 @@
         .conversation-block__content {
             background: var(--color-neutral-50);
             padding: var(--spacing-6);
-            border-radius: 12px;
+            border-radius: var(--radius-base);
             border-left: 4px solid var(--color-primary-600);
         }
         
@@ -243,7 +250,7 @@
             font-style: italic;
             line-height: 1.6;
             color: var(--color-neutral-700);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .conversation-block__response {
@@ -253,24 +260,30 @@
         
         /* Before/Afterセクション */
         .before-after-section {
-            background: white;
+            background: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
         .before-after-container {
             display: grid;
             grid-template-columns: 1fr auto 1fr;
-            gap: 3rem;
+            gap: var(--spacing-12);
             align-items: center;
-            margin-top: 3rem;
+            margin-top: var(--spacing-12);
         }
         
         .before-after-card {
-            background: white;
+            background: var(--color-neutral-white);
             border: 2px solid var(--color-neutral-200);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: var(--spacing-10);
             height: 100%;
+            transition: var(--animation-transition);
+        }
+        
+        .before-after-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--elevation-lg);
         }
         
         .before-after-card--before {
@@ -283,13 +296,13 @@
         
         .before-after-card__header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
         }
         
         .before-after-card__title {
             font-size: var(--font-size-2xl);
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--spacing-2);
         }
         
         .before-after-card--before .before-after-card__title {
@@ -313,9 +326,9 @@
         .before-after-list__item {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
             padding: var(--spacing-3);
-            border-radius: 8px;
+            border-radius: var(--radius-base);
         }
         
         .before-after-card--before .before-after-list__item {
@@ -329,7 +342,7 @@
         }
         
         .before-after-list__icon {
-            margin-right: 0.75rem;
+            margin-right: var(--spacing-3);
             font-size: var(--font-size-lg);
         }
         
@@ -341,14 +354,14 @@
             height: 60px;
             background: var(--color-primary-600);
             border-radius: 50%;
-            color: white;
+            color: var(--color-neutral-white);
             font-size: var(--font-size-2xl);
             font-weight: 700;
         }
         
         .before-after-link {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: var(--spacing-8);
         }
         
         /* 4ステップ成長ロードマップセクション */
@@ -376,7 +389,7 @@
         
         .roadmap-step {
             position: relative;
-            margin-bottom: 4rem;
+            margin-bottom: var(--spacing-16);
             display: flex;
             align-items: center;
         }
@@ -391,19 +404,25 @@
         
         .roadmap-step__content {
             flex: 1;
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-lg);
             border: 2px solid var(--color-neutral-200);
+            transition: var(--animation-transition);
+        }
+        
+        .roadmap-step__content:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--elevation-xl);
         }
         
         .roadmap-step:nth-child(odd) .roadmap-step__content {
-            margin-right: 3rem;
+            margin-right: var(--spacing-12);
         }
         
         .roadmap-step:nth-child(even) .roadmap-step__content {
-            margin-left: 3rem;
+            margin-left: var(--spacing-12);
         }
         
         .roadmap-step__number {
@@ -417,24 +436,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
+            color: var(--color-neutral-white);
             font-size: var(--font-size-2xl);
             font-weight: 700;
             z-index: 2;
-            border: 4px solid white;
+            border: 4px solid var(--color-neutral-white);
         }
         
         .roadmap-step__title {
             font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--spacing-2);
         }
         
         .roadmap-step__period {
             font-size: var(--font-size-sm);
             color: var(--color-neutral-400);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .roadmap-step__description {
@@ -444,30 +463,30 @@
         
         /* Why Us（差別化ブロック）セクション */
         .why-us-section {
-            background: white;
+            background: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
         .why-us-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
         }
         
         .why-us-tile {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-10);
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-lg);
             border: 2px solid var(--color-neutral-200);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: var(--animation-transition);
         }
         
         .why-us-tile:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--elevation-xl);
             border-color: var(--color-primary-600);
         }
         
@@ -475,15 +494,15 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
+            border-radius: var(--radius-base);
+            margin-bottom: var(--spacing-6);
         }
         
         .why-us-tile__title {
             font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .why-us-tile__description {
@@ -505,28 +524,28 @@
         .company-info-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: var(--spacing-16);
             align-items: center;
-            margin-top: 3rem;
+            margin-top: var(--spacing-12);
         }
         
         .company-info-text {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-12);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-lg);
         }
         
         .company-info-list {
             list-style: none;
             padding: 0;
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-8);
         }
         
         .company-info-list__item {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
             padding: var(--spacing-3) 0;
         }
         
@@ -535,7 +554,7 @@
             height: 20px;
             background: var(--color-primary-600);
             border-radius: 50%;
-            margin-right: 1rem;
+            margin-right: var(--spacing-4);
             flex-shrink: 0;
         }
         
@@ -556,35 +575,35 @@
         .company-info-image img {
             width: 100%;
             max-width: 500px;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--elevation-lg);
         }
         
         .project-examples {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
-            margin-top: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-top: var(--spacing-8);
+            box-shadow: var(--elevation-lg);
         }
         
         .project-examples__title {
             font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .project-examples__list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: var(--spacing-4);
         }
         
         .project-examples__item {
             background: var(--color-neutral-50);
             padding: var(--spacing-4);
-            border-radius: 8px;
+            border-radius: var(--radius-base);
             text-align: center;
             color: var(--color-neutral-700);
             font-weight: 500;
@@ -593,12 +612,12 @@
         /* 年収例セクション */
         .salary-examples-section {
             background: var(--color-primary-600);
-            color: white;
+            color: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
         .salary-examples-section .section__title {
-            color: white;
+            color: var(--color-neutral-white);
         }
         
         .salary-examples-section .section__subtitle {
@@ -608,22 +627,22 @@
         .salary-examples-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
         }
         
         .salary-example-card {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
             text-align: center;
             color: var(--color-neutral-700);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: var(--animation-transition);
         }
         
         .salary-example-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: var(--elevation-xl);
         }
         
         .salary-example-card__avatar {
@@ -634,7 +653,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto var(--spacing-4);
             font-size: var(--font-size-3xl);
         }
         
@@ -642,13 +661,13 @@
             font-size: var(--font-size-lg);
             font-weight: 600;
             color: var(--color-primary-600);
-            margin-bottom: 0.5rem;
+            margin-bottom: var(--spacing-2);
         }
         
         .salary-example-card__position {
             font-size: var(--font-size-sm);
             color: var(--color-neutral-400);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .salary-example-card__salary {
@@ -659,9 +678,9 @@
         
         .salary-evaluation-note {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
-            margin-top: 3rem;
+            margin-top: var(--spacing-12);
             text-align: center;
         }
         
@@ -672,29 +691,29 @@
         
         /* 選考フローセクション */
         .process-section {
-            background: white;
+            background: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
         .process-flow {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
         }
         
         .process-step {
-            background: white;
-            border-radius: 16px;
+            background: var(--color-neutral-white);
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
             text-align: center;
             border: 2px solid var(--color-neutral-200);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: var(--animation-transition);
         }
         
         .process-step:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--elevation-lg);
             border-color: var(--color-primary-600);
         }
         
@@ -706,8 +725,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            color: white;
+            margin: 0 auto var(--spacing-6);
+            color: var(--color-neutral-white);
             font-size: var(--font-size-3xl);
         }
         
@@ -715,13 +734,13 @@
             font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .process-step__description {
             line-height: 1.6;
             color: var(--color-neutral-700);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .process-step__note {
@@ -732,9 +751,9 @@
         
         .process-highlights {
             background: var(--color-neutral-50);
-            border-radius: 16px;
+            border-radius: var(--radius-lg);
             padding: var(--spacing-8);
-            margin-top: 3rem;
+            margin-top: var(--spacing-12);
             text-align: center;
         }
         
@@ -742,18 +761,18 @@
             font-size: var(--font-size-xl);
             font-weight: 700;
             color: var(--color-primary-600);
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
         }
         
         .process-highlights__list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: var(--spacing-4);
         }
         
         .process-highlights__item {
-            background: white;
+            background: var(--color-neutral-white);
             color: var(--color-neutral-700);
             padding: var(--spacing-2) var(--spacing-4);
             border-radius: 20px;
@@ -765,7 +784,7 @@
         /* CTAセクション */
         .cta-section {
             background: var(--color-primary-600);
-            color: white;
+            color: var(--color-neutral-white);
             padding: var(--spacing-16) 0;
         }
         
@@ -776,22 +795,22 @@
         }
         
         .cta-title {
-            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-size: var(--font-size-4xl);
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: var(--spacing-4);
             line-height: 1.2;
         }
         
         .cta-subtitle {
             font-size: var(--font-size-xl);
-            margin-bottom: 3rem;
+            margin-bottom: var(--spacing-12);
             opacity: 0.9;
             line-height: 1.6;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: var(--spacing-4);
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -800,7 +819,7 @@
         @media (max-width: 768px) {
             .hero-mid-career__content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: var(--spacing-8);
                 text-align: center;
             }
             
@@ -822,7 +841,7 @@
             
             .before-after-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: var(--spacing-8);
             }
             
             .before-after-arrow {
@@ -853,7 +872,7 @@
             
             .company-info-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: var(--spacing-8);
             }
             
             .project-examples__list {
@@ -890,20 +909,15 @@
     <!-- Header Component -->
     <header class="header" data-component="header">
         <div class="container">
-            <div class="header__brand">
-                <a href="../../index.html" class="header__logo-link">
-                    <img src="../../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
-                </a>
-            </div>
-            
-            <!-- ハンバーガーメニューボタン -->
-            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-                <span class="hamburger__line"></span>
-            </button>
-            
-            <nav class="header__nav" id="main-navigation">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../../index.html" class="header__logo-link">
+                        <img src="../../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
                 <ul class="nav__list">
                     <li class="nav__item" data-dropdown="features">
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
@@ -924,8 +938,9 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="../ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="../new-grad-jobs.html" class="dropdown__link">新卒採用ページトップ</a>
+                            <a href="../mid-career-jobs.html" class="dropdown__link">中途採用ページトップ</a>
                             <a href="../faq.html" class="dropdown__link">よくある質問</a>
-                            <a href="../new-grad-jobs.html" class="dropdown__link">募集要項一覧</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
@@ -938,11 +953,26 @@
                     </li>
                 </ul>
                 
-                <!-- コーポレートサイトへのリンク -->
-                <div class="header__cta">
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
                     <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
                 </div>
-            </nav>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 
