@@ -953,9 +953,9 @@
 }
 
 .link-text:hover {
-  color: var(--color-primary-600);
+  color: var(--color-primary-500);
   text-decoration: underline;
-  text-decoration-color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-500);
 }
 
 .link-text:focus {
@@ -1079,7 +1079,7 @@
   }
   
   .link-text:hover {
-    color: var(--color-neutral-800);
+    color: var(--color-primary-500);
     text-decoration-thickness: 3px;
   }
   

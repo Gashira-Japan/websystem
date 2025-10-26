@@ -161,12 +161,6 @@ body {
     /* margin: 0 0 var(--spacing-2); */
 }
 
-.diversity-section .section__subtitle {
-    font-size: var(--font-size-lg);
-    color: var(--color-neutral-600);
-    font-family: var(--font-family-secondary);
-    margin: 0 0 var(--spacing-6);
-}
 
 .diversity-section .section__content {
     text-align: left;

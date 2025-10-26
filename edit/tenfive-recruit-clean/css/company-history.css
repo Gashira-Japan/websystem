@@ -26,13 +26,13 @@
 .timeline-item {
   position: relative;
   margin-bottom: var(--spacing-12);
-  padding-left: 80px;
+  padding-left: 100px;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 21px;
+  left: 20px;
   top: 8px;
   width: 18px;
   height: 18px;
@@ -45,7 +45,7 @@
 
 .timeline-year {
   position: absolute;
-  left: -60px;
+  left: 52px;
   top: 0;
   width: 50px;
   text-align: center;
@@ -63,16 +63,16 @@
 }
 
 .timeline-content {
-  background: var(--color-neutral-white);
+  /* background: var(--color-neutral-white); */
   border-radius: var(--radius-lg);
   padding: var(--spacing-6);
-  box-shadow: var(--elevation-md);
+  /* box-shadow: var(--elevation-md); */
   transition: var(--animation-transition);
 }
 
 .timeline-content:hover {
-  box-shadow: var(--elevation-lg);
-  transform: translateY(-2px);
+  box-shadow: var(--elevation-base);
+  transform: translateY(0px);
 }
 
 .timeline-content__title {
@@ -256,37 +256,102 @@
 }
 
 /* レスポンシブデザイン */
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* タブレット横向き用レイアウト - PCと同じ左寄せレイアウトを維持 */
   .timeline::before {
-    left: 20px;
+    left: 12px;
   }
   
   .timeline-item {
-    padding-left: 60px;
+    padding-left: 100px;
   }
   
   .timeline-item::before {
-    left: 11px;
-    width: 18px;
-    height: 18px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
   }
   
   .timeline-year {
-    left: -50px;
-    width: 40px;
+    left: 40px;
+    width: 50px;
   }
   
   .timeline-year__number {
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-2) var(--spacing-3);
   }
   
   .timeline-content {
-    padding: var(--spacing-4);
+    padding: var(--spacing-5);
+    text-align: left;
   }
   
   .timeline-content__title {
     font-size: var(--font-size-lg);
+  }
+  
+  .initiatives-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+@media (max-width: 768px) {
+  /* タブレット用レイアウト - 左寄せレイアウト */
+  .timeline {
+    position: relative;
+    padding: 0 var(--spacing-4);
+  }
+  
+  .timeline::before {
+    left: 20px;
+    width: 2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-8);
+    padding-left: var(--spacing-20);
+  }
+  
+  .timeline-item::before {
+    left: -4px;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .timeline-year {
+    position: absolute;
+    left: 16px;
+    top: 0px;
+    width: 28px;
+    text-align: center;
+  }
+  
+  .timeline-year__number {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1) var(--spacing-2);
+    background: var(--color-primary-500);
+    color: var(--color-neutral-white);
+    border-radius: var(--radius-full);
+    display: inline-block;
+  }
+  
+  .timeline-content {
+    width: 100%;
+    padding: var(--spacing-5);
+    text-align: left;
+  }
+  
+  .timeline-content__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .timeline-content__description {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
   }
   
   .timeline-content__img {
@@ -314,40 +379,58 @@
 }
 
 @media (max-width: 480px) {
+  /* スマホ用レイアウト - 左寄せレイアウト */
+  .timeline {
+    padding: 0;
+  }
+  
   .timeline::before {
-    left: 15px;
+    left: 12px;
+    width: 2px;
   }
   
   .timeline-item {
-    padding-left: 50px;
+    margin-bottom: var(--spacing-6);
+    padding-left: 20px;
   }
   
   .timeline-item::before {
-    left: 6px;
+    left: 0;
     width: 18px;
     height: 18px;
   }
   
   .timeline-year {
-    left: -40px;
-    width: 30px;
+    position: relative;
+    left: 0px;
+    top: -12px;
+    width: 60px;
+    text-align: center;
   }
   
   .timeline-year__number {
     font-size: var(--font-size-xs);
     padding: var(--spacing-1);
+    background: var(--color-primary-500);
+    color: var(--color-neutral-white);
+    border-radius: var(--radius-full);
+    display: inline-block;
   }
   
   .timeline-content {
-    padding: var(--spacing-3);
+    width: 100%;
+    padding: var(--spacing-4);
+    text-align: left;
   }
   
   .timeline-content__title {
     font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2);
   }
   
   .timeline-content__description {
     font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
   }
   
   .timeline-content__img {

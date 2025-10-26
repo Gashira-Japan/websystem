@@ -2,18 +2,25 @@
    カードシステム - 統一されたルール
    ======================================== */
 
-/* 統一されたリンクスタイル - デザインシステム準拠 */
-a {
+/* カード専用のリンクスタイル - グローバルなaタグには影響しない */
+.image-card,
+.card,
+.feature-card,
+.workstyle-card,
+.job-card,
+.selection-card {
   color: var(--link-default);
   text-decoration: none;
   transition: all 0.2s var(--animation-easing-ease);
 }
 
-a:hover {
-  /* color: var(--link-hover); */
-  /* text-decoration: underline; */
-  /* text-decoration-color: var(--link-hover); */
-  /* text-underline-offset: 2px; */
+.image-card:hover,
+.card:hover,
+.feature-card:hover,
+.workstyle-card:hover,
+.job-card:hover,
+.selection-card:hover {
+  /* カード自体のホバースタイル */
 }
 
 /* カード内のタイトルは個別のスタイルを適用 */
@@ -58,15 +65,31 @@ a:hover {
   text-decoration: none;
 }
 
-a:visited {
+/* カード内のリンクの疑似クラス（グローバルなaタグには影響しない） */
+.image-card:visited,
+.card:visited,
+.feature-card:visited,
+.workstyle-card:visited,
+.job-card:visited,
+.selection-card:visited {
   color: var(--link-visited);
 }
 
-a:active {
+.image-card:active,
+.card:active,
+.feature-card:active,
+.workstyle-card:active,
+.job-card:active,
+.selection-card:active {
   color: var(--link-active);
 }
 
-a:focus {
+.image-card:focus,
+.card:focus,
+.feature-card:focus,
+.workstyle-card:focus,
+.job-card:focus,
+.selection-card:focus {
   color: var(--link-focus);
   outline: 2px solid var(--link-focus);
   outline-offset: 2px;

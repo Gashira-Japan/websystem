@@ -212,7 +212,7 @@
 /* インタラクティブ要素 - デザインシステム準拠 */
 --link-default: var(--color-primary-500);
 --link-hover: var(--color-primary-600);
---link-visited: var(--color-secondary-600);
+--link-visited: var(--color-neutral-300);
 --link-active: var(--color-primary-700);
 --link-focus: var(--color-primary-500);
 
@@ -510,6 +510,7 @@ body {
 
 .section__title {
   margin: 0;
+  color: var(--color-primary-500);
 }
 
 .section__subtitle {
@@ -556,7 +557,7 @@ body {
 .breadcrumb__link {
   color: var(--color-primary-600);
   text-decoration: none;
-  transition: color var(--animation-fast);
+  transition: color var(--animation-duration-fast) var(--animation-easing-ease);
 }
 
 .breadcrumb__link:hover {

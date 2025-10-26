@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // フォーカス管理
     initFocusManagement();
+    
+    // 数字アニメーション
+    initNumberAnimation();
 });
 
 /**
@@ -510,4 +513,59 @@ function initResponsiveImages() {
     
     // リサイズ時に画像を更新
     window.addEventListener('resize', debounce(updateImages, 250));
+}
+
+/**
+ * 数字アニメーション機能
+ * スロットマシンのような数字のカウントアップアニメーション
+ */
+function initNumberAnimation() {
+    const salaryNumbers = document.querySelectorAll('.salary-number');
+    
+    if (salaryNumbers.length === 0) return;
+    
+    // Intersection Observer でアニメーション開始を制御
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumber(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    salaryNumbers.forEach(number => {
+        observer.observe(number);
+    });
+}
+
+/**
+ * 個別の数字アニメーション
+ * @param {HTMLElement} element - アニメーション対象の要素
+ */
+function animateNumber(element) {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000; // 2秒
+    const startTime = performance.now();
+    
+    function updateNumber(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // イージング関数（easeOutQuart）
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(target * easeOutQuart);
+        
+        element.textContent = current;
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateNumber);
+        } else {
+            element.textContent = target;
+        }
+    }
+    
+    requestAnimationFrame(updateNumber);
 }

@@ -9,901 +9,23 @@
     <!-- デザインシステムCSS -->
     <link rel="stylesheet" href="../../css/design-system.css">
     <link rel="stylesheet" href="../../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-components.css">
     <link rel="stylesheet" href="../../css/components.css">
     <link rel="stylesheet" href="../../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-sections.css">
     <link rel="stylesheet" href="../../css/sections.css">
     <link rel="stylesheet" href="../../css/selection-system.css">
     <link rel="stylesheet" href="../../css/news-system.css">
     <link rel="stylesheet" href="../../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../css/mid-career.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* キャリア採用ページ専用スタイル - デザインシステム準拠 */
-        .hero-mid-career {
-            background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-500) 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            color: var(--color-neutral-white);
-            padding: calc(var(--spacing-24) + 72px) 0 var(--spacing-24);
-        }
-        
-        .hero-mid-career::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, var(--color-primary-100) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, var(--color-secondary-100) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, var(--color-accent-100) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .hero-mid-career__content {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-16);
-            align-items: center;
-        }
-        
-        .hero-mid-career__text {
-            max-width: 600px;
-        }
-        
-        .hero-mid-career__tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--color-neutral-white);
-            padding: var(--spacing-2) var(--spacing-4);
-            border-radius: 20px;
-            font-size: var(--font-size-sm);
-            font-weight: 600;
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .hero-mid-career__title {
-            font-size: var(--font-size-5xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-8);
-            line-height: 1.2;
-        }
-        
-        .hero-mid-career__subtitle {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-12);
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-        
-        .hero-mid-career__cta {
-            margin-top: var(--spacing-8);
-        }
-        
-        .hero-mid-career__image {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero-mid-career__img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--elevation-xl);
-        }
-        
-        /* Jobs セクション */
-        .jobs-section {
-            background: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .jobs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: var(--spacing-8);
-            margin-top: var(--spacing-12);
-        }
-        
-        .job-card {
-            background: var(--color-neutral-white);
-            border: 2px solid var(--color-neutral-200);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-10);
-            transition: var(--animation-transition);
-        }
-        
-        .job-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--elevation-xl);
-            border-color: var(--color-primary-600);
-        }
-        
-        .job-card__header {
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .job-card__title {
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .job-card__salary {
-            font-size: var(--font-size-xl);
-            font-weight: 600;
-            color: var(--color-accent-500);
-        }
-        
-        .job-card__requirements {
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .job-card__section {
-            margin-bottom: var(--spacing-6);
-        }
-        
-        .job-card__section-title {
-            font-size: var(--font-size-base);
-            font-weight: 600;
-            color: var(--color-neutral-700);
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .job-card__tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--spacing-2);
-        }
-        
-        .job-card__tag {
-            background: var(--color-neutral-50);
-            color: var(--color-neutral-700);
-            padding: var(--spacing-1) var(--spacing-3);
-            border-radius: 20px;
-            font-size: var(--font-size-sm);
-            border: 1px solid var(--color-neutral-200);
-        }
-        
-        .job-card__tag--required {
-            background: var(--color-error-50);
-            color: var(--color-error-600);
-            border-color: var(--color-error-200);
-        }
-        
-        .job-card__tag--welcome {
-            background: var(--color-success-50);
-            color: var(--color-success-600);
-            border-color: var(--color-success-200);
-        }
-        
-        .job-card__cta {
-            text-align: center;
-        }
-        
-        /* ペルソナの悩みセクション */
-        .persona-section {
-            background: var(--color-neutral-50);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .conversation-blocks {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: var(--spacing-8);
-            margin-top: var(--spacing-12);
-        }
-        
-        .conversation-block {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            box-shadow: var(--elevation-lg);
-            transition: var(--animation-transition);
-        }
-        
-        .conversation-block:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--elevation-xl);
-        }
-        
-        .conversation-block__header {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--spacing-6);
-        }
-        
-        .conversation-block__avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: var(--spacing-4);
-        }
-        
-        .conversation-block__role {
-            font-size: var(--font-size-sm);
-            color: var(--color-neutral-400);
-            font-weight: 500;
-        }
-        
-        .conversation-block__content {
-            background: var(--color-neutral-50);
-            padding: var(--spacing-6);
-            border-radius: var(--radius-base);
-            border-left: 4px solid var(--color-primary-600);
-        }
-        
-        .conversation-block__quote {
-            font-style: italic;
-            line-height: 1.6;
-            color: var(--color-neutral-700);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .conversation-block__response {
-            color: var(--color-primary-600);
-            font-weight: 600;
-        }
-        
-        /* Before/Afterセクション */
-        .before-after-section {
-            background: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .before-after-container {
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            gap: var(--spacing-12);
-            align-items: center;
-            margin-top: var(--spacing-12);
-        }
-        
-        .before-after-card {
-            background: var(--color-neutral-white);
-            border: 2px solid var(--color-neutral-200);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-10);
-            height: 100%;
-            transition: var(--animation-transition);
-        }
-        
-        .before-after-card:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--elevation-lg);
-        }
-        
-        .before-after-card--before {
-            border-color: var(--color-error-500);
-        }
-        
-        .before-after-card--after {
-            border-color: var(--color-success);
-        }
-        
-        .before-after-card__header {
-            text-align: center;
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .before-after-card__title {
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .before-after-card--before .before-after-card__title {
-            color: var(--color-error-500);
-        }
-        
-        .before-after-card--after .before-after-card__title {
-            color: var(--color-success);
-        }
-        
-        .before-after-card__subtitle {
-            color: var(--color-neutral-400);
-            font-size: var(--font-size-sm);
-        }
-        
-        .before-after-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .before-after-list__item {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--spacing-4);
-            padding: var(--spacing-3);
-            border-radius: var(--radius-base);
-        }
-        
-        .before-after-card--before .before-after-list__item {
-            background: var(--color-error-50);
-            color: var(--color-error-600);
-        }
-        
-        .before-after-card--after .before-after-list__item {
-            background: var(--color-success-50);
-            color: var(--color-success-600);
-        }
-        
-        .before-after-list__icon {
-            margin-right: var(--spacing-3);
-            font-size: var(--font-size-lg);
-        }
-        
-        .before-after-arrow {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--color-primary-600);
-            border-radius: 50%;
-            color: var(--color-neutral-white);
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-        }
-        
-        .before-after-link {
-            text-align: center;
-            margin-top: var(--spacing-8);
-        }
-        
-        /* 4ステップ成長ロードマップセクション */
-        .roadmap-section {
-            background: var(--color-neutral-50);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .roadmap-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: var(--spacing-12) auto 0;
-        }
-        
-        .roadmap-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--color-primary-600);
-            transform: translateX(-50%);
-        }
-        
-        .roadmap-step {
-            position: relative;
-            margin-bottom: var(--spacing-16);
-            display: flex;
-            align-items: center;
-        }
-        
-        .roadmap-step:nth-child(odd) {
-            flex-direction: row;
-        }
-        
-        .roadmap-step:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
-        .roadmap-step__content {
-            flex: 1;
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            box-shadow: var(--elevation-lg);
-            border: 2px solid var(--color-neutral-200);
-            transition: var(--animation-transition);
-        }
-        
-        .roadmap-step__content:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--elevation-xl);
-        }
-        
-        .roadmap-step:nth-child(odd) .roadmap-step__content {
-            margin-right: var(--spacing-12);
-        }
-        
-        .roadmap-step:nth-child(even) .roadmap-step__content {
-            margin-left: var(--spacing-12);
-        }
-        
-        .roadmap-step__number {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: var(--color-primary-600);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-neutral-white);
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-            z-index: 2;
-            border: 4px solid var(--color-neutral-white);
-        }
-        
-        .roadmap-step__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .roadmap-step__period {
-            font-size: var(--font-size-sm);
-            color: var(--color-neutral-400);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .roadmap-step__description {
-            line-height: 1.6;
-            color: var(--color-neutral-700);
-        }
-        
-        /* Why Us（差別化ブロック）セクション */
-        .why-us-section {
-            background: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-8);
-            margin-top: var(--spacing-12);
-        }
-        
-        .why-us-tile {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-10);
-            text-align: center;
-            box-shadow: var(--elevation-lg);
-            border: 2px solid var(--color-neutral-200);
-            transition: var(--animation-transition);
-        }
-        
-        .why-us-tile:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--elevation-xl);
-            border-color: var(--color-primary-600);
-        }
-        
-        .why-us-tile__image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: var(--radius-base);
-            margin-bottom: var(--spacing-6);
-        }
-        
-        .why-us-tile__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .why-us-tile__description {
-            line-height: 1.6;
-            color: var(--color-neutral-700);
-        }
-        
-        .why-us-tile__highlight {
-            color: var(--color-accent-500);
-            font-weight: 600;
-        }
-        
-        /* 会社紹介セクション */
-        .company-info-section {
-            background: var(--color-neutral-50);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .company-info-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--spacing-16);
-            align-items: center;
-            margin-top: var(--spacing-12);
-        }
-        
-        .company-info-text {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-12);
-            box-shadow: var(--elevation-lg);
-        }
-        
-        .company-info-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: var(--spacing-8);
-        }
-        
-        .company-info-list__item {
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--spacing-4);
-            padding: var(--spacing-3) 0;
-        }
-        
-        .company-info-list__icon {
-            width: 20px;
-            height: 20px;
-            background: var(--color-primary-600);
-            border-radius: 50%;
-            margin-right: var(--spacing-4);
-            flex-shrink: 0;
-        }
-        
-        .company-info-list__text {
-            color: var(--color-neutral-700);
-            line-height: 1.6;
-        }
-        
-        .company-info-list__highlight {
-            color: var(--color-primary-600);
-            font-weight: 600;
-        }
-        
-        .company-info-image {
-            text-align: center;
-        }
-        
-        .company-info-image img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--elevation-lg);
-        }
-        
-        .project-examples {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            margin-top: var(--spacing-8);
-            box-shadow: var(--elevation-lg);
-        }
-        
-        .project-examples__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .project-examples__list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-4);
-        }
-        
-        .project-examples__item {
-            background: var(--color-neutral-50);
-            padding: var(--spacing-4);
-            border-radius: var(--radius-base);
-            text-align: center;
-            color: var(--color-neutral-700);
-            font-weight: 500;
-        }
-        
-        /* 年収例セクション */
-        .salary-examples-section {
-            background: var(--color-primary-600);
-            color: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .salary-examples-section .section__title {
-            color: var(--color-neutral-white);
-        }
-        
-        .salary-examples-section .section__subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .salary-examples-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-8);
-            margin-top: var(--spacing-12);
-        }
-        
-        .salary-example-card {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            text-align: center;
-            color: var(--color-neutral-700);
-            transition: var(--animation-transition);
-        }
-        
-        .salary-example-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--elevation-xl);
-        }
-        
-        .salary-example-card__avatar {
-            width: 80px;
-            height: 80px;
-            background: var(--color-neutral-50);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-4);
-            font-size: var(--font-size-3xl);
-        }
-        
-        .salary-example-card__age {
-            font-size: var(--font-size-lg);
-            font-weight: 600;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-2);
-        }
-        
-        .salary-example-card__position {
-            font-size: var(--font-size-sm);
-            color: var(--color-neutral-400);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .salary-example-card__salary {
-            font-size: var(--font-size-2xl);
-            font-weight: 700;
-            color: var(--color-accent-500);
-        }
-        
-        .salary-evaluation-note {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            margin-top: var(--spacing-12);
-            text-align: center;
-        }
-        
-        .salary-evaluation-note__text {
-            font-size: var(--font-size-lg);
-            line-height: 1.6;
-        }
-        
-        /* 選考フローセクション */
-        .process-section {
-            background: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .process-flow {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--spacing-8);
-            margin-top: var(--spacing-12);
-        }
-        
-        .process-step {
-            background: var(--color-neutral-white);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            text-align: center;
-            border: 2px solid var(--color-neutral-200);
-            transition: var(--animation-transition);
-        }
-        
-        .process-step:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--elevation-lg);
-            border-color: var(--color-primary-600);
-        }
-        
-        .process-step__icon {
-            width: 80px;
-            height: 80px;
-            background: var(--color-primary-600);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto var(--spacing-6);
-            color: var(--color-neutral-white);
-            font-size: var(--font-size-3xl);
-        }
-        
-        .process-step__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .process-step__description {
-            line-height: 1.6;
-            color: var(--color-neutral-700);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .process-step__note {
-            font-size: var(--font-size-sm);
-            color: var(--color-neutral-400);
-            font-style: italic;
-        }
-        
-        .process-highlights {
-            background: var(--color-neutral-50);
-            border-radius: var(--radius-lg);
-            padding: var(--spacing-8);
-            margin-top: var(--spacing-12);
-            text-align: center;
-        }
-        
-        .process-highlights__title {
-            font-size: var(--font-size-xl);
-            font-weight: 700;
-            color: var(--color-primary-600);
-            margin-bottom: var(--spacing-4);
-        }
-        
-        .process-highlights__list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: var(--spacing-4);
-        }
-        
-        .process-highlights__item {
-            background: var(--color-neutral-white);
-            color: var(--color-neutral-700);
-            padding: var(--spacing-2) var(--spacing-4);
-            border-radius: 20px;
-            font-size: var(--font-size-sm);
-            font-weight: 500;
-            border: 1px solid var(--color-neutral-200);
-        }
-        
-        /* CTAセクション */
-        .cta-section {
-            background: var(--color-primary-600);
-            color: var(--color-neutral-white);
-            padding: var(--spacing-16) 0;
-        }
-        
-        .cta-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-title {
-            font-size: var(--font-size-4xl);
-            font-weight: 700;
-            margin-bottom: var(--spacing-4);
-            line-height: 1.2;
-        }
-        
-        .cta-subtitle {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-12);
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: var(--spacing-4);
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* レスポンシブ対応 */
-        @media (max-width: 768px) {
-            .hero-mid-career__content {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-8);
-                text-align: center;
-            }
-            
-            .hero-mid-career__text {
-                order: 2;
-            }
-            
-            .hero-mid-career__image {
-                order: 1;
-            }
-            
-            .jobs-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .conversation-blocks {
-                grid-template-columns: 1fr;
-            }
-            
-            .before-after-container {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-8);
-            }
-            
-            .before-after-arrow {
-                transform: rotate(90deg);
-            }
-            
-            .roadmap-timeline::before {
-                left: 30px;
-            }
-            
-            .roadmap-step {
-                flex-direction: row !important;
-                padding-left: 60px;
-            }
-            
-            .roadmap-step__content {
-                margin: 0 !important;
-            }
-            
-            .roadmap-step__number {
-                left: 30px;
-                transform: translateX(-50%);
-            }
-            
-            .why-us-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .company-info-content {
-                grid-template-columns: 1fr;
-                gap: var(--spacing-8);
-            }
-            
-            .project-examples__list {
-                grid-template-columns: 1fr;
-            }
-            
-            .salary-examples-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .salary-examples-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-flow {
-                grid-template-columns: 1fr;
-            }
-            
-            .process-highlights__list {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+
 </head>
 <body>
     <!-- Header Component -->
@@ -913,7 +35,7 @@
             <div class="header__left">
                 <div class="header__brand">
                     <a href="../../index.html" class="header__logo-link">
-                        <img src="../../assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                        <img src="../../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
                     </a>
                 </div>
                 
@@ -938,13 +60,13 @@
                         <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
                         <div class="nav__dropdown">
                             <a href="../ideal-candidate.html" class="dropdown__link">求める人物像</a>
-                            <a href="../new-grad-jobs.html" class="dropdown__link">新卒採用ページトップ</a>
-                            <a href="../mid-career-jobs.html" class="dropdown__link">中途採用ページトップ</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="dropdown__link">キャリア採用</a>
                             <a href="../faq.html" class="dropdown__link">よくある質問</a>
                         </div>
                     </li>
                     <li class="nav__item" data-dropdown="company">
-                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
                         <div class="nav__dropdown">
                             <a href="../company.html" class="dropdown__link">会社概要</a>
                             <a href="../members.html" class="dropdown__link">メンバー</a>
@@ -980,130 +102,111 @@
     <main class="main">
         <!-- Hero Section -->
         <section class="hero-mid-career" data-section="hero">
+            <div class="hero-mid-career__background">
+                <div class="hero-mid-career__slide hero-mid-career__slide--active" data-slide="0">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-01-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-01.jpg" alt="中途採用背景画像1" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+                <div class="hero-mid-career__slide" data-slide="1">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-02-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-02.jpg" alt="中途採用背景画像2" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+                <div class="hero-mid-career__slide" data-slide="2">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-03-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-03.jpg" alt="中途採用背景画像3" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+            </div>
             <div class="container">
                 <div class="hero-mid-career__content">
-                    <div class="hero-mid-career__text">
-                        <span class="hero-mid-career__tag">プログラマー経験者向け</span>
-                        <h1 class="hero-mid-career__title">これまで積み上げた<br>コードの数だけ、<br>次のキャリアが広がっている</h1>
-                        <p class="hero-mid-career__subtitle">
-                            設計・要件定義に挑戦できる環境で、<br>
-                            「エンジニアとしての未来」を描きませんか？
-                        </p>
-                        <div class="hero-mid-career__cta">
-                            <a href="#jobs" class="btn btn--secondary btn--large">募集要項を見る</a>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-mid-career__image">
-                        <img src="../../assets/home/staff-02.jpg" alt="エンジニアとして働く様子" class="hero-mid-career__img">
-                    </div>
+                    <span class="hero-mid-career__tag">エンジニアキャリア採用</span>
+                    <h1 class="hero-mid-career__title">
+                        <span class="hero-mid-career__title-line">これまで積み上げた</span><br>
+                        <span class="hero-mid-career__title-line">コードの数だけ、</span><br>
+                        <span class="hero-mid-career__title-line">次のキャリアが広がっている</span>
+                    </h1>
                 </div>
             </div>
         </section>
 
-        <!-- Jobs セクション -->
-        <section class="jobs-section" id="jobs" data-section="jobs">
+        <!-- 募集要項セクション -->
+        <section class="requirements" id="requirements" data-section="requirements">
             <div class="container">
                 <div class="section__header">
                     <span class="section__dot"></span>
-                    <h2 class="section__title">Career</h2>
-                    <p class="section__subtitle">詳しい応募条件と待遇をご確認ください</p>
+                    <h2 class="section__title">募集要項</h2>
+                    <p class="section__subtitle">Requirements</p>
                 </div>
                 
-                <div class="jobs-grid">
-                    <div class="job-card">
-                        <div class="job-card__header">
-                            <h3 class="job-card__title">システムエンジニア</h3>
-                            <p class="job-card__salary">年収: 400–600万</p>
-                        </div>
-                        
-                        <div class="job-card__requirements">
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">応募条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--required">プログラミング3年以上</span>
-                                    <span class="job-card__tag job-card__tag--required">何らかの言語</span>
-                                    <span class="job-card__tag job-card__tag--required">上流挑戦意欲</span>
+                <div class="requirements-slider">
+                    <div class="requirements-slider__container">
+                        <div class="requirements-slider__track" id="requirements-track">
+                            <a href="../recruitment-details/se-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-a.jpg" alt="システムエンジニア（中途）" class="requirements-card__image">
                                 </div>
-                            </div>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">システムエンジニア（中途）</h3>
+                                    <p class="requirements-card__description">
+                                        金融機関向けシステムの設計・開発・保守業務。<br>
+                                        Java、C#、Python等を使用した業務システム開発に携わります。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：400-600万円</p>
+                                </div>
+                            </a>
                             
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">歓迎条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--welcome">Java</span>
-                                    <span class="job-card__tag job-card__tag--welcome">JavaScript</span>
-                                    <span class="job-card__tag job-card__tag--welcome">Python</span>
-                                    <span class="job-card__tag job-card__tag--welcome">要件・設計</span>
-                                    <span class="job-card__tag job-card__tag--welcome">チーム開発</span>
+                            <a href="../recruitment-details/pl-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-b.jpg" alt="プロジェクトリーダー" class="requirements-card__image">
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="job-card__cta">
-                            <a href="https://10-5.jp/" class="btn btn--primary" target="_blank" rel="noopener">募集要項を見る</a>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">プロジェクトリーダー</h3>
+                                    <p class="requirements-card__description">
+                                        チーム開発のリーダーとして、プロジェクトの進行管理とメンバーの指導を行います。<br>
+                                        上流工程から下流工程まで幅広く関わることができます。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：550-750万円</p>
+                                </div>
+                            </a>
+                            
+                            <a href="../recruitment-details/pm-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-c.jpg" alt="プロジェクトマネージャー" class="requirements-card__image">
+                                </div>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">プロジェクトマネージャー</h3>
+                                    <p class="requirements-card__description">
+                                        大規模プロジェクトの全体管理と顧客折衝を担当します。<br>
+                                        予算管理、スケジュール管理、品質管理を統括します。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：700-900万円</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     
-                    <div class="job-card">
-                        <div class="job-card__header">
-                            <h3 class="job-card__title">プロジェクトリーダー</h3>
-                            <p class="job-card__salary">年収: 550–750万</p>
+                    <!-- スライダーコントロール -->
+                    <div class="requirements-slider__controls">
+                        <button class="requirements-slider__btn requirements-slider__btn--prev" aria-label="前の募集要項">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,18 9,12 15,6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="requirements-slider__dots" id="requirements-dots">
+                            <button class="requirements-slider__dot requirements-slider__dot--active" aria-label="スライド1"></button>
+                            <button class="requirements-slider__dot" aria-label="スライド2"></button>
+                            <button class="requirements-slider__dot" aria-label="スライド3"></button>
                         </div>
-                        
-                        <div class="job-card__requirements">
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">応募条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--required">開発3年以上</span>
-                                    <span class="job-card__tag job-card__tag--required">チーム開発</span>
-                                    <span class="job-card__tag job-card__tag--required">PM興味</span>
-                                </div>
-                            </div>
-                            
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">歓迎条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--welcome">PL/PM経験</span>
-                                    <span class="job-card__tag job-card__tag--welcome">指導経験</span>
-                                    <span class="job-card__tag job-card__tag--welcome">顧客折衝</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="job-card__cta">
-                            <a href="https://10-5.jp/" class="btn btn--primary" target="_blank" rel="noopener">募集要項を見る</a>
-                        </div>
-                    </div>
-                    
-                    <div class="job-card">
-                        <div class="job-card__header">
-                            <h3 class="job-card__title">プロジェクトマネージャー</h3>
-                            <p class="job-card__salary">年収: 700–900万</p>
-                        </div>
-                        
-                        <div class="job-card__requirements">
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">応募条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--required">開発5年以上</span>
-                                    <span class="job-card__tag job-card__tag--required">PL・PM3年以上</span>
-                                    <span class="job-card__tag job-card__tag--required">顧客折衝</span>
-                                </div>
-                            </div>
-                            
-                            <div class="job-card__section">
-                                <h4 class="job-card__section-title">歓迎条件</h4>
-                                <div class="job-card__tags">
-                                    <span class="job-card__tag job-card__tag--welcome">大規模PJ管理</span>
-                                    <span class="job-card__tag job-card__tag--welcome">予算・契約</span>
-                                    <span class="job-card__tag job-card__tag--welcome">ITコンサル</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="job-card__cta">
-                            <a href="https://10-5.jp/" class="btn btn--primary" target="_blank" rel="noopener">募集要項を見る</a>
-                        </div>
+                        <button class="requirements-slider__btn requirements-slider__btn--next" aria-label="次の募集要項">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"></polyline>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1115,51 +218,51 @@
                 <div class="section__header">
                     <span class="section__dot"></span>
                     <h2 class="section__title">こんな思い、抱えていませんか？</h2>
-                    <p class="section__subtitle">（28歳前後の例）</p>
+                    <p class="section__subtitle">Common Concerns</p>
                 </div>
                 
                 <div class="conversation-blocks">
                     <div class="conversation-block">
                         <div class="conversation-block__header">
-                            <img src="../../assets/home/staff-03.jpg" alt="候補者A" class="conversation-block__avatar">
+                            <img src="../../assets/images/mid-career/candidate-a.jpg" alt="候補者A" class="conversation-block__avatar">
                             <div class="conversation-block__role">候補者A</div>
                         </div>
                         <div class="conversation-block__content">
                             <p class="conversation-block__quote">「現在の仕事では全体像が見えない。システムの一部しか触れていない気がする...」</p>
-                            <p class="conversation-block__response">→ プライム比率高・上流参画・背景理解で解決</p>
+                            <p class="conversation-block__response">→ プライム比率高・上流参画をすることで背景理解を深めることができます。</p>
                         </div>
                     </div>
                     
                     <div class="conversation-block">
                         <div class="conversation-block__header">
-                            <img src="../../assets/home/staff-04.jpg" alt="候補者B" class="conversation-block__avatar">
+                            <img src="../../assets/images/mid-career/candidate-b.jpg" alt="候補者B" class="conversation-block__avatar">
                             <div class="conversation-block__role">候補者B</div>
                         </div>
                         <div class="conversation-block__content">
                             <p class="conversation-block__quote">「上流工程に挑戦したいけど、なかなか機会がない。いつまでも下流で...」</p>
-                            <p class="conversation-block__response">→ 事例・メンター制度で段階的に成長</p>
+                            <p class="conversation-block__response">→ 参画案件はもちろんですが、事例・メンター制度で段階的に成長することができます。</p>
                         </div>
                     </div>
                     
                     <div class="conversation-block">
                         <div class="conversation-block__header">
-                            <img src="../../assets/home/staff-05.jpg" alt="候補者C" class="conversation-block__avatar">
+                            <img src="../../assets/images/mid-career/candidate-c.jpg" alt="候補者C" class="conversation-block__avatar">
                             <div class="conversation-block__role">候補者C</div>
                         </div>
                         <div class="conversation-block__content">
                             <p class="conversation-block__quote">「年収がなかなか上がらない。スキルアップしても評価されない...」</p>
-                            <p class="conversation-block__response">→ 上流で年収アップ・評価制度で解決</p>
+                            <p class="conversation-block__response">→ 上流で年収アップ・評価制度で解決することができます。</p>
                         </div>
                     </div>
                     
                     <div class="conversation-block">
                         <div class="conversation-block__header">
-                            <img src="../../assets/home/staff-06.jpg" alt="候補者D" class="conversation-block__avatar">
+                            <img src="../../assets/images/mid-career/candidate-d.jpg" alt="候補者D" class="conversation-block__avatar">
                             <div class="conversation-block__role">候補者D</div>
                         </div>
                         <div class="conversation-block__content">
                             <p class="conversation-block__quote">「客先常駐で一人で作業することが多くて、孤独感を感じる...」</p>
-                            <p class="conversation-block__response">→ 2–6名チーム・自社PL・PM・定着率100%で解決</p>
+                            <p class="conversation-block__response">→ 2–6名チーム・自社PL・PM・定着率100%で解決することができます。</p>
                         </div>
                     </div>
                 </div>
@@ -1172,6 +275,7 @@
                 <div class="section__header">
                     <span class="section__dot"></span>
                     <h2 class="section__title">テンファイブで描ける未来</h2>
+                    <p class="section__subtitle">Future with TenFive</p>
                 </div>
                 
                 <div class="before-after-container">
@@ -1204,7 +308,7 @@
                                         <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
                                     </svg>
                                 </span>
-                                <span>年収360万前後</span>
+                                <span>年収360万前後で停滞気味</span>
                             </li>
                             <li class="before-after-list__item">
                                 <span class="before-after-list__icon">
@@ -1220,7 +324,7 @@
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                                     </svg>
                                 </span>
-                                <span>将来不安</span>
+                                <span>将来キャリアの見えない不安</span>
                             </li>
                         </ul>
                     </div>
@@ -1256,7 +360,7 @@
                                         <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
                                     </svg>
                                 </span>
-                                <span>年収400–800万+</span>
+                                <span>年収400–800万以上</span>
                             </li>
                             <li class="before-after-list__item">
                                 <span class="before-after-list__icon">
@@ -1264,7 +368,7 @@
                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                     </svg>
                                 </span>
-                                <span>課題解決</span>
+                                <span>ビジネス課題解決</span>
                             </li>
                             <li class="before-after-list__item">
                                 <span class="before-after-list__icon">
@@ -1277,10 +381,6 @@
                         </ul>
                     </div>
                 </div>
-                
-                <div class="before-after-link">
-                    <a href="../career-path.html" class="btn btn--outline">キャリアパス詳細を見る</a>
-                </div>
             </div>
         </section>
 
@@ -1290,45 +390,90 @@
                 <div class="section__header">
                     <span class="section__dot"></span>
                     <h2 class="section__title">キャリアパス</h2>
-                    <p class="section__subtitle">4ステップ成長ロードマップ</p>
+                    <p class="section__subtitle">CAREER PATH</p>
                 </div>
                 
                 <div class="roadmap-timeline">
                     <div class="roadmap-step">
                         <div class="roadmap-step__number">1</div>
                         <div class="roadmap-step__content">
-                            <h3 class="roadmap-step__title">設計に挑戦</h3>
-                            <p class="roadmap-step__period">入社〜半年</p>
-                            <p class="roadmap-step__description">先輩サポートで設計に挑戦（メンター制度）</p>
+                            <h3 class="roadmap-step__title">先輩のサポートのもと設計業務にチャレンジ</h3>
+                            <p class="roadmap-step__period">入社~半年</p>
+                            <p class="roadmap-step__description">
+                                まずは既存プロジェクトで基本設計・詳細設計を学習します。経験豊富な先輩エンジニアがメンターとして付き、分からないことはすぐに相談できる環境です。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">ポイント・心構え</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        上司と現場で業務を行います。現場で指導を行うことができる。指導ができるエンジニアの方と共に業務に当たることができるので、実務未経験のエンジニアでもしっかりとクライアント業務を行う体制を整えてますのでご安心ください。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="roadmap-step">
                         <div class="roadmap-step__number">2</div>
                         <div class="roadmap-step__content">
-                            <h3 class="roadmap-step__title">要件定義・顧客折衝に同席</h3>
-                            <p class="roadmap-step__period">6ヶ月〜1年</p>
-                            <p class="roadmap-step__description">要件定義・顧客折衝に同席（PM同席）</p>
+                            <h3 class="roadmap-step__title">要件定義や顧客折衝にも同席</h3>
+                            <p class="roadmap-step__period">6ヶ月~1年</p>
+                            <p class="roadmap-step__description">
+                                顧客との打ち合わせに同席し、要件をシステムに落とし込むスキルを習得します。最初はサポート役から始まり、徐々に主担当として活躍できるようになります。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">実践的な経験</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        PMが商談に同席するため、安心して顧客対応にチャレンジできます。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="roadmap-step">
                         <div class="roadmap-step__number">3</div>
                         <div class="roadmap-step__content">
-                            <h3 class="roadmap-step__title">設計〜テスト一貫担当</h3>
-                            <p class="roadmap-step__period">1〜2年</p>
-                            <p class="roadmap-step__description">設計〜テスト一貫担当（フルスタック化）</p>
+                            <h3 class="roadmap-step__title">自走して設計~テストまでを一貫担当</h3>
+                            <p class="roadmap-step__period">1年~2年</p>
+                            <p class="roadmap-step__description">
+                                プロジェクトの中心メンバーとして、要件定義から運用まで一貫して担当。フルスタックエンジニアとしてのスキルを確立し、技術力と業務知識の両方を磨きます。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">成長加速</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        チーム体制なので責任を一人で抱え込まず、安心して挑戦できます。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="roadmap-step">
                         <div class="roadmap-step__number">4</div>
                         <div class="roadmap-step__content">
-                            <h3 class="roadmap-step__title">PM独り立ち</h3>
-                            <p class="roadmap-step__period">2年〜</p>
-                            <p class="roadmap-step__description">PM独り立ち→TSE/CTO/TSCなど分岐</p>
+                            <h3 class="roadmap-step__title">PMとして一人立ち、自ら主導のプロジェクトを担当</h3>
+                            <p class="roadmap-step__period">2年目以降</p>
+                            <p class="roadmap-step__description">
+                                プロジェクトマネージャーとして独り立ちし、自らが主導するプロジェクトを任されるようになります。さらに成長を続ける方には、高度技術戦術家(TSE)、最高技術責任者(CTO)、高度技術戦略家(TSC)など、さまざまなキャリアパスを用意しています。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">多様なキャリアパス</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        希望と適性に合わせてキャリアを積んでいける環境です。更なる成長に向けて、あなたの目指す方向性をサポートします。
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
+                </div>
+                
+                <div class="roadmap__footer">
+                    <a href="../career-path.html" class="link-text">キャリアパスについて</a>
                 </div>
             </div>
         </section>
@@ -1344,7 +489,6 @@
                 
                 <div class="why-us-grid">
                     <div class="why-us-tile">
-                        <img src="../../assets/images/industry.png" alt="プライム案件" class="why-us-tile__image">
                         <h3 class="why-us-tile__title">プライム直・エンド直約8割</h3>
                         <p class="why-us-tile__description">
                             <span class="why-us-tile__highlight">上流参画容易</span><br>
@@ -1353,7 +497,6 @@
                     </div>
                     
                     <div class="why-us-tile">
-                        <img src="../../assets/images/team-members-pc.jpg" alt="チーム体制" class="why-us-tile__image">
                         <h3 class="why-us-tile__title">2–6名チーム・自社PM・PL</h3>
                         <p class="why-us-tile__description">
                             <span class="why-us-tile__highlight">定着率100%</span>（直近2年）<br>
@@ -1362,7 +505,6 @@
                     </div>
                     
                     <div class="why-us-tile">
-                        <img src="../../assets/images/career-path-pc.jpg" alt="転職支援" class="why-us-tile__image">
                         <h3 class="why-us-tile__title">自社ITスクール運営</h3>
                         <p class="why-us-tile__description">
                             <span class="why-us-tile__highlight">実務直結研修</span><br>
@@ -1371,10 +513,9 @@
                     </div>
                     
                     <div class="why-us-tile">
-                        <img src="../../assets/images/numbers.png" alt="大手企業取引" class="why-us-tile__image">
                         <h3 class="why-us-tile__title">モダンな技術スタック</h3>
                         <p class="why-us-tile__description">
-                            <span class="why-us-tile__highlight">Java/TS/React/AWS/Azure</span> 等<br>
+                            <span class="why-us-tile__highlight">Java/TS/React/AWS/Azure</span><br>
                             モダンな技術スタックで大手企業との取引実績があり、最新技術を学ぶ機会が豊富です。
                         </p>
                     </div>
@@ -1382,114 +523,63 @@
             </div>
         </section>
 
-        <!-- 会社紹介セクション -->
-        <section class="company-info-section" data-section="company-info">
-            <div class="container">
-                <div class="section__header">
-                    <span class="section__dot"></span>
-                    <h2 class="section__title">会社紹介</h2>
-                    <p class="section__subtitle">Company Profile</p>
-                </div>
-                
-                <div class="company-info-content">
-                    <div class="company-info-text">
-                        <ul class="company-info-list">
-                            <li class="company-info-list__item">
-                                <div class="company-info-list__icon"></div>
-                                <div class="company-info-list__text">
-                                    <span class="company-info-list__highlight">2009年創業</span> / 金融システム15年以上
-                                </div>
-                            </li>
-                            <li class="company-info-list__item">
-                                <div class="company-info-list__icon"></div>
-                                <div class="company-info-list__text">
-                                    住所: 〒150-0001 東京都渋谷区神宮前2-13-9 BIRTH神宮前2F(202)
-                                </div>
-                            </li>
-                            <li class="company-info-list__item">
-                                <div class="company-info-list__icon"></div>
-                                <div class="company-info-list__text">
-                                    ミッション: <span class="company-info-list__highlight">ソサエティ5.0に貢献</span>
-                                </div>
-                            </li>
-                            <li class="company-info-list__item">
-                                <div class="company-info-list__icon"></div>
-                                <div class="company-info-list__text">
-                                    主要取引: <span class="company-info-list__highlight">東京スター銀行</span> / 三菱総研DCS / クボタ / 他
-                                </div>
-                            </li>
-                        </ul>
-                        
-                        <div class="project-examples">
-                            <h3 class="project-examples__title">プロジェクト例</h3>
-                            <div class="project-examples__list">
-                                <div class="project-examples__item">AMLシステム</div>
-                                <div class="project-examples__item">ネット銀行決済</div>
-                                <div class="project-examples__item">株式情報Web</div>
-                                <div class="project-examples__item">証券系要件再構築</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="company-info-image">
-                        <img src="../../assets/images/company-history.jpg" alt="テンファイブチーム写真">
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- 年収例セクション -->
         <section class="salary-examples-section" data-section="salary-examples">
             <div class="container">
                 <div class="section__header">
                     <span class="section__dot"></span>
-                    <h2 class="section__title">キャリア、年齢、経験別</h2>
+                    <h2 class="section__title">給与例</h2>
                     <p class="section__subtitle">Salary Examples</p>
                 </div>
                 
                 <div class="salary-examples-grid">
                     <div class="salary-example-card">
-                        <div class="salary-example-card__avatar">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-                            </svg>
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">25歳・入社2年目 SE</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="400">0</span>万円
+                            </div>
                         </div>
-                        <div class="salary-example-card__age">25歳</div>
-                        <div class="salary-example-card__position">SE</div>
-                        <div class="salary-example-card__salary">400万円</div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-1.png" alt="キャリアステージ1" class="salary-example-card__illustration">
+                        </div>
                     </div>
                     
                     <div class="salary-example-card">
-                        <div class="salary-example-card__avatar">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-                            </svg>
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">27歳・入社4年目 SE</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="490">0</span>万円
+                            </div>
                         </div>
-                        <div class="salary-example-card__age">27歳</div>
-                        <div class="salary-example-card__position">SE</div>
-                        <div class="salary-example-card__salary">490万円</div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-2.png" alt="キャリアステージ2" class="salary-example-card__illustration">
+                        </div>
                     </div>
                     
                     <div class="salary-example-card">
-                        <div class="salary-example-card__avatar">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
-                            </svg>
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">33歳・入社10年目 PMO</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="800">0</span>万円
+                            </div>
                         </div>
-                        <div class="salary-example-card__age">33歳</div>
-                        <div class="salary-example-card__position">PMO</div>
-                        <div class="salary-example-card__salary">800万円</div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-3.png" alt="キャリアステージ3" class="salary-example-card__illustration">
+                        </div>
                     </div>
                     
                     <div class="salary-example-card">
-                        <div class="salary-example-card__avatar">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
-                            </svg>
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">37歳・入社14年目 PMO</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="830">0</span>万円
+                            </div>
                         </div>
-                        <div class="salary-example-card__age">37歳</div>
-                        <div class="salary-example-card__position">PMO</div>
-                        <div class="salary-example-card__salary">830万円</div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-4.png" alt="キャリアステージ4" class="salary-example-card__illustration">
+                        </div>
                     </div>
                 </div>
                 
@@ -1502,86 +592,62 @@
             </div>
         </section>
 
-        <!-- 選考フローセクション -->
-        <section class="process-section" data-section="process">
+        <!-- 選考プロセスセクション -->
+        <section class="recruitment-process" data-section="recruitment-process" id="recruitment-process">
             <div class="container">
                 <div class="section__header">
                     <span class="section__dot"></span>
-                    <h2 class="section__title">選考フロー</h2>
-                    <p class="section__subtitle">Selection Flow</p>
+                    <h2 class="section__title">選考プロセス</h2>
+                    <p class="section__subtitle">Recruitment Process</p>
                 </div>
                 
-                <div class="process-flow">
+                <div class="process-steps">
                     <div class="process-step">
-                        <div class="process-step__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-                            </svg>
+                        <div class="process-step__number">1</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">お問い合わせ</h3>
+                            <div class="process-step__description">
+                                <p>業務内容など知りたい方は、カジュアル面談も可能です。</p>
+                            </div>
                         </div>
-                        <h3 class="process-step__title">カジュアル面談</h3>
-                        <p class="process-step__description">30-60分、オンライン/対面</p>
-                        <p class="process-step__note">お互いを知る時間</p>
                     </div>
                     
                     <div class="process-step">
-                        <div class="process-step__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
-                            </svg>
+                        <div class="process-step__number">2</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">エントリー</h3>
+                            <div class="process-step__description">
+                                <p>正式に応募書類をご準備、ご提出いただき書類審査をさせていただきます。</p>
+                            </div>
                         </div>
-                        <h3 class="process-step__title">エントリー</h3>
-                        <p class="process-step__description">フォーム/電話、即日〜1営業日</p>
-                        <p class="process-step__note">正式な応募手続き</p>
                     </div>
                     
                     <div class="process-step">
-                        <div class="process-step__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01.99L14 10h-2v12h4v-6h2v6h2zm-6.5-11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S12 8.17 12 9s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9V9.5C9 8.12 7.88 7 6.5 7S4 8.12 4 9.5V15H2.5v7H7.5z"/>
-                            </svg>
+                        <div class="process-step__number">3</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">面談</h3>
+                            <div class="process-step__description">
+                                <p>オンラインにてリードエンジニアメンバー、幹部・代表とのミーティングを複数回実施させていただきます。</p>
+                            </div>
                         </div>
-                        <h3 class="process-step__title">面談</h3>
-                        <p class="process-step__description">リード/Mgr/代表</p>
-                        <p class="process-step__note">詳細な面談</p>
                     </div>
                     
                     <div class="process-step">
-                        <div class="process-step__icon">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
+                        <div class="process-step__number">4</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">内定・入社準備</h3>
+                            <div class="process-step__description">
+                                <p>内定のご連絡後、晴れてテンファイブのエンジニアとして新しいキャリアのスタートです。</p>
+                            </div>
                         </div>
-                        <h3 class="process-step__title">内定・入社準備</h3>
-                        <p class="process-step__description">1週〜1ヶ月</p>
-                        <p class="process-step__note">新しいキャリアのスタート</p>
                     </div>
                 </div>
                 
-                <div class="process-highlights">
-                    <h3 class="process-highlights__title">選考のポイント</h3>
-                    <div class="process-highlights__list">
-                        <span class="process-highlights__item">技術テストなし</span>
-                        <span class="process-highlights__item">全面オンライン可</span>
-                        <span class="process-highlights__item">期間約2週間</span>
-                        <span class="process-highlights__item">質問歓迎</span>
-                    </div>
-                </div>
+
             </div>
         </section>
 
-        <!-- CTA / フッター -->
-        <section class="cta-section" data-section="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">面接では「これからどうなりたいか」を重視</h2>
-                    <p class="cta-subtitle">あなたの未来への想いを聞かせてください</p>
-                    <div class="cta-buttons">
-                        <a href="https://10-5.jp/" class="btn btn--primary btn--large" target="_blank" rel="noopener">募集要項を見る</a>
-                        <a href="#jobs" class="btn btn--outline btn--large">職種を確認する</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+
     </main>
 
     <!-- Footer Component -->
@@ -1589,14 +655,14 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__brand">
-                    <img src="../../assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                    <img src="../../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
                 </div>
                 <div class="footer__links">
                     <div class="footer__section">
                         <h4 class="footer__title">採用情報</h4>
                         <ul class="footer__list">
-                            <li><a href="../new-grad/" class="footer__link">新卒採用</a></li>
-                            <li><a href="./" class="footer__link">キャリア採用</a></li>
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="footer__link">新卒採用</a></li>
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="footer__link">キャリア採用</a></li>
                         </ul>
                     </div>
                     <div class="footer__section">
@@ -1616,5 +682,99 @@
     </footer>
 
     <script src="../../js/main.js"></script>
+    <script src="../../js/hero-slider.js"></script>
+    <script>
+        // 募集要項スライダー機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('requirements-track');
+            const dots = document.getElementById('requirements-dots');
+            const prevBtn = document.querySelector('.requirements-slider__btn--prev');
+            const nextBtn = document.querySelector('.requirements-slider__btn--next');
+            const dotButtons = dots.querySelectorAll('.requirements-slider__dot');
+            
+            let currentSlide = 0;
+            const totalSlides = track.children.length;
+            
+            // レスポンシブ対応の表示枚数取得
+            function getVisibleCards() {
+                if (window.innerWidth <= 1024) {
+                    return 2; // タブレット・スマホ: 2枚
+                }
+                return 3; // PC: 3枚
+            }
+            
+            // 最大スライド数を計算
+            function getMaxSlides() {
+                const visibleCards = getVisibleCards();
+                return Math.max(0, totalSlides - visibleCards);
+            }
+            
+            function updateSlider() {
+                const visibleCards = getVisibleCards();
+                const maxSlides = getMaxSlides();
+                const translateX = -(currentSlide * (100 / visibleCards));
+                track.style.transform = `translateX(${translateX}%)`;
+                
+                // ドットの更新
+                dotButtons.forEach((dot, index) => {
+                    dot.classList.toggle('requirements-slider__dot--active', index === currentSlide);
+                });
+                
+                // ボタンの無効化
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide >= maxSlides;
+            }
+            
+            function goToSlide(slideIndex) {
+                const maxSlides = getMaxSlides();
+                currentSlide = Math.max(0, Math.min(slideIndex, maxSlides));
+                updateSlider();
+            }
+            
+            function nextSlide() {
+                const maxSlides = getMaxSlides();
+                if (currentSlide < maxSlides) {
+                    currentSlide++;
+                    updateSlider();
+                }
+            }
+            
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlider();
+                }
+            }
+            
+            // リサイズ時の処理
+            function handleResize() {
+                const maxSlides = getMaxSlides();
+                if (currentSlide > maxSlides) {
+                    currentSlide = maxSlides;
+                }
+                updateSlider();
+            }
+            
+            // イベントリスナー
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            dotButtons.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // リサイズイベント
+            window.addEventListener('resize', handleResize);
+            
+            // キーボードナビゲーション
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+            
+            // 初期化
+            updateSlider();
+        });
+    </script>
 </body>
 </html>

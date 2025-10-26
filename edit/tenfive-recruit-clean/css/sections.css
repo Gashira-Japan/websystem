@@ -3,7 +3,7 @@
    共通スタイルは shared-sections.css を参照
    ======================================== */
 
-/* 会社紹介セクション - デジタル庁デザインシステム準拠 */
+/* 会社情報セクション - デジタル庁デザインシステム準拠 */
 .company {
   background: var(--color-primary-50);
 }
@@ -17,41 +17,23 @@
 /* .company .section__subtitle の個別設定は削除 - 統一された.section__subtitleを使用 */
 
 /* ヒーローセクション - 採用サイトの親しみやすさを表現 */
-.hero {
-  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-50) 100%);
-  padding: calc(var(--spacing-24) + 72px) 0 var(--spacing-24); /* ヘッダーの高さ分を追加 (8pxグリッド準拠) */
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+/* 基本構造は shared-sections.css で管理 */
+/* 背景スライダーを表示するため、独自の.heroスタイルは最小限に */
 
-/* テックな背景アニメーション */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-  animation: techBackground 20s ease-in-out infinite;
-  z-index: 0;
-}
+/* ::before と ::after のアニメーション背景は削除 - 背景画像を表示するため */
 
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="%23e5e7eb" stroke-width="0.5" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
-  animation: gridMove 30s linear infinite;
-  z-index: 1;
+/* ヒーロータグ */
+.hero__tag {
+    display: inline-block;
+    background: rgba(34, 141, 196, 0.8); /* プライマリカラーを透過させて背景画像が見えるように */
+    color: var(--color-neutral-white);
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-1);
+    box-shadow: 0 2px 4px rgba(34, 141, 196, 0.3);
+    position: relative;
 }
 
 .hero__content {
@@ -153,7 +135,7 @@
   }
   
   .hero__content {
-    max-width: 500px; /* モバイルではさらに狭く */
+    max-width: 600px; /* モバイルではさらに狭く */
     gap: var(--spacing-4); /* 間隔をさらに狭く */
   }
   
@@ -183,7 +165,7 @@
   }
   
   .hero__content {
-    max-width: 320px; /* 小さいモバイルではさらに狭く */
+    max-width: 400px; /* 小さいモバイルではさらに狭く */
     gap: var(--spacing-3); /* 間隔をさらに狭く */
   }
   
@@ -519,5 +501,112 @@
     
     .join-description {
         font-size: var(--font-size-base);
+    }
+}
+
+/* 選考プロセスセクション - 共通スタイル */
+.recruitment-process {
+    background: var(--color-primary-50);
+    padding: var(--spacing-16) 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: var(--color-primary-600);
+    z-index: 1;
+}
+
+.process-step:last-child::after {
+    display: none;
+}
+
+.process-step__number {
+    width: 80px;
+    height: 80px;
+    background: var(--color-primary-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.process-step__content {
+    text-align: left;
+}
+
+.process-step__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-3);
+    text-align: left;
+}
+
+.process-step__description {
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    text-align: left;
+}
+
+.process-step__description p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+}
+
+/* 選考プロセスのレスポンシブ対応 */
+@media (max-width: 960px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-step::after {
+        display: none;
+    }
+    
+    .process-step {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-4);
+        text-align: left;
+    }
+    
+    .process-step__number {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .process-step__content {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .process-step__title {
+        margin-bottom: var(--spacing-2);
+        text-align: left;
     }
 }

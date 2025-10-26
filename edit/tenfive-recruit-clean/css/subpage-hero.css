@@ -375,19 +375,3 @@
   transition: width 0.3s ease;
 }
 
-/* ダークモード対応（将来の拡張用） */
-@media (prefers-color-scheme: dark) {
-  .hero--subpage {
-    background: linear-gradient(135deg, 
-      var(--color-neutral-800) 0%, 
-      var(--color-neutral-900) 100%);
-  }
-  
-  .hero--subpage .hero__title {
-    color: var(--color-neutral-100);
-  }
-  
-  .hero--subpage .hero__description {
-    color: var(--color-neutral-300);
-  }
-}
