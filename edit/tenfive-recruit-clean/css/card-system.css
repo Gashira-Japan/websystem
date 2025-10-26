@@ -1,0 +1,1175 @@
+/* ========================================
+   カードシステム - 統一されたルール
+   ======================================== */
+
+/* カード専用のリンクスタイル - グローバルなaタグには影響しない */
+.image-card,
+.card,
+.feature-card,
+.workstyle-card,
+.job-card,
+.selection-card {
+  color: var(--link-default);
+  text-decoration: none;
+  transition: all 0.2s var(--animation-easing-ease);
+}
+
+.image-card:hover,
+.card:hover,
+.feature-card:hover,
+.workstyle-card:hover,
+.job-card:hover,
+.selection-card:hover {
+  /* カード自体のホバースタイル */
+}
+
+/* カード内のタイトルは個別のスタイルを適用 */
+.image-card__title,
+.card__title,
+.feature-card__title,
+.workstyle-card__title,
+.job-card__title,
+.selection-card__title {
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.image-card:hover .image-card__title,
+.card:hover .card__title,
+.feature-card:hover .feature-card__title,
+.workstyle-card:hover .workstyle-card__title,
+.job-card:hover .job-card__title,
+.selection-card:hover .selection-card__title {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-neutral-900);
+}
+
+/* カード内の説明文には下線を適用しない */
+.image-card__description,
+.card__description,
+.feature-card__description,
+.workstyle-card__description,
+.job-card__description,
+.selection-card__description {
+  text-decoration: none;
+}
+
+.image-card__description:hover,
+.card__description:hover,
+.feature-card__description:hover,
+.workstyle-card__description:hover,
+.job-card__description:hover,
+.selection-card__description:hover {
+  text-decoration: none;
+}
+
+/* カード内のリンクの疑似クラス（グローバルなaタグには影響しない） */
+.image-card:visited,
+.card:visited,
+.feature-card:visited,
+.workstyle-card:visited,
+.job-card:visited,
+.selection-card:visited {
+  color: var(--link-visited);
+}
+
+.image-card:active,
+.card:active,
+.feature-card:active,
+.workstyle-card:active,
+.job-card:active,
+.selection-card:active {
+  color: var(--link-active);
+}
+
+.image-card:focus,
+.card:focus,
+.feature-card:focus,
+.workstyle-card:focus,
+.job-card:focus,
+.selection-card:focus {
+  color: var(--link-focus);
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+}
+
+/* 画像入りカードコンポーネント - デザイン庁Vertical with video準拠 */
+.image-card {
+  display: flex;
+  flex-direction: column;
+  /* background: var(--color-neutral-white); */
+  /* border: 1px solid var(--color-neutral-200); */
+  border-radius: var(--radius-lg);
+  /* box-shadow: var(--elevation-sm); */
+  overflow: hidden;
+  transition: all 0.3s var(--animation-easing-ease);
+  position: relative;
+  width: 100%;
+  max-width: 352px; /* デザイン庁仕様準拠 */
+  height: 400px; /* 統一された高さ */
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  /* box-shadow: var(--elevation-lg); */
+  /* border-color: var(--color-primary-500); */
+  /* text-decoration: none; */
+  /* color: var(--color-neutral-900); */
+}
+
+.image-card__media {
+  position: relative;
+  width: 100%;
+  height: 200px; /* 画像エリアの高さ */
+  overflow: hidden;
+  background: var(--color-neutral-100);
+}
+
+.image-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* アイコン表示用プレースホルダー */
+.image-card__icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.image-card__icon-svg {
+  width: 48px;
+  height: 48px;
+}
+
+/* レスポンシブ画像対応 - デバイス別に最適な画像を表示 */
+.image-card__image[data-src="team-members"] {
+  /* デフォルト: PC用画像 */
+  content: url('assets/images/team-members-pc.jpg');
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .image-card__image[data-src="team-members"] {
+    /* タブレット用画像 */
+    content: url('assets/images/team-members-tab.jpg');
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card__image[data-src="team-members"] {
+    /* モバイル用画像 */
+    content: url('assets/images/team-members-sp.jpg');
+  }
+}
+
+/* キャリアパス画像のレスポンシブ対応 */
+.image-card__image[data-src="career-path"] {
+  /* デフォルト: PC用画像 */
+  content: url('assets/images/career-path-pc.jpg');
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .image-card__image[data-src="career-path"] {
+    /* タブレット用画像 */
+    content: url('assets/images/career-path-tab.jpg');
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card__image[data-src="career-path"] {
+    /* モバイル用画像 */
+    content: url('assets/images/career-path-sp.jpg');
+  }
+}
+
+.image-card:hover .image-card__image {
+  transform: scale(1.05);
+}
+
+.image-card__content {
+  padding: var(--spacing-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  /* デジタル庁推奨: カード内テキストは左寄せ */
+  text-align: left;
+  min-height: 160px;
+  justify-content: space-between;
+}
+
+.image-card__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.image-card__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.image-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  flex: 1;
+}
+
+/* カード全体をリンクとして実装 */
+.image-card {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.image-card:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.image-card:hover .image-card__title {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.image-card:focus .image-card__title {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+/* カード内のテキストはリンクスタイルの影響を受けない */
+.image-card * {
+  color: inherit;
+  text-decoration: none;
+}
+
+.image-card:hover * {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* タイトルには下線を適用 */
+.image-card .image-card__title {
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+}
+
+.image-card:hover .image-card__title {
+  /* text-decoration-color: var(--color-neutral-900); */
+}
+
+/* 説明文には下線を適用しない */
+.image-card .image-card__description {
+  text-decoration: none !important;
+}
+
+.image-card:hover .image-card__description {
+  text-decoration: none !important;
+}
+
+/* カードレイアウト - デジタル庁デザインシステム準拠 */
+.cards-grid {
+  display: grid;
+  gap: var(--spacing-6);
+  width: 100%;
+  /* デジタル庁推奨: カード自体は中央配置 */
+  justify-items: left;
+}
+
+/* 1カード */
+.cards-grid--1 {
+  grid-template-columns: 1fr;
+  justify-items: left;
+}
+
+/* 2カード */
+.cards-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: left;
+}
+
+/* 3カード */
+.cards-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: left;
+}
+
+/* 4カード */
+.cards-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: left;
+}
+
+/* レスポンシブブレークポイント */
+
+/* 中間ブレークポイント: 3カードを1列に並べてバランスを改善 */
+@media (max-width: 900px) and (min-width: 769px) {
+  .cards-grid--3 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: var(--spacing-6);
+  }
+  
+  /* 全カードを同じサイズに統一 */
+  .cards-grid--3 .image-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* 3カードレイアウト: タブレットでは1列に並べてバランスを改善 */
+  .cards-grid--3 {
+    grid-template-columns: var(--spacing-card-3-layout-tablet); /* 1列レイアウト */
+    max-width: 600px; /* カードの最大幅を制限して読みやすさを向上 */
+    margin: 0 auto; /* 中央寄せ */
+  }
+  
+  /* 3カードのタブレット用スタイル調整 */
+  .cards-grid--3 .image-card {
+    max-width: 100%;
+    margin-bottom: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid--4,
+  .cards-grid--3,
+  .cards-grid--2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-card {
+    max-width: 100%;
+    height: 350px;
+  }
+  
+  .image-card__media {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    height: 320px;
+  }
+  
+  .image-card__content {
+    padding: var(--spacing-3);
+  }
+  
+  .image-card__media {
+    height: 160px;
+  }
+}
+
+/* カードの基本構造 - セマンティックHTML対応 */
+.card {
+  background-color: var(--color-neutral-white);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* カードヘッダー */
+.card__header {
+  padding: var(--spacing-6) var(--spacing-6) var(--spacing-4);
+  text-align: center;
+}
+
+.card__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-4);
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.card__icon-image {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.card__icon-placeholder {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-neutral-300);
+  border-radius: var(--radius-base);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.card__icon-error {
+  font-size: 24px;
+}
+
+.card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-3);
+  line-height: var(--line-height-tight);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.card__title:hover {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.card__badge {
+  display: inline-block;
+  background-color: var(--color-primary-50);
+  color: var(--color-secondary-600);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--spacing-3);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* カードコンテンツ */
+.card__content {
+  padding: 0 var(--spacing-6) var(--spacing-4);
+}
+
+.card__description {
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-4);
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.card__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-500);
+}
+
+.card__meta-icon {
+  font-size: var(--font-size-base);
+}
+
+.card__meta-text {
+  font-weight: var(--font-weight-medium);
+}
+
+/* カードフッター */
+.card__footer {
+  padding: 0 var(--spacing-6) var(--spacing-6);
+  text-align: center;
+}
+
+.card__link-text {
+  color: var(--color-neutral-900);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.card__link-text:hover {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.card__link-text:visited {
+  color: var(--color-neutral-600);
+  opacity: 0.8;
+}
+
+.card__link-text:active {
+  color: var(--link-active);
+}
+
+.card__link-text:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.card__link-icon {
+  margin-left: var(--spacing-2);
+  transition: transform 0.2s ease;
+}
+
+/* 状態管理 */
+.card__loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.loading__spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-neutral-300);
+  border-top-color: var(--color-primary-500);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.card__error {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3);
+  background-color: var(--color-error);
+  color: var(--color-neutral-white);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+}
+
+.error__icon {
+  font-size: var(--font-size-base);
+}
+
+.error__message {
+  font-weight: var(--font-weight-medium);
+}
+
+/* カードタイプ別スタイル */
+
+/* 0. Featured Card Component - 重要なコンテンツ用の特別なカード */
+.featured-card {
+  position: relative;
+  display: block;
+  max-width: 700px;
+  margin: 0;
+  background: var(--color-neutral-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--elevation-2);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--animation-duration-base) var(--animation-easing-ease);
+  border: 2px solid transparent;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--elevation-4);
+  border-color: var(--color-primary-200);
+}
+
+.featured-card:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* バッジ */
+.featured-card__badge {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500));
+  color: var(--color-neutral-white);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  z-index: 2;
+  box-shadow: var(--elevation-1);
+}
+
+.featured-card__badge-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+}
+
+.featured-card__badge-text {
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.05em;
+}
+
+/* メディア部分 */
+.featured-card__media {
+  position: relative;
+  height: var(--spacing-featured-card-media-height);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-50), var(--color-primary-50));
+}
+
+.featured-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--animation-duration-base) var(--animation-easing-ease);
+}
+
+.featured-card:hover .featured-card__image {
+  transform: scale(1.05);
+}
+
+/* コンテンツ部分 */
+.featured-card__content {
+  padding: var(--spacing-featured-card-padding);
+  text-align: left;
+}
+
+.featured-card__header {
+  margin-bottom: var(--spacing-4);
+}
+
+.featured-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin: 0 0 var(--spacing-2) 0;
+  line-height: var(--line-height-tight);
+}
+
+.featured-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0 0 var(--spacing-5) 0;
+}
+
+/* CTA部分 */
+.featured-card__cta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  transition: color var(--animation-duration-base) var(--animation-easing-ease);
+}
+
+.featured-card:hover .featured-card__cta {
+  color: var(--color-primary-700);
+}
+
+.featured-card__cta-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--animation-duration-base) var(--animation-easing-ease);
+}
+
+.featured-card:hover .featured-card__cta-icon {
+  transform: translateX(2px);
+}
+
+/* Featured Card レスポンシブ対応 */
+@media (max-width: 768px) {
+  .featured-card {
+    max-width: 100%;
+    margin: 0 var(--spacing-4);
+  }
+  
+  .featured-card__media {
+    height: 160px;
+  }
+  
+  .featured-card__content {
+    padding: var(--spacing-5);
+  }
+  
+  .featured-card__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .featured-card__description {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-card {
+    margin: 0 var(--spacing-3);
+  }
+  
+  .featured-card__media {
+    height: 140px;
+  }
+  
+  .featured-card__content {
+    padding: var(--spacing-4);
+  }
+  
+  .featured-card__badge {
+    top: var(--spacing-3);
+    right: var(--spacing-3);
+    padding: var(--spacing-1) var(--spacing-2);
+  }
+  
+  .featured-card__badge-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* 1. 情報カード（Information Card） */
+.card--information {
+  border-color: var(--color-primary-200);
+}
+
+.card--information:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-md);
+  /* transform: translateY(-2px); カードタイプのホバー時の浮き上がり効果を無効化 */
+}
+
+.card--information .card__link {
+  color: var(--color-neutral-900);
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.card--information .card__link:hover {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.card--information .card__link:visited {
+  color: var(--link-visited);
+}
+
+.card--information .card__link:active {
+  color: var(--link-active);
+}
+
+.card--information .card__link:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.card--information .card__link::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.card--information .card__link:hover::after {
+  transform: translateX(4px);
+}
+
+/* 2. アクションカード（Action Card） */
+.card--action {
+  border-color: var(--color-secondary-200);
+}
+
+.card--action:hover {
+  border-color: var(--color-secondary-300);
+  box-shadow: var(--shadow-lg);
+  /* transform: translateY(-4px); カードタイプのホバー時の浮き上がり効果を無効化 */
+}
+
+.card--action .card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--color-secondary-500);
+  color: var(--color-neutral-white);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.2s ease;
+  gap: var(--spacing-2);
+}
+
+.card--action .card__link:hover {
+  background-color: var(--color-secondary-600);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.card--action .card__link::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.card--action .card__link:hover::after {
+  transform: translateX(4px);
+}
+
+/* 3. ナビゲーションカード（Navigation Card） */
+.card--navigation {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card--navigation:hover {
+  box-shadow: var(--shadow-xl);
+  /* transform: translateY(-8px); カードタイプのホバー時の浮き上がり効果を無効化 */
+  border-color: var(--color-accent-200);
+}
+
+.card--navigation .card__title {
+  color: var(--color-neutral-900);
+  transition: color 0.2s ease;
+}
+
+.card--navigation:hover .card__title {
+  color: var(--color-accent-500);
+}
+
+/* リンクの統一ルール */
+
+/* テキストリンク - デザインシステム統一 */
+.link--text {
+  color: var(--link-default);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: var(--font-weight-medium);
+}
+
+.link--text:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-default);
+}
+
+.link--text:visited {
+  color: var(--link-visited);
+}
+
+.link--text:active {
+  color: var(--link-active);
+}
+
+.link--text:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ボタンリンク - デザインシステム統一 */
+.link--button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--link-default);
+  color: var(--color-neutral-white);
+  border-radius: var(--radius-base);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.2s ease;
+  gap: var(--spacing-2);
+  border: none;
+  cursor: pointer;
+}
+
+.link--button:hover {
+  background-color: var(--link-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.link--button:visited {
+  background-color: var(--link-visited);
+}
+
+.link--button:active {
+  background-color: var(--link-active);
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.link--button:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+}
+
+/* セカンダリボタンリンク - デザインシステム統一 */
+.link--button-secondary {
+  background-color: var(--color-secondary-500);
+}
+
+.link--button-secondary:hover {
+  background-color: var(--color-secondary-600);
+}
+
+.link--button-secondary:visited {
+  background-color: var(--color-secondary-700);
+}
+
+.link--button-secondary:active {
+  background-color: var(--color-secondary-800);
+}
+
+.link--button-secondary:focus {
+  outline: 2px solid var(--color-secondary-500);
+  outline-offset: 2px;
+}
+
+/* アウトラインボタンリンク - デザインシステム統一 */
+.link--button-outline {
+  background-color: transparent;
+  color: var(--link-default);
+  border: 2px solid var(--link-default);
+}
+
+.link--button-outline:hover {
+  background-color: var(--color-primary-50);
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+.link--button-outline:visited {
+  color: var(--link-visited);
+  border-color: var(--link-visited);
+}
+
+.link--button-outline:active {
+  background-color: var(--color-primary-100);
+  color: var(--link-active);
+  border-color: var(--link-active);
+}
+
+.link--button-outline:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+}
+
+/* カードリンク（全体がクリック可能） - デザインシステム統一 */
+.card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.card--link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card--link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card--link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card--link:focus {
+  outline: 2px solid var(--link-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-lg);
+}
+
+/* アクセシビリティ対応 */
+
+/* キーボードナビゲーション */
+.keyboard-navigation .card:focus,
+.keyboard-navigation .link--text:focus,
+.keyboard-navigation .link--button:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* 色覚障害対応 */
+.link--primary::before {
+  content: "→";
+  margin-right: var(--spacing-2);
+  font-weight: var(--font-weight-bold);
+}
+
+.link--secondary::before {
+  content: "●";
+  margin-right: var(--spacing-2);
+  font-weight: var(--font-weight-bold);
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+  .card {
+    border-width: 2px;
+  }
+  
+  .link--text {
+    border-bottom-width: 2px;
+  }
+  
+  .link--button {
+    border: 2px solid var(--color-primary-500);
+  }
+}
+
+/* モーション軽減対応 */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card__link,
+  .link--text,
+  .link--button {
+    transition: none;
+  }
+  
+  .card:hover,
+  .link--button:hover {
+    transform: none;
+  }
+}
+
+/* レスポンシブ対応 */
+
+/* モバイル（< 768px） */
+@media (max-width: 767px) {
+  .card__content {
+    padding: var(--spacing-4);
+  }
+  
+  .card__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .link--button {
+    padding: var(--spacing-4) var(--spacing-5);
+    font-size: var(--font-size-base);
+  }
+  
+  /* タッチターゲットの最小サイズ確保 */
+  .card--navigation {
+    min-height: 44px;
+  }
+  
+  .link--button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* タブレット（768px - 1024px） */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card__content {
+    padding: var(--spacing-5);
+  }
+}
+
+/* デスクトップ（> 1024px） */
+@media (min-width: 1024px) {
+  .card__content {
+    padding: var(--spacing-6);
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .card--navigation:hover {
+    transform: translateY(-8px);
+  }
+}
+
+/* 状態管理 */
+
+/* ローディング状態 */
+.card--loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card--loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--color-neutral-300);
+  border-top-color: var(--color-primary-500);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 無効状態 */
+.card--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.link--button:disabled {
+  background-color: var(--color-neutral-300);
+  color: var(--color-neutral-500);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.link--button:disabled:hover {
+  background-color: var(--color-neutral-300);
+  transform: none;
+  box-shadow: none;
+}

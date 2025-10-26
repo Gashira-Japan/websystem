@@ -1,0 +1,270 @@
+{
+  "name": "Usage-Based Colors",
+  "description": "用途別カラーシステム - プラス・マイナス印象表現を含む",
+  "version": "1.0.0",
+  
+  "emotionalColors": {
+    "positive": {
+      "primary": {
+        "value": "#10B981",
+        "name": "ポジティブプライマリ",
+        "description": "プラス・良い印象を表現するメインカラー",
+        "usage": [
+          "成長率の表示",
+          "利益の表示",
+          "改善の表現",
+          "成功の表現",
+          "満足度の表示"
+        ],
+        "examples": [
+          "売上+15%",
+          "顧客満足度向上",
+          "効率化達成",
+          "目標達成"
+        ]
+      },
+      "secondary": {
+        "value": "#34D399",
+        "name": "ポジティブセカンダリ",
+        "description": "プラス印象の補助色",
+        "usage": [
+          "ポジティブ要素の背景",
+          "軽微な改善の表現",
+          "サブ的な成功要素"
+        ]
+      },
+      "light": {
+        "value": "#D1FAE5",
+        "name": "ポジティブライト",
+        "description": "プラス印象の薄い色",
+        "usage": [
+          "ポジティブ要素の背景色",
+          "成功状態の背景",
+          "改善エリアのハイライト"
+        ]
+      }
+    },
+    
+    "negative": {
+      "primary": {
+        "value": "#EF4444",
+        "name": "ネガティブプライマリ",
+        "description": "マイナス・悪い印象を表現するメインカラー",
+        "usage": [
+          "減少率の表示",
+          "損失の表示",
+          "問題の表現",
+          "失敗の表現",
+          "不満の表示"
+        ],
+        "examples": [
+          "売上-10%",
+          "顧客離れ",
+          "効率低下",
+          "目標未達成"
+        ]
+      },
+      "secondary": {
+        "value": "#F87171",
+        "name": "ネガティブセカンダリ",
+        "description": "マイナス印象の補助色",
+        "usage": [
+          "ネガティブ要素の背景",
+          "軽微な問題の表現",
+          "サブ的な問題要素"
+        ]
+      },
+      "light": {
+        "value": "#FEE2E2",
+        "name": "ネガティブライト",
+        "description": "マイナス印象の薄い色",
+        "usage": [
+          "ネガティブ要素の背景色",
+          "エラー状態の背景",
+          "注意エリアのハイライト"
+        ]
+      }
+    },
+    
+    "neutral": {
+      "primary": {
+        "value": "#6B7280",
+        "name": "ニュートラルプライマリ",
+        "description": "中立的な印象を表現するメインカラー",
+        "usage": [
+          "変化なしの表示",
+          "維持の表現",
+          "標準の表示",
+          "平均の表現"
+        ],
+        "examples": [
+          "売上±0%",
+          "現状維持",
+          "標準レベル",
+          "平均値"
+        ]
+      },
+      "secondary": {
+        "value": "#9CA3AF",
+        "name": "ニュートラルセカンダリ",
+        "description": "中立的印象の補助色",
+        "usage": [
+          "ニュートラル要素の背景",
+          "補足情報の表現",
+          "サブ的な情報要素"
+        ]
+      },
+      "light": {
+        "value": "#F3F4F6",
+        "name": "ニュートラルライト",
+        "description": "中立的印象の薄い色",
+        "usage": [
+          "ニュートラル要素の背景色",
+          "情報状態の背景",
+          "標準エリアのハイライト"
+        ]
+      }
+    }
+  },
+  
+  "contentColors": {
+    "highlight": {
+      "primary": {
+        "value": "#FEF3C7",
+        "name": "ハイライトプライマリ",
+        "description": "重要な情報を強調する色",
+        "usage": [
+          "重要な数値の背景",
+          "注目すべき情報のハイライト",
+          "キーポイントの強調"
+        ]
+      },
+      "secondary": {
+        "value": "#FDE68A",
+        "name": "ハイライトセカンダリ",
+        "description": "ハイライトの補助色",
+        "usage": [
+          "サブ的な重要情報の背景",
+          "軽微な強調要素"
+        ]
+      }
+    },
+    
+    "accent": {
+      "primary": {
+        "value": "#F59E0B",
+        "name": "アクセントプライマリ",
+        "description": "注目を引く色",
+        "usage": [
+          "CTAボタン",
+          "重要なリンク",
+          "注目すべき要素"
+        ]
+      },
+      "secondary": {
+        "value": "#FBBF24",
+        "name": "アクセントセカンダリ",
+        "description": "アクセントの補助色",
+        "usage": [
+          "サブ的なCTA",
+          "補助的なリンク",
+          "軽微な注目要素"
+        ]
+      }
+    },
+    
+    "muted": {
+      "primary": {
+        "value": "#9CA3AF",
+        "name": "ミュートプライマリ",
+        "description": "控えめな色",
+        "usage": [
+          "補足情報のテキスト",
+          "サブテキスト",
+          "補助的な情報"
+        ]
+      },
+      "secondary": {
+        "value": "#D1D5DB",
+        "name": "ミュートセカンダリ",
+        "description": "ミュートの補助色",
+        "usage": [
+          "控えめな背景色",
+          "軽微な区切り線",
+          "補助的な装飾要素"
+        ]
+      }
+    }
+  },
+  
+  "dataVisualization": {
+    "trend": {
+      "up": {
+        "value": "#10B981",
+        "name": "上昇トレンド",
+        "description": "上昇・増加を表現する色"
+      },
+      "down": {
+        "value": "#EF4444",
+        "name": "下降トレンド",
+        "description": "下降・減少を表現する色"
+      },
+      "stable": {
+        "value": "#6B7280",
+        "name": "安定トレンド",
+        "description": "安定・変化なしを表現する色"
+      }
+    },
+    
+    "status": {
+      "excellent": {
+        "value": "#10B981",
+        "name": "優秀",
+        "description": "優秀な状態を表現"
+      },
+      "good": {
+        "value": "#34D399",
+        "name": "良好",
+        "description": "良好な状態を表現"
+      },
+      "average": {
+        "value": "#F59E0B",
+        "name": "平均",
+        "description": "平均的な状態を表現"
+      },
+      "poor": {
+        "value": "#EF4444",
+        "name": "不良",
+        "description": "不良な状態を表現"
+      }
+    }
+  },
+  
+  "usageGuidelines": {
+    "emotional": {
+      "positive": "成長、成功、改善、利益、満足などの良い印象を表現する際に使用",
+      "negative": "減少、失敗、問題、損失、不満などの悪い印象を表現する際に使用",
+      "neutral": "変化なし、維持、標準、平均などのニュートラルな印象を表現する際に使用"
+    },
+    "content": {
+      "highlight": "重要な情報を強調する際に使用",
+      "accent": "注目を引く要素に使用",
+      "muted": "控えめな情報や補足情報に使用"
+    },
+    "dataVisualization": {
+      "trend": "データの傾向を表現する際に使用",
+      "status": "状態や評価を表現する際に使用"
+    }
+  },
+  
+  "accessibility": {
+    "contrast": {
+      "positive": "AA準拠（4.5:1以上）",
+      "negative": "AA準拠（4.5:1以上）",
+      "neutral": "AA準拠（4.5:1以上）"
+    },
+    "colorBlind": {
+      "note": "色覚異常者にも区別できるよう、色だけでなく形状やテキストでも情報を表現"
+    }
+  }
+}

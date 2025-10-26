@@ -1,0 +1,224 @@
+{
+  "version": "1.0.0",
+  "name": "TenFive Shared Design System",
+  "description": "テンファイブの統一デザインシステム - 全サイト共通",
+  "lastUpdated": "2025-01-27",
+  
+  "base": {
+    "colors": {
+      "neutral": {
+        "white": "#FFFFFF",
+        "gray-50": "#F9FAFB",
+        "gray-100": "#F3F4F6",
+        "gray-200": "#E5E7EB",
+        "gray-300": "#D1D5DB",
+        "gray-400": "#9CA3AF",
+        "gray-500": "#6B7280",
+        "gray-600": "#4B5563",
+        "gray-700": "#374151",
+        "gray-800": "#1F2937",
+        "gray-900": "#111827",
+        "black": "#000000"
+      },
+      "semantic": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      }
+    },
+    
+    "typography": {
+      "fonts": {
+        "primary": "'Noto Sans JP', system-ui, -apple-system, sans-serif",
+        "secondary": "'Inter', system-ui, -apple-system, sans-serif",
+        "monospace": "'JetBrains Mono', Monaco, Consolas, monospace"
+      },
+      "sizes": {
+        "xs": "12px",
+        "sm": "14px",
+        "base": "16px",
+        "lg": "18px",
+        "xl": "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        "4xl": "40px",
+        "5xl": "48px",
+        "6xl": "64px"
+      },
+      "weights": {
+        "light": "300",
+        "normal": "400",
+        "medium": "500",
+        "semibold": "600",
+        "bold": "700"
+      },
+      "lineHeights": {
+        "tight": "1.2",
+        "snug": "1.375",
+        "normal": "1.5",
+        "relaxed": "1.625",
+        "loose": "2"
+      }
+    },
+    
+    "spacing": {
+      "0": "0px",
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "5": "20px",
+      "6": "24px",
+      "8": "32px",
+      "10": "40px",
+      "12": "48px",
+      "16": "64px",
+      "20": "80px",
+      "24": "96px"
+    },
+    
+    "radius": {
+      "sm": "4px",
+      "base": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "full": "9999px"
+    },
+    
+    "shadows": {
+      "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "base": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+      "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+    },
+    
+    "transitions": {
+      "fast": "150ms ease-in-out",
+      "normal": "250ms ease-in-out",
+      "slow": "350ms ease-in-out"
+    },
+    
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px",
+      "2xl": "1536px"
+    }
+  },
+  
+  "themes": {
+    "corporate": {
+      "name": "Corporate Theme",
+      "description": "コーポレートサイト用テーマ",
+      "colors": {
+        "primary": {
+          "50": "#EFF6FF",
+          "100": "#DBEAFE",
+          "200": "#BFDBFE",
+          "300": "#93C5FD",
+          "400": "#60A5FA",
+          "500": "#3B82F6",
+          "600": "#2563EB",
+          "700": "#1D4ED8",
+          "800": "#1E40AF",
+          "900": "#1E3A8A"
+        },
+        "secondary": {
+          "50": "#F8FAFC",
+          "100": "#F1F5F9",
+          "200": "#E2E8F0",
+          "300": "#CBD5E1",
+          "400": "#94A3B8",
+          "500": "#64748B",
+          "600": "#475569",
+          "700": "#334155",
+          "800": "#1E293B",
+          "900": "#0F172A"
+        },
+        "accent": {
+          "50": "#F0FDF4",
+          "100": "#DCFCE7",
+          "200": "#BBF7D0",
+          "300": "#86EFAC",
+          "400": "#4ADE80",
+          "500": "#22C55E",
+          "600": "#16A34A",
+          "700": "#15803D",
+          "800": "#166534",
+          "900": "#14532D"
+        }
+      }
+    },
+    
+    "recruitment": {
+      "name": "Recruitment Theme",
+      "description": "採用サイト用テーマ",
+      "colors": {
+        "primary": {
+          "50": "#EFF6FF",
+          "100": "#DBEAFE",
+          "200": "#BFDBFE",
+          "300": "#93C5FD",
+          "400": "#60A5FA",
+          "500": "#228DC4",
+          "600": "#0D679E",
+          "700": "#1D4ED8",
+          "800": "#1E40AF",
+          "900": "#1E3A8A"
+        },
+        "secondary": {
+          "50": "#F0FDF4",
+          "100": "#DCFCE7",
+          "200": "#BBF7D0",
+          "300": "#86EFAC",
+          "400": "#4ADE80",
+          "500": "#90B425",
+          "600": "#138F8F",
+          "700": "#15803D",
+          "800": "#166534",
+          "900": "#14532D"
+        },
+        "accent": {
+          "50": "#FEF3C7",
+          "100": "#FDE68A",
+          "200": "#FCD34D",
+          "300": "#FBBF24",
+          "400": "#F59E0B",
+          "500": "#E6951E",
+          "600": "#D97706",
+          "700": "#B45309",
+          "800": "#92400E",
+          "900": "#78350F"
+        }
+      }
+    }
+  },
+  
+  "usage": {
+    "corporate": {
+      "primary": "信頼性・専門性を表現",
+      "secondary": "落ち着き・安定感を表現",
+      "accent": "成長・革新を表現"
+    },
+    "recruitment": {
+      "primary": "信頼性（採用サイトと同一）",
+      "secondary": "親しみやすさ・成長を表現",
+      "accent": "活力・エネルギーを表現"
+    }
+  },
+  
+  "maintenance": {
+    "updateProcess": [
+      "1. shared-design-tokens.jsonを更新",
+      "2. 各サイトのdesign-system.cssを同期",
+      "3. 変更内容をテスト",
+      "4. ドキュメントを更新"
+    ],
+    "versioning": "セマンティックバージョニング（major.minor.patch）",
+    "breakingChanges": "majorバージョンアップ時は全サイトで確認が必要"
+  }
+}

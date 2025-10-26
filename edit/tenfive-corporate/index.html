@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンファイブ株式会社 | 金融情報システム開発</title>
+    <meta name="description" content="金融情報システム開発を通じてWealth社会の発展に貢献します。20年以上の実績を持つシステムインテグレーターです。">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../shared-components.css">
+    <link rel="stylesheet" href="css/components.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../shared-sections.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/blog-card-system.css">
+    <link rel="stylesheet" href="css/tech-blog.css">
+    <link rel="stylesheet" href="css/case-studies.css">
+    <link rel="stylesheet" href="css/glossary.css">
+    <!-- ニュースシステムは最後に読み込み（他のCSSを上書き） -->
+    <link rel="stylesheet" href="../shared-news-system.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/images/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#business" class="nav__link">事業内容</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#company" class="nav__link">会社紹介</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#curriculum" class="nav__link">アカデミー</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#partners" class="nav__link">パートナー募集</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">お問い合わせ</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- 採用情報ボタン（モバイルナビゲーション内） -->
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（採用情報ボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-section="hero">
+        <!-- Background Image Slider -->
+        <div class="hero__bg-slider">
+            <div class="hero__bg-slide hero__bg-slide--active">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/main-bg01-mobile.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/main-bg01.jpg" alt="Tech × Wealth = Well-being - より良い社会と未来の豊かさをデザインする" class="hero__bg-image">
+                </picture>
+            </div>
+            <div class="hero__bg-slide">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/main-bg02-mobile.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/main-bg02.jpg" alt="金融×テクノロジーの最前線 - 未来の金融エンジニアリングを探求" class="hero__bg-image">
+                </picture>
+            </div>
+            <div class="hero__bg-slide">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/main-bg03-mobile.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/main-bg03.jpg" alt="確かな技術力と提案力 - お客様のビジネス課題を解決する実績" class="hero__bg-image">
+                </picture>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title--accent">Tech × Wealth</span><br>
+                    <span class="hero__title--accent">— </span><span class="hero__title--accent">Creating a Better Life for All</span>
+                </h1>
+                <p class="hero__subtitle">
+                    テクノロジーで創る、豊かさが循環する社会
+                </p>
+                <p class="hero__description">
+                    テクノロジーを通じて、人と社会、そして未来をつなぐ。豊かさが循環し、誰もが幸福を感じられる社会の実現を目指します。
+                </p>
+                <div class="hero__scroll">
+                    <span class="hero__scroll-text">SCROLL</span>
+                    <div class="hero__scroll-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- News Section -->
+<section class="news" data-section="news" id="news">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">お知らせ</h2>
+            <p class="section__subtitle">News</p>
+        </div>
+        
+        <div class="news__list">
+            <article class="news__item">
+                <div class="news__meta-row">
+                    <div class="news__date">
+                        <time datetime="2025-10-15">2025.10.15</time>
+                    </div>
+                    <div class="news__badge news__badge--notice">予告</div>
+                </div>
+                <div class="news__content">
+                    <h3 class="news__title">
+                        <a href="/news/website-renewal/" class="news__link">
+                            Webサイトリニューアルに向けて鋭意制作中！
+                        </a>
+                    </h3>
+                </div>
+            </article>
+            <hr class="news__divider">
+            
+            <article class="news__item">
+                <div class="news__meta-row">
+                    <div class="news__date">
+                        <time datetime="2025-10-08">2025.10.08</time>
+                    </div>
+                    <div class="news__badge news__badge--update">公開</div>
+                </div>
+                <div class="news__content">
+                    <h3 class="news__title">
+                        <a href="/news/aws-articles/" class="news__link">
+                            AWS応用「IAMとアクセス制御」＆SQL応用「パフォーマンスチューニング」記事を追加！
+                        </a>
+                    </h3>
+                </div>
+            </article>
+            <hr class="news__divider">
+            
+            <article class="news__item">
+                <div class="news__meta-row">
+                    <div class="news__date">
+                        <time datetime="2025-10-01">2025.10.01</time>
+                    </div>
+                    <div class="news__badge news__badge--update">公開</div>
+                </div>
+                <div class="news__content">
+                    <h3 class="news__title">
+                        <a href="/news/database-security/" class="news__link">
+                            SQL応用「データベースセキュリティ」＆AWS応用「RDS & Aurora 高度設定」記事を追加！
+                        </a>
+                    </h3>
+                </div>
+            </article>
+        </div>
+        
+        <div class="news__footer">
+            <a href="/news/" class="link-text">すべてのお知らせを見る</a>
+        </div>
+    </div>
+</section>
+    <!-- Business Content Section -->
+    <section class="pickup-content" data-section="pickup-content" id="pickup-content">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">事業内容</h2>
+                <p class="section__subtitle">Service</p>
+                <p class="section__description">金融システムの構築からAI導入による最新技術の開発支援まで、確かな技術力と提案力で、お客様のビジネス課題を解決します。</p>
+            </div>
+            
+            <!-- 事業内容カード（2列） -->
+            <div class="cards-grid cards-grid--2">
+                <a href="/ses-business/" class="image-card" aria-label="SES事業の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/ses-solutions.jpg" alt="SES事業" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">SES事業</h3>
+                        </div>
+                        <p class="image-card__description">金融業界を中心に基幹システム、インフラ整備、WEB/アプリ開発からオーダーメイドのシステム開発まで卓越したエンジニアメンバーがサポートします。</p>
+                    </div>
+                </a>
+                
+                <a href="/ai-solution/" class="image-card" aria-label="AIソリューション事業の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/ai-solutions.jpg" alt="AIソリューション事業" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">AIソリューション事業</h3>
+                        </div>
+                        <p class="image-card__description">最先端かつ高度な知見をもとに、自然言語処理、画像認識、LLM導入など高度なセキュリティ開発を進めてきた弊社エンジニアがAI導入をサポートします。</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 既存のピックアップコンテンツカード（3列） -->
+            <!-- <div class="pickup-content__grid">
+                <div class="pickup-item">
+                    <div class="pickup-item__content">
+                        <h3 class="pickup-item__title">キャリアパスを説明</h3>
+                        <p class="pickup-item__description">
+                            テンファイブでのキャリアパスと成長の道筋について詳しくご説明します。
+                        </p>
+                        <a href="/career-path/" class="pickup-item__link">詳しく見る</a>
+                    </div>
+                </div>
+                
+                <div class="pickup-item">
+                    <div class="pickup-item__content">
+                        <h3 class="pickup-item__title">1日のスケジュール</h3>
+                        <p class="pickup-item__description">
+                            実際の社員の1日のスケジュールを通して、リアルな働き方をご紹介します。
+                        </p>
+                        <a href="/daily-schedule/" class="pickup-item__link">詳しく見る</a>
+                    </div>
+                </div>
+                
+                <div class="pickup-item">
+                    <div class="pickup-item__content">
+                        <h3 class="pickup-item__title">適職診断コンテンツ</h3>
+                        <p class="pickup-item__description">
+                            あなたに最適な職種やキャリアパスを見つけるための適職診断をご提供します。
+                        </p>
+                        <a href="/career-assessment/" class="pickup-item__link">診断を受ける</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Strengths Section -->
+    <section class="strengths" data-section="strengths" id="strengths">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">私たちの強み</h2>
+                <p class="section__subtitle">Strength</p>
+                <p class="section__description">
+                    金融×テクノロジーの専門性と豊富な実績で、お客様のビジネス成長を支援します。
+                </p>
+            </div>
+            
+            <div class="strengths__grid">
+                <div class="strength-item">
+                    <div class="strength-item__header">
+                        <div class="strength-item__icon">
+                            <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="strength-item__title">大手金融機関との豊富な取引実績</h3>
+                    </div>
+                    <p class="strength-item__description">
+                        金融領域におけるIT技術・セキュリティ技術の深い知見を活かし、高品質なソリューションを提供しています。
+                    </p>
+                </div>
+                
+                <div class="strength-item">
+                    <div class="strength-item__header">
+                        <div class="strength-item__icon">
+                            <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="strength-item__title">上流工程に強みを持った一貫した開発体制</h3>
+                    </div>
+                    <p class="strength-item__description">
+                        要件定義・設計フェーズから参画し、お客様のビジネス要件を正確に把握。技術的な課題を事前に解決し、プロジェクトの成功確率を高めます。
+                    </p>
+                </div>
+                
+                <div class="strength-item">
+                    <div class="strength-item__header">
+                        <div class="strength-item__icon">
+                            <svg class="strength-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="strength-item__title">大手ITベンダーとの継続取引</h3>
+                    </div>
+                    <p class="strength-item__description">
+                        大手企業との長期継続取引により、高い技術力と信頼性を実証。安定したパートナーシップを構築しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Case Studies Section -->
+<section class="case-studies" data-section="case-studies" id="case-studies">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">実績</h2>
+            <p class="section__subtitle">Case</p>
+            <p class="section__description">金融システムの構築から業務効率化まで、確かな技術力と提案力で、お客様のビジネス課題を解決してきた実績の一部をお伝えします。</p>
+        </div>
+        
+        <!-- スライダーコンテナ -->
+        <div class="case-studies__slider" id="case-studies-slider">
+            <div class="case-studies__slider-container">
+                <div class="case-studies__slider-track" id="case-studies-track">
+                    <article class="blog-card case-studies__slide">
+                        <a href="/case/cross-border-ec/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="越境ECプラットフォームのイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--case">実績</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <h3 class="blog-card__title">
+                                    案件実績 越境EC プロジェクト
+                                </h3>
+                                <p class="blog-card__description">
+                                    越境ECプラットフォームの開発・運用支援プロジェクト。多言語対応、決済システム統合、税関手続き自動化を実現し、グローバル展開を支援しました。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">EC</span>
+                                    <span class="blog-card__tag">決済システム</span>
+                                    <span class="blog-card__tag">多言語対応</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card case-studies__slide">
+                        <a href="/case/digital-banking/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="デジタルバンキングシステムのイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--case">実績</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <h3 class="blog-card__title">
+                                    案件実績 都内地方銀行様[業務内容]
+                                </h3>
+                                <p class="blog-card__description">
+                                    地方銀行様のデジタルバンキングシステム刷新プロジェクト。既存システムからの移行と新機能開発を担当し、顧客体験の向上を実現しました。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">金融システム</span>
+                                    <span class="blog-card__tag">デジタルバンキング</span>
+                                    <span class="blog-card__tag">システム移行</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+            
+            <!-- スライダーコントロール（3個以上で表示） -->
+            <div class="case-studies__controls" id="case-studies-controls" style="display: none;">
+                <button class="case-studies__btn case-studies__btn--prev" id="case-studies-prev" aria-label="前の実績">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </button>
+                <button class="case-studies__btn case-studies__btn--next" id="case-studies-next" aria-label="次の実績">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- インジケーター（3個以上で表示） -->
+            <div class="case-studies__indicators" id="case-studies-indicators" style="display: none;">
+                <!-- JavaScript で動的生成 -->
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Tech Blog Section -->
+    <section class="tech-blog" data-section="tech-blog" id="tech-blog">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">テックブログ</h2>
+                <p class="section__subtitle">Tech blog</p>
+                <p class="section__description">金融×テクノロジーの最前線をお届けします。<br>SES現場の実践ノウハウからAIソリューションまで、未来の金融エンジニアリングを探求していきます。</p>
+            </div>
+            
+            <div class="blog-slider">
+                <div class="blog-card-container" id="blogSlider">
+                    <article class="blog-card">
+                        <a href="/blog/upstream-engineering-career/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="上流工程転職のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--career">キャリア</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2024-01-15">2024.01.15</time>
+                                    <span class="blog-card__reading-time">5分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    未経験者必見！上流工程転職成功の秘訣とは？
+                                </h3>
+                                <p class="blog-card__description">
+                                    上流工程への転職を考えている未経験者の方に向けて、成功の秘訣と具体的なステップをご紹介します。要件定義から設計まで、上流工程で必要なスキルと実践的な学習方法を詳しく解説。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">上流工程</span>
+                                    <span class="blog-card__tag">転職</span>
+                                    <span class="blog-card__tag">要件定義</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/flutter-apple-pay/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="Flutter決済実装のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">技術</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2024-01-10">2024.01.10</time>
+                                    <span class="blog-card__reading-time">8分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    Flutter×Apple Pay/Google Pay：トークン化決済でPCI DSS範囲を最小化する実装パターン
+                                </h3>
+                                <p class="blog-card__description">
+                                    モバイルアプリでの決済実装において、PCI DSSの適用範囲を最小化するトークン化決済の実装方法を解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">Flutter</span>
+                                    <span class="blog-card__tag">決済</span>
+                                    <span class="blog-card__tag">セキュリティ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/pmo-market-value/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="PMO市場分析のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">PMO</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2024-01-05">2024.01.05</time>
+                                    <span class="blog-card__reading-time">6分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    データで見るPMOの真実：「やめとけ」論争を一蹴する市場価値と将来性
+                                </h3>
+                                <p class="blog-card__description">
+                                    PMO（プロジェクトマネジメントオフィス）の市場価値と将来性をデータに基づいて分析します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">PMO</span>
+                                    <span class="blog-card__tag">プロジェクト管理</span>
+                                    <span class="blog-card__tag">データ分析</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/core-system/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="勘定系システムのイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">金融システム</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-12-28">2023.12.28</time>
+                                    <span class="blog-card__reading-time">10分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    勘定系システムとは？仕組み・最新動向・導入ポイント徹底解説
+                                </h3>
+                                <p class="blog-card__description">
+                                    金融機関の中核をなす勘定系システムについて、基本的な仕組みから最新の動向まで詳しく解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">勘定系</span>
+                                    <span class="blog-card__tag">金融</span>
+                                    <span class="blog-card__tag">システム設計</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/aws-architecture/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="AWSアーキテクチャのイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">AWS</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-12-20">2023.12.20</time>
+                                    <span class="blog-card__reading-time">12分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    AWSで構築するスケーラブルなマイクロサービスアーキテクチャ設計パターン
+                                </h3>
+                                <p class="blog-card__description">
+                                    マイクロサービスアーキテクチャをAWS上で構築する際の設計パターンとベストプラクティスを詳しく解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">AWS</span>
+                                    <span class="blog-card__tag">マイクロサービス</span>
+                                    <span class="blog-card__tag">アーキテクチャ</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/database-optimization/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="データベース最適化のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">データベース</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-12-15">2023.12.15</time>
+                                    <span class="blog-card__reading-time">8分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    PostgreSQLのクエリ最適化：インデックス戦略と実行計画の読み方
+                                </h3>
+                                <p class="blog-card__description">
+                                    PostgreSQLでのクエリ最適化手法について、インデックス設計から実行計画の解析まで実践的に解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">PostgreSQL</span>
+                                    <span class="blog-card__tag">最適化</span>
+                                    <span class="blog-card__tag">インデックス</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/agile-development/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="アジャイル開発のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--career">プロジェクト管理</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-12-10">2023.12.10</time>
+                                    <span class="blog-card__reading-time">7分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    金融システム開発におけるアジャイル導入の成功事例と課題解決策
+                                </h3>
+                                <p class="blog-card__description">
+                                    金融システム開発でアジャイル開発を導入する際の課題と解決策について、実際の事例を交えて解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">アジャイル</span>
+                                    <span class="blog-card__tag">金融システム</span>
+                                    <span class="blog-card__tag">プロジェクト管理</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/security-best-practices/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="セキュリティベストプラクティスのイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">セキュリティ</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-12-05">2023.12.05</time>
+                                    <span class="blog-card__reading-time">9分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    金融システムのセキュリティ強化：OWASP Top 10対策と実装ガイド
+                                </h3>
+                                <p class="blog-card__description">
+                                    金融システムにおけるセキュリティ対策について、OWASP Top 10を基にした実装方法とベストプラクティスを解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">セキュリティ</span>
+                                    <span class="blog-card__tag">OWASP</span>
+                                    <span class="blog-card__tag">金融システム</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/react-performance/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="Reactパフォーマンス最適化のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">フロントエンド</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-11-28">2023.11.28</time>
+                                    <span class="blog-card__reading-time">11分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    React 18の新機能を活用したパフォーマンス最適化テクニック
+                                </h3>
+                                <p class="blog-card__description">
+                                    React 18のConcurrent FeaturesやSuspenseを活用した、大規模アプリケーションのパフォーマンス最適化手法を解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">React</span>
+                                    <span class="blog-card__tag">パフォーマンス</span>
+                                    <span class="blog-card__tag">フロントエンド</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/devops-culture/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="DevOps文化のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--career">DevOps</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-11-20">2023.11.20</time>
+                                    <span class="blog-card__reading-time">6分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    金融機関におけるDevOps文化の醸成：組織変革の成功事例
+                                </h3>
+                                <p class="blog-card__description">
+                                    金融機関でDevOps文化を導入し、組織変革を成功させた事例について、具体的な取り組みと成果を紹介します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">DevOps</span>
+                                    <span class="blog-card__tag">組織変革</span>
+                                    <span class="blog-card__tag">文化</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/api-design/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="API設計のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--tech">API</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-11-15">2023.11.15</time>
+                                    <span class="blog-card__reading-time">13分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    RESTful API設計のベストプラクティス：バージョニングとエラーハンドリング
+                                </h3>
+                                <p class="blog-card__description">
+                                    スケーラブルで保守性の高いRESTful APIの設計について、バージョニング戦略とエラーハンドリングの実装方法を解説します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">API</span>
+                                    <span class="blog-card__tag">REST</span>
+                                    <span class="blog-card__tag">設計</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <a href="/blog/career-transition/" class="blog-card__link">
+                            <div class="blog-card__image-area">
+                                <img src="assets/images/sample-bg.jpg" alt="キャリア転換のイメージ" class="blog-card__image">
+                                <div class="blog-card__image-overlay"></div>
+                                <span class="blog-card__category-badge blog-card__category-badge--career">キャリア</span>
+                            </div>
+                            <div class="blog-card__main-area">
+                                <div class="blog-card__meta">
+                                    <time class="blog-card__date" datetime="2023-11-10">2023.11.10</time>
+                                    <span class="blog-card__reading-time">8分</span>
+                                </div>
+                                <h3 class="blog-card__title">
+                                    文系からITエンジニアへの転身：金融システム開発での活躍事例
+                                </h3>
+                                <p class="blog-card__description">
+                                    文系出身者がITエンジニアとして金融システム開発の分野で活躍している事例と、転身のポイントを詳しく紹介します。
+                                </p>
+                                <div class="blog-card__tags">
+                                    <span class="blog-card__tag">転職</span>
+                                    <span class="blog-card__tag">文系</span>
+                                    <span class="blog-card__tag">エンジニア</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                
+                <div class="blog-slider__controls">
+                    <button class="blog-slider__button" id="prevBtn" aria-label="前の記事">
+                        <span>‹</span>
+                    </button>
+                    <div class="blog-slider__dots" id="sliderDots">
+                        <!-- ドットはJavaScriptで動的に生成 -->
+                    </div>
+                    <button class="blog-slider__button" id="nextBtn" aria-label="次の記事">
+                        <span>›</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="tech-blog__footer">
+                <a href="/blog/" class="link-text">すべての記事を見る</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <!-- Curriculum Section -->
+    <section class="curriculum" data-section="curriculum" id="curriculum">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">アカデミー</h2>
+                <p class="section__subtitle">Academy</p>
+                <p class="section__description">エンジニアの成長を支援する現場エンジニアが執筆する分野別の学習コンテンツです。</p>
+            </div>
+            
+            <div class="blog-slider">
+                <div class="blog-card-container" id="curriculumSlider">
+                    <article class="blog-card">
+                    <a href="/curriculum/vpc-network-design/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="VPCとネットワーク設計のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-10-15">2025年10月15日</time>
+                                <span class="blog-card__reading-time">90分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                VPCとネットワーク設計
+                            </h3>
+                            <p class="blog-card__description">
+                                AWS環境での仮想プライベートクラウドとネットワーク設計の基礎から応用まで。実践的な設定方法とセキュリティベストプラクティスを学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">AWS</span>
+                                <span class="blog-card__tag">VPC</span>
+                                <span class="blog-card__tag">ネットワーク</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/transaction-concurrency/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="データベーストランザクションのイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-10-15">2025年10月15日</time>
+                                <span class="blog-card__reading-time">120分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                トランザクションと排他制御の基本と実践
+                            </h3>
+                            <p class="blog-card__description">
+                                データベースにおけるトランザクション管理と排他制御の実装方法。ACID特性の理解から実践的なロック戦略まで詳しく解説します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">データベース</span>
+                                <span class="blog-card__tag">トランザクション</span>
+                                <span class="blog-card__tag">排他制御</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/iam-access-control/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="IAMとアクセス制御のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-10-08">2025年10月8日</time>
+                                <span class="blog-card__reading-time">150分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                IAMとアクセス制御の最適化──AWS環境のセキュリティを強化する実践ノウハウ
+                            </h3>
+                            <p class="blog-card__description">
+                                AWS IAMの設定とセキュリティベストプラクティスの実践。最小権限の原則から多要素認証まで、包括的なセキュリティ対策を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">AWS</span>
+                                <span class="blog-card__tag">IAM</span>
+                                <span class="blog-card__tag">セキュリティ</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/docker-containerization/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="Dockerコンテナ化のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-09-20">2025年9月20日</time>
+                                <span class="blog-card__reading-time">75分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                Dockerコンテナ化の実践入門
+                            </h3>
+                            <p class="blog-card__description">
+                                アプリケーションのコンテナ化から本番環境での運用まで、Dockerの実践的な使い方を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">Docker</span>
+                                <span class="blog-card__tag">コンテナ</span>
+                                <span class="blog-card__tag">インフラ</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/kubernetes-orchestration/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="Kubernetesオーケストレーションのイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-09-15">2025年9月15日</time>
+                                <span class="blog-card__reading-time">100分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                Kubernetesオーケストレーション基礎
+                            </h3>
+                            <p class="blog-card__description">
+                                コンテナオーケストレーションの基本概念から、Kubernetesクラスタの構築・運用まで学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">Kubernetes</span>
+                                <span class="blog-card__tag">オーケストレーション</span>
+                                <span class="blog-card__tag">DevOps</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/microservices-architecture/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="マイクロサービスアーキテクチャのイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-09-10">2025年9月10日</time>
+                                <span class="blog-card__reading-time">120分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                マイクロサービスアーキテクチャ設計
+                            </h3>
+                            <p class="blog-card__description">
+                                大規模システムの設計パターンから、マイクロサービス間の連携方法まで実践的に学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">マイクロサービス</span>
+                                <span class="blog-card__tag">アーキテクチャ</span>
+                                <span class="blog-card__tag">設計</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/ci-cd-pipeline/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="CI/CDパイプラインのイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-09-05">2025年9月5日</time>
+                                <span class="blog-card__reading-time">90分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                CI/CDパイプライン構築実践
+                            </h3>
+                            <p class="blog-card__description">
+                                継続的インテグレーション・デプロイメントの環境構築から自動化まで実践的に学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">CI/CD</span>
+                                <span class="blog-card__tag">自動化</span>
+                                <span class="blog-card__tag">DevOps</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/performance-optimization/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="パフォーマンス最適化のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-08-30">2025年8月30日</time>
+                                <span class="blog-card__reading-time">110分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                システムパフォーマンス最適化
+                            </h3>
+                            <p class="blog-card__description">
+                                データベース最適化からアプリケーション性能向上まで、実践的なパフォーマンス改善手法を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">パフォーマンス</span>
+                                <span class="blog-card__tag">最適化</span>
+                                <span class="blog-card__tag">チューニング</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/security-audit/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="セキュリティ監査のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-08-25">2025年8月25日</time>
+                                <span class="blog-card__reading-time">85分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                セキュリティ監査と脆弱性対策
+                            </h3>
+                            <p class="blog-card__description">
+                                システムのセキュリティ監査手法から、脆弱性発見・対策まで包括的に学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">セキュリティ</span>
+                                <span class="blog-card__tag">監査</span>
+                                <span class="blog-card__tag">脆弱性</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/cloud-migration/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="クラウド移行のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-08-20">2025年8月20日</time>
+                                <span class="blog-card__reading-time">130分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                オンプレミスからクラウド移行戦略
+                            </h3>
+                            <p class="blog-card__description">
+                                既存システムのクラウド移行計画から実行まで、実践的な移行戦略と手法を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">クラウド</span>
+                                <span class="blog-card__tag">移行</span>
+                                <span class="blog-card__tag">戦略</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/api-design/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="API設計のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-08-15">2025年8月15日</time>
+                                <span class="blog-card__reading-time">95分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                RESTful API設計と実装
+                            </h3>
+                            <p class="blog-card__description">
+                                スケーラブルで保守性の高いAPI設計から実装まで、実践的なAPI開発手法を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">API</span>
+                                <span class="blog-card__tag">RESTful</span>
+                                <span class="blog-card__tag">設計</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="/curriculum/monitoring-logging/" class="blog-card__link">
+                        <div class="blog-card__image-area">
+                            <img src="assets/images/sample-bg.jpg" alt="監視・ログ管理のイメージ" class="blog-card__image">
+                            <div class="blog-card__image-overlay"></div>
+                            <span class="blog-card__category-badge blog-card__category-badge--curriculum">アカデミー</span>
+                        </div>
+                        <div class="blog-card__main-area">
+                            <div class="blog-card__meta">
+                                <time class="blog-card__date" datetime="2025-08-10">2025年8月10日</time>
+                                <span class="blog-card__reading-time">80分</span>
+                            </div>
+                            <h3 class="blog-card__title">
+                                システム監視とログ管理
+                            </h3>
+                            <p class="blog-card__description">
+                                運用監視の基本から高度なログ分析まで、システム運用に必要な監視技術を学習します。
+                            </p>
+                            <div class="blog-card__tags">
+                                <span class="blog-card__tag">監視</span>
+                                <span class="blog-card__tag">ログ</span>
+                                <span class="blog-card__tag">運用</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                </div>
+                
+                <div class="blog-slider__controls">
+                    <button class="blog-slider__button" id="curriculumPrevBtn" aria-label="前のコンテンツ">
+                        <span>‹</span>
+                    </button>
+                    <div class="blog-slider__dots" id="curriculumSliderDots">
+                        <!-- ドットはJavaScriptで動的に生成 -->
+                    </div>
+                    <button class="blog-slider__button" id="curriculumNextBtn" aria-label="次のコンテンツ">
+                        <span>›</span>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="curriculum__footer">
+                <a href="/curriculum/" class="link-text">すべてのコンテンツを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glossary Section -->
+    <section class="glossary" data-section="glossary" id="glossary">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">用語集</h2>
+                <p class="section__subtitle">Terminology</p>
+            </div>
+            
+            <div class="glossary__grid">
+                <div class="glossary-item">
+                    <h3 class="glossary-item__title">
+                        <a href="/glossary/as400/" class="glossary-item__link">AS/400基幹システムとは？</a>
+                    </h3>
+                    <p class="glossary-item__description">これまでの歴史とこれからの課題</p>
+                </div>
+                
+                <div class="glossary-item">
+                    <h3 class="glossary-item__title">
+                        <a href="/glossary/requirements/" class="glossary-item__link">要件定義とは？</a>
+                    </h3>
+                    <p class="glossary-item__description">ゼロからわかる流れとつまずき防止ポイント</p>
+                </div>
+                
+                <div class="glossary-item">
+                    <h3 class="glossary-item__title">
+                        <a href="/glossary/ses/" class="glossary-item__link">SESとは？</a>
+                    </h3>
+                    <p class="glossary-item__description">業界の仕組みや事業内容を徹底解説</p>
+                </div>
+                
+                <div class="glossary-item">
+                    <h3 class="glossary-item__title">
+                        <a href="/glossary/core-system/" class="glossary-item__link">勘定系システムとは？</a>
+                    </h3>
+                    <p class="glossary-item__description">金融機関の基盤システムを分かりやすく解説</p>
+                </div>
+            </div>
+            
+            <div class="glossary__footer">
+                <a href="/glossary/" class="link-text">すべての用語を見る</a>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Company Overview Section -->
+    <section class="company-overview" data-section="company" id="company">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">会社概要</h2>
+                <p class="section__subtitle">Company</p>
+            </div>
+            
+            <div class="company-info">
+                <div class="company-info__table">
+                    <div class="company-info__row">
+                        <dt class="company-info__label">会社名</dt>
+                        <dd class="company-info__value">テンファイブ株式会社</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">代表者</dt>
+                        <dd class="company-info__value">山城 祐也</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">設立日</dt>
+                        <dd class="company-info__value">2009年1月8日</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">資本金</dt>
+                        <dd class="company-info__value">3,000,000円</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">所在地</dt>
+                        <dd class="company-info__value">東京都渋谷区神宮前2-13-9 BIRTH神宮前2F(202)</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">事業内容</dt>
+                        <dd class="company-info__value">システム開発支援<br>IT課題解決支援<br>ブランド向上支援</dd>
+                    </div>
+                    <div class="company-info__row">
+                        <dt class="company-info__label">取引先</dt>
+                        <dd class="company-info__value">
+                            TISインテックグループ、株式会社東京スター銀行、<br>
+                            株式会社ミンカブ・ジ・インフォノイド、株式会社クボタ、<br>
+                            株式会社エスキュービズム、三菱総研DCS株式会社他
+                        </dd>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" data-section="cta" id="cta">
+        <div class="container">
+            <!-- CTAカード（2列） -->
+            <div class="cards-grid cards-grid--2">
+                <a href="https://recruit.10-5.jp/" class="image-card cta__card cta__card--recruit" target="_blank" rel="noopener" aria-label="採用情報の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/cta-recruit-bg.jpg" alt="採用情報" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">採用情報</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="#contact" class="image-card cta__card cta__card--contact" aria-label="お問い合わせの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/cta-contact-bg.jpg" alt="お問い合わせ" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">お問い合わせ</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="assets/images/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                
+                <nav class="footer__nav">
+                    <div class="footer__section">
+                        <h4 class="footer__title">サイトマップ</h4>
+                        <ul class="footer__list">
+                            <li><a href="#business" class="footer__link">事業内容</a></li>
+                            <li><a href="#company" class="footer__link">会社概要</a></li>
+                            <li><a href="#news" class="footer__link">お知らせ</a></li>
+                            <li><a href="#curriculum" class="footer__link">アカデミー</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer__section">
+                        <h4 class="footer__title">サービス</h4>
+                        <ul class="footer__list">
+                            <li><a href="#ai-tools" class="footer__link">AIツール</a></li>
+                            <li><a href="#partners" class="footer__link">パートナー募集</a></li>
+                            <li><a href="https://recruit.10-5.jp/" class="footer__link" target="_blank" rel="noopener">採用情報</a></li>
+                            <li><a href="#contact" class="footer__link">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    2009-Latest © TenFive, Inc. All rights reserved.<br>
+                    No reproduction or republication without written permission.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 共通ヒーロースライダー機能 -->
+    <script src="../shared-hero-slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

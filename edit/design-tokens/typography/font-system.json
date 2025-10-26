@@ -1,0 +1,181 @@
+{
+  "name": "Font System",
+  "description": "タイポグラフィシステム - フォントファミリーとリンクテキストの定義",
+  "version": "1.0.0",
+  
+  "fontFamilies": {
+    "primary": {
+      "name": "Noto Sans JP",
+      "fallback": "sans-serif",
+      "description": "メインフォント（日本語対応）",
+      "usage": "見出し、本文、UI要素"
+    },
+    "secondary": {
+      "name": "Noto Serif JP",
+      "fallback": "serif",
+      "description": "セカンダリフォント（日本語対応）",
+      "usage": "引用、特別な強調"
+    },
+    "monospace": {
+      "name": "JetBrains Mono",
+      "fallback": "monospace",
+      "description": "等幅フォント",
+      "usage": "コード、数値、データ表示"
+    }
+  },
+  
+  "linkColors": {
+    "default": {
+      "value": "#3B82F6",
+      "name": "デフォルトリンク",
+      "description": "通常のリンクテキスト",
+      "usage": "一般的なリンク、ナビゲーションリンク",
+      "states": {
+        "default": "#3B82F6",
+        "hover": "#2563EB",
+        "active": "#1D4ED8",
+        "visited": "#7C3AED"
+      }
+    },
+    "visited": {
+      "value": "#7C3AED",
+      "name": "訪問済みリンク",
+      "description": "過去に閲覧したリンクテキスト",
+      "usage": "訪問済みページのリンク",
+      "states": {
+        "default": "#7C3AED",
+        "hover": "#6D28D9",
+        "active": "#5B21B6"
+      }
+    },
+    "primary": {
+      "value": "#3B82F6",
+      "name": "プライマリリンク",
+      "description": "重要なリンクテキスト",
+      "usage": "メインCTA、重要なナビゲーション",
+      "states": {
+        "default": "#3B82F6",
+        "hover": "#2563EB",
+        "active": "#1D4ED8"
+      }
+    },
+    "secondary": {
+      "value": "#6B7280",
+      "name": "セカンダリリンク",
+      "description": "補助的なリンクテキスト",
+      "usage": "フッターリンク、補足リンク",
+      "states": {
+        "default": "#6B7280",
+        "hover": "#4B5563",
+        "active": "#374151"
+      }
+    },
+    "accent": {
+      "value": "#F59E0B",
+      "name": "アクセントリンク",
+      "description": "注目を引くリンクテキスト",
+      "usage": "特別なアクション、注目リンク",
+      "states": {
+        "default": "#F59E0B",
+        "hover": "#D97706",
+        "active": "#B45309"
+      }
+    },
+    "success": {
+      "value": "#10B981",
+      "name": "成功リンク",
+      "description": "成功状態のリンクテキスト",
+      "usage": "成功メッセージ内のリンク",
+      "states": {
+        "default": "#10B981",
+        "hover": "#059669",
+        "active": "#047857"
+      }
+    },
+    "warning": {
+      "value": "#F59E0B",
+      "name": "警告リンク",
+      "description": "警告状態のリンクテキスト",
+      "usage": "警告メッセージ内のリンク",
+      "states": {
+        "default": "#F59E0B",
+        "hover": "#D97706",
+        "active": "#B45309"
+      }
+    },
+    "error": {
+      "value": "#EF4444",
+      "name": "エラーリンク",
+      "description": "エラー状態のリンクテキスト",
+      "usage": "エラーメッセージ内のリンク",
+      "states": {
+        "default": "#EF4444",
+        "hover": "#DC2626",
+        "active": "#B91C1C"
+      }
+    }
+  },
+  
+  "textColors": {
+    "primary": {
+      "value": "#111827",
+      "name": "プライマリテキスト",
+      "description": "メインのテキストカラー",
+      "usage": "見出し、本文のメインテキスト"
+    },
+    "secondary": {
+      "value": "#6B7280",
+      "name": "セカンダリテキスト",
+      "description": "補助的なテキストカラー",
+      "usage": "サブテキスト、補足情報"
+    },
+    "muted": {
+      "value": "#9CA3AF",
+      "name": "ミュートテキスト",
+      "description": "控えめなテキストカラー",
+      "usage": "軽微な情報、装飾テキスト"
+    },
+    "inverse": {
+      "value": "#FFFFFF",
+      "name": "反転テキスト",
+      "description": "暗い背景用のテキストカラー",
+      "usage": "ダーク背景上のテキスト"
+    }
+  },
+  
+  "linkStyles": {
+    "underline": {
+      "default": "none",
+      "hover": "underline",
+      "active": "underline"
+    },
+    "decoration": {
+      "default": "none",
+      "hover": "underline",
+      "active": "underline"
+    },
+    "transition": "color 0.2s ease-in-out, text-decoration 0.2s ease-in-out"
+  },
+  
+  "accessibility": {
+    "contrast": {
+      "default": "AA準拠（4.5:1以上）",
+      "visited": "AA準拠（4.5:1以上）",
+      "primary": "AA準拠（4.5:1以上）",
+      "secondary": "AA準拠（4.5:1以上）"
+    },
+    "focus": {
+      "outline": "2px solid #3B82F6",
+      "outlineOffset": "2px"
+    }
+  },
+  
+  "usage": {
+    "default": "一般的なリンク、ナビゲーションリンク",
+    "visited": "過去に閲覧したリンク",
+    "primary": "重要なリンク、メインCTA",
+    "secondary": "補助的なリンク、フッターリンク",
+    "accent": "注目を引くリンク、特別なアクション",
+    "semantic": "状態に応じたリンク（成功・警告・エラー）"
+  }
+}

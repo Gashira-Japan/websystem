@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+会社情報
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ヘッダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.page-header {
+/* 	background-image: url("../img/company/header.jpg"); */
+	background-position-y: 80%;
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 会社概要
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.company-overview .inner {
+	max-width: 930px;
+}
+
+.company-overview tr {
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.company-overview tr:first-child {
+	border-top: 1px solid #d5d5d5;
+}
+
+.company-overview th {
+	padding-top: 0.7em;
+}
+
+.company-overview td {
+	padding-bottom: 0.7em;
+}
+
+@media (min-width: 768px) {
+.company-overview table {
+	font-size: 1.8rem;
+}
+
+.company-overview th {
+	width: 150px;
+	padding-bottom: 0.7em;
+}
+
+.company-overview td {
+	padding-top: 0.7em;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ミッション
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.company-mission .inner {
+	max-width: 1400px;
+	/* background: url("../img/company/mission-background.jpg") center center no-repeat; */
+	background-size: contain;
+}
+
+.company-mission-dl {
+	max-width: 720px;
+	margin: 0 auto;
+	font-weight: 700;
+}
+
+.company-mission-dt {
+	color: #0088b7;
+	font-size: 2.6rem;
+}
+
+.company-mission-dt:not(:first-child) {
+	margin-top: 30px;
+}
+
+.company-mission-dd {
+	font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+.company-mission-dt {
+	font-size: 5rem;
+}
+
+.company-mission-dt:not(:first-child) {
+	margin-top: 75px;
+}
+
+.company-mission-dd {
+	font-size: 2.4rem;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- メンバー紹介
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.company-member .inner {
+	max-width: 1020px;
+}
+
+.company-member-li:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.company-member-li .position {
+	font-size: 1.3rem;
+}
+
+.company-member-li .heading {
+	margin-bottom: 1em;
+	font-size: 2rem;
+}
+
+.company-member-li .heading-english {
+	font-size: 1.3rem;
+}
+
+.company-member-li .profile {
+	margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+.company-member-li {
+	display: flex;
+	flex-flow: row-reverse;
+	align-items: flex-start;
+}
+
+.company-member-li:not(:last-child) {
+	margin-bottom: 70px;
+}
+
+.company-member-li .image {
+	flex: none;
+}
+
+.company-member-li .text {
+	margin-right: 6%;
+	min-width:70%;
+}
+}
+
+@media (max-width: 767.9px) {
+.company-member-li .image {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.company-member-li .position {
+	text-align: center;
+}
+
+.company-member-li .heading {
+	text-align: center;
+}
+}

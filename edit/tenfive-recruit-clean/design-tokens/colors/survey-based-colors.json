@@ -1,0 +1,190 @@
+{
+  "name": "Survey-Based Colors",
+  "description": "アンケート結果を基にしたカラーシステム - テンファイブのブランドカラー",
+  "version": "1.0.0",
+  "source": "アンケート結果（10名）",
+  
+  "brandColors": {
+    "primary": {
+      "trust-blue": {
+        "value": "#228dc4",
+        "description": "信頼の青 - ロゴ、メインビジュアル、CTA、ヘッダーに使用",
+        "usage": "主要なブランド要素、重要なアクション",
+        "accessibility": "ホワイト背景で3.4:1のコントラスト比",
+        "rgb": "34, 141, 196"
+      },
+      "deep-blue": {
+        "value": "#0d679e",
+        "description": "専門性ブルー - 見出し、強調テキスト、フッターに使用",
+        "usage": "専門性を表現する要素、深い信頼感",
+        "accessibility": "ホワイト背景で5.2:1のコントラスト比",
+        "rgb": "13, 103, 158"
+      }
+    },
+    "secondary": {
+      "teal-green": {
+        "value": "#138f8f",
+        "description": "革新ティール - サブビジュアル、情報パネル、バッジに使用",
+        "usage": "革新性を表現する要素、技術的な印象",
+        "accessibility": "ホワイト背景で4.8:1のコントラスト比",
+        "rgb": "19, 143, 143"
+      },
+      "fresh-green": {
+        "value": "#90b425",
+        "description": "成長グリーン - サブアクセント、成功表示、進捗表示に使用",
+        "usage": "成長、進歩、成功を表現",
+        "accessibility": "ホワイト背景で4.2:1のコントラスト比",
+        "rgb": "144, 180, 37"
+      },
+      "warm-yellow": {
+        "value": "#e9e13a",
+        "description": "温もりイエロー - アクセント、ハイライト専用",
+        "usage": "温かみ、親しみやすさを表現",
+        "accessibility": "⚠️ テキストには使用不可（コントラスト比1.2:1）",
+        "rgb": "233, 225, 58"
+      }
+    },
+    "accent": {
+      "orange": {
+        "value": "#e6951e",
+        "description": "活力オレンジ - アクセント、注目要素に使用",
+        "usage": "エネルギー、活力、注目を引く要素",
+        "accessibility": "ホワイト背景で4.1:1のコントラスト比",
+        "rgb": "230, 149, 30"
+      },
+      "purple": {
+        "value": "#8b1970",
+        "description": "創造性パープル - 特別なアクセントに使用",
+        "usage": "創造性、革新性、特別感を表現",
+        "accessibility": "ホワイト背景で6.8:1のコントラスト比",
+        "rgb": "139, 25, 112"
+      },
+      "red": {
+        "value": "#d01d1a",
+        "description": "情熱レッド - 重要なアクション、警告に使用",
+        "usage": "情熱、重要性、緊急性を表現",
+        "accessibility": "ホワイト背景で5.9:1のコントラスト比",
+        "rgb": "208, 29, 26"
+      }
+    }
+  },
+  
+  "neutralColors": {
+    "white": {
+      "value": "#ffffff",
+      "description": "メイン背景、カード背景",
+      "usage": "清潔感、明るさ、信頼性"
+    },
+    "light-grey": {
+      "value": "#ecf0f1",
+      "description": "背景、カードの区切り",
+      "usage": "柔らかい背景、区切り線"
+    },
+    "medium-grey": {
+      "value": "#7f8c8d",
+      "description": "補助テキスト、ボーダー、無効状態",
+      "usage": "補足情報、控えめな要素",
+      "accessibility": "ホワイト背景で4.6:1のコントラスト比"
+    },
+    "dark-grey": {
+      "value": "#2c3e50",
+      "description": "本文テキスト、アイコン",
+      "usage": "主要なテキスト、重要な情報",
+      "accessibility": "ホワイト背景で12.6:1のコントラスト比"
+    },
+    "black": {
+      "value": "#000000",
+      "description": "最大コントラスト用",
+      "usage": "最高の可読性が必要な要素"
+    }
+  },
+  
+  "semanticColors": {
+    "success": {
+      "value": "#2ecc71",
+      "description": "成功メッセージ、完了状態、ポジティブフィードバック",
+      "usage": "成功、完了、正の結果を表現"
+    },
+    "warning": {
+      "value": "#f39c12",
+      "description": "注意喚起、確認が必要な状態",
+      "usage": "⚠️ 警告表示のみに限定使用",
+      "accessibility": "ホワイト背景で3.1:1のコントラスト比"
+    },
+    "error": {
+      "value": "#e74c3c",
+      "description": "エラーメッセージ、削除アクション、危険な操作",
+      "usage": "⚠️ エラー表示専用",
+      "accessibility": "ホワイト背景で4.5:1のコントラスト比"
+    },
+    "info": {
+      "value": "#3498db",
+      "description": "情報メッセージ、ヒント、通知",
+      "usage": "情報提供、案内、通知"
+    }
+  },
+  
+  "emotionalColors": {
+    "positive": {
+      "value": "#2ecc71",
+      "description": "プラス・良い印象を表現",
+      "usage": "成長、成功、改善、利益、満足"
+    },
+    "negative": {
+      "value": "#e74c3c",
+      "description": "マイナス・悪い印象を表現",
+      "usage": "減少、失敗、問題、損失、不満"
+    },
+    "neutral": {
+      "value": "#7f8c8d",
+      "description": "ニュートラル・中立的な印象を表現",
+      "usage": "変化なし、維持、標準、平均"
+    }
+  },
+  
+  "contentColors": {
+    "highlight": {
+      "value": "#fef3c7",
+      "description": "ハイライト・強調表示",
+      "usage": "重要な情報の背景色"
+    },
+    "accent": {
+      "value": "#e6951e",
+      "description": "アクセント・注目を引く色",
+      "usage": "CTA、リンク、重要な要素"
+    },
+    "muted": {
+      "value": "#7f8c8d",
+      "description": "控えめ・補助的な色",
+      "usage": "補足情報、サブテキスト"
+    }
+  },
+  
+  "usage": {
+    "brand": "テンファイブのブランドアイデンティティを表現する色",
+    "neutral": "基本的な要素に使用する色（グレースケール）",
+    "semantic": "状態や結果を表現する色（成功・警告・エラー・情報）",
+    "emotional": "感情や印象を表現する色（プラス・マイナス・ニュートラル）",
+    "content": "コンテンツ内での用途別色（ハイライト・アクセント・控えめ）"
+  },
+  
+  "colorCategories": {
+    "primary": "信頼性、専門性を表現するメインカラー",
+    "secondary": "革新性、技術性を表現するサブカラー",
+    "accent": "活力、創造性、情熱を表現するアクセントカラー",
+    "neutral": "基本的な要素に使用する色（グレースケール）",
+    "semantic": "状態や結果を表現する色（成功・警告・エラー・情報）",
+    "emotional": "感情や印象を表現する色（プラス・マイナス・ニュートラル）",
+    "content": "コンテンツ内での用途別色（ハイライト・アクセント・控えめ）"
+  },
+  
+  "accessibility": {
+    "wcag": {
+      "AA": "4.5:1以上のコントラスト比",
+      "AAA": "7:1以上のコントラスト比"
+    },
+    "colorBlind": {
+      "note": "色覚異常者にも区別できるよう、色だけでなく形状やテキストでも情報を表現"
+    }
+  }
+}

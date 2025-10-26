@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブの採用に関するお知らせ、イベント情報、ニュースをご紹介します。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../../css/design-system.css">
+    <link rel="stylesheet" href="../../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-components.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-sections.css">
+    <link rel="stylesheet" href="../../css/sections.css">
+    <link rel="stylesheet" href="../../css/subpage-hero.css">
+    <link rel="stylesheet" href="../../css/breadcrumb.css">
+    <link rel="stylesheet" href="../../css/news-list.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../../index.html" class="header__logo-link">
+                        <img src="../../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="../in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="../ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="../career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="../schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="../events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="../ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="../faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
+                        <div class="nav__dropdown">
+                            <a href="../company.html" class="dropdown__link">会社概要</a>
+                            <a href="../members.html" class="dropdown__link">メンバー</a>
+                            <a href="../history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    お知らせ
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero--subpage" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__header">
+                        <h1 class="hero__title">お知らせ</h1>
+                        <p class="hero__subtitle">News & Updates</p>
+                    </div>
+                    <p class="hero__description">テンファイブの最新情報、採用に関するお知らせ、イベント情報をご紹介します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- お知らせ一覧セクション -->
+        <section class="news-list-section" data-section="news-list">
+            <div class="container">
+                <!-- お知らせカードグリッド -->
+                <div class="news-grid">
+                    <!-- お知らせカード 1 -->
+                    <article class="news-card">
+                        <a href="./2024-01-company-event.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="2024年社員総会の様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--event">イベント</span>
+                            </div>
+                            <div class="news-card__content">
+                                                        <time class="news-card__date" datetime="2025-01-15">2025年1月15日</time>
+                        <h3 class="news-card__title">2025年社員総会を開催しました</h3>
+                        <p class="news-card__excerpt">テンファイブの2025年社員総会を開催し、今年度の方針と目標を全社員で共有しました。新たな一年のスタートに向けて、より良い働き方と成長を目指します。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- お知らせカード 2 -->
+                    <article class="news-card">
+                        <a href="./2024-02-new-recruit.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="2024年新卒採用の様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--recruitment">採用</span>
+                            </div>
+                            <div class="news-card__content">
+                                <time class="news-card__date" datetime="2025-02-01">2025年2月1日</time>
+                                <h3 class="news-card__title">2025年新卒採用エントリー受付開始</h3>
+                                <p class="news-card__excerpt">2025年新卒採用のエントリー受付を開始しました。エンジニア職を中心に、意欲のある方を募集しています。エントリーフォームよりご応募ください。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- お知らせカード 3 -->
+                    <article class="news-card">
+                        <a href="./2024-03-seminar.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="技術セミナーの様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--event">イベント</span>
+                            </div>
+                            <div class="news-card__content">
+                                <time class="news-card__date" datetime="2025-03-10">2025年3月10日</time>
+                                <h3 class="news-card__title">AI技術活用セミナーを開催</h3>
+                                <p class="news-card__excerpt">最新のAI技術を活用した開発手法に関するセミナーを開催しました。実際のプロジェクト事例を交えながら、実践的なノウハウを共有しました。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- お知らせカード 4 -->
+                    <article class="news-card">
+                        <a href="./2024-04-office-relocation.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="新オフィスの様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--important">重要</span>
+                            </div>
+                            <div class="news-card__content">
+                                <time class="news-card__date" datetime="2024-04-01">2024年4月1日</time>
+                                <h3 class="news-card__title">東京本社を新オフィスへ移転</h3>
+                                <p class="news-card__excerpt">業務拡大に伴い、東京本社を新オフィスへ移転いたしました。より広々とした空間で、快適な環境で働いていただけます。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- お知らせカード 5 -->
+                    <article class="news-card">
+                        <a href="./2024-05-mid-career.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="中途採用の様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--recruitment">採用</span>
+                            </div>
+                            <div class="news-card__content">
+                                <time class="news-card__date" datetime="2024-05-15">2024年5月15日</time>
+                                <h3 class="news-card__title">中途採用を強化しています</h3>
+                                <p class="news-card__excerpt">経験豊富なエンジニアの中途採用を強化しています。プロジェクトリーダーやテックリードとして活躍できる方を募集しています。</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- お知らせカード 6 -->
+                    <article class="news-card">
+                        <a href="./2024-06-summer-event.html" class="news-card__link">
+                            <div class="news-card__media">
+                                <img src="../../assets/images/home/company.jpg" alt="夏のイベントの様子" class="news-card__image">
+                                <span class="news-card__badge news-card__badge--event">イベント</span>
+                            </div>
+                            <div class="news-card__content">
+                                <time class="news-card__date" datetime="2024-06-20">2024年6月20日</time>
+                                <h3 class="news-card__title">2024年サマーパーティーを開催</h3>
+                                <p class="news-card__excerpt">夏の恒例イベント、サマーパーティーを開催しました。リフレッシュしながら、チームメンバーとの親睦を深めました。</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <!-- ページネーション -->
+                <nav class="pagination" aria-label="ページネーション">
+                    <ul class="pagination__list">
+                        <li class="pagination__item pagination__item--disabled">
+                            <span class="pagination__link pagination__link--prev" aria-label="前のページ">‹</span>
+                        </li>
+                        <li class="pagination__item pagination__item--active">
+                            <a href="#1" class="pagination__link" aria-label="ページ 1" aria-current="page">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#2" class="pagination__link" aria-label="ページ 2">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#3" class="pagination__link" aria-label="ページ 3">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a href="#2" class="pagination__link pagination__link--next" aria-label="次のページ">›</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="footer__link">新卒採用</a></li>
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="../company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="../members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="../history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 下層ページ用ヘローテンプレート -->
+<!-- 使用方法: 各ページで以下のコードをコピー&ペーストして使用 -->
+
+<!-- カテゴリ別のクラスを指定 -->
+<!-- 特徴ページ: hero--subpage hero--features -->
+<!-- 働き方ページ: hero--subpage hero--workstyle -->
+<!-- 選考ページ: hero--subpage hero--selection -->
+<!-- 会社紹介ページ: hero--subpage hero--company -->
+
+<section class="hero hero--subpage hero--features" data-section="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">{{PAGE_TITLE}}</h1>
+            <p class="hero__subtitle">{{PAGE_SUBTITLE}}</p>
+            <p class="hero__description">{{PAGE_DESCRIPTION}}</p>
+        </div>
+        
+        <!-- デジタル調のアクセント要素 -->
+        <div class="hero__accent"></div>
+    </div>
+</section>
+
+<!-- CSS読み込み例 -->
+<!-- <link rel="stylesheet" href="../../css/subpage-hero.css"> -->
+
+<!-- 使用例 -->
+<!--
+<section class="hero hero--subpage hero--features" data-section="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">SES・SIer業界構造から見た当社の強み</h1>
+            <p class="hero__subtitle">Industry Analysis</p>
+            <p class="hero__description">業界内でのポジションと独自の強みを分析。競合他社との差別化ポイントと、当社が持つ競争優位性をご説明します。</p>
+        </div>
+        <div class="hero__accent"></div>
+    </div>
+</section>
+-->

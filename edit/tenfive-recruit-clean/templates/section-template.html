@@ -1,0 +1,72 @@
+<!-- セクションテンプレート -->
+<section class="{{SECTION_CLASS}}" data-section="{{SECTION_ID}}" id="{{SECTION_ID}}">
+    <div class="container">
+        {{SECTION_HEADER}}
+        {{SECTION_CONTENT}}
+    </div>
+</section>
+
+<!-- セクションヘッダーテンプレート -->
+<div class="section__header">
+    <h2 class="section__title">{{SECTION_TITLE}}</h2>
+    <p class="section__subtitle">{{SECTION_SUBTITLE}}</p>
+</div>
+
+<!-- カードグリッドテンプレート -->
+<div class="cards-grid cards-grid--{{GRID_COLUMNS}}">
+    {{CARD_ITEMS}}
+</div>
+
+<!-- 画像カードテンプレート -->
+<a href="{{CARD_LINK}}" class="image-card" aria-label="{{CARD_ARIA_LABEL}}">
+    <div class="image-card__media">
+        <img src="{{CARD_IMAGE}}" alt="{{CARD_ALT}}" class="image-card__image">
+    </div>
+    <div class="image-card__content">
+        <div class="image-card__header">
+            <h3 class="image-card__title">{{CARD_TITLE}}</h3>
+        </div>
+        <p class="image-card__description">{{CARD_DESCRIPTION}}</p>
+    </div>
+</a>
+
+<!-- フィーチャードカードテンプレート -->
+<a href="{{FEATURED_CARD_LINK}}" class="featured-card" aria-label="{{FEATURED_CARD_ARIA_LABEL}}">
+    <div class="featured-card__media">
+        <img src="{{FEATURED_CARD_IMAGE}}" alt="{{FEATURED_CARD_ALT}}" class="featured-card__image">
+    </div>
+    <div class="featured-card__content">
+        <div class="featured-card__header">
+            <h3 class="featured-card__title">{{FEATURED_CARD_TITLE}}</h3>
+        </div>
+        <p class="featured-card__description">{{FEATURED_CARD_DESCRIPTION}}</p>
+    </div>
+</a>
+
+<!-- セレクションカードテンプレート -->
+<a href="{{SELECTION_CARD_LINK}}" class="selection-card" aria-label="{{SELECTION_CARD_ARIA_LABEL}}">
+    <div class="selection-card__icon">
+        <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            {{SELECTION_CARD_ICON_PATH}}
+        </svg>
+    </div>
+    <div class="selection-card__content">
+        <h3 class="selection-card__title">{{SELECTION_CARD_TITLE}}</h3>
+        <p class="selection-card__description">{{SELECTION_CARD_DESCRIPTION}}</p>
+    </div>
+</a>
+
+<!-- ニュースアイテムテンプレート -->
+<article class="news__item">
+    <div class="news__date">
+        <time datetime="{{NEWS_DATE}}">{{NEWS_DATE_DISPLAY}}</time>
+    </div>
+    <div class="news__badge news__badge--{{NEWS_BADGE_TYPE}}">{{NEWS_BADGE_TEXT}}</div>
+    <div class="news__content">
+        <h3 class="news__title">
+            <a href="{{NEWS_LINK}}" class="news__link">{{NEWS_TITLE}}</a>
+        </h3>
+        <p class="news__excerpt">{{NEWS_EXCERPT}}</p>
+    </div>
+</article>
+<hr class="news__divider">

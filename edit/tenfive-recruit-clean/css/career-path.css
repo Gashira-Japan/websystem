@@ -1,0 +1,352 @@
+/* ========================================
+   キャリアパスページ - 専用スタイル
+   ======================================== */
+
+/* キャリアタイムライン */
+.career-timeline {
+  background: var(--color-neutral-50);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-8);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  width: 100%;
+  /* background: var(--color-neutral-white); */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  /* box-shadow: var(--elevation-md); */
+  transition: var(--animation-transition);
+}
+
+.timeline-item:hover {
+  /* box-shadow: var(--elevation-lg); */
+  /* transform: translateY(-2px); */
+}
+
+.timeline-item__year {
+  flex-shrink: 0;
+  width: 120px;
+  text-align: center;
+}
+
+.timeline-year {
+  display: inline-block;
+  background: var(--color-primary-500);
+  color: var(--color-neutral-white);
+  padding: var(--spacing-3) var(--spacing-6);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--elevation-sm);
+}
+
+.timeline-item__content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-6);
+  align-items: center;
+}
+
+.timeline-item__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-item__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-item__img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-sm);
+  object-fit: cover;
+}
+
+.timeline-item__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.timeline-item__description {
+  color: var(--color-neutral-700);
+}
+
+.timeline-item__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-item__list li {
+  padding: var(--spacing-2) 0;
+  position: relative;
+  padding-left: var(--spacing-6);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.timeline-item__list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.timeline-arrow {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin: var(--spacing-4) 0;
+}
+
+/* キャリア概要セクション */
+.career-overview {
+  /* セクション共通のpaddingは.sectionで管理 */
+}
+
+.career-overview__content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.career-overview__text {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+}
+
+/* キャリアロールセクション */
+.career-roles {
+  background: var(--color-neutral-50);
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+}
+
+.role-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.role-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.role-card--technical::before {
+  background: var(--color-secondary-500);
+}
+
+.role-card--cto::before {
+  background: var(--color-warning-500);
+}
+
+.role-card--strategic::before {
+  background: var(--color-error-500);
+}
+
+.role-card__header {
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.role-card__label {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-3);
+}
+
+.role-card__label--purple {
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-700);
+}
+
+.role-card__label--yellow {
+  background: var(--color-warning-100);
+  color: var(--color-warning-700);
+}
+
+.role-card__label--orange {
+  background: var(--color-error-100);
+  color: var(--color-error-700);
+}
+
+.role-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin: 0;
+}
+
+.role-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.role-card__section {
+  flex: 1;
+}
+
+.role-card__section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 2px solid var(--color-neutral-200);
+}
+
+.role-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.role-card__list li {
+  padding: var(--spacing-3) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+  position: relative;
+  padding-left: var(--spacing-6);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+}
+
+.role-card__list li:last-child {
+  border-bottom: none;
+}
+
+.role-card__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+/* アニメーション - 統一システムを使用 */
+
+/* レスポンシブデザイン */
+@media (max-width: 1024px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .role-card {
+    padding: var(--spacing-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-4);
+  }
+  
+  .timeline-item__year {
+    width: auto;
+  }
+  
+  .timeline-item__content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .timeline-item__img {
+    max-height: 150px;
+  }
+  
+  .timeline-item__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .role-card {
+    padding: var(--spacing-6);
+  }
+  
+  .role-card__title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding: var(--spacing-4);
+  }
+  
+  .timeline-year {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+  
+  .timeline-item__img {
+    max-height: 120px;
+  }
+  
+  .timeline-item__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .role-card {
+    padding: var(--spacing-4);
+  }
+  
+  .role-card__title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .role-card__section-title {
+    font-size: var(--font-size-base);
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "name": "Corporate Theme",
+  "description": "コーポレートサイト用カラーテーマ",
+  "version": "1.0.0",
+  "extends": "base-colors.json",
+  
+  "colors": {
+    "primary": {
+      "50": {
+        "value": "#EFF6FF",
+        "description": "プライマリ50"
+      },
+      "100": {
+        "value": "#DBEAFE",
+        "description": "プライマリ100"
+      },
+      "200": {
+        "value": "#BFDBFE",
+        "description": "プライマリ200"
+      },
+      "300": {
+        "value": "#93C5FD",
+        "description": "プライマリ300"
+      },
+      "400": {
+        "value": "#60A5FA",
+        "description": "プライマリ400"
+      },
+      "500": {
+        "value": "#3B82F6",
+        "description": "プライマリ500（メイン）"
+      },
+      "600": {
+        "value": "#2563EB",
+        "description": "プライマリ600"
+      },
+      "700": {
+        "value": "#1D4ED8",
+        "description": "プライマリ700"
+      },
+      "800": {
+        "value": "#1E40AF",
+        "description": "プライマリ800"
+      },
+      "900": {
+        "value": "#1E3A8A",
+        "description": "プライマリ900"
+      }
+    },
+    
+    "secondary": {
+      "50": {
+        "value": "#F8FAFC",
+        "description": "セカンダリ50"
+      },
+      "100": {
+        "value": "#F1F5F9",
+        "description": "セカンダリ100"
+      },
+      "200": {
+        "value": "#E2E8F0",
+        "description": "セカンダリ200"
+      },
+      "300": {
+        "value": "#CBD5E1",
+        "description": "セカンダリ300"
+      },
+      "400": {
+        "value": "#94A3B8",
+        "description": "セカンダリ400"
+      },
+      "500": {
+        "value": "#64748B",
+        "description": "セカンダリ500（メイン）"
+      },
+      "600": {
+        "value": "#475569",
+        "description": "セカンダリ600"
+      },
+      "700": {
+        "value": "#334155",
+        "description": "セカンダリ700"
+      },
+      "800": {
+        "value": "#1E293B",
+        "description": "セカンダリ800"
+      },
+      "900": {
+        "value": "#0F172A",
+        "description": "セカンダリ900"
+      }
+    },
+    
+    "accent": {
+      "50": {
+        "value": "#F0FDF4",
+        "description": "アクセント50"
+      },
+      "100": {
+        "value": "#DCFCE7",
+        "description": "アクセント100"
+      },
+      "200": {
+        "value": "#BBF7D0",
+        "description": "アクセント200"
+      },
+      "300": {
+        "value": "#86EFAC",
+        "description": "アクセント300"
+      },
+      "400": {
+        "value": "#4ADE80",
+        "description": "アクセント400"
+      },
+      "500": {
+        "value": "#22C55E",
+        "description": "アクセント500（メイン）"
+      },
+      "600": {
+        "value": "#16A34A",
+        "description": "アクセント600"
+      },
+      "700": {
+        "value": "#15803D",
+        "description": "アクセント700"
+      },
+      "800": {
+        "value": "#166534",
+        "description": "アクセント800"
+      },
+      "900": {
+        "value": "#14532D",
+        "description": "アクセント900"
+      }
+    }
+  },
+  
+  "brand": {
+    "corporate": {
+      "primary": "#3B82F6",
+      "secondary": "#64748B",
+      "accent": "#22C55E",
+      "description": "コーポレートサイトのメインブランドカラー"
+    }
+  },
+  
+  "usage": {
+    "primary": "メインCTA、リンク、重要な要素に使用",
+    "secondary": "サブ要素、補助的な情報に使用",
+    "accent": "成功、成長、技術革新を表現する際に使用",
+    "brand": "ブランドアイデンティティの表現に使用"
+  },
+  
+  "accessibility": {
+    "contrast": {
+      "primary-500": "AA準拠（4.5:1以上）",
+      "primary-600": "AAA準拠（7:1以上）",
+      "accent-500": "AA準拠（4.5:1以上）"
+    }
+  },
+  
+  "context": {
+    "financial": "金融システム開発の信頼性と専門性を表現",
+    "technology": "技術革新とデジタルトランスフォーメーションを表現",
+    "corporate": "企業の安定性と成長性を表現"
+  }
+}

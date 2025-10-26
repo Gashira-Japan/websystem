@@ -1,0 +1,158 @@
+<!-- コンポーネントテンプレート集 -->
+
+<!-- ボタンコンポーネント -->
+<button class="btn btn--{{BUTTON_VARIANT}} btn--{{BUTTON_SIZE}}" {{BUTTON_ATTRIBUTES}}>
+    {{BUTTON_TEXT}}
+</button>
+
+<!-- リンクボタンコンポーネント -->
+<a href="{{LINK_URL}}" class="btn btn--{{BUTTON_VARIANT}} btn--{{BUTTON_SIZE}}" {{LINK_ATTRIBUTES}}>
+    {{BUTTON_TEXT}}
+</a>
+
+<!-- カードコンポーネント -->
+<div class="card card--{{CARD_VARIANT}}">
+    <div class="card__header">
+        <h3 class="card__title">{{CARD_TITLE}}</h3>
+        {{CARD_BADGE}}
+    </div>
+    <div class="card__content">
+        {{CARD_CONTENT}}
+    </div>
+    <div class="card__footer">
+        {{CARD_ACTIONS}}
+    </div>
+</div>
+
+<!-- バッジコンポーネント -->
+<span class="badge badge--{{BADGE_VARIANT}}">{{BADGE_TEXT}}</span>
+
+<!-- アイコンコンポーネント -->
+<svg class="icon icon--{{ICON_SIZE}}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    {{ICON_PATH}}
+</svg>
+
+<!-- アラートコンポーネント -->
+<div class="alert alert--{{ALERT_VARIANT}}" role="alert">
+    <div class="alert__icon">
+        {{ALERT_ICON}}
+    </div>
+    <div class="alert__content">
+        <h4 class="alert__title">{{ALERT_TITLE}}</h4>
+        <p class="alert__message">{{ALERT_MESSAGE}}</p>
+    </div>
+    <button class="alert__close" aria-label="アラートを閉じる">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+</div>
+
+<!-- モーダルコンポーネント -->
+<div class="modal" id="{{MODAL_ID}}" role="dialog" aria-labelledby="{{MODAL_TITLE_ID}}" aria-hidden="true">
+    <div class="modal__backdrop"></div>
+    <div class="modal__container">
+        <div class="modal__header">
+            <h2 class="modal__title" id="{{MODAL_TITLE_ID}}">{{MODAL_TITLE}}</h2>
+            <button class="modal__close" aria-label="モーダルを閉じる">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="modal__content">
+            {{MODAL_CONTENT}}
+        </div>
+        <div class="modal__footer">
+            {{MODAL_ACTIONS}}
+        </div>
+    </div>
+</div>
+
+<!-- タブコンポーネント -->
+<div class="tabs" data-tabs="{{TABS_ID}}">
+    <div class="tabs__nav">
+        {{TAB_BUTTONS}}
+    </div>
+    <div class="tabs__content">
+        {{TAB_PANELS}}
+    </div>
+</div>
+
+<!-- タブボタンテンプレート -->
+<button class="tabs__button {{TAB_ACTIVE_CLASS}}" data-tab="{{TAB_ID}}" aria-selected="{{TAB_SELECTED}}">
+    {{TAB_ICON}}
+    {{TAB_LABEL}}
+</button>
+
+<!-- タブパネルテンプレート -->
+<div class="tabs__panel {{TAB_PANEL_ACTIVE_CLASS}}" id="{{TAB_ID}}" role="tabpanel" aria-labelledby="{{TAB_BUTTON_ID}}">
+    {{TAB_CONTENT}}
+</div>
+
+<!-- アコーディオンコンポーネント -->
+<div class="accordion" data-accordion="{{ACCORDION_ID}}">
+    {{ACCORDION_ITEMS}}
+</div>
+
+<!-- アコーディオンアイテムテンプレート -->
+<div class="accordion__item">
+    <button class="accordion__button" aria-expanded="{{ACCORDION_EXPANDED}}" aria-controls="{{ACCORDION_PANEL_ID}}">
+        <span class="accordion__title">{{ACCORDION_TITLE}}</span>
+        <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6,9 12,15 18,9"></polyline>
+        </svg>
+    </button>
+    <div class="accordion__panel" id="{{ACCORDION_PANEL_ID}}" aria-labelledby="{{ACCORDION_BUTTON_ID}}">
+        <div class="accordion__content">
+            {{ACCORDION_CONTENT}}
+        </div>
+    </div>
+</div>
+
+<!-- フォームコンポーネント -->
+<form class="form" action="{{FORM_ACTION}}" method="{{FORM_METHOD}}">
+    {{FORM_FIELDS}}
+    <div class="form__actions">
+        {{FORM_BUTTONS}}
+    </div>
+</form>
+
+<!-- フォームフィールドテンプレート -->
+<div class="form__field">
+    <label for="{{FIELD_ID}}" class="form__label">{{FIELD_LABEL}}</label>
+    <input type="{{FIELD_TYPE}}" id="{{FIELD_ID}}" name="{{FIELD_NAME}}" class="form__input" {{FIELD_ATTRIBUTES}}>
+    <div class="form__error" id="{{FIELD_ERROR_ID}}">{{FIELD_ERROR_MESSAGE}}</div>
+</div>
+
+<!-- テキストエリアテンプレート -->
+<div class="form__field">
+    <label for="{{TEXTAREA_ID}}" class="form__label">{{TEXTAREA_LABEL}}</label>
+    <textarea id="{{TEXTAREA_ID}}" name="{{TEXTAREA_NAME}}" class="form__textarea" rows="{{TEXTAREA_ROWS}}" {{TEXTAREA_ATTRIBUTES}}></textarea>
+    <div class="form__error" id="{{TEXTAREA_ERROR_ID}}">{{TEXTAREA_ERROR_MESSAGE}}</div>
+</div>
+
+<!-- セレクトボックステンプレート -->
+<div class="form__field">
+    <label for="{{SELECT_ID}}" class="form__label">{{SELECT_LABEL}}</label>
+    <select id="{{SELECT_ID}}" name="{{SELECT_NAME}}" class="form__select" {{SELECT_ATTRIBUTES}}>
+        {{SELECT_OPTIONS}}
+    </select>
+    <div class="form__error" id="{{SELECT_ERROR_ID}}">{{SELECT_ERROR_MESSAGE}}</div>
+</div>
+
+<!-- チェックボックステンプレート -->
+<div class="form__field form__field--checkbox">
+    <input type="checkbox" id="{{CHECKBOX_ID}}" name="{{CHECKBOX_NAME}}" class="form__checkbox" {{CHECKBOX_ATTRIBUTES}}>
+    <label for="{{CHECKBOX_ID}}" class="form__label form__label--checkbox">{{CHECKBOX_LABEL}}</label>
+    <div class="form__error" id="{{CHECKBOX_ERROR_ID}}">{{CHECKBOX_ERROR_MESSAGE}}</div>
+</div>
+
+<!-- ラジオボタンテンプレート -->
+<div class="form__field form__field--radio">
+    <input type="radio" id="{{RADIO_ID}}" name="{{RADIO_NAME}}" value="{{RADIO_VALUE}}" class="form__radio" {{RADIO_ATTRIBUTES}}>
+    <label for="{{RADIO_ID}}" class="form__label form__label--radio">{{RADIO_LABEL}}</label>
+    <div class="form__error" id="{{RADIO_ERROR_ID}}">{{RADIO_ERROR_MESSAGE}}</div>
+</div>

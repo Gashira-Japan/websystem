@@ -1,0 +1,520 @@
+/* ========================================
+   会社概要ページ - 専用スタイル
+   ======================================== */
+
+/* About TenFiveセクション */
+.about-section {
+  background: var(--color-neutral-50);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+
+.about-tagline__main {
+  display: block;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-2);
+}
+
+.about-tagline__subtitle {
+  display: block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-500);
+  margin-bottom: var(--spacing-4);
+}
+
+.about-tagline__sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-md);
+}
+
+/* CEO Layout Styles */
+.ceo-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: var(--spacing-8);
+  align-items: start;
+}
+
+.ceo-message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ceo-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.ceo-img {
+  width: 180px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.ceo-info {
+  text-align: center;
+}
+
+.ceo-name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.ceo-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-600);
+  margin: 0;
+}
+
+/* Message Signature Styles */
+.message-signature {
+  margin-top: var(--spacing-8);
+  text-align: right;
+}
+
+.signature-company {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.signature-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-900);
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.signature-name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin: 0;
+}
+
+/* 代表挨拶セクション */
+.ceo-message {
+  /* セクション共通のpaddingは.sectionで管理 */
+}
+
+.message-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.message-text {
+  /* background: var(--color-neutral-white); */
+  /* border-radius: var(--radius-lg); */
+  /* padding: var(--spacing-8); */
+  /* box-shadow: var(--elevation-md); */
+}
+
+.message-paragraph {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-6);
+}
+
+.message-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* 企業理念セクション */
+.company-philosophy {
+  background: var(--color-neutral-50);
+}
+
+.philosophy-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.philosophy-item {
+  margin-bottom: var(--spacing-8);
+  text-align: left;
+}
+
+.philosophy-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+.philosophy-description {
+  font-size: var(--font-size-xl);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+.philosophy-list {
+  font-size: var(--font-size-xl);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.philosophy-list li {
+  margin-bottom: var(--spacing-2);
+}
+
+/* 会社概要セクション */
+.company-details {
+  /* セクション共通のpaddingは.sectionで管理 */
+}
+
+.details-table {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--elevation-md);
+}
+
+.company-table__label {
+  background: var(--color-primary-50);
+  padding: var(--spacing-6);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-900);
+  text-align: left;
+  width: 200px;
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.company-table__value {
+  padding: var(--spacing-6);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.company-table tr:last-child .company-table__label,
+.company-table tr:last-child .company-table__value {
+  border-bottom: none;
+}
+
+/* メンバー紹介セクション */
+.members-intro {
+  background: var(--color-neutral-50);
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.member-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  box-shadow: var(--elevation-md);
+  transition: var(--animation-transition);
+  text-align: center;
+}
+
+.member-card:hover {
+  box-shadow: var(--elevation-lg);
+  transform: translateY(-4px);
+}
+
+.member-card__image {
+  margin-bottom: var(--spacing-6);
+}
+
+.member-card__img {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  box-shadow: var(--elevation-sm);
+}
+
+.member-card__name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.member-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin-bottom: var(--spacing-1);
+}
+
+.member-card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin: 0;
+}
+
+/* 一緒に未来を創造セクション */
+.join-us {
+  background: var(--color-primary-50);
+}
+
+.join-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.join-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.join-description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-8);
+}
+
+.join-buttons {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.about-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.philosophy-card {
+  /* animation: fadeInScale 0.8s ease-out; */
+}
+
+.philosophy-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.philosophy-card:nth-child(3) {
+  /* animation-delay: 0.4s; */
+}
+
+.member-card {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.member-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.join-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+    text-align: center;
+  }
+  
+  
+  .about-tagline__main {
+    font-size: var(--font-size-xl);
+  }
+  
+  .about-tagline__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .ceo-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .ceo-image {
+    order: -1;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .ceo-img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .ceo-name {
+    font-size: var(--font-size-lg);
+  }
+  
+  .ceo-title {
+    font-size: var(--font-size-sm);
+  }
+  
+  .message-signature {
+    text-align: center;
+    margin-top: var(--spacing-6);
+  }
+  
+  .signature-company {
+    font-size: var(--font-size-base);
+  }
+  
+  .signature-name {
+    font-size: var(--font-size-lg);
+  }
+  
+  .philosophy-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .philosophy-description {
+    font-size: var(--font-size-lg);
+  }
+  
+  .philosophy-list {
+    font-size: var(--font-size-lg);
+  }
+  
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .company-table__label {
+    width: 150px;
+    padding: var(--spacing-4);
+  }
+  
+  .company-table__value {
+    padding: var(--spacing-4);
+  }
+  
+  .join-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .join-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .about-tagline__main {
+    font-size: var(--font-size-lg);
+  }
+  
+  .about-tagline__sub {
+    font-size: var(--font-size-base);
+  }
+  
+  .message-text {
+    padding: var(--spacing-6);
+  }
+  
+  .message-paragraph {
+    font-size: var(--font-size-base);
+  }
+  
+  
+  .member-card {
+    padding: var(--spacing-6);
+  }
+  
+  .member-card__img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .company-table__label {
+    width: 120px;
+    padding: var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .company-table__value {
+    padding: var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .join-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .join-description {
+    font-size: var(--font-size-base);
+  }
+}

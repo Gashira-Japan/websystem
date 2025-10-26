@@ -1,0 +1,462 @@
+/* ========================================
+   数字で見るテンファイブ - 専用スタイル
+   ======================================== */
+
+/* 統計グリッドレイアウト */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .stat-card {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    gap: var(--spacing-3);
+  }
+  
+  .stat-card {
+    padding: var(--spacing-3);
+  }
+  
+  .stat-card__header {
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+  }
+  
+  .stat-card__icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stat-card__icon-svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .stat-card__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .stat-number__value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .stat-number__label {
+    font-size: var(--font-size-sm);
+  }
+  
+  /* 横並びレイアウトのモバイル対応 */
+  .stat-card__numbers--horizontal {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+  
+  .stat-card__numbers--horizontal .stat-number {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pie-chart {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* 3色レイアウトのモバイル対応 */
+  .stat-card__numbers--three-col {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2);
+  }
+  
+  .stat-card__numbers--three-col .stat-number {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* 統計カード */
+.stat-card {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--elevation-sm);
+  transition: var(--animation-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  box-shadow: var(--elevation-md);
+  transform: translateY(-2px);
+}
+
+/* カードの色バリエーション */
+.stat-card--green {
+  border-left: 4px solid var(--color-primary-500);
+}
+
+.stat-card--red {
+  border-left: 4px solid var(--color-error-500);
+}
+
+.stat-card--blue {
+  border-left: 4px solid var(--color-info-500);
+}
+
+.stat-card--pink {
+  border-left: 4px solid var(--color-secondary-500);
+}
+
+/* 統計カードのヘッダー（アイコン + タイトル） */
+.stat-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* 統計カードのアイコン */
+.stat-card__icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-neutral-100);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card--green .stat-card__icon {
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+}
+
+.stat-card--red .stat-card__icon {
+  background: var(--color-error-100);
+  color: var(--color-error-600);
+}
+
+.stat-card--blue .stat-card__icon {
+  background: var(--color-info-100);
+  color: var(--color-info-600);
+}
+
+.stat-card--pink .stat-card__icon {
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-600);
+}
+
+.stat-card__icon-svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 統計カードのタイトル */
+.stat-card__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  flex: 1;
+}
+
+/* 統計数字 */
+.stat-card__numbers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+/* 横並びレイアウト */
+.stat-card__numbers--horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.stat-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number--large {
+  align-items: center;
+  text-align: center;
+}
+
+/* 横並びレイアウト用のstat-number */
+.stat-card__numbers--horizontal .stat-number {
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* 3色対応レイアウト */
+.stat-card__numbers--three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3);
+  text-align: center;
+}
+
+.stat-card__numbers--three-col .stat-number {
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number__value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  line-height: 1;
+  margin-bottom: var(--spacing-1);
+}
+
+/* 数字の色をグラフの色と一致させる */
+.stat-number__value--primary {
+  color: var(--color-primary-500);
+}
+
+.stat-number__value--secondary {
+  color: var(--color-secondary-500);
+}
+
+.stat-number__value--neutral {
+  color: var(--color-neutral-500);
+}
+
+.stat-number__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+/* 統計詳細（リスト形式） */
+.stat-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.stat-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+}
+
+.stat-detail:last-child {
+  border-bottom: none;
+}
+
+.stat-detail__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.stat-detail__value {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-900);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* 円グラフ */
+.stat-chart {
+  margin-top: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+}
+
+.pie-chart {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2色円グラフ - 動的な角度計算 */
+.pie-chart--two-col {
+  background: conic-gradient(
+    var(--color-primary-500) 0deg calc(var(--percentage) * 3.6deg),
+    var(--color-secondary-500) calc(var(--percentage) * 3.6deg) 360deg
+  );
+  border: 2px solid var(--color-neutral-white);
+  box-shadow: 0 0 0 1px var(--color-neutral-200);
+}
+
+/* 3色円グラフ */
+.pie-chart--three-col {
+  background: conic-gradient(
+    var(--color-primary-500) 0deg 288deg,
+    var(--color-secondary-500) 288deg 324deg,
+    var(--color-neutral-500) 324deg 360deg
+  );
+  border: 2px solid var(--color-neutral-white);
+  box-shadow: 0 0 0 1px var(--color-neutral-200);
+}
+
+.pie-chart__segment {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* 説明文 */
+.stat-card__description {
+  margin-top: var(--spacing-3);
+  text-align: center;
+}
+
+.stat-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin: 0;
+  font-style: italic;
+}
+
+/* タグ */
+.stat-card__tags {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.tag--primary {
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
+
+.tag--secondary {
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-700);
+}
+
+/* 説明セクション */
+.company-description {
+  background: var(--color-neutral-50);
+}
+
+.description-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+  .description-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+}
+
+.description-column {
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+}
+
+.description-column__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+  position: relative;
+}
+
+.description-column__title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--color-primary-500);
+  border-radius: var(--radius-full);
+}
+
+.description-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.description-item {
+  padding: var(--spacing-4) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  position: relative;
+  padding-left: var(--spacing-6);
+}
+
+.description-item:last-child {
+  border-bottom: none;
+}
+
+.description-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+/* アニメーション - 統一システムを使用 */
+
+/* レスポンシブ調整 */
+@media (max-width: 480px) {
+  .stat-card {
+    padding: var(--spacing-4);
+  }
+  
+  .stat-number__value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .description-column {
+    padding: var(--spacing-6);
+  }
+  
+  .description-item {
+    padding: var(--spacing-3) 0;
+    padding-left: var(--spacing-4);
+  }
+}

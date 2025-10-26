@@ -1,0 +1,289 @@
+{
+  "name": "Spacing Scale",
+  "description": "レスポンシブデザイン対応のスペーシングシステム",
+  "version": "1.0.0",
+  
+  "baseUnit": {
+    "value": 8,
+    "unit": "px",
+    "description": "ベーススペーシングユニット（8pxグリッド）"
+  },
+  
+  "spacingScale": {
+    "0": {
+      "value": "0px",
+      "description": "スペースなし"
+    },
+    "1": {
+      "value": "4px",
+      "description": "最小スペース"
+    },
+    "2": {
+      "value": "8px",
+      "description": "ベーススペース"
+    },
+    "3": {
+      "value": "12px",
+      "description": "小スペース"
+    },
+    "4": {
+      "value": "16px",
+      "description": "標準スペース"
+    },
+    "5": {
+      "value": "20px",
+      "description": "中スペース"
+    },
+    "6": {
+      "value": "24px",
+      "description": "大スペース"
+    },
+    "8": {
+      "value": "32px",
+      "description": "特大スペース"
+    },
+    "10": {
+      "value": "40px",
+      "description": "巨大スペース"
+    },
+    "12": {
+      "value": "48px",
+      "description": "最大スペース"
+    },
+    "16": {
+      "value": "64px",
+      "description": "セクション間スペース"
+    },
+    "20": {
+      "value": "80px",
+      "description": "ページ間スペース"
+    },
+    "24": {
+      "value": "96px",
+      "description": "最大ページ間スペース"
+    }
+  },
+  
+  "responsiveBreakpoints": {
+    "mobile": {
+      "min": 0,
+      "max": 767,
+      "description": "モバイルデバイス",
+      "layout": "single-column",
+      "container": {
+        "maxWidth": "100%",
+        "padding": "16px"
+      },
+      "spacing": {
+        "multiplier": 0.75,
+        "description": "モバイルではスペーシングを75%に縮小"
+      }
+    },
+    "tablet": {
+      "min": 768,
+      "max": 1023,
+      "description": "タブレットデバイス",
+      "layout": "two-column",
+      "container": {
+        "maxWidth": "100%",
+        "padding": "24px"
+      },
+      "spacing": {
+        "multiplier": 1,
+        "description": "タブレットでは標準スペーシング"
+      }
+    },
+    "desktop": {
+      "min": 1024,
+      "max": 1439,
+      "description": "デスクトップデバイス",
+      "layout": "multi-column",
+      "container": {
+        "maxWidth": "1200px",
+        "padding": "32px"
+      },
+      "spacing": {
+        "multiplier": 1,
+        "description": "デスクトップでは標準スペーシング"
+      }
+    },
+    "large-desktop": {
+      "min": 1440,
+      "max": 9999,
+      "description": "大型デスクトップデバイス",
+      "layout": "multi-column",
+      "container": {
+        "maxWidth": "1400px",
+        "padding": "40px"
+      },
+      "spacing": {
+        "multiplier": 1.25,
+        "description": "大型デスクトップではスペーシングを125%に拡大"
+      }
+    }
+  },
+  
+  "layoutSystems": {
+    "single-column": {
+      "name": "ワンカラム",
+      "description": "モバイル用の単一カラムレイアウト",
+      "breakpoint": "mobile",
+      "structure": "container > content",
+      "spacing": {
+        "vertical": "16px",
+        "horizontal": "16px"
+      }
+    },
+    "two-column": {
+      "name": "ツーカラム",
+      "description": "タブレット用の2カラムレイアウト",
+      "breakpoint": "tablet",
+      "structure": "container > grid-2 > content",
+      "spacing": {
+        "vertical": "24px",
+        "horizontal": "24px",
+        "gap": "24px"
+      }
+    },
+    "multi-column": {
+      "name": "マルチカラム",
+      "description": "デスクトップ用の複数カラムレイアウト",
+      "breakpoint": "desktop",
+      "structure": "container > grid-3 > content",
+      "spacing": {
+        "vertical": "32px",
+        "horizontal": "32px",
+        "gap": "32px"
+      }
+    }
+  },
+  
+  "gridSystem": {
+    "columns": {
+      "mobile": 1,
+      "tablet": 2,
+      "desktop": 3,
+      "large-desktop": 4
+    },
+    "gutters": {
+      "mobile": "16px",
+      "tablet": "24px",
+      "desktop": "32px",
+      "large-desktop": "40px"
+    },
+    "margins": {
+      "mobile": "16px",
+      "tablet": "24px",
+      "desktop": "32px",
+      "large-desktop": "40px"
+    }
+  },
+  
+  "componentSpacing": {
+    "button": {
+      "mobile": {
+        "padding": "12px 16px",
+        "margin": "8px"
+      },
+      "tablet": {
+        "padding": "12px 24px",
+        "margin": "12px"
+      },
+      "desktop": {
+        "padding": "16px 32px",
+        "margin": "16px"
+      }
+    },
+    "card": {
+      "mobile": {
+        "padding": "16px",
+        "margin": "16px"
+      },
+      "tablet": {
+        "padding": "24px",
+        "margin": "24px"
+      },
+      "desktop": {
+        "padding": "32px",
+        "margin": "32px"
+      }
+    },
+    "form": {
+      "mobile": {
+        "padding": "16px",
+        "gap": "12px"
+      },
+      "tablet": {
+        "padding": "24px",
+        "gap": "16px"
+      },
+      "desktop": {
+        "padding": "32px",
+        "gap": "20px"
+      }
+    }
+  },
+  
+  "sectionSpacing": {
+    "hero": {
+      "mobile": {
+        "paddingTop": "64px",
+        "paddingBottom": "64px"
+      },
+      "tablet": {
+        "paddingTop": "80px",
+        "paddingBottom": "80px"
+      },
+      "desktop": {
+        "paddingTop": "96px",
+        "paddingBottom": "96px"
+      }
+    },
+    "content": {
+      "mobile": {
+        "paddingTop": "48px",
+        "paddingBottom": "48px"
+      },
+      "tablet": {
+        "paddingTop": "64px",
+        "paddingBottom": "64px"
+      },
+      "desktop": {
+        "paddingTop": "80px",
+        "paddingBottom": "80px"
+      }
+    },
+    "footer": {
+      "mobile": {
+        "paddingTop": "48px",
+        "paddingBottom": "32px"
+      },
+      "tablet": {
+        "paddingTop": "64px",
+        "paddingBottom": "40px"
+      },
+      "desktop": {
+        "paddingTop": "80px",
+        "paddingBottom": "48px"
+      }
+    }
+  },
+  
+  "usage": {
+    "mobile": "モバイルデバイス（0-767px）でのスペーシング",
+    "tablet": "タブレットデバイス（768-1023px）でのスペーシング",
+    "desktop": "デスクトップデバイス（1024px以上）でのスペーシング"
+  },
+  
+  "implementation": {
+    "css": {
+      "mobile": "spacing-mobile",
+      "tablet": "spacing-tablet",
+      "desktop": "spacing-desktop"
+    },
+    "wordpress": {
+      "breakpoints": "wp_breakpoints",
+      "spacing": "wp_spacing"
+    }
+  }
+}

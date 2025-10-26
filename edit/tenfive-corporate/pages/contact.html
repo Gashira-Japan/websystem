@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | テンファイブ株式会社</title>
+    <meta name="description" content="テンファイブ株式会社へのお問い合わせはこちらから。サービス、採用、パートナーシップに関するご質問など、お気軽にお問い合わせください。">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="header__logo">
+                    </a>
+                </div>
+
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="service.html" class="nav__link">サービス</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="company.html" class="nav__link">会社情報</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="news.html" class="nav__link">ニュース</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="partners.html" class="nav__link">パートナー</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link nav__link--active">お問い合わせ</a>
+                        </li>
+                    </ul>
+
+                    <!-- 採用情報ボタン（モバイルナビゲーション内） -->
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- 右側グループ（採用情報ボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Section -->
+    <section class="subpage-hero" data-section="subpage-hero">
+        <div class="subpage-hero__bg">
+            <picture class="subpage-hero__picture">
+                <source media="(max-width: 768px)" srcset="../assets/images/contact/hero-mobile.jpg">
+                <img src="../assets/images/contact/hero.jpg" alt="お問い合わせ" class="subpage-hero__image">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="subpage-hero__content">
+                <h1 class="subpage-hero__title">お問い合わせ</h1>
+                <p class="subpage-hero__subtitle">CONTACT</p>
+                <p class="subpage-hero__description">
+                    お気軽にお問い合わせください
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" data-section="contact-form">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">お問い合わせフォーム</h2>
+            </div>
+
+            <form class="contact-form" id="contact-form" action="#" method="post">
+                <!-- Company Name -->
+                <div class="form-group">
+                    <label for="company" class="form-label">
+                        会社名 <span class="form-required">※必須</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        class="form-input"
+                        maxlength="100"
+                        required
+                        aria-required="true">
+                </div>
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name" class="form-label">
+                        お名前 <span class="form-required">※必須</span>
+                    </label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-input"
+                        maxlength="50"
+                        required
+                        aria-required="true">
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        メールアドレス <span class="form-required">※必須</span>
+                    </label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-input"
+                        required
+                        aria-required="true">
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone" class="form-label">
+                        電話番号
+                    </label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        class="form-input"
+                        pattern="[0-9\-]*"
+                        placeholder="例: 03-1234-5678">
+                </div>
+
+                <!-- Inquiry Type -->
+                <div class="form-group">
+                    <label class="form-label">
+                        お問い合わせ種別 <span class="form-required">※必須</span>
+                    </label>
+                    <div class="form-radio-group">
+                        <label class="form-radio">
+                            <input type="radio" name="type" value="service" required>
+                            <span>サービスについて</span>
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio" name="type" value="recruitment" required>
+                            <span>採用について</span>
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio" name="type" value="partnership" required>
+                            <span>パートナーシップについて</span>
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio" name="type" value="other" required>
+                            <span>その他</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message" class="form-label">
+                        お問い合わせ内容 <span class="form-required">※必須</span>
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="form-textarea"
+                        rows="8"
+                        maxlength="2000"
+                        required
+                        aria-required="true"></textarea>
+                </div>
+
+                <!-- Privacy Policy Agreement -->
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox" name="agreement" required>
+                        <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する <span class="form-required">※必須</span></span>
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn--primary btn--large">送信する</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Phone Contact Section -->
+    <section class="phone-contact-section" data-section="phone-contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">お電話でのお問い合わせ</h2>
+            </div>
+
+            <div class="phone-contact">
+                <p class="phone-contact__number">
+                    <a href="tel:03-6721-1745">TEL: 03-6721-1745</a>
+                </p>
+                <p class="phone-contact__hours">受付時間: 平日 9:00〜18:00（土日祝除く）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" data-section="location">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">所在地</h2>
+            </div>
+
+            <div class="location-wrapper">
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2280829089894!2d139.70692831525853!3d35.67361598019686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c8d0d0d0d%3A0x0!2zMzXCsDQwJzI1LjAiTiAxMznCsDQyJzMxLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="テンファイブ株式会社 所在地">
+                    </iframe>
+                </div>
+
+                <div class="location-info">
+                    <h3 class="location-info__title">テンファイブ株式会社</h3>
+                    <p class="location-info__address">
+                        〒150-0001<br>
+                        東京都渋谷区神宮前2-13-9<br>
+                        BIRTH神宮前2F(202)
+                    </p>
+
+                    <h4 class="location-info__subtitle">最寄り駅</h4>
+                    <ul class="location-info__list">
+                        <li>JR山手線 原宿駅 徒歩8分</li>
+                        <li>東京メトロ千代田線・副都心線 明治神宮前駅 徒歩7分</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="footer__logo">
+                    <p class="footer__tagline">ITで人と世界をつなぐ</p>
+                </div>
+
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="service.html" class="footer__nav-link">サービス</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="company.html" class="footer__nav-link">会社情報</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="news.html" class="footer__nav-link">ニュース</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="partners.html" class="footer__nav-link">パートナー</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/header.js"></script>
+    <script src="../js/contact-form.js"></script>
+</body>
+</html>

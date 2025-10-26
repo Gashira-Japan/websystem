@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>システムエンジニア（新卒） - 募集要項 | テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブ株式会社のシステムエンジニア（新卒）の募集要項詳細。金融システム開発でキャリアをスタートしませんか。">
+
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 募集要項詳細ページスタイル */
+        .job-hero {
+            background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-100) 100%);
+            padding: var(--spacing-16) 0 var(--spacing-12);
+            text-align: center;
+        }
+
+        .job-hero__title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .job-hero__subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-8);
+            line-height: 1.6;
+        }
+
+        .job-hero__cta {
+            margin-top: var(--spacing-6);
+        }
+
+        /* 仕事の魅力セクション */
+        .job-appeal {
+            background: white;
+            padding: var(--spacing-12) 0;
+        }
+
+        .job-appeal__text {
+            max-width: 800px;
+            margin: 0 auto var(--spacing-8);
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+            text-align: center;
+        }
+
+        .job-appeal__images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-6);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .job-appeal__image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 募集要項テーブル */
+        .job-requirements {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .requirements-table {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: var(--spacing-8) auto;
+        }
+
+        .requirements-table dl {
+            margin: 0;
+            border-top: 1px solid var(--color-neutral-200);
+        }
+
+        .requirements-table dt {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-4) var(--spacing-6);
+            font-weight: 600;
+            color: var(--color-neutral-700);
+            border-bottom: 1px solid var(--color-neutral-200);
+        }
+
+        .requirements-table dd {
+            padding: var(--spacing-4) var(--spacing-6);
+            margin: 0;
+            border-bottom: 1px solid var(--color-neutral-200);
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+        }
+
+        .requirements-cta {
+            text-align: center;
+            margin-top: var(--spacing-8);
+        }
+
+        /* お仕事情報セクション */
+        .job-info-section {
+            background: white;
+            padding: var(--spacing-16) 0;
+        }
+
+        .job-info-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-12);
+            font-size: var(--font-size-lg);
+            color: var(--color-neutral-700);
+        }
+
+        .job-info-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-8);
+            align-items: center;
+            margin-bottom: var(--spacing-12);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .job-info-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .job-info-item:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .job-info-item__image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-info-item__content {
+            padding: var(--spacing-6);
+        }
+
+        .job-info-item__title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .job-info-item__text {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+        }
+
+        /* 1日のスケジュール */
+        .daily-schedule {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .schedule-list {
+            max-width: 800px;
+            margin: var(--spacing-8) auto;
+        }
+
+        .schedule-item {
+            background: white;
+            border-left: 4px solid var(--color-primary-600);
+            padding: var(--spacing-6);
+            margin-bottom: var(--spacing-4);
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .schedule-item__time {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .schedule-item__title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .schedule-item__description {
+            font-size: var(--font-size-base);
+            color: var(--color-neutral-600);
+            line-height: 1.6;
+        }
+
+        /* 求める人物像 */
+        .ideal-person {
+            background: white;
+            padding: var(--spacing-16) 0;
+        }
+
+        .ideal-person-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-6);
+            margin-top: var(--spacing-8);
+        }
+
+        .ideal-person-card {
+            background: white;
+            border: 2px solid var(--color-neutral-200);
+            border-radius: 16px;
+            padding: var(--spacing-8);
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ideal-person-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-primary-600);
+        }
+
+        .ideal-person-card__icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-4);
+            color: white;
+            font-size: var(--font-size-3xl);
+        }
+
+        .ideal-person-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .ideal-person-card__text {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--color-neutral-700);
+        }
+
+        /* キャリアパス */
+        .career-path-section {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .career-path-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-4);
+            margin-top: var(--spacing-8);
+            position: relative;
+        }
+
+        .career-step {
+            text-align: center;
+            padding: var(--spacing-6);
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .career-step__year {
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-400);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .career-step__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .career-step__description {
+            font-size: var(--font-size-sm);
+            line-height: 1.6;
+            color: var(--color-neutral-700);
+        }
+
+        /* 応募方法セクション */
+        .application-section {
+            background: white;
+            padding: var(--spacing-16) 0;
+        }
+
+        .application-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-4);
+            margin: var(--spacing-8) 0;
+        }
+
+        .flow-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .flow-step__number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-primary-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--spacing-3);
+            color: white;
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+        }
+
+        .flow-step__title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .flow-step__description {
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-600);
+        }
+
+        .recruiter-message {
+            background: var(--color-primary-50);
+            border-radius: 16px;
+            padding: var(--spacing-10);
+            margin: var(--spacing-12) auto;
+            max-width: 900px;
+        }
+
+        .recruiter-message__title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-6);
+            text-align: center;
+        }
+
+        .recruiter-message__text {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-4);
+        }
+
+        /* 関連求人 */
+        .related-jobs {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .related-jobs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-6);
+            margin-top: var(--spacing-8);
+        }
+
+        .related-job-card {
+            background: white;
+            border-radius: 16px;
+            padding: var(--spacing-8);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .related-job-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-job-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .related-job-card__description {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .related-job-card__link {
+            display: inline-block;
+            color: var(--color-primary-600);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .related-job-card__link:hover {
+            color: var(--color-primary-500);
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .job-appeal__images {
+                grid-template-columns: 1fr;
+            }
+
+            .job-info-item {
+                grid-template-columns: 1fr;
+            }
+
+            .job-info-item:nth-child(even) {
+                direction: ltr;
+            }
+
+            .career-path-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .application-flow {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="new-grad/" class="nav__link">新卒採用</a></li>
+                    <li class="nav__item"><a href="mid-career/" class="nav__link">中途採用</a></li>
+                    <li class="nav__item"><a href="members.html" class="nav__link">メンバー</a></li>
+                    <li class="nav__item"><a href="company.html" class="nav__link">会社情報</a></li>
+                </ul>
+
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="job-hero">
+            <div class="container">
+                <h1 class="job-hero__title">システムエンジニア（新卒）</h1>
+                <p class="job-hero__subtitle">金融システム開発でキャリアをスタートしませんか</p>
+                <div class="job-hero__cta">
+                    <a href="#application" class="btn btn--primary btn--large">今すぐ応募する</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- この仕事の魅力 -->
+        <section class="job-appeal">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">この仕事の魅力</h2>
+                </div>
+
+                <p class="job-appeal__text">
+                    金融業界の最前線で、社会を支えるシステム開発に携われます。<br>
+                    上級エンジニアの指導のもと、着実にスキルアップできる環境です。
+                </p>
+
+                <div class="job-appeal__images">
+                    <img src="../assets/home/staff-01.jpg" alt="プロジェクト風景" class="job-appeal__image">
+                    <img src="../assets/home/staff-13.jpg" alt="チームワーク" class="job-appeal__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- 募集要項 -->
+        <section class="job-requirements">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">募集要項</h2>
+                </div>
+
+                <div class="requirements-table">
+                    <dl>
+                        <dt>職種</dt>
+                        <dd>システムエンジニア（新卒）</dd>
+
+                        <dt>雇用形態</dt>
+                        <dd>正社員</dd>
+
+                        <dt>業務内容</dt>
+                        <dd>金融機関向けシステムの開発・保守・運用<br>要件定義、設計、実装、テストなどの各工程に携わります</dd>
+
+                        <dt>給与</dt>
+                        <dd>月給250,000円〜<br>※経験・スキルに応じて優遇</dd>
+
+                        <dt>勤務地</dt>
+                        <dd>東京都渋谷区神宮前2-13-9 BIRTH神宮前2F(202)<br>※プロジェクトにより客先常駐の場合あり</dd>
+
+                        <dt>アクセス</dt>
+                        <dd>JR「原宿駅」徒歩8分<br>東京メトロ「明治神宮前駅」徒歩6分<br>東京メトロ「外苑前駅」徒歩10分</dd>
+
+                        <dt>勤務時間</dt>
+                        <dd>10:00〜19:00（実働8時間、休憩1時間）<br>※プロジェクトにより変動あり</dd>
+
+                        <dt>応募資格</dt>
+                        <dd>・2026年3月卒業見込みの方<br>・ITエンジニアとしてキャリアを築きたい方<br>・コミュニケーション能力のある方<br>※プログラミング実務未経験OK（学習経験は必要）</dd>
+
+                        <dt>休日・休暇</dt>
+                        <dd>完全週休2日制（土・日）、祝日<br>年末年始休暇、夏季休暇、有給休暇</dd>
+
+                        <dt>待遇・福利厚生</dt>
+                        <dd>・社会保険完備（健康保険、厚生年金、雇用保険、労災保険）<br>・交通費全額支給<br>・資格取得支援制度<br>・定期健康診断<br>・書籍購入補助<br>・社員旅行（年1回）</dd>
+
+                        <dt>備考</dt>
+                        <dd>・服装自由（オフィスカジュアル推奨）<br>・リモートワークはプロジェクトによる<br>・研修制度充実</dd>
+                    </dl>
+                </div>
+
+                <div class="requirements-cta">
+                    <a href="#application" class="btn btn--primary btn--large">この求人に応募する</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- お仕事情報 -->
+        <section class="job-info-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">お仕事情報</h2>
+                </div>
+
+                <p class="job-info-intro">実際にどんな仕事をするのか、プロジェクト事例を交えてご紹介します</p>
+
+                <div class="job-info-item">
+                    <img src="../assets/home/staff-02.jpg" alt="開発現場の様子" class="job-info-item__image">
+                    <div class="job-info-item__content">
+                        <h3 class="job-info-item__title">金融システムの開発</h3>
+                        <p class="job-info-item__text">
+                            銀行や証券会社向けのシステム開発プロジェクトに参画します。
+                            要件定義から実装、テストまで一連の工程に携わることができます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="job-info-item">
+                    <div class="job-info-item__content">
+                        <h3 class="job-info-item__title">チームでの協働作業</h3>
+                        <p class="job-info-item__text">
+                            5名程度のユニットでプロジェクトに取り組みます。上級エンジニアの
+                            指導のもと、OJTで実践的なスキルを身につけることができます。
+                        </p>
+                    </div>
+                    <img src="../assets/home/staff-03.jpg" alt="チームミーティング" class="job-info-item__image">
+                </div>
+
+                <div class="job-info-item">
+                    <img src="../assets/home/staff-04.jpg" alt="研修・学習の様子" class="job-info-item__image">
+                    <div class="job-info-item__content">
+                        <h3 class="job-info-item__title">充実した研修制度</h3>
+                        <p class="job-info-item__text">
+                            ビデオ講座やOJTを通じて、実務に必要なスキルを習得できます。
+                            資格取得支援もあり、着実にキャリアアップできます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1日の仕事の流れ -->
+        <section class="daily-schedule">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">1日の仕事の流れ</h2>
+                </div>
+
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">10:00</div>
+                        <div class="schedule-item__title">出社・朝会</div>
+                        <p class="schedule-item__description">チームメンバーと今日のタスクを確認</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">10:30</div>
+                        <div class="schedule-item__title">開発作業</div>
+                        <p class="schedule-item__description">設計書に基づいてコーディング、または設計書の作成</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">12:00</div>
+                        <div class="schedule-item__title">昼休憩</div>
+                        <p class="schedule-item__description">チームメンバーとランチ</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">13:00</div>
+                        <div class="schedule-item__title">開発作業継続</div>
+                        <p class="schedule-item__description">午前中の続きや、テスト作業</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">15:00</div>
+                        <div class="schedule-item__title">レビュー・ミーティング</div>
+                        <p class="schedule-item__description">上級エンジニアにコードレビューを受ける</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">16:00</div>
+                        <div class="schedule-item__title">開発作業・ドキュメント作成</div>
+                        <p class="schedule-item__description">コードの修正やドキュメント整備</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">18:00</div>
+                        <div class="schedule-item__title">夕会・振り返り</div>
+                        <p class="schedule-item__description">今日の進捗報告と明日の予定確認</p>
+                    </div>
+
+                    <div class="schedule-item">
+                        <div class="schedule-item__time">19:00</div>
+                        <div class="schedule-item__title">退社</div>
+                        <p class="schedule-item__description"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 求める人物像 -->
+        <section class="ideal-person">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">求める人物像</h2>
+                </div>
+
+                <div class="ideal-person-grid">
+                    <div class="ideal-person-card">
+                        <div class="ideal-person-card__icon">💬</div>
+                        <h3 class="ideal-person-card__title">コミュニケーション力</h3>
+                        <p class="ideal-person-card__text">チームで協力して仕事を進められる方</p>
+                    </div>
+
+                    <div class="ideal-person-card">
+                        <div class="ideal-person-card__icon">📚</div>
+                        <h3 class="ideal-person-card__title">学習意欲</h3>
+                        <p class="ideal-person-card__text">新しい技術を学び続ける意欲のある方</p>
+                    </div>
+
+                    <div class="ideal-person-card">
+                        <div class="ideal-person-card__icon">🧠</div>
+                        <h3 class="ideal-person-card__title">論理的思考力</h3>
+                        <p class="ideal-person-card__text">複雑な問題を分解して解決できる方</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- キャリアパス例 -->
+        <section class="career-path-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">キャリアパス例</h2>
+                </div>
+
+                <div class="career-path-timeline">
+                    <div class="career-step">
+                        <div class="career-step__year">1年目</div>
+                        <h3 class="career-step__title">プログラマー</h3>
+                        <p class="career-step__description">OJT研修、基礎スキル習得、簡単なコーディング</p>
+                    </div>
+
+                    <div class="career-step">
+                        <div class="career-step__year">2〜3年目</div>
+                        <h3 class="career-step__title">システムエンジニア</h3>
+                        <p class="career-step__description">設計・実装、上流工程参画、要件定義参加</p>
+                    </div>
+
+                    <div class="career-step">
+                        <div class="career-step__year">4〜5年目</div>
+                        <h3 class="career-step__title">リーダー</h3>
+                        <p class="career-step__description">チームリード、後輩指導、技術選定</p>
+                    </div>
+
+                    <div class="career-step">
+                        <div class="career-step__year">6年目〜</div>
+                        <h3 class="career-step__title">マネージャー</h3>
+                        <p class="career-step__description">プロジェクト管理、顧客折衝、組織マネジメント</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 応募方法 -->
+        <section class="application-section" id="application">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">応募方法</h2>
+                </div>
+
+                <h3 style="text-align: center; font-size: var(--font-size-2xl); margin-bottom: var(--spacing-8); color: var(--color-neutral-700);">応募の流れ</h3>
+
+                <div class="application-flow">
+                    <div class="flow-step">
+                        <div class="flow-step__number">1</div>
+                        <h4 class="flow-step__title">応募フォーム送信</h4>
+                        <p class="flow-step__description">下記フォームからご応募ください</p>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step__number">2</div>
+                        <h4 class="flow-step__title">書類選考</h4>
+                        <p class="flow-step__description">1週間以内に選考結果をご連絡</p>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step__number">3</div>
+                        <h4 class="flow-step__title">一次面接</h4>
+                        <p class="flow-step__description">オンラインまたは対面で実施</p>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step__number">4</div>
+                        <h4 class="flow-step__title">最終面接</h4>
+                        <p class="flow-step__description">役員との面接、キャリアプランを相談</p>
+                    </div>
+
+                    <div class="flow-step">
+                        <div class="flow-step__number">5</div>
+                        <h4 class="flow-step__title">内定</h4>
+                        <p class="flow-step__description">条件面談後、正式内定</p>
+                    </div>
+                </div>
+
+                <div class="recruiter-message">
+                    <h3 class="recruiter-message__title">採用担当からのメッセージ</h3>
+                    <p class="recruiter-message__text">
+                        テンファイブでは、ITエンジニアとして成長したいという意欲のある方を求めています。
+                        実務経験がなくても大丈夫です。基礎的なプログラミング知識をお持ちの方であれば、
+                        上級エンジニアが丁寧に指導しますので、安心してご応募ください。
+                    </p>
+                    <p class="recruiter-message__text">
+                        金融システム開発という社会的意義の高い仕事で、一緒にキャリアを築いていきましょう。
+                        まずはお気軽にご応募ください。お会いできることを楽しみにしています。
+                    </p>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-8);">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--large" target="_blank" rel="noopener">応募フォームへ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 関連する募集要項 -->
+        <section class="related-jobs">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">関連する募集要項</h2>
+                    <p class="section__subtitle">他のポジションもご覧ください</p>
+                </div>
+
+                <div class="related-jobs-grid">
+                    <div class="related-job-card">
+                        <h3 class="related-job-card__title">Webエンジニア（新卒）</h3>
+                        <p class="related-job-card__description">
+                            モダンなWeb技術を使った開発に挑戦できます
+                        </p>
+                        <a href="#" class="related-job-card__link">詳細を見る →</a>
+                    </div>
+
+                    <div class="related-job-card">
+                        <h3 class="related-job-card__title">インフラエンジニア（新卒）</h3>
+                        <p class="related-job-card__description">
+                            クラウドインフラの構築・運用に携わります
+                        </p>
+                        <a href="#" class="related-job-card__link">詳細を見る →</a>
+                    </div>
+
+                    <div class="related-job-card">
+                        <h3 class="related-job-card__title">フルスタックエンジニア（中途）</h3>
+                        <p class="related-job-card__description">
+                            フロント・バックエンド両方を担当できる方を募集
+                        </p>
+                        <a href="#" class="related-job-card__link">詳細を見る →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

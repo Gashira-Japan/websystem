@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パートナー募集 | テンファイブ株式会社</title>
+    <meta name="description" content="共に成長し、お客様の課題を解決するパートナーを募集しています。技術パートナー、ビジネスパートナーなど、様々な形態でのパートナーシップをご提案します。">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="header__logo">
+                    </a>
+                </div>
+
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="service.html" class="nav__link">サービス</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="company.html" class="nav__link">会社情報</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="news.html" class="nav__link">ニュース</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="partners.html" class="nav__link nav__link--active">パートナー</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">お問い合わせ</a>
+                        </li>
+                    </ul>
+
+                    <!-- 採用情報ボタン（モバイルナビゲーション内） -->
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- 右側グループ（採用情報ボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Section -->
+    <section class="subpage-hero" data-section="subpage-hero">
+        <div class="subpage-hero__bg">
+            <picture class="subpage-hero__picture">
+                <source media="(max-width: 768px)" srcset="../assets/images/partners/hero-mobile.jpg">
+                <img src="../assets/images/partners/hero.jpg" alt="パートナー募集" class="subpage-hero__image">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="subpage-hero__content">
+                <h1 class="subpage-hero__title">パートナー募集</h1>
+                <p class="subpage-hero__subtitle">PARTNER RECRUITMENT</p>
+                <p class="subpage-hero__description">
+                    共に成長し、お客様の課題を解決するパートナーを募集
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" data-section="benefits">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">パートナーシップのメリット</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="benefit-card__icon-svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">案件紹介</h3>
+                    <p class="benefit-card__description">
+                        金融系を中心とした豊富な案件をご紹介します。大手金融機関からスタートアップまで、幅広いお客様との取引実績があります。
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="benefit-card__icon-svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">技術連携</h3>
+                    <p class="benefit-card__description">
+                        最新技術の共有と共同開発の機会。AI・機械学習、クラウドインフラ、金融システムなど、専門技術の相互補完が可能です。
+                    </p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="benefit-card__icon-svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                    </div>
+                    <h3 class="benefit-card__title">共同成長</h3>
+                    <p class="benefit-card__description">
+                        相互の強みを活かしたビジネス拡大。長期的なパートナーシップにより、共に成長していきます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Requirements Section -->
+    <section class="partner-requirements-section" data-section="partner-requirements">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">求めるパートナー像</h2>
+            </div>
+
+            <div class="requirements-grid">
+                <div class="requirement-group">
+                    <h3 class="requirement-group__title">技術パートナー</h3>
+                    <ul class="requirement-group__list">
+                        <li>システム開発会社様</li>
+                        <li>フリーランスエンジニア様</li>
+                        <li>技術コンサルタント様</li>
+                        <li>AI・機械学習スペシャリスト様</li>
+                    </ul>
+                </div>
+
+                <div class="requirement-group">
+                    <h3 class="requirement-group__title">ビジネスパートナー</h3>
+                    <ul class="requirement-group__list">
+                        <li>IT関連サービス提供企業様</li>
+                        <li>営業代理店様</li>
+                        <li>事業提携をご検討の企業様</li>
+                        <li>教育・研修サービス提供企業様</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Types Section -->
+    <section class="partnership-types-section" data-section="partnership-types">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">パートナーシップ形態</h2>
+            </div>
+
+            <div class="partnership-types">
+                <div class="partnership-type">
+                    <div class="partnership-type__number">01.</div>
+                    <h3 class="partnership-type__title">案件紹介パートナー</h3>
+                    <p class="partnership-type__description">
+                        お客様をご紹介いただき、案件成約時に紹介料をお支払いします。
+                    </p>
+                    <ul class="partnership-type__details">
+                        <li>紹介料: 案件規模に応じて設定</li>
+                        <li>契約形態: 業務委託契約</li>
+                    </ul>
+                </div>
+
+                <div class="partnership-type">
+                    <div class="partnership-type__number">02.</div>
+                    <h3 class="partnership-type__title">技術協力パートナー</h3>
+                    <p class="partnership-type__description">
+                        共同でシステム開発案件に取り組み、相互の強みを活かします。
+                    </p>
+                    <ul class="partnership-type__details">
+                        <li>技術共有・ノウハウ交換</li>
+                        <li>共同受注・共同開発</li>
+                    </ul>
+                </div>
+
+                <div class="partnership-type">
+                    <div class="partnership-type__number">03.</div>
+                    <h3 class="partnership-type__title">OEM/ODMパートナー</h3>
+                    <p class="partnership-type__description">
+                        当社サービスを貴社ブランドでご提供いただけます。
+                    </p>
+                    <ul class="partnership-type__details">
+                        <li>ホワイトラベル提供</li>
+                        <li>技術サポート</li>
+                    </ul>
+                </div>
+
+                <div class="partnership-type">
+                    <div class="partnership-type__number">04.</div>
+                    <h3 class="partnership-type__title">業務提携パートナー</h3>
+                    <p class="partnership-type__description">
+                        長期的な事業提携による、相互のビジネス拡大を目指します。
+                    </p>
+                    <ul class="partnership-type__details">
+                        <li>資本提携検討可</li>
+                        <li>共同事業開発</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Registration Flow Section -->
+    <section class="registration-flow-section" data-section="registration-flow">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">パートナー登録フロー</h2>
+            </div>
+
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="flow-step__number">STEP 1</div>
+                    <h3 class="flow-step__title">お問い合わせ</h3>
+                    <p class="flow-step__description">
+                        お問い合わせフォームからご連絡ください
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step__number">STEP 2</div>
+                    <h3 class="flow-step__title">面談・ヒアリング</h3>
+                    <p class="flow-step__description">
+                        貴社の強みや希望するパートナー形態をヒアリング
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step__number">STEP 3</div>
+                    <h3 class="flow-step__title">契約締結</h3>
+                    <p class="flow-step__description">
+                        パートナー契約書を締結します
+                    </p>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-step">
+                    <div class="flow-step__number">STEP 4</div>
+                    <h3 class="flow-step__title">パートナー開始</h3>
+                    <p class="flow-step__description">
+                        案件紹介や技術連携を開始します
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-section="cta">
+        <div class="container">
+            <div class="cta-section__content">
+                <h2 class="cta-section__title">パートナーシップについてのお問い合わせ</h2>
+                <div class="cta-section__actions">
+                    <a href="contact.html" class="btn btn--secondary btn--large">お問い合わせはこちら</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="footer__logo">
+                    <p class="footer__tagline">ITで人と世界をつなぐ</p>
+                </div>
+
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="service.html" class="footer__nav-link">サービス</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="company.html" class="footer__nav-link">会社情報</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="news.html" class="footer__nav-link">ニュース</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="partners.html" class="footer__nav-link">パートナー</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/header.js"></script>
+</body>
+</html>

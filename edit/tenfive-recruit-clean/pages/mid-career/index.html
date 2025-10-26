@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャリア採用 - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="これまで積み上げたコードの数だけ、次のキャリアが広がっている。設計・要件定義に挑戦できる環境で、「エンジニアとしての未来」を描きませんか？">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../../css/design-system.css">
+    <link rel="stylesheet" href="../../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-components.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../../shared-sections.css">
+    <link rel="stylesheet" href="../../css/sections.css">
+    <link rel="stylesheet" href="../../css/selection-system.css">
+    <link rel="stylesheet" href="../../css/news-system.css">
+    <link rel="stylesheet" href="../../css/hero-staff-background.css">
+    <link rel="stylesheet" href="../../css/mid-career.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../../index.html" class="header__logo-link">
+                        <img src="../../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="../in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="../ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="../career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="../schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="../events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="../ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="../faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
+                        <div class="nav__dropdown">
+                            <a href="../company.html" class="dropdown__link">会社概要</a>
+                            <a href="../members.html" class="dropdown__link">メンバー</a>
+                            <a href="../history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero-mid-career" data-section="hero">
+            <div class="hero-mid-career__background">
+                <div class="hero-mid-career__slide hero-mid-career__slide--active" data-slide="0">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-01-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-01.jpg" alt="中途採用背景画像1" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+                <div class="hero-mid-career__slide" data-slide="1">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-02-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-02.jpg" alt="中途採用背景画像2" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+                <div class="hero-mid-career__slide" data-slide="2">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="../../assets/images/mid-career/mid-career-mainbg-03-sp.jpg">
+                        <img src="../../assets/images/mid-career/mid-career-mainbg-03.jpg" alt="中途採用背景画像3" class="hero-mid-career__bg-image">
+                    </picture>
+                </div>
+            </div>
+            <div class="container">
+                <div class="hero-mid-career__content">
+                    <span class="hero-mid-career__tag">エンジニアキャリア採用</span>
+                    <h1 class="hero-mid-career__title">
+                        <span class="hero-mid-career__title-line">これまで積み上げた</span><br>
+                        <span class="hero-mid-career__title-line">コードの数だけ、</span><br>
+                        <span class="hero-mid-career__title-line">次のキャリアが広がっている</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- 募集要項セクション -->
+        <section class="requirements" id="requirements" data-section="requirements">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">募集要項</h2>
+                    <p class="section__subtitle">Requirements</p>
+                </div>
+                
+                <div class="requirements-slider">
+                    <div class="requirements-slider__container">
+                        <div class="requirements-slider__track" id="requirements-track">
+                            <a href="../recruitment-details/se-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-a.jpg" alt="システムエンジニア（中途）" class="requirements-card__image">
+                                </div>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">システムエンジニア（中途）</h3>
+                                    <p class="requirements-card__description">
+                                        金融機関向けシステムの設計・開発・保守業務。<br>
+                                        Java、C#、Python等を使用した業務システム開発に携わります。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：400-600万円</p>
+                                </div>
+                            </a>
+                            
+                            <a href="../recruitment-details/pl-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-b.jpg" alt="プロジェクトリーダー" class="requirements-card__image">
+                                </div>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">プロジェクトリーダー</h3>
+                                    <p class="requirements-card__description">
+                                        チーム開発のリーダーとして、プロジェクトの進行管理とメンバーの指導を行います。<br>
+                                        上流工程から下流工程まで幅広く関わることができます。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：550-750万円</p>
+                                </div>
+                            </a>
+                            
+                            <a href="../recruitment-details/pm-mid-career.html" class="requirements-card">
+                                <div class="requirements-card__media">
+                                    <img src="../../assets/images/mid-career/candidate-c.jpg" alt="プロジェクトマネージャー" class="requirements-card__image">
+                                </div>
+                                <div class="requirements-card__content">
+                                    <h3 class="requirements-card__title">プロジェクトマネージャー</h3>
+                                    <p class="requirements-card__description">
+                                        大規模プロジェクトの全体管理と顧客折衝を担当します。<br>
+                                        予算管理、スケジュール管理、品質管理を統括します。
+                                    </p>
+                                    <p class="requirements-card__salary">年収：700-900万円</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- スライダーコントロール -->
+                    <div class="requirements-slider__controls">
+                        <button class="requirements-slider__btn requirements-slider__btn--prev" aria-label="前の募集要項">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15,18 9,12 15,6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="requirements-slider__dots" id="requirements-dots">
+                            <button class="requirements-slider__dot requirements-slider__dot--active" aria-label="スライド1"></button>
+                            <button class="requirements-slider__dot" aria-label="スライド2"></button>
+                            <button class="requirements-slider__dot" aria-label="スライド3"></button>
+                        </div>
+                        <button class="requirements-slider__btn requirements-slider__btn--next" aria-label="次の募集要項">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ペルソナの悩みセクション -->
+        <section class="persona-section" data-section="persona">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">こんな思い、抱えていませんか？</h2>
+                    <p class="section__subtitle">Common Concerns</p>
+                </div>
+                
+                <div class="conversation-blocks">
+                    <div class="conversation-block">
+                        <div class="conversation-block__header">
+                            <img src="../../assets/images/mid-career/candidate-a.jpg" alt="候補者A" class="conversation-block__avatar">
+                            <div class="conversation-block__role">候補者A</div>
+                        </div>
+                        <div class="conversation-block__content">
+                            <p class="conversation-block__quote">「現在の仕事では全体像が見えない。システムの一部しか触れていない気がする...」</p>
+                            <p class="conversation-block__response">→ プライム比率高・上流参画をすることで背景理解を深めることができます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-block">
+                        <div class="conversation-block__header">
+                            <img src="../../assets/images/mid-career/candidate-b.jpg" alt="候補者B" class="conversation-block__avatar">
+                            <div class="conversation-block__role">候補者B</div>
+                        </div>
+                        <div class="conversation-block__content">
+                            <p class="conversation-block__quote">「上流工程に挑戦したいけど、なかなか機会がない。いつまでも下流で...」</p>
+                            <p class="conversation-block__response">→ 参画案件はもちろんですが、事例・メンター制度で段階的に成長することができます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-block">
+                        <div class="conversation-block__header">
+                            <img src="../../assets/images/mid-career/candidate-c.jpg" alt="候補者C" class="conversation-block__avatar">
+                            <div class="conversation-block__role">候補者C</div>
+                        </div>
+                        <div class="conversation-block__content">
+                            <p class="conversation-block__quote">「年収がなかなか上がらない。スキルアップしても評価されない...」</p>
+                            <p class="conversation-block__response">→ 上流で年収アップ・評価制度で解決することができます。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-block">
+                        <div class="conversation-block__header">
+                            <img src="../../assets/images/mid-career/candidate-d.jpg" alt="候補者D" class="conversation-block__avatar">
+                            <div class="conversation-block__role">候補者D</div>
+                        </div>
+                        <div class="conversation-block__content">
+                            <p class="conversation-block__quote">「客先常駐で一人で作業することが多くて、孤独感を感じる...」</p>
+                            <p class="conversation-block__response">→ 2–6名チーム・自社PL・PM・定着率100%で解決することができます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/Afterセクション -->
+        <section class="before-after-section" data-section="before-after">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">テンファイブで描ける未来</h2>
+                    <p class="section__subtitle">Future with TenFive</p>
+                </div>
+                
+                <div class="before-after-container">
+                    <div class="before-after-card before-after-card--before">
+                        <div class="before-after-card__header">
+                            <h3 class="before-after-card__title">Before</h3>
+                            <p class="before-after-card__subtitle">現在の状況</p>
+                        </div>
+                        
+                        <ul class="before-after-list">
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 18l2.29-2.29-4.88-4.88-4 4L2 7.41 3.41 6l6 6 4-4 6.3 6.29L22 12v6z"/>
+                                    </svg>
+                                </span>
+                                <span>下流中心の作業</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    </svg>
+                                </span>
+                                <span>一人常駐</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                                    </svg>
+                                </span>
+                                <span>年収360万前後で停滞気味</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                    </svg>
+                                </span>
+                                <span>仕様順守</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </span>
+                                <span>将来キャリアの見えない不安</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="before-after-arrow">→</div>
+                    
+                    <div class="before-after-card before-after-card--after">
+                        <div class="before-after-card__header">
+                            <h3 class="before-after-card__title">After</h3>
+                            <p class="before-after-card__subtitle">テンファイブでの未来</p>
+                        </div>
+                        
+                        <ul class="before-after-list">
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                                    </svg>
+                                </span>
+                                <span>上流関与</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H17c-.8 0-1.54.37-2.01.99L14 10h-2v12h4v-6h2v6h2zm-6.5-11.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5S12 8.17 12 9s.67 1.5 1.5 1.5zM5.5 6c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2zm2 16v-7H9V9.5C9 8.12 7.88 7 6.5 7S4 8.12 4 9.5V15H2.5v7H7.5z"/>
+                                    </svg>
+                                </span>
+                                <span>2–6名体制</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                                    </svg>
+                                </span>
+                                <span>年収400–800万以上</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </span>
+                                <span>ビジネス課題解決</span>
+                            </li>
+                            <li class="before-after-list__item">
+                                <span class="before-after-list__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M2.81 14.126l5.482 2.73c.1.05.21.08.33.08s.23-.03.33-.08l5.482-2.73c.27-.13.43-.41.43-.72 0-.31-.16-.59-.43-.72l-5.482-2.73c-.2-.1-.46-.1-.66 0L2.81 12.686c-.27.13-.43.41-.43.72 0 .31.16.59.43.72zM12 2L8.5 9h7L12 2zm0 14l-3.5-7h7L12 16z"/>
+                                    </svg>
+                                </span>
+                                <span>明確なキャリア</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4ステップ成長ロードマップセクション -->
+        <section class="roadmap-section" data-section="roadmap">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">キャリアパス</h2>
+                    <p class="section__subtitle">CAREER PATH</p>
+                </div>
+                
+                <div class="roadmap-timeline">
+                    <div class="roadmap-step">
+                        <div class="roadmap-step__number">1</div>
+                        <div class="roadmap-step__content">
+                            <h3 class="roadmap-step__title">先輩のサポートのもと設計業務にチャレンジ</h3>
+                            <p class="roadmap-step__period">入社~半年</p>
+                            <p class="roadmap-step__description">
+                                まずは既存プロジェクトで基本設計・詳細設計を学習します。経験豊富な先輩エンジニアがメンターとして付き、分からないことはすぐに相談できる環境です。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">ポイント・心構え</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        上司と現場で業務を行います。現場で指導を行うことができる。指導ができるエンジニアの方と共に業務に当たることができるので、実務未経験のエンジニアでもしっかりとクライアント業務を行う体制を整えてますのでご安心ください。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-step">
+                        <div class="roadmap-step__number">2</div>
+                        <div class="roadmap-step__content">
+                            <h3 class="roadmap-step__title">要件定義や顧客折衝にも同席</h3>
+                            <p class="roadmap-step__period">6ヶ月~1年</p>
+                            <p class="roadmap-step__description">
+                                顧客との打ち合わせに同席し、要件をシステムに落とし込むスキルを習得します。最初はサポート役から始まり、徐々に主担当として活躍できるようになります。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">実践的な経験</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        PMが商談に同席するため、安心して顧客対応にチャレンジできます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-step">
+                        <div class="roadmap-step__number">3</div>
+                        <div class="roadmap-step__content">
+                            <h3 class="roadmap-step__title">自走して設計~テストまでを一貫担当</h3>
+                            <p class="roadmap-step__period">1年~2年</p>
+                            <p class="roadmap-step__description">
+                                プロジェクトの中心メンバーとして、要件定義から運用まで一貫して担当。フルスタックエンジニアとしてのスキルを確立し、技術力と業務知識の両方を磨きます。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">成長加速</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        チーム体制なので責任を一人で抱え込まず、安心して挑戦できます。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-step">
+                        <div class="roadmap-step__number">4</div>
+                        <div class="roadmap-step__content">
+                            <h3 class="roadmap-step__title">PMとして一人立ち、自ら主導のプロジェクトを担当</h3>
+                            <p class="roadmap-step__period">2年目以降</p>
+                            <p class="roadmap-step__description">
+                                プロジェクトマネージャーとして独り立ちし、自らが主導するプロジェクトを任されるようになります。さらに成長を続ける方には、高度技術戦術家(TSE)、最高技術責任者(CTO)、高度技術戦略家(TSC)など、さまざまなキャリアパスを用意しています。
+                            </p>
+                            <div class="roadmap-step__highlight">
+                                <div class="roadmap-step__highlight-content">
+                                    <h4 class="roadmap-step__highlight-title">多様なキャリアパス</h4>
+                                    <p class="roadmap-step__highlight-text">
+                                        希望と適性に合わせてキャリアを積んでいける環境です。更なる成長に向けて、あなたの目指す方向性をサポートします。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="roadmap__footer">
+                    <a href="../career-path.html" class="link-text">キャリアパスについて</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us（差別化ブロック）セクション -->
+        <section class="why-us-section" data-section="why-us">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">テンファイブの魅力</h2>
+                    <p class="section__subtitle">Why Us</p>
+                </div>
+                
+                <div class="why-us-grid">
+                    <div class="why-us-tile">
+                        <h3 class="why-us-tile__title">プライム直・エンド直約8割</h3>
+                        <p class="why-us-tile__description">
+                            <span class="why-us-tile__highlight">上流参画容易</span><br>
+                            大手金融機関との直接契約により、要件定義から設計まで幅広く関わることができます。
+                        </p>
+                    </div>
+                    
+                    <div class="why-us-tile">
+                        <h3 class="why-us-tile__title">2–6名チーム・自社PM・PL</h3>
+                        <p class="why-us-tile__description">
+                            <span class="why-us-tile__highlight">定着率100%</span>（直近2年）<br>
+                            少人数チームで密にコミュニケーションを取りながら、自社のPM・PLがプロジェクトを管理します。
+                        </p>
+                    </div>
+                    
+                    <div class="why-us-tile">
+                        <h3 class="why-us-tile__title">自社ITスクール運営</h3>
+                        <p class="why-us-tile__description">
+                            <span class="why-us-tile__highlight">実務直結研修</span><br>
+                            自社でITスクールを運営し、最新技術や実務に直結したスキルアップを支援しています。
+                        </p>
+                    </div>
+                    
+                    <div class="why-us-tile">
+                        <h3 class="why-us-tile__title">モダンな技術スタック</h3>
+                        <p class="why-us-tile__description">
+                            <span class="why-us-tile__highlight">Java/TS/React/AWS/Azure</span><br>
+                            モダンな技術スタックで大手企業との取引実績があり、最新技術を学ぶ機会が豊富です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 年収例セクション -->
+        <section class="salary-examples-section" data-section="salary-examples">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">給与例</h2>
+                    <p class="section__subtitle">Salary Examples</p>
+                </div>
+                
+                <div class="salary-examples-grid">
+                    <div class="salary-example-card">
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">25歳・入社2年目 SE</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="400">0</span>万円
+                            </div>
+                        </div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-1.png" alt="キャリアステージ1" class="salary-example-card__illustration">
+                        </div>
+                    </div>
+                    
+                    <div class="salary-example-card">
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">27歳・入社4年目 SE</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="490">0</span>万円
+                            </div>
+                        </div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-2.png" alt="キャリアステージ2" class="salary-example-card__illustration">
+                        </div>
+                    </div>
+                    
+                    <div class="salary-example-card">
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">33歳・入社10年目 PMO</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="800">0</span>万円
+                            </div>
+                        </div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-3.png" alt="キャリアステージ3" class="salary-example-card__illustration">
+                        </div>
+                    </div>
+                    
+                    <div class="salary-example-card">
+                        <div class="salary-example-card__content">
+                            <div class="salary-example-card__info">37歳・入社14年目 PMO</div>
+                            <div class="salary-example-card__salary">
+                                <span class="salary-number" data-target="830">0</span>万円
+                            </div>
+                        </div>
+                        <div class="salary-example-card__image">
+                            <img src="../../assets/images/mid-career/career-stage-4.png" alt="キャリアステージ4" class="salary-example-card__illustration">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="salary-evaluation-note">
+                    <p class="salary-evaluation-note__text">
+                        透明性ある人事評価で昇給・昇格<br>
+                        スキルアップに応じた適正な評価制度を実施しています
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 選考プロセスセクション -->
+        <section class="recruitment-process" data-section="recruitment-process" id="recruitment-process">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">選考プロセス</h2>
+                    <p class="section__subtitle">Recruitment Process</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="process-step__number">1</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">お問い合わせ</h3>
+                            <div class="process-step__description">
+                                <p>業務内容など知りたい方は、カジュアル面談も可能です。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-step__number">2</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">エントリー</h3>
+                            <div class="process-step__description">
+                                <p>正式に応募書類をご準備、ご提出いただき書類審査をさせていただきます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-step__number">3</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">面談</h3>
+                            <div class="process-step__description">
+                                <p>オンラインにてリードエンジニアメンバー、幹部・代表とのミーティングを複数回実施させていただきます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step">
+                        <div class="process-step__number">4</div>
+                        <div class="process-step__content">
+                            <h3 class="process-step__title">内定・入社準備</h3>
+                            <div class="process-step__description">
+                                <p>内定のご連絡後、晴れてテンファイブのエンジニアとして新しいキャリアのスタートです。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="footer__link">新卒採用</a></li>
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="../company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="../members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="../history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/hero-slider.js"></script>
+    <script>
+        // 募集要項スライダー機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('requirements-track');
+            const dots = document.getElementById('requirements-dots');
+            const prevBtn = document.querySelector('.requirements-slider__btn--prev');
+            const nextBtn = document.querySelector('.requirements-slider__btn--next');
+            const dotButtons = dots.querySelectorAll('.requirements-slider__dot');
+            
+            let currentSlide = 0;
+            const totalSlides = track.children.length;
+            
+            // レスポンシブ対応の表示枚数取得
+            function getVisibleCards() {
+                if (window.innerWidth <= 1024) {
+                    return 2; // タブレット・スマホ: 2枚
+                }
+                return 3; // PC: 3枚
+            }
+            
+            // 最大スライド数を計算
+            function getMaxSlides() {
+                const visibleCards = getVisibleCards();
+                return Math.max(0, totalSlides - visibleCards);
+            }
+            
+            function updateSlider() {
+                const visibleCards = getVisibleCards();
+                const maxSlides = getMaxSlides();
+                const translateX = -(currentSlide * (100 / visibleCards));
+                track.style.transform = `translateX(${translateX}%)`;
+                
+                // ドットの更新
+                dotButtons.forEach((dot, index) => {
+                    dot.classList.toggle('requirements-slider__dot--active', index === currentSlide);
+                });
+                
+                // ボタンの無効化
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide >= maxSlides;
+            }
+            
+            function goToSlide(slideIndex) {
+                const maxSlides = getMaxSlides();
+                currentSlide = Math.max(0, Math.min(slideIndex, maxSlides));
+                updateSlider();
+            }
+            
+            function nextSlide() {
+                const maxSlides = getMaxSlides();
+                if (currentSlide < maxSlides) {
+                    currentSlide++;
+                    updateSlider();
+                }
+            }
+            
+            function prevSlide() {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    updateSlider();
+                }
+            }
+            
+            // リサイズ時の処理
+            function handleResize() {
+                const maxSlides = getMaxSlides();
+                if (currentSlide > maxSlides) {
+                    currentSlide = maxSlides;
+                }
+                updateSlider();
+            }
+            
+            // イベントリスナー
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            dotButtons.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // リサイズイベント
+            window.addEventListener('resize', handleResize);
+            
+            // キーボードナビゲーション
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            });
+            
+            // 初期化
+            updateSlider();
+        });
+    </script>
+</body>
+</html>

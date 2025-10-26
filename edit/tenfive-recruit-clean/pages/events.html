@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社内イベント - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブで働くメンバーたちと定期的に開催している社内イベントを紹介。活動のシェア、つながりの場、入社後のキャリア形成、情報提供などを目的とした交流の場を提供しています。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/section-description.css">
+    <link rel="stylesheet" href="../css/events.css">
+    
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    社内イベント
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero--subpage" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__header">
+                        <h1 class="hero__title">社内イベント</h1>
+                        <p class="hero__subtitle">Company Events</p>
+                    </div>
+                    <p class="hero__description">テンファイブで働くメンバーたちと定期的に開催している社内イベントを紹介。活動のシェア、つながりの場、入社後のキャリア形成、情報提供などを目的とし、普段顔を合わせないメンバーとも交流できる場を提供している。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- イベント一覧セクション -->
+        <section class="events-list" data-section="events-list">
+            <div class="container">
+                <div class="events-grid">
+                    <!-- 新年会 -->
+                    <div class="event-card">
+                        <div class="event-card__content">
+                            <div class="event-card__header">
+                                <div class="event-card__month">1月</div>
+                                <h3 class="event-card__title">新年会</h3>
+                            </div>
+                            <p class="event-card__description">
+                                新たな一年の始まりを祝い、全社員で食事会を行う。
+                            </p>
+                        </div>
+                        <div class="event-card__image">
+                            <img src="../assets/images/events/event01.jpg" alt="新年会の様子" class="event-card__img">
+                        </div>
+                    </div>
+                    
+                    <!-- 花見 -->
+                    <div class="event-card event-card--reverse">
+                        <div class="event-card__image">
+                            <img src="../assets/images/events/event02.jpg" alt="花見の様子" class="event-card__img">
+                        </div>
+                        <div class="event-card__content">
+                            <div class="event-card__header">
+                                <div class="event-card__month">4～5月</div>
+                                <h3 class="event-card__title">花見</h3>
+                            </div>
+                            <p class="event-card__description">
+                                社員全員で都内でお花見を開催。エンジニアは外に出る機会が少ないため、気分転換と交流を兼ねる。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- BBQ -->
+                    <div class="event-card">
+                        <div class="event-card__content">
+                            <div class="event-card__header">
+                                <div class="event-card__month">7～8月</div>
+                                <h3 class="event-card__title">BBQ</h3>
+                            </div>
+                            <p class="event-card__description">
+                                夏の風物詩であるBBQを開催。「料理大会」などの企画を通じて、アクティブな社員が交流を深める。
+                            </p>
+                        </div>
+                        <div class="event-card__image">
+                            <img src="../assets/images/events/event03.jpg" alt="BBQの様子" class="event-card__img">
+                        </div>
+                    </div>
+                    
+                    <!-- 運動会 -->
+                    <div class="event-card event-card--reverse">
+                        <div class="event-card__image">
+                            <img src="../assets/images/events/event04.jpg" alt="運動会の様子" class="event-card__img">
+                        </div>
+                        <div class="event-card__content">
+                            <div class="event-card__header">
+                                <div class="event-card__month">10～11月</div>
+                                <h3 class="event-card__title">運動会</h3>
+                            </div>
+                            <p class="event-card__description">
+                                都内の施設を貸し切り、運動会を開催。運動不足解消とスポーツの秋を楽しむ。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 忘年会 -->
+                    <div class="event-card">
+                        <div class="event-card__content">
+                            <div class="event-card__header">
+                                <div class="event-card__month">12月</div>
+                                <h3 class="event-card__title">忘年会</h3>
+                            </div>
+                            <p class="event-card__description">
+                                テンファイブ社員だけでなく、協力パートナーなど外部の関係者も招いて開催。
+                            </p>
+                        </div>
+                        <div class="event-card__image">
+                            <img src="../assets/images/events/event05.jpg" alt="忘年会の様子" class="event-card__img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- イベントの意義セクション -->
+        <section class="events-purpose" data-section="events-purpose">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">イベントの意義</h2>
+                    <p class="section__subtitle">Purpose of Company Events</p>
+                </div>
+                
+                <div class="purpose-content">
+                    <div class="purpose-grid">
+                        <div class="purpose-item">
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">活動のシェア</h3>
+                            </div>
+                            <p class="purpose-item__description">
+                                普段の業務では見えない、メンバーの活動や成果を共有する場として機能しています。
+                            </p>
+                        </div>
+                        
+                        <div class="purpose-item">
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">つながりの場</h3>
+                            </div>
+                            <p class="purpose-item__description">
+                                普段顔を合わせないメンバー同士が交流し、チームワークを深める機会を提供します。
+                            </p>
+                        </div>
+                        
+                        <div class="purpose-item">
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                        <polyline points="17 6 23 6 23 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">キャリア形成</h3>
+                            </div>
+                            <p class="purpose-item__description">
+                                先輩社員との交流を通じて、入社後のキャリア形成に関する情報やアドバイスを得られます。
+                            </p>
+                        </div>
+                        
+                        <div class="purpose-item">
+                            <div class="purpose-item__header">
+                                <div class="purpose-item__icon">
+                                    <svg class="purpose-item__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="purpose-item__title">情報提供</h3>
+                            </div>
+                            <p class="purpose-item__description">
+                                会社の最新情報や今後の方針について、メンバー全体で共有する場として活用されています。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

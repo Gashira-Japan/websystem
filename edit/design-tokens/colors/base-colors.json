@@ -1,0 +1,136 @@
+{
+  "name": "Base Colors",
+  "description": "全テーマ共通のベースカラー",
+  "version": "1.0.0",
+  
+  "colors": {
+    "neutral": {
+      "white": {
+        "value": "#FFFFFF",
+        "description": "純白"
+      },
+      "gray-50": {
+        "value": "#F9FAFB",
+        "description": "最も薄いグレー"
+      },
+      "gray-100": {
+        "value": "#F3F4F6",
+        "description": "薄いグレー"
+      },
+      "gray-200": {
+        "value": "#E5E7EB",
+        "description": "ライトグレー"
+      },
+      "gray-300": {
+        "value": "#D1D5DB",
+        "description": "ミディアムライトグレー"
+      },
+      "gray-400": {
+        "value": "#9CA3AF",
+        "description": "ミディアムグレー"
+      },
+      "gray-500": {
+        "value": "#6B7280",
+        "description": "ミディアムダークグレー"
+      },
+      "gray-600": {
+        "value": "#4B5563",
+        "description": "ダークグレー"
+      },
+      "gray-700": {
+        "value": "#374151",
+        "description": "ダーカーグレー"
+      },
+      "gray-800": {
+        "value": "#1F2937",
+        "description": "ダークストグレー"
+      },
+      "gray-900": {
+        "value": "#111827",
+        "description": "最も濃いグレー"
+      },
+      "black": {
+        "value": "#000000",
+        "description": "純黒"
+      },
+      "white-60": {
+        "value": "rgba(255, 255, 255, 0.6)",
+        "description": "白の60%透過"
+      },
+      "black-60": {
+        "value": "rgba(0, 0, 0, 0.6)",
+        "description": "黒の60%透過"
+      }
+    },
+    
+    "semantic": {
+      "success": {
+        "value": "#10B981",
+        "description": "成功状態"
+      },
+      "warning": {
+        "value": "#F59E0B",
+        "description": "警告状態"
+      },
+      "error": {
+        "value": "#EF4444",
+        "description": "エラー状態"
+      },
+      "info": {
+        "value": "#3B82F6",
+        "description": "情報状態"
+      }
+    },
+    
+    "emotional": {
+      "positive": {
+        "value": "#10B981",
+        "description": "プラス・良い印象を表現",
+        "usage": "成長、成功、改善、利益、満足"
+      },
+      "negative": {
+        "value": "#EF4444",
+        "description": "マイナス・悪い印象を表現",
+        "usage": "減少、失敗、問題、損失、不満"
+      },
+      "neutral": {
+        "value": "#6B7280",
+        "description": "ニュートラル・中立的な印象を表現",
+        "usage": "変化なし、維持、標準、平均"
+      }
+    },
+    
+    "content": {
+      "highlight": {
+        "value": "#FEF3C7",
+        "description": "ハイライト・強調表示",
+        "usage": "重要な情報の背景色"
+      },
+      "accent": {
+        "value": "#F59E0B",
+        "description": "アクセント・注目を引く色",
+        "usage": "CTA、リンク、重要な要素"
+      },
+      "muted": {
+        "value": "#9CA3AF",
+        "description": "控えめ・補助的な色",
+        "usage": "補足情報、サブテキスト"
+      }
+    }
+  },
+  
+  "usage": {
+    "neutral": "テキスト、背景、ボーダーなど基本的な要素に使用",
+    "semantic": "状態を示す要素（成功、警告、エラー、情報）に使用",
+    "emotional": "プラス・マイナス・ニュートラルの印象を表現する際に使用",
+    "content": "コンテンツ内での強調、アクセント、補助的な要素に使用"
+  },
+  
+  "colorCategories": {
+    "brand": "ブランドアイデンティティを表現する色（プライマリ・セカンダリ）",
+    "neutral": "基本的な要素に使用する色（グレースケール）",
+    "semantic": "状態や結果を表現する色（成功・警告・エラー・情報）",
+    "emotional": "感情や印象を表現する色（プラス・マイナス・ニュートラル）",
+    "content": "コンテンツ内での用途別色（ハイライト・アクセント・控えめ）"
+  }
+}

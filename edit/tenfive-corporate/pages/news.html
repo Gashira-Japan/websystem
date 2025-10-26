@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース | テンファイブ株式会社</title>
+    <meta name="description" content="テンファイブの最新情報をお届けします。プレスリリース、お知らせ、技術ブログ、イベント情報など。">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="header__logo">
+                    </a>
+                </div>
+
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="service.html" class="nav__link">サービス</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="company.html" class="nav__link">会社情報</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="news.html" class="nav__link nav__link--active">ニュース</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="partners.html" class="nav__link">パートナー</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">お問い合わせ</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Section -->
+    <section class="subpage-hero" data-section="subpage-hero">
+        <div class="subpage-hero__bg">
+            <picture class="subpage-hero__picture">
+                <source media="(max-width: 768px)" srcset="../assets/images/news/hero-mobile.jpg">
+                <img src="../assets/images/news/hero.jpg" alt="ニュース" class="subpage-hero__image">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="subpage-hero__content">
+                <h1 class="subpage-hero__title">ニュース</h1>
+                <p class="subpage-hero__subtitle">NEWS</p>
+                <p class="subpage-hero__description">
+                    テンファイブの最新情報をお届けします
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter Section -->
+    <section class="category-filter-section" data-section="category-filter">
+        <div class="container">
+            <div class="category-filter">
+                <button class="category-filter__btn category-filter__btn--active" data-category="all">すべて</button>
+                <button class="category-filter__btn" data-category="press">プレスリリース</button>
+                <button class="category-filter__btn" data-category="notice">お知らせ</button>
+                <button class="category-filter__btn" data-category="tech">技術ブログ</button>
+                <button class="category-filter__btn" data-category="event">イベント</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- News List Section -->
+    <section class="news-list-section" data-section="news-list">
+        <div class="container">
+            <div class="news-grid">
+                <!-- News Card 1 -->
+                <article class="news-card" data-category="press">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-01.jpg" alt="新サービス「AI画像認識ソリューション」をリリース" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-15">2025.01.15</time>
+                                <span class="news-card__category news-card__category--press">プレスリリース</span>
+                            </div>
+                            <h3 class="news-card__title">新サービス「AI画像認識ソリューション」をリリース</h3>
+                            <p class="news-card__excerpt">製造業向けの画像認識AIソリューションをリリースしました。検品工程の自動化により、業務効率を大幅に改善します。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card" data-category="notice">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-02.jpg" alt="年末年始休業のお知らせ" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-10">2025.01.10</time>
+                                <span class="news-card__category news-card__category--notice">お知らせ</span>
+                            </div>
+                            <h3 class="news-card__title">年末年始休業のお知らせ</h3>
+                            <p class="news-card__excerpt">誠に勝手ながら、下記期間を年末年始休業とさせていただきます。休業期間：2024年12月29日（金）～2025年1月5日（日）</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card" data-category="tech">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-03.jpg" alt="TypeScriptで学ぶデザインパターン" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-05">2025.01.05</time>
+                                <span class="news-card__category news-card__category--tech">技術ブログ</span>
+                            </div>
+                            <h3 class="news-card__title">TypeScriptで学ぶデザインパターン</h3>
+                            <p class="news-card__excerpt">TypeScriptを使った代表的なデザインパターンの実装例を紹介します。Singleton、Factory、Observerパターンなど。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News Card 4 -->
+                <article class="news-card" data-category="event">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-04.jpg" alt="AI技術セミナー開催のお知らせ" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2024-12-20">2024.12.20</time>
+                                <span class="news-card__category news-card__category--event">イベント</span>
+                            </div>
+                            <h3 class="news-card__title">AI技術セミナー開催のお知らせ</h3>
+                            <p class="news-card__excerpt">2025年2月に「ビジネスで活用するAI技術」をテーマにしたセミナーを開催します。実務で使えるAI活用事例をご紹介。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News Card 5 -->
+                <article class="news-card" data-category="press">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-05.jpg" alt="金融機関向けシステム開発プロジェクト受注" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2024-12-15">2024.12.15</time>
+                                <span class="news-card__category news-card__category--press">プレスリリース</span>
+                            </div>
+                            <h3 class="news-card__title">金融機関向けシステム開発プロジェクト受注</h3>
+                            <p class="news-card__excerpt">大手金融機関向けの基幹システム開発プロジェクトを受注しました。2025年4月から開発を開始予定です。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- News Card 6 -->
+                <article class="news-card" data-category="notice">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/news/news-06.jpg" alt="オフィス移転のお知らせ" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2024-12-10">2024.12.10</time>
+                                <span class="news-card__category news-card__category--notice">お知らせ</span>
+                            </div>
+                            <h3 class="news-card__title">オフィス移転のお知らせ</h3>
+                            <p class="news-card__excerpt">2025年3月より、新オフィスへ移転することになりました。新住所：東京都渋谷区神宮前2-13-9 BIRTH神宮前2F</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination__btn pagination__btn--more">もっと見る</button>
+                <div class="pagination__numbers">
+                    <a href="#" class="pagination__number pagination__number--active">1</a>
+                    <a href="#" class="pagination__number">2</a>
+                    <a href="#" class="pagination__number">3</a>
+                    <a href="#" class="pagination__number">4</a>
+                    <a href="#" class="pagination__number">5</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="footer__logo">
+                    <p class="footer__tagline">ITで人と世界をつなぐ</p>
+                </div>
+
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="service.html" class="footer__nav-link">サービス</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="company.html" class="footer__nav-link">会社情報</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="news.html" class="footer__nav-link">ニュース</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="partners.html" class="footer__nav-link">パートナー</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/header.js"></script>
+    <script src="../js/news-filter.js"></script>
+</body>
+</html>
