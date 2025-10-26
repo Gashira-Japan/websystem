@@ -1,0 +1,325 @@
+/* ========================================
+   選考セクション - デジタル庁デザインシステム準拠
+   ======================================== */
+
+/* 選考セクション基本スタイル */
+.selection {
+  background: var(--color-neutral-50);
+  /* paddingはsection要素で統一管理 */
+}
+
+.selection__common {
+  margin-bottom: var(--spacing-12);
+}
+
+/* タブシステム - デジタル庁ベストプラクティス準拠 */
+.selection__tabs {
+  background: var(--color-neutral-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-sm);
+  overflow: hidden;
+  margin-top: var(--spacing-6);
+}
+
+.selection__tab-buttons {
+  display: flex;
+  background: var(--color-neutral-100);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.selection__tab-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4) var(--spacing-6);
+  background: transparent;
+  border: none;
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s var(--animation-easing-ease);
+  position: relative;
+}
+
+.selection__tab-button:hover {
+  background: var(--color-primary-500);
+  color: var(--color-neutral-white);
+  font-weight: var(--font-weight-semibold);
+}
+
+.selection__tab-button--active {
+  background: var(--color-primary-500);
+  color: var(--color-neutral-white);
+  font-weight: var(--font-weight-semibold);
+}
+
+.selection__tab-button--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary-500);
+}
+
+.selection__tab-icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}
+
+/* タブコンテンツ */
+.selection__tab-content {
+  position: relative;
+}
+
+.selection__tab-panel {
+  display: none;
+  padding: var(--spacing-8);
+}
+
+.selection__tab-panel--active {
+  display: block;
+}
+
+.selection__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+  /* デジタル庁推奨: カード自体は中央配置 */
+  justify-items: center;
+}
+
+.selection__grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+/* 選考カードコンポーネント - デジタル庁カードシステム準拠 */
+.selection-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-neutral-white);
+  /* border: 1px solid var(--color-neutral-200); */
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  text-decoration: none;
+  /* color: inherit; */
+  transition: all 0.3s var(--animation-easing-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.selection-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--elevation-lg);
+  border-color: var(--color-primary-500);
+}
+
+.selection-card:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+
+.selection-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-100);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-4);
+  /* アイコンが切れないように適切な余白を確保 - デザインシステムトークンを使用 */
+  padding: var(--spacing-icon-padding);
+}
+
+
+.selection-card__icon-svg {
+  width: 20px; /* アイコンサイズを少し小さくして余白を確保 */
+  height: 20px;
+  color: var(--color-primary-600);
+}
+
+
+.selection-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  /* デジタル庁推奨: カード内テキストは左寄せ */
+  text-align: left;
+}
+
+.selection-card__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--color-neutral-400);
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.selection-card:hover .selection-card__title {
+  color: var(--color-primary-600);
+  text-decoration-color: var(--color-primary-600);
+}
+
+.selection-card__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+  flex: 1;
+  text-decoration: none;
+}
+
+.selection-card:hover .selection-card__description {
+  text-decoration: none;
+}
+
+
+/* レスポンシブデザイン */
+
+/* 中間ブレークポイント: 3カードを1列に並べてバランスを改善 */
+@media (max-width: 900px) and (min-width: 769px) {
+  .selection__grid--3 {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: var(--spacing-6);
+  }
+  
+  /* 全カードを同じサイズに統一 */
+  .selection__grid--3 .selection-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .selection__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  /* 3カードレイアウト: タブレットでは1列に並べてバランスを改善 */
+  .selection__grid--3 {
+    grid-template-columns: var(--spacing-card-3-layout-tablet); /* 1列レイアウト */
+    max-width: 600px; /* カードの最大幅を制限して読みやすさを向上 */
+    margin: 0 auto; /* 中央寄せ */
+  }
+  
+  /* 3カードのタブレット用スタイル調整 */
+  .selection__grid--3 .selection-card {
+    max-width: 100%;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .selection__tab-panel {
+    padding: var(--spacing-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .selection {
+    /* paddingはsection要素で統一管理 */
+  }
+  
+  .selection__tab-buttons {
+    flex-direction: column;
+  }
+  
+  .selection__tab-button {
+    padding: var(--spacing-3) var(--spacing-4);
+    justify-content: flex-start;
+  }
+  
+  .selection__tab-panel {
+    padding: var(--spacing-4);
+  }
+  
+  .selection__grid--3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .selection-card {
+    padding: var(--spacing-4);
+  }
+  
+  .selection-card__icon {
+    width: 40px;
+    height: 40px;
+    /* タブレットでも適切な余白を確保 - デザインシステムトークンを使用 */
+    padding: var(--spacing-icon-padding-small);
+  }
+  
+  .selection-card__icon-svg {
+    width: 18px; /* タブレットではさらに小さく */
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .selection__tab-button {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-sm);
+  }
+  
+  .selection-card__icon {
+    width: 36px;
+    height: 36px;
+    /* モバイルでも適切な余白を確保 - デザインシステムトークンを使用 */
+    padding: var(--spacing-icon-padding-small);
+  }
+  
+  .selection-card__icon-svg {
+    width: 16px; /* モバイルでは最も小さく */
+    height: 16px;
+  }
+  
+  .selection__tab-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+}
+
+/* アクセシビリティ対応 */
+@media (prefers-reduced-motion: reduce) {
+  .selection-card,
+  .selection__tab-button,
+  .selection-card__cta-arrow {
+    transition: none;
+  }
+}
+
+/* フォーカス管理 */
+.selection__tab-button:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+  .selection-card {
+    border-width: 2px;
+  }
+  
+  .selection-card--highlight {
+    border-color: var(--color-primary-600);
+  }
+  
+  .selection__tab-button--active {
+    background: var(--color-primary-100);
+    color: var(--color-primary-800);
+  }
+}

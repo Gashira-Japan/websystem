@@ -1,0 +1,24 @@
+/*
+Theme Name: TenFive Recruit
+Theme URI: https://10-5.jp/
+Description: テンファイブ株式会社の採用サイト用WordPressテーマ
+Version: 1.0.0
+Author: TenFive Inc.
+Author URI: https://10-5.jp/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tenfive-recruit
+Tags: recruitment, corporate, custom-menu
+
+このテーマは tenfive-recruit-clean の静的HTMLサイトをWordPress化したものです。
+デザインシステムとコンポーネントシステムをそのまま使用しています。
+*/
+
+/*
+実際のスタイルは以下のCSSファイルで管理されています：
+- css/design-system.css: デザイントークン
+- css/components.css: コンポーネントスタイル
+- css/sections.css: セクションスタイル
+- css/card-system.css: カードシステム
+- その他の専用CSS
+*/

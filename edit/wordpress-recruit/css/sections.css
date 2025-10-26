@@ -1,0 +1,612 @@
+/* ========================================
+   テンファイブ採用サイト - セクション専用スタイル
+   共通スタイルは shared-sections.css を参照
+   ======================================== */
+
+/* 会社情報セクション - デジタル庁デザインシステム準拠 */
+.company {
+  background: var(--color-primary-50);
+}
+
+.company .section__header {
+  text-align: left;
+  margin-bottom: var(--spacing-12);
+}
+
+
+/* .company .section__subtitle の個別設定は削除 - 統一された.section__subtitleを使用 */
+
+/* ヒーローセクション - 採用サイトの親しみやすさを表現 */
+/* 基本構造は shared-sections.css で管理 */
+/* 背景スライダーを表示するため、独自の.heroスタイルは最小限に */
+
+/* ::before と ::after のアニメーション背景は削除 - 背景画像を表示するため */
+
+/* ヒーロータグ */
+.hero__tag {
+    display: inline-block;
+    background: rgba(34, 141, 196, 0.8); /* プライマリカラーを透過させて背景画像が見えるように */
+    color: var(--color-neutral-white);
+    padding: var(--spacing-2) var(--spacing-4);
+    border-radius: var(--border-radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-1);
+    box-shadow: 0 2px 4px rgba(34, 141, 196, 0.3);
+    position: relative;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1080px; /* コーポレートサイトと同じ幅に調整 */
+  margin: 0 auto;
+  text-align: left; /* 左寄せに変更 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 左寄せに変更 */
+  gap: var(--spacing-6); /* 要素間の間隔を統一 */
+}
+
+.hero__title {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-hero); /* デザインシステムトークンを使用 */
+  color: var(--color-primary-500);
+  margin-bottom: 0; /* gapで間隔を管理するため0に */
+  letter-spacing: var(--letter-spacing-tight);
+  /* descenderが切れないようにpaddingを追加 - デザインシステムトークンを使用 */
+  padding-bottom: var(--spacing-hero-padding-bottom);
+}
+
+.hero__title--gradient {
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.hero__title--gradient::after {
+  content: '';
+  position: absolute;
+  bottom: calc(-1 * var(--spacing-hero-underline-offset)); /* デザインシステムトークンを使用 */
+  left: 0;
+  right: 0;
+  height: 6px;
+  /* background: linear-gradient(90deg, var(--color-primary-500), var(--color-secondary-500)); */
+  border-radius: var(--radius-sm);
+  opacity: 0.8;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-medium);
+  /* color: var(--color-primary-600); */
+  margin-bottom: 0; /* gapで間隔を管理するため0に */
+  text-align: left; /* 中央配置 */
+}
+
+.hero__description {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-700);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 0; /* gapで間隔を管理するため0に */
+  text-align: left; /* 中央配置 */
+  max-width: var(--content-max-width); /* 統一されたコンテンツ幅 */
+  word-wrap: break-word; /* 長い単語の改行を許可 */
+  overflow-wrap: break-word; /* より確実な改行 */
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 社員写真ギャラリー */
+/* スクロールアニメーション関連のコードを削除 */
+
+/* アニメーション関連のキーフレームを削除 */
+
+/* レスポンシブヒーロー - 8pxグリッド準拠 */
+@media (max-width: 1024px) {
+  .hero__content {
+    max-width: 100%;
+    gap: var(--spacing-5);
+    padding: 0 var(--spacing-4);
+  }
+  
+  .hero__title {
+    white-space: normal; /* タブレット以下では改行を許可 */
+    font-size: var(--font-size-4xl);
+  }
+  
+  .hero__title--gradient::after {
+    height: 4px; /* タブレットでは少し細く */
+    bottom: calc(-1 * var(--spacing-hero-underline-offset-tablet)); /* デザインシステムトークンを使用 */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--spacing-16) + var(--header-height-tablet)) 0 var(--spacing-16);
+  }
+  
+  .hero__content {
+    max-width: 600px; /* モバイルではさらに狭く */
+    gap: var(--spacing-4); /* 間隔をさらに狭く */
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-4xl); /* モバイルではさらに小さく */
+  }
+  
+  .hero__title--gradient::after {
+    height: 3px; /* モバイルではさらに細く */
+    bottom: calc(-1 * var(--spacing-hero-underline-offset-mobile)); /* デザインシステムトークンを使用 */
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-3); /* 8pxグリッド準拠: 12px */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: calc(var(--spacing-12) + var(--header-height-mobile)) 0 var(--spacing-12);
+  }
+  
+  .hero__content {
+    max-width: 400px; /* 小さいモバイルではさらに狭く */
+    gap: var(--spacing-3); /* 間隔をさらに狭く */
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero__cta {
+    gap: var(--spacing-2); /* 8pxグリッド準拠: 8px */
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    padding: calc(var(--spacing-8) + var(--header-height-mobile)) 0 var(--spacing-8);
+  }
+  
+  .hero__content {
+    max-width: 280px; /* 極小モバイルでは最も狭く */
+    gap: var(--spacing-2); /* 間隔を最も狭く */
+  }
+  
+  .hero__title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero__title--gradient::after {
+    height: 2px; /* 極小モバイルでは最も細く */
+    bottom: calc(-1 * var(--spacing-hero-underline-offset-small)); /* デザインシステムトークンを使用 */
+  }
+  
+  .hero__subtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* フィーチャーセクション */
+.features {
+  background-color: var(--color-neutral-white);
+}
+
+.features__grid {
+  /* グリッド基本構造は shared-sections.css で管理 */
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-10);
+  }
+}
+
+/* ワークスタイルセクション - 成長グリーンで親しみやすさを表現 */
+.workstyle {
+  background-color: var(--color-primary-50); /* 成長グリーンの薄い色で親しみやすさ */
+}
+
+.workstyle__grid {
+  /* グリッド基本構造は shared-sections.css で管理 */
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .workstyle__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+/* セレクションセクション */
+.selection {
+  background-color: var(--color-neutral-white);
+}
+
+.selection__content {
+  /* グリッド基本構造は shared-sections.css で管理 */
+  gap: var(--spacing-12);
+}
+
+.selection__info {
+  text-align: center;
+}
+
+.selection__subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary-500);
+  margin-bottom: var(--spacing-4);
+}
+
+.selection__description {
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-6);
+}
+
+.selection__cta {
+  text-align: center;
+  background-color: var(--color-primary-50);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-primary-200);
+}
+
+.selection__buttons {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .selection__content {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+  
+  .selection__info {
+    text-align: left;
+  }
+  
+  .selection__cta {
+    text-align: left;
+  }
+}
+
+/* ジョブディスクリプションセクション - 成長グリーンで親しみやすさを表現 */
+.job-description {
+  background-color: var(--color-primary-50); /* 成長グリーンの薄い色で親しみやすさ */
+}
+
+.job-description__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .job-description__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-10);
+  }
+}
+
+/* セクション共通スタイルは shared-sections.css を参照 */
+
+/* レスポンシブセクションは shared-sections.css を参照 */
+
+/* アニメーション */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 下層ページでのスクロール問題を防ぐためアニメーションを無効化 */
+.section {
+  animation: none;
+}
+
+/* ホバーエフェクト - shared-sections.css で統一管理 */
+
+/* フォーカス状態 */
+.btn:focus,
+.card:focus,
+.feature-card:focus,
+.workstyle-card:focus,
+.job-card:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* 会社紹介セクション - レスポンシブ対応 */
+@media (max-width: 1024px) {
+  .company {
+    /* paddingは.sectionで統一管理 */
+  }
+  
+  .company .section__header {
+    margin-bottom: var(--spacing-8);
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .company {
+    /* paddingは.sectionで統一管理 */
+  }
+  
+  .company .section__header {
+    margin-bottom: var(--spacing-6);
+  }
+  
+  
+  /* .company .section__subtitle の個別設定は削除 - 統一された.section__subtitleを使用 */
+}
+
+
+/* アクセシビリティ */
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    animation: none;
+  }
+  
+  .feature-card,
+  .workstyle-card,
+  .job-card {
+    transition: none;
+  }
+  
+  /* ホバーエフェクトは shared-sections.css で統一管理 */
+}
+
+/* ========================================
+   セクション説明文の統一スタイル
+   ======================================== */
+.section__description {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-neutral-700);
+    margin: var(--spacing-6) 0 0;
+    text-align: left;
+    max-width: none;
+}
+
+/* セクションヘッダー内の説明文 */
+.section__header .section__description {
+    margin-top: var(--spacing-4);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .section__description {
+        font-size: var(--font-size-base);
+        margin: var(--spacing-4) 0 0;
+    }
+}
+
+/* 中央寄せが必要な場合のモディファイア */
+.section__description--center {
+    text-align: center;
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* セクション内の一般的な説明文 */
+.section-content__text,
+.section-text,
+.content-text {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-neutral-700);
+    margin: var(--spacing-6) 0 0;
+    text-align: left;
+}
+
+/* 既存の個別セレクターを統一 */
+.career-overview__text,
+.career-path-text,
+.overview-text,
+.description-text,
+.content-description {
+    font-size: var(--font-size-lg) !important;
+    line-height: var(--line-height-relaxed) !important;
+    color: var(--color-neutral-700) !important;
+    margin: var(--spacing-6) 0 0 !important;
+    text-align: left !important;
+    max-width: none !important;
+}
+
+/* 共通フッターセクション - Join Us */
+.join-us {
+    background: var(--color-primary-50);
+}
+
+.join-content {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.join-title {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-4);
+}
+
+.join-description {
+    font-size: var(--font-size-base);
+    color: var(--color-neutral-700);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-8);
+}
+
+.join-buttons {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .join-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .join-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .join-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .join-description {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* 選考プロセスセクション - 共通スタイル */
+.recruitment-process {
+    background: var(--color-primary-50);
+    padding: var(--spacing-16) 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-8);
+    margin-top: var(--spacing-12);
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: var(--color-primary-600);
+    z-index: 1;
+}
+
+.process-step:last-child::after {
+    display: none;
+}
+
+.process-step__number {
+    width: 80px;
+    height: 80px;
+    background: var(--color-primary-600);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-4);
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.process-step__content {
+    text-align: left;
+}
+
+.process-step__title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-neutral-900);
+    margin-bottom: var(--spacing-3);
+    text-align: left;
+}
+
+.process-step__description {
+    line-height: 1.6;
+    color: var(--color-neutral-700);
+    text-align: left;
+}
+
+.process-step__description p {
+    margin: 0;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+}
+
+/* 選考プロセスのレスポンシブ対応 */
+@media (max-width: 960px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-step::after {
+        display: none;
+    }
+    
+    .process-step {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-4);
+        text-align: left;
+    }
+    
+    .process-step__number {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .process-step__content {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .process-step__title {
+        margin-bottom: var(--spacing-2);
+        text-align: left;
+    }
+}
