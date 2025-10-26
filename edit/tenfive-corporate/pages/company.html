@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社情報 | テンファイブ株式会社</title>
+    <meta name="description" content="ITで人と世界をつなぐ、十人十色の企業。テンファイブ株式会社の会社概要、代表メッセージ、企業理念、アクセス情報をご紹介します。">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="header__logo">
+                    </a>
+                </div>
+
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="service.html" class="nav__link">サービス</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="company.html" class="nav__link nav__link--active">会社情報</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="news.html" class="nav__link">ニュース</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="partners.html" class="nav__link">パートナー</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">お問い合わせ</a>
+                        </li>
+                    </ul>
+
+                    <!-- 採用情報ボタン（モバイルナビゲーション内） -->
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- 右側グループ（採用情報ボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subpage Hero Section -->
+    <section class="subpage-hero" data-section="subpage-hero">
+        <div class="subpage-hero__bg">
+            <picture class="subpage-hero__picture">
+                <source media="(max-width: 768px)" srcset="../assets/images/company/hero-mobile.jpg">
+                <img src="../assets/images/company/hero.jpg" alt="会社情報" class="subpage-hero__image">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="subpage-hero__content">
+                <h1 class="subpage-hero__title">会社情報</h1>
+                <p class="subpage-hero__subtitle">COMPANY</p>
+                <p class="subpage-hero__description">
+                    ITで人と世界をつなぐ、十人十色の企業
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="company-overview-section" data-section="company-overview">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">会社概要</h2>
+            </div>
+
+            <table class="company-table">
+                <tbody>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">会社名</th>
+                        <td class="company-table__data">テンファイブ株式会社 / TEN-FIVE Inc.</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">設立</th>
+                        <td class="company-table__data">2019年10月</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">代表者</th>
+                        <td class="company-table__data">代表取締役社長 山代 慶一郎</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">資本金</th>
+                        <td class="company-table__data">500万円</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">所在地</th>
+                        <td class="company-table__data">〒150-0001<br>東京都渋谷区神宮前2-13-9 BIRTH神宮前2F(202)</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">電話番号</th>
+                        <td class="company-table__data">03-6721-1745</td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">事業内容</th>
+                        <td class="company-table__data">
+                            ・SES（システムエンジニアリングサービス）事業<br>
+                            ・システム開発事業<br>
+                            ・AI・機械学習ソリューション事業
+                        </td>
+                    </tr>
+                    <tr class="company-table__row">
+                        <th class="company-table__header">従業員数</th>
+                        <td class="company-table__data">30名（2025年1月現在）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CEO Message Section -->
+    <section class="ceo-message-section" data-section="ceo-message">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">代表メッセージ</h2>
+            </div>
+
+            <div class="ceo-message">
+                <div class="ceo-message__profile">
+                    <div class="ceo-message__image-wrapper">
+                        <img src="../../old-wordpress/old-tenfive-wordpress/img/company/ceo-yamashiro.jpg" alt="代表取締役社長 山代 慶一郎" class="ceo-message__image">
+                    </div>
+                    <div class="ceo-message__title">
+                        <p class="ceo-message__position">代表取締役社長</p>
+                        <p class="ceo-message__name">山代 慶一郎</p>
+                        <p class="ceo-message__name-en">Keiichiro Yamashiro</p>
+                    </div>
+                </div>
+
+                <div class="ceo-message__content">
+                    <p class="ceo-message__text">
+                        私たちテンファイブは、「ITで人と世界をつなぐ」という理念のもと、2019年に設立されました。
+                        社名の由来は、米国でCB無線や警察無線に用いられる「テンコード」という符牒に由来し、
+                        10-5（テンファイブ）は「中継する」を意味します。
+                    </p>
+                    <p class="ceo-message__text">
+                        私たちは人と人、人と情報、情報と物、物と人など、様々なものを中継する存在でありたいと願っています。
+                    </p>
+                    <p class="ceo-message__text">
+                        「十人十色」の精神で、多様な価値観を大切にしながら、同時代を生きる仲間と手を取り合い、
+                        お客様のビジネス課題をIT技術で解決することに全力で取り組んでいます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Corporate Philosophy Section -->
+    <section class="philosophy-section" data-section="philosophy">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">企業理念</h2>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <h3 class="philosophy-item__title">ミッション</h3>
+                    <p class="philosophy-item__content">ITで人と世界をつなぐ</p>
+                </div>
+
+                <div class="philosophy-item">
+                    <h3 class="philosophy-item__title">ビジョン</h3>
+                    <p class="philosophy-item__content">十人十色、多様な個性が輝く技術者集団</p>
+                </div>
+
+                <div class="philosophy-item">
+                    <h3 class="philosophy-item__title">バリュー</h3>
+                    <ul class="philosophy-item__list">
+                        <li>お客様良し、エンジニア良し、当社良し の「三方良し」</li>
+                        <li>継続的な学習と成長</li>
+                        <li>誠実なコミュニケーション</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section class="access-section" data-section="access">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">アクセス</h2>
+            </div>
+
+            <div class="access-wrapper">
+                <div class="access-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2280829089894!2d139.70692831525853!3d35.67361598019686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9c8d0d0d0d%3A0x0!2zMzXCsDQwJzI1LjAiTiAxMznCsDQyJzMxLjAiRQ!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="テンファイブ株式会社 本社所在地">
+                    </iframe>
+                </div>
+
+                <div class="access-info">
+                    <div class="access-info__address">
+                        <h3 class="access-info__title">テンファイブ株式会社 本社所在地</h3>
+                        <p class="access-info__text">
+                            〒150-0001<br>
+                            東京都渋谷区神宮前2-13-9<br>
+                            BIRTH神宮前2F(202)
+                        </p>
+                    </div>
+
+                    <div class="access-info__stations">
+                        <h4 class="access-info__subtitle">最寄り駅</h4>
+                        <ul class="access-info__list">
+                            <li>JR山手線 原宿駅 徒歩8分</li>
+                            <li>東京メトロ千代田線・副都心線 明治神宮前駅 徒歩7分</li>
+                            <li>東京メトロ銀座線 外苑前駅 徒歩10分</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-section="cta">
+        <div class="container">
+            <div class="cta-section__content">
+                <h2 class="cta-section__title">一緒に未来を創りませんか？</h2>
+                <div class="cta-section__actions">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--secondary btn--large" target="_blank" rel="noopener">採用情報を見る</a>
+                    <a href="contact.html" class="btn btn--outline-white btn--large">お問い合わせ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="footer__logo">
+                    <p class="footer__tagline">ITで人と世界をつなぐ</p>
+                </div>
+
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="service.html" class="footer__nav-link">サービス</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="company.html" class="footer__nav-link">会社情報</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="news.html" class="footer__nav-link">ニュース</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="partners.html" class="footer__nav-link">パートナー</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/header.js"></script>
+</body>
+</html>
