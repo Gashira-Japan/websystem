@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- 事業内容
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.home-service {
+	position: relative;
+/* 	background-image: url("../img/home/home-service.jpg"); */
+	/* background: linear-gradient(135deg, #0088b7, #0b4363 70%, #0e2d49); */
+	/* color: #fff; */
+	background-position: top;
+    background-size: cover;
+}
+
+.home-service-particles {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.home-service .section-heading {
+	color: inherit;
+}
+
+.home-service .section-description {
+	margin-bottom: 40px;
+}
+
+.home-service-li:not(:last-child) {
+	margin-bottom: 24px;
+}
+
+.home-service-li .number {
+	display: block;
+	font-weight: 700;
+	font-size: 2rem;
+	font-family: var(--font-english);
+}
+
+.home-service-li .number::before {
+	display: inline-block;
+	width: 2.6em;
+	margin: 0 0.6em 0.1em 0;
+	border-top: 1px solid;
+	content: "";
+}
+
+.home-service-li .heading {
+	margin-bottom: 1.1em;
+	font-size: 2.6rem;
+}
+
+@media (min-width: 768px) {
+.home-service .section-description {
+	margin-bottom: 85px;
+}
+
+.home-service-li {
+	display: flex;
+	align-items: center;
+}
+
+.home-service-li:nth-child(2n) {
+	flex-flow: row-reverse;
+}
+
+.home-service-li:nth-child(2n+1) .text {
+	margin-right: 5%;
+}
+
+.home-service-li:nth-child(2n) .text {
+	margin-left: 5%;
+}
+
+.home-service-li .number {
+	font-size: 2.4rem;
+}
+
+.home-service-li .heading {
+	font-size: 3.5rem;
+}
+
+.home-service-li .image {
+	width: 47.5%;
+	flex: none;
+}
+}
+
+@media (max-width: 767.9px) {
+.home-service-li .text {
+	margin-bottom: 20px;
+}
+
+.home-service-li .image {
+	display: block;
+	margin: 0 auto;
+}
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ヘッダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.page-header {
+/* 	background-image: url("../img/service/header.jpg"); */
+/* 	background-position-y: 80%; */
+}

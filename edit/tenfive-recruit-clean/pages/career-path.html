@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>入社後のキャリアパス - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="実務未経験の若手エンジニアが、どのように成長していくのか。エンジニアとしてどのようなキャリアを描けるのか。テンファイブに入社後のキャリアパスについてご紹介します。">
+    
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/selection-system.css">
+    <link rel="stylesheet" href="../../shared-news-system.css">
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <link rel="stylesheet" href="../css/breadcrumb.css">
+    <link rel="stylesheet" href="../css/section-description.css">
+    <link rel="stylesheet" href="../css/career-path.css">
+    
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    入社後のキャリアパス
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero--subpage" data-section="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__header">
+                        <h1 class="hero__title">入社後のキャリアパス</h1>
+                        <p class="hero__subtitle">Career Path</p>
+                    </div>
+                    <p class="hero__description">実務未経験の若手エンジニアが、どのように成長していくのか。そして、エンジニアとしてどのようなキャリアを描けるのか。テンファイブに入社後のキャリアパスについてご紹介します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- キャリアタイムラインセクション -->
+        <section class="career-timeline" data-section="career-timeline">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">入社3年間の成長ステップ</h2>
+                    <p class="section__subtitle">3-Year Career Development</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item__year">
+                            <span class="timeline-year">1年目</span>
+                        </div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__image">
+                                <img src="../assets/images/career-path/career-year1.jpg" alt="1年目の成長ステップ" class="timeline-item__img">
+                            </div>
+                            <div class="timeline-item__text">
+                                <h3 class="timeline-item__title">現場未経験からの実務デビュー</h3>
+                                <div class="timeline-item__description">
+                                    <ul class="timeline-item__list">
+                                        <li>先輩と同じ現場で基礎力を築く</li>
+                                        <li>上司と指導役のエンジニアがサポート</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-arrow">↓</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-item__year">
+                            <span class="timeline-year">2年目</span>
+                        </div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__image">
+                                <img src="../assets/images/career-path/career-year2.jpg" alt="2年目の成長ステップ" class="timeline-item__img">
+                            </div>
+                            <div class="timeline-item__text">
+                                <h3 class="timeline-item__title">1人で現場に出ていく</h3>
+                                <div class="timeline-item__description">
+                                    <ul class="timeline-item__list">
+                                        <li>1人でタスクをこなし、会議で発言</li>
+                                        <li>自律的に業務を進める能力を習得</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-arrow">↓</div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-item__year">
+                            <span class="timeline-year">3年目</span>
+                        </div>
+                        <div class="timeline-item__content">
+                            <div class="timeline-item__image">
+                                <img src="../assets/images/career-path/career-year3.jpg" alt="3年目の成長ステップ" class="timeline-item__img">
+                            </div>
+                            <div class="timeline-item__text">
+                                <h3 class="timeline-item__title">先輩社員として活動の幅が広がる</h3>
+                                <div class="timeline-item__description">
+                                    <ul class="timeline-item__list">
+                                        <li>後輩の教育を行う</li>
+                                        <li>さらなる自己研鑽</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- キャリアパス概要セクション -->
+        <section class="career-overview" data-section="career-overview">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">エンジニアのキャリアパス</h2>
+                    <p class="section__subtitle">Engineer's Career Path</p>
+                </div>
+                
+                <div class="career-overview__content">
+                    <p class="section__description">
+                        個々のエンジニアの意思や特性を尊重し、多様なキャリアパスを支援しています。
+                        技術的な面で組織をリードするプレイヤー・CTOを目指す方、チームビルディングや後継人材の育成を行うエンジニア、
+                        ビジネスサイドでの活躍を希望するエンジニアなど、様々な働き方を応援する体制があります。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- キャリアロールセクション -->
+        <section class="career-roles" data-section="career-roles">
+            <div class="container">
+                <div class="roles-grid">
+                    <!-- 高度技術戦術家 (TSE) -->
+                    <div class="role-card role-card--technical">
+                        <div class="role-card__header">
+                            <span class="role-card__label role-card__label--purple">高度技術戦術家</span>
+                            <h3 class="role-card__title">TSE</h3>
+                        </div>
+                        
+                        <div class="role-card__content">
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められるスキル:</h4>
+                                <ul class="role-card__list">
+                                    <li>技術への知見と経験</li>
+                                    <li>課題解決力</li>
+                                    <li>プロジェクト推進力</li>
+                                    <li>コミュニケーション能力</li>
+                                    <li>交渉力・調整力</li>
+                                    <li>リスク管理能力</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められる役割:</h4>
+                                <ul class="role-card__list">
+                                    <li>システム導入、プロジェクト推進</li>
+                                    <li>組織計画、リソース管理</li>
+                                    <li>ピープルマネジメント</li>
+                                    <li>コスト／品質管理</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 最高技術責任者 (CTO) -->
+                    <div class="role-card role-card--cto">
+                        <div class="role-card__header">
+                            <span class="role-card__label role-card__label--yellow">最高技術責任者</span>
+                            <h3 class="role-card__title">CTO</h3>
+                        </div>
+                        
+                        <div class="role-card__content">
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められるスキル:</h4>
+                                <ul class="role-card__list">
+                                    <li>技術的問題を解決できる能力</li>
+                                    <li>適切なコミュニケーションスキル</li>
+                                    <li>技術への好奇心</li>
+                                    <li>責任感</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められる役割:</h4>
+                                <ul class="role-card__list">
+                                    <li>問題解決能力</li>
+                                    <li>責任感</li>
+                                    <li>他人への配慮</li>
+                                    <li>好奇心</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 高度技術戦略家 (TSC) -->
+                    <div class="role-card role-card--strategic">
+                        <div class="role-card__header">
+                            <span class="role-card__label role-card__label--orange">高度技術戦略家</span>
+                            <h3 class="role-card__title">TSC</h3>
+                        </div>
+                        
+                        <div class="role-card__content">
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められるスキル:</h4>
+                                <ul class="role-card__list">
+                                    <li>ビジネスコンサルティングの視点</li>
+                                    <li>統合・調整を論理的に差配できる能力</li>
+                                    <li>TSEと連携して戦略を構築できる能力</li>
+                                    <li>関連法規に精通</li>
+                                    <li>コンサルティングファームの知見</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="role-card__section">
+                                <h4 class="role-card__section-title">求められる役割:</h4>
+                                <ul class="role-card__list">
+                                    <li>事業開発、M&A, PMI</li>
+                                    <li>ブランディング＆マーケティング</li>
+                                    <li>市場開拓</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

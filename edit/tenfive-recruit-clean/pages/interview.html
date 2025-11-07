@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社員インタビュー：山城 海音 | テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="新卒入社の山城海音のインタビュー。金融システム開発エンジニアとして成長する日々と、テンファイブの働きやすい環境について語ります。">
+
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <link rel="stylesheet" href="../css/sections.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* インタビューページスタイル */
+        .interview-hero {
+            background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--color-primary-100) 100%);
+            padding: var(--spacing-16) 0;
+            text-align: center;
+        }
+
+        .interview-hero__image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto var(--spacing-6);
+            border: 4px solid white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .interview-hero__name-ja {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .interview-hero__name-en {
+            font-size: var(--font-size-xl);
+            color: var(--color-neutral-400);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .interview-hero__position {
+            font-size: var(--font-size-lg);
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .interview-hero__year {
+            font-size: var(--font-size-base);
+            color: var(--color-neutral-600);
+        }
+
+        /* プロフィールセクション */
+        .profile-section {
+            background: white;
+            padding: var(--spacing-12) 0;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-4);
+            max-width: 800px;
+            margin: var(--spacing-8) auto;
+        }
+
+        .profile-item {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-4);
+            border-radius: 8px;
+        }
+
+        .profile-item__label {
+            font-size: var(--font-size-sm);
+            color: var(--color-neutral-400);
+            margin-bottom: var(--spacing-1);
+        }
+
+        .profile-item__value {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-neutral-700);
+        }
+
+        /* インタビューセクション */
+        .interview-chapter {
+            padding: var(--spacing-16) 0;
+            border-top: 2px solid var(--color-primary-600);
+        }
+
+        .interview-chapter:nth-child(even) {
+            background: var(--color-neutral-50);
+        }
+
+        .interview-chapter:nth-child(odd) {
+            background: white;
+        }
+
+        .interview-chapter__title {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-8);
+            text-align: center;
+        }
+
+        .interview-qa {
+            max-width: 900px;
+            margin: 0 auto var(--spacing-10);
+        }
+
+        .interview-qa__question {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .interview-qa__question::before {
+            content: "Q: ";
+            font-weight: 700;
+        }
+
+        .interview-qa__answer {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            color: var(--color-neutral-700);
+            padding-left: var(--spacing-4);
+            border-left: 3px solid var(--color-primary-200);
+            margin-bottom: var(--spacing-6);
+        }
+
+        .interview-qa__answer::before {
+            content: "A: ";
+            font-weight: 700;
+            color: var(--color-secondary-600);
+        }
+
+        /* スケジュールセクション */
+        .schedule-section {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .schedule-timeline {
+            max-width: 800px;
+            margin: var(--spacing-8) auto;
+        }
+
+        .schedule-time-item {
+            background: white;
+            border-left: 4px solid var(--color-primary-600);
+            padding: var(--spacing-6);
+            margin-bottom: var(--spacing-4);
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .schedule-time-item__time {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .schedule-time-item__activity {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-2);
+        }
+
+        .schedule-time-item__detail {
+            font-size: var(--font-size-base);
+            color: var(--color-neutral-600);
+            line-height: 1.6;
+        }
+
+        /* フォトギャラリー */
+        .photo-gallery {
+            background: white;
+            padding: var(--spacing-16) 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-4);
+            margin-top: var(--spacing-8);
+        }
+
+        .photo-grid__item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo-grid__image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* CTAセクション */
+        .interview-cta {
+            background: var(--color-primary-600);
+            color: white;
+            padding: var(--spacing-16) 0;
+            text-align: center;
+        }
+
+        .interview-cta__title {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-4);
+        }
+
+        .interview-cta__subtitle {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-8);
+            opacity: 0.9;
+        }
+
+        .interview-cta__buttons {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* 関連コンテンツ */
+        .related-content {
+            background: var(--color-neutral-50);
+            padding: var(--spacing-16) 0;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-6);
+            margin-top: var(--spacing-8);
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 16px;
+            padding: var(--spacing-8);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .related-card__title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-primary-600);
+            margin-bottom: var(--spacing-3);
+        }
+
+        .related-card__description {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--color-neutral-700);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .related-card__link {
+            display: inline-block;
+            color: var(--color-primary-600);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .related-card__link:hover {
+            color: var(--color-primary-500);
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .interview-cta__buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__brand">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                </a>
+            </div>
+
+            <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+
+            <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="new-grad/" class="nav__link">新卒採用</a></li>
+                    <li class="nav__item"><a href="mid-career/" class="nav__link">中途採用</a></li>
+                    <li class="nav__item"><a href="members.html" class="nav__link">メンバー</a></li>
+                    <li class="nav__item"><a href="company.html" class="nav__link">会社情報</a></li>
+                </ul>
+
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="interview-hero">
+            <div class="container">
+                <img src="../assets/images/members/kaine-yamashiro.jpg" alt="山城 海音" class="interview-hero__image">
+                <h1 class="interview-hero__name-ja">山城 海音</h1>
+                <p class="interview-hero__name-en">Kaine Yamashiro</p>
+                <p class="interview-hero__position">システムエンジニア</p>
+                <p class="interview-hero__year">2024年入社（新卒）</p>
+            </div>
+        </section>
+
+        <!-- プロフィール -->
+        <section class="profile-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">プロフィール</h2>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <div class="profile-item__label">出身</div>
+                        <div class="profile-item__value">沖縄県</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="profile-item__label">学部・学科</div>
+                        <div class="profile-item__value">情報工学部 情報システム学科</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="profile-item__label">趣味</div>
+                        <div class="profile-item__value">ギター、ゲーム、カフェ巡り</div>
+                    </div>
+
+                    <div class="profile-item">
+                        <div class="profile-item__label">入社理由</div>
+                        <div class="profile-item__value">金融システムという社会インフラに関われることと、少数精鋭で一人ひとりの成長を大切にする社風に惹かれました</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- インタビュー Chapter 1 -->
+        <section class="interview-chapter">
+            <div class="container">
+                <h2 class="interview-chapter__title">1. テンファイブとの出会い</h2>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">就職活動で、どのような軸で会社を選んでいましたか?</h3>
+                    <div class="interview-qa__answer">
+                        <p>大学で情報システムを学ぶ中で、単に技術を学ぶだけでなく「社会に必要とされるシステム」を作りたいと思うようになりました。金融システムは、私たちの生活に欠かせないインフラです。銀行のATMや証券取引など、当たり前のように使っているシステムの裏側で、多くのエンジニアが社会を支えている。その一員になりたいと思いました。</p>
+                        <p>また、大手企業よりも、少人数で一人ひとりの成長を大切にしてくれる環境を探していました。テンファイブは、5名程度のユニットでプロジェクトに取り組むスタイルで、上級エンジニアから直接指導を受けられる点が魅力的でした。</p>
+                    </div>
+                </div>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">最終的にテンファイブを選んだ決め手は何でしたか?</h3>
+                    <div class="interview-qa__answer">
+                        <p>面接での代表取締役の山代さんとの会話です。「一人一人の個性を引き出す」という言葉が、とても印象に残りました。大量採用して数の論理で動く会社ではなく、個人を大切にする姿勢を感じました。</p>
+                        <p>また、面接で実際のプロジェクト事例を聞いた時、金融三分野（銀行、証券、保険）に特化しているという強みが明確で、「ここなら専門性を深められる」と確信しました。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- インタビュー Chapter 2 -->
+        <section class="interview-chapter">
+            <div class="container">
+                <h2 class="interview-chapter__title">2. 入社後の成長ストーリー</h2>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">入社して最初のプロジェクトについて教えてください</h3>
+                    <div class="interview-qa__answer">
+                        <p>入社後1ヶ月の研修を経て、銀行の勘定系システムの保守プロジェクトに配属されました。最初は、先輩エンジニアが書いたCOBOLのコードを読み解くことから始めました。大学ではJavaやPythonを学んでいたので、COBOLは初めてで戸惑いました。</p>
+                        <p>でも、先輩が「COBOLは読みやすい言語だよ。英語の文章みたいに読めるから」と励ましてくれて、毎日30分、わからないところを質問する時間を作ってくれました。2週間ほどで、だんだんコードの構造が理解できるようになり、簡単な修正作業を任されるようになりました。</p>
+                    </div>
+                </div>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">初めて自分のコードが本番環境に反映された時のことを教えてください</h3>
+                    <div class="interview-qa__answer">
+                        <p>入社3ヶ月目、初めて自分が書いたコードが本番環境にリリースされた時は、本当に緊張しました。画面の項目を1つ追加するという小さな修正でしたが、何百万人もの人が使う銀行システムです。「もし間違えたら...」と思うと、リリース前夜は眠れませんでした（笑）</p>
+                        <p>でも、リリース後に先輩から「問題なく稼働してるよ。お疲れ様」と言われた時、初めて「自分もエンジニアとして社会に貢献できた」と実感できて、すごく嬉しかったです。あの達成感は今でも忘れられません。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- インタビュー Chapter 3 -->
+        <section class="interview-chapter">
+            <div class="container">
+                <h2 class="interview-chapter__title">3. やりがいと成長</h2>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">この仕事のやりがいは何ですか?</h3>
+                    <div class="interview-qa__answer">
+                        <p>一番のやりがいは、「社会を支えている」という実感です。自分が携わったシステムが、毎日何百万人もの人に使われている。それは、他の仕事ではなかなか味わえない達成感だと思います。</p>
+                        <p>また、技術的な成長も感じられます。入社当初はCOBOLしか知りませんでしたが、今はJavaでの開発プロジェクトにも参画していて、幅広い技術スタックに触れられることが楽しいです。</p>
+                        <p>先輩から「1年前と比べて、すごく成長したね」と言われた時は、本当に嬉しかったです。努力が認められるのは、大きなモチベーションになります。</p>
+                    </div>
+                </div>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">資格取得支援制度は活用していますか?</h3>
+                    <div class="interview-qa__answer">
+                        <p>はい、入社1年目で基本情報技術者試験に合格しました。会社の資格取得補助で、参考書代と受験料を全額負担してもらいました。</p>
+                        <p>今は、応用情報技術者試験の勉強をしています。上司が「資格は、自分の知識を体系的に整理するのに役立つから、ぜひチャレンジして」と背中を押してくれました。勉強時間の確保のため、プロジェクトの状況を見ながら、残業を減らす配慮もしてもらっています。こういうサポートがあると、安心して資格取得にチャレンジできます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- インタビュー Chapter 4 -->
+        <section class="interview-chapter">
+            <div class="container">
+                <h2 class="interview-chapter__title">4. 就職活動中の方へのメッセージ</h2>
+
+                <div class="interview-qa">
+                    <h3 class="interview-qa__question">最後に、就職活動中の方にメッセージをお願いします</h3>
+                    <div class="interview-qa__answer">
+                        <p>就職活動は不安でいっぱいだと思います。私もそうでした。「自分に本当にエンジニアが務まるのか」「実務経験がなくて大丈夫なのか」とたくさん悩みました。</p>
+                        <p>でも、大切なのは「学び続ける姿勢」だと、入社して実感しました。プログラミングの基礎知識さえあれば、実務はOJTでしっかり学べます。先輩たちが丁寧に教えてくれるので、心配いりません。</p>
+                        <p>テンファイブは、「人を大切にする会社」です。一人ひとりの成長を見守り、サポートしてくれる環境があります。少数精鋭だからこそ、個人の成長にしっかり向き合ってくれます。</p>
+                        <p>金融システムという社会インフラを支える仕事は、大きな責任がありますが、それ以上にやりがいがあります。「社会に貢献したい」「エンジニアとして成長したい」という気持ちがあれば、きっと充実したキャリアを築けると思います。</p>
+                        <p>ぜひ、一緒に働きましょう。テンファイブで、お会いできることを楽しみにしています!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1日のスケジュール -->
+        <section class="schedule-section">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">1日のスケジュール</h2>
+                </div>
+
+                <div class="schedule-timeline">
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">10:00</div>
+                        <div class="schedule-time-item__activity">出社・朝会</div>
+                        <p class="schedule-time-item__detail">チームメンバーと今日のタスクを確認。進捗状況や課題を共有します</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">10:30</div>
+                        <div class="schedule-time-item__activity">開発作業</div>
+                        <p class="schedule-time-item__detail">設計書を見ながら、COBOLでのプログラム修正。わからないところは先輩に質問</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">12:00</div>
+                        <div class="schedule-time-item__activity">ランチ</div>
+                        <p class="schedule-time-item__detail">プロジェクトメンバーと近くのレストランへ。技術の話や趣味の話で盛り上がります</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">13:00</div>
+                        <div class="schedule-time-item__activity">開発作業継続</div>
+                        <p class="schedule-time-item__detail">午前中の続き。コードが完成したら、自分でテスト環境で動作確認</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">15:00</div>
+                        <div class="schedule-time-item__activity">コードレビュー</div>
+                        <p class="schedule-time-item__detail">先輩に書いたコードをレビューしてもらいます。改善点をアドバイスしてもらって学びが多い時間</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">16:00</div>
+                        <div class="schedule-time-item__activity">修正作業・ドキュメント作成</div>
+                        <p class="schedule-time-item__detail">レビューで指摘された箇所を修正。修正内容を設計書に反映</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">17:30</div>
+                        <div class="schedule-time-item__activity">勉強時間</div>
+                        <p class="schedule-time-item__detail">資格試験の勉強や、新しい技術の学習。会社が購入してくれた技術書を読むことも</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">18:30</div>
+                        <div class="schedule-time-item__activity">夕会・振り返り</div>
+                        <p class="schedule-time-item__detail">今日の進捗を報告し、明日の予定を確認。困っていることがあれば相談</p>
+                    </div>
+
+                    <div class="schedule-time-item">
+                        <div class="schedule-time-item__time">19:00</div>
+                        <div class="schedule-time-item__activity">退社</div>
+                        <p class="schedule-time-item__detail">繁忙期以外は定時で帰れることが多いです。プライベートの時間もしっかり確保できます</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- フォトギャラリー -->
+        <section class="photo-gallery">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">フォトギャラリー</h2>
+                </div>
+
+                <div class="photo-grid">
+                    <div class="photo-grid__item">
+                        <img src="../assets/images/home/staff-01.jpg" alt="オフィスでの様子" class="photo-grid__image">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="../assets/images/home/staff-02.jpg" alt="チームミーティング" class="photo-grid__image">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="../assets/images/home/staff-03.jpg" alt="開発作業中" class="photo-grid__image">
+                    </div>
+                    <div class="photo-grid__item">
+                        <img src="../assets/images/home/staff-13.jpg" alt="社員旅行" class="photo-grid__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="interview-cta">
+            <div class="container">
+                <h2 class="interview-cta__title">あなたも一緒に働きませんか？</h2>
+                <p class="interview-cta__subtitle">金融システム開発のプロフェッショナルとして成長できる環境があります<br>まずはお気軽にご応募ください</p>
+                <div class="interview-cta__buttons">
+                    <a href="new-grad/" class="btn btn--secondary btn--large">新卒採用に応募する</a>
+                    <a href="mid-career/" class="btn btn--outline btn--large" style="background: white; color: var(--color-primary-600);">中途採用に応募する</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 関連コンテンツ -->
+        <section class="related-content">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__dot"></span>
+                    <h2 class="section__title">他の社員のインタビューも読む</h2>
+                </div>
+
+                <div class="related-grid">
+                    <div class="related-card">
+                        <h3 class="related-card__title">中途入社：國武 雅裕</h3>
+                        <p class="related-card__description">【システムエンジニア】</p>
+                        <a href="#" class="related-card__link">インタビューを読む →</a>
+                    </div>
+
+                    <div class="related-card">
+                        <h3 class="related-card__title">中途入社：瀬尾 浩子</h3>
+                        <p class="related-card__description">【システムエンジニア】</p>
+                        <a href="#" class="related-card__link">インタビューを読む →</a>
+                    </div>
+
+                    <div class="related-card">
+                        <h3 class="related-card__title">募集要項一覧</h3>
+                        <p class="related-card__description">現在募集中のポジションをご覧ください</p>
+                        <a href="new-grad/" class="related-card__link">募集要項を見る →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

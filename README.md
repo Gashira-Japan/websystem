@@ -33,7 +33,7 @@ Webサイトリデザインプロジェクト
 - /ai-tool/
 
 #### ブログ
-- /blog-tenfive/curriculum/
+- /blog/curriculum/
 
 #### LP
 - /erp/

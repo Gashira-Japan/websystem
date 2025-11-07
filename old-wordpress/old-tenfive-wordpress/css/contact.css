@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+お問い合わせ
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ヘッダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.page-header {
+/* 	background-image: url("../img/contact/header.jpg"); */
+/* 	background-position-y: 15%; */
+}
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- フォーム
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.contact-form .inner {
+	max-width: 740px;
+}
+
+.contact-form .section-description {
+	margin-bottom: 0.7em;
+}
+
+.contact-form-tel {
+	display: flex;
+	margin-bottom: 40px;
+	flex-flow: wrap;
+	font-weight: 700;
+	flex-flow: wrap;
+	align-items: flex-end;
+}
+
+.contact-form-tel .number {
+	display: inline-flex;
+	margin-right: 10px;
+	font-size: 2.8rem;
+	font-family: var(--font-english);
+	line-height: 1.1;
+	align-items: center;
+}
+
+.contact-form-tel .icon {
+	margin-right: 5px;
+	flex: none;
+}
+
+.contact-form-tel .hour {
+	display: inline-block;
+	font-size: 1.4rem;
+}
+
+.contact-form dl {
+	margin-bottom: 35px;
+}
+
+.contact-form dt {
+	display: flex;
+	margin: 1.3em 0 0.3em;
+	font-weight: 700;
+	font-size: 1.6rem;
+	align-items: center;
+}
+
+.contact-form .required::after {
+	display: inline-block;
+	width: 40px;
+	margin-left: 8px;
+	background: #ff7f00;
+	color: #fff;
+	font-size: 1.2rem;
+	line-height: 20px;
+	text-align: center;
+	content: "必須";
+}
+
+.wpcf7-list-item {
+	display: block;
+	margin-left: 0;
+}
+
+.wpcf7-list-item label {
+	display: flex;
+	align-items: center;
+}
+
+.wpcf7-not-valid-tip {
+	margin-top: 0.3em;
+	color: #ff7f00;
+	font-weight: inherit;
+	font-size: 0.9em;
+}
+
+.wpcf7-spinner {
+	display: block;
+	margin: 15px auto 0;
+}
+
+.wpcf7-response-output {
+	display: table;
+	margin: 0 auto !important;
+	border: none !important;
+	color: var(--color-main);
+}
+
+@media (min-width: 768px) {
+.contact-form dt {
+	font-size: 1.8rem;
+}
+}

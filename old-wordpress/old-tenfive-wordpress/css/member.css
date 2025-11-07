@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+メンバー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+
+/*+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
+- ヘッダー
++--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+*/
+.page-header {
+/* 	background-image: url("../img/member/header.jpg"); */
+/* 	background-position-y: 80%; */
+}
+.member-post-ul .image-outer {
+    min-height: 450px;
+}
+
+@media screen and (max-width: 390px) {
+.member-post-ul .image-outer {
+	min-height: 350px;
+}
+
+}

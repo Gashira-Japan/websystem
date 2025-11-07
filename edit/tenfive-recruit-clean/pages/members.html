@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メンバー紹介 - テンファイブ株式会社採用サイト</title>
+    <meta name="description" content="テンファイブで活躍するメンバーをご紹介します。多様なバックグラウンドを持つ仲間が、それぞれの強みを活かしてお客様のビジネスを支えています。">
+
+    <!-- デザインシステムCSS -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/section-description.css">
+    <!-- サブページヒーロー（メンバー専用スタイルの前に読み込み） -->
+    <link rel="stylesheet" href="../css/subpage-hero.css">
+    <!-- メンバーページ専用スタイル -->
+    <link rel="stylesheet" href="../css/members.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="./new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="./mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="./faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社情報</button>
+                        <div class="nav__dropdown">
+                            <a href="./company.html" class="dropdown__link">会社概要</a>
+                            <a href="./members.html" class="dropdown__link">メンバー</a>
+                            <a href="./history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+            <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                    <a href="../index.html" class="breadcrumb__link">ホーム</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item--current" aria-current="page">
+                    メンバー紹介
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero--subpage">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__header">
+                    <h1 class="hero__title">メンバー紹介</h1>
+                    <p class="hero__subtitle">Members</p>
+                </div>
+                <p class="hero__description">テンファイブで活躍するメンバーをご紹介します。多様なバックグラウンドを持つ仲間が、それぞれの強みを活かしてお客様のビジネスを支えています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- メンバー一覧セクション -->
+    <section class="section" data-section="members">
+        <div class="container">
+
+            <div class="members-grid">
+                <!-- 山城 祐也 (Yuya Yamashiro) - 代表取締役社長 -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/yamashiro_yuya.jpg" alt="山城 祐也" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">山城 祐也</span>
+                            <span class="member-card__name-en">Yuya Yamashiro</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">代表取締役社長</span>
+                            <span class="member-card__role-en">CEO</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 工藤 岳 (Gaku Kudo) - CTO -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/kudo_gaku.jpg" alt="工藤 岳" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">工藤 岳</span>
+                            <span class="member-card__name-en">Gaku Kudo</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">CTO</span>
+                            <span class="member-card__role-en">CTO</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 塩山 雅史 (Masafumi Shioyama) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/shioyama_masafumi.jpg" alt="塩山 雅史" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">塩山 雅史</span>
+                            <span class="member-card__name-en">Masafumi Shioyama</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 清水 康平 (Kohei Shimizu) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/shimizu_kohei.jpg" alt="清水 康平" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">清水 康平</span>
+                            <span class="member-card__name-en">Kohei Shimizu</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 國武 雅裕 (Masahiro Kunitake) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/kunitake_masahiro.jpg" alt="國武 雅裕" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">國武 雅裕</span>
+                            <span class="member-card__name-en">Masahiro Kunitake</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 太田 康善 (Yasuyoshi Oota) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/oota_yasuyoshi.jpg" alt="太田 康善" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">太田 康善</span>
+                            <span class="member-card__name-en">Yasuyoshi Oota</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 肥後 和也 (Kazuya Higo) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/higo_kazuya.jpg" alt="肥後 和也" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">肥後 和也</span>
+                            <span class="member-card__name-en">Kazuya Higo</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 瀬尾 浩子 (Hiroko Seo) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/seo_hiroko.jpg" alt="瀬尾 浩子" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">瀬尾 浩子</span>
+                            <span class="member-card__name-en">Hiroko Seo</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 龍 皓士郎 (Ryu Koshiro) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/ryu_koshiro.jpg" alt="龍 皓士郎" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">龍 皓士郎</span>
+                            <span class="member-card__name-en">Ryu Koshiro</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 山城 海音 (Kaine Yamashiro) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/yamashiro_kaine.jpg" alt="山城 海音" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">山城 海音</span>
+                            <span class="member-card__name-en">Kaine Yamashiro</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 船越 洋希 (Hiroki Funakoshi) - エンジニア -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/funakoshi_hiroki.jpg" alt="船越 洋希" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">船越 洋希</span>
+                            <span class="member-card__name-en">Hiroki Funakoshi</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">エンジニア</span>
+                            <span class="member-card__role-en">Engineer</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 加藤 美衣 (Mii Kato) - 事務 -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/kato_mii.jpg" alt="加藤 美衣" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">加藤 美衣</span>
+                            <span class="member-card__name-en">Mii Kato</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">事務</span>
+                            <span class="member-card__role-en">Administration</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 奥田 千慧 (Chie Okuda) - 事務 -->
+                <div class="member-card">
+                    <div class="member-card__media">
+                        <img src="../assets/images/members/okuda_chie.jpg" alt="奥田 千慧" class="member-card__image">
+                    </div>
+                    <div class="member-card__content">
+                        <h3 class="member-card__name">
+                            <span class="member-card__name-ja">奥田 千慧</span>
+                            <span class="member-card__name-en">Chie Okuda</span>
+                        </h3>
+                        <p class="member-card__role">
+                            <span class="member-card__role-ja">事務</span>
+                            <span class="member-card__role-en">Administration</span>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 多様性セクション -->
+    <section class="diversity-section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">多様なバックグラウンド</h2>
+                <p class="section__subtitle">Diverse Backgrounds</p>
+            </div>
+            <div class="section__content">
+                <p>
+                    私たちのチームは、様々な経歴を持つメンバーで構成されています。<br>
+                    多様な視点を持ち寄り、お客様のビジネス課題に取り組んでいます。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 一緒に未来を創造セクション -->
+    <section class="join-us" data-section="join-us">
+        <div class="container">
+            <div class="join-content">
+                <h2 class="join-title">一緒に未来を創造しませんか？</h2>
+                <p class="join-description">
+                    AI時代の新しい働き方を実践し、価値ある事業を創造できる人材を募集しています。
+                </p>
+                <div class="join-buttons">
+                    <a href="./new-grad/" class="btn btn--primary btn--large">新卒採用</a>
+                    <a href="./mid-career/" class="btn btn--secondary btn--large">キャリア採用</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="../assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./new-grad/" class="footer__link">新卒採用</a></li>
+                            <li><a href="./mid-career/" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="./company.html" class="footer__link">会社概要</a></li>
+                            <li><a href="./members.html" class="footer__link">メンバー</a></li>
+                            <li><a href="./history.html" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

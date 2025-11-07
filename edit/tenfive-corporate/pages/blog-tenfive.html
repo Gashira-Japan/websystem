@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンファイブブログ | テンファイブ株式会社</title>
+    <meta name="description" content="技術情報・ノウハウ・業界トレンドを発信。テンファイブの技術ブログ。">
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../../shared-components.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../../shared-sections.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <header class="header" data-component="header">
+        <div class="container">
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="../index.html" class="header__logo-link">
+                        <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="header__logo">
+                    </a>
+                </div>
+                <nav class="header__nav" id="main-navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="service.html" class="nav__link">サービス</a></li>
+                        <li class="nav__item"><a href="company.html" class="nav__link">会社情報</a></li>
+                        <li class="nav__item"><a href="news.html" class="nav__link">ニュース</a></li>
+                        <li class="nav__item"><a href="partners.html" class="nav__link">パートナー</a></li>
+                        <li class="nav__item"><a href="contact.html" class="nav__link">お問い合わせ</a></li>
+                    </ul>
+                    <div class="nav__cta">
+                        <a href="https://recruit.10-5.jp/" class="link-text" target="_blank" rel="noopener">採用情報を見る</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://recruit.10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">採用情報</a>
+                </div>
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="subpage-hero" data-section="subpage-hero">
+        <div class="subpage-hero__bg">
+            <picture class="subpage-hero__picture">
+                <source media="(max-width: 768px)" srcset="../assets/images/blog/hero-mobile.jpg">
+                <img src="../assets/images/blog/hero.jpg" alt="テンファイブブログ" class="subpage-hero__image">
+            </picture>
+        </div>
+        <div class="container">
+            <div class="subpage-hero__content">
+                <h1 class="subpage-hero__title">テンファイブブログ</h1>
+                <p class="subpage-hero__subtitle">TEN-FIVE BLOG</p>
+                <p class="subpage-hero__description">技術情報・ノウハウ・業界トレンドを発信</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-filter-section" data-section="category-filter">
+        <div class="container">
+            <div class="category-filter">
+                <button class="category-filter__btn category-filter__btn--active" data-category="all">すべて</button>
+                <button class="category-filter__btn" data-category="curriculum">カリキュラム</button>
+                <button class="category-filter__btn" data-category="tech-tips">技術Tips</button>
+                <button class="category-filter__btn" data-category="case-study">プロジェクト事例</button>
+                <button class="category-filter__btn" data-category="industry-trend">業界トレンド</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-list-section" data-section="blog-list">
+        <div class="container">
+            <div class="news-grid">
+                <article class="news-card" data-category="curriculum">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/blog/blog-01.jpg" alt="Pythonで学ぶ機械学習入門" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-15">2025.01.15</time>
+                                <span class="news-card__category news-card__category--press">カリキュラム</span>
+                            </div>
+                            <h3 class="news-card__title">Pythonで学ぶ機械学習入門～実践カリキュラム～</h3>
+                            <p class="news-card__excerpt">機械学習の基礎から実装まで、実践的なカリキュラムをご紹介します。初学者でも理解しやすい内容です。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card" data-category="tech-tips">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/blog/blog-02.jpg" alt="GitHub Actionsで実現するCI/CDパイプライン" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-10">2025.01.10</time>
+                                <span class="news-card__category news-card__category--tech">技術Tips</span>
+                            </div>
+                            <h3 class="news-card__title">GitHub Actionsで実現するCI/CDパイプライン</h3>
+                            <p class="news-card__excerpt">GitHub Actionsを使った自動化のベストプラクティスを解説します。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="news-card" data-category="case-study">
+                    <a href="#" class="news-card__link">
+                        <div class="news-card__media">
+                            <img src="../assets/images/blog/blog-03.jpg" alt="大手金融機関向けシステム開発プロジェクト事例" class="news-card__image">
+                        </div>
+                        <div class="news-card__content">
+                            <div class="news-card__meta">
+                                <time class="news-card__date" datetime="2025-01-05">2025.01.05</time>
+                                <span class="news-card__category news-card__category--event">プロジェクト事例</span>
+                            </div>
+                            <h3 class="news-card__title">大手金融機関向けシステム開発プロジェクト事例</h3>
+                            <p class="news-card__excerpt">プロジェクト立ち上げから運用までの実践的なノウハウを共有します。</p>
+                            <span class="news-card__more">続きを読む →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination__btn pagination__btn--more">もっと見る</button>
+                <div class="pagination__numbers">
+                    <a href="#" class="pagination__number pagination__number--active">1</a>
+                    <a href="#" class="pagination__number">2</a>
+                    <a href="#" class="pagination__number">3</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__brand">
+                    <img src="../assets/images/corporate-logo.svg" alt="テンファイブ株式会社" class="footer__logo">
+                    <p class="footer__tagline">ITで人と世界をつなぐ</p>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item"><a href="service.html" class="footer__nav-link">サービス</a></li>
+                        <li class="footer__nav-item"><a href="company.html" class="footer__nav-link">会社情報</a></li>
+                        <li class="footer__nav-item"><a href="news.html" class="footer__nav-link">ニュース</a></li>
+                        <li class="footer__nav-item"><a href="partners.html" class="footer__nav-link">パートナー</a></li>
+                        <li class="footer__nav-item"><a href="privacy.html" class="footer__nav-link">プライバシーポリシー</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ株式会社. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/header.js"></script>
+    <script src="../js/blog-filter.js"></script>
+</body>
+</html>

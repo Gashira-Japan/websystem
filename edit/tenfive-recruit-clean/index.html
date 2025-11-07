@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テンファイブ株式会社採用サイト</title>
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/nav-reset.css">
+    <!-- コンポーネント共通スタイル -->
+    <link rel="stylesheet" href="../shared-components.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/card-system.css">
+    <!-- セクション共通スタイル -->
+    <link rel="stylesheet" href="../shared-sections.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/selection-system.css">
+    <link rel="stylesheet" href="../shared-news-system.css">
+    
+    <!-- ナビゲーションリンクのスタイルは shared-components.css で統一管理 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header" data-component="header">
+        <div class="container">
+            <!-- 左側グループ（ロゴ + ナビゲーション） -->
+            <div class="header__left">
+                <div class="header__brand">
+                    <a href="/" class="header__logo-link">
+                        <img src="assets/images/common/recruit-logo.svg" alt="テンファイブ" class="header__logo">
+                    </a>
+                </div>
+                
+                <nav class="header__nav" id="main-navigation">
+                <ul class="nav__list">
+                    <li class="nav__item" data-dropdown="features">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">特徴</button>
+                        <div class="nav__dropdown">
+                            <a href="./pages/in-numbers.html" class="dropdown__link">数字で見るテンファイブ</a>
+                            <a href="./pages/ses-sier-industry-structure.html" class="dropdown__link">業界構造から見た当社の強み</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="workstyle">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">働き方・キャリアパス</button>
+                        <div class="nav__dropdown">
+                            <a href="./pages/career-path.html" class="dropdown__link">キャリアパス</a>
+                            <a href="./pages/schedule.html" class="dropdown__link">1週間のスケジュール</a>
+                            <a href="./pages/events.html" class="dropdown__link">社内イベント</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="selection">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">選考について</button>
+                        <div class="nav__dropdown">
+                            <a href="./pages/ideal-candidate.html" class="dropdown__link">求める人物像</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="dropdown__link">新卒採用</a>
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="dropdown__link">キャリア採用</a>
+                            <a href="./pages/faq.html" class="dropdown__link">よくある質問</a>
+                        </div>
+                    </li>
+                    <li class="nav__item" data-dropdown="company">
+                        <button class="nav__link nav__link--dropdown" aria-expanded="false">会社紹介</button>
+                        <div class="nav__dropdown">
+                            <a href="./pages/company.html" class="dropdown__link">会社概要</a>
+                            <a href="./pages/members.html" class="dropdown__link">メンバー</a>
+                            <a href="./pages/history.html" class="dropdown__link">ヒストリー</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- コーポレートサイトへのリンク（モバイルナビゲーション内） -->
+                <div class="nav__cta">
+                    <a href="https://10-5.jp/" class="link-text" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                </nav>
+            </div>
+            
+            <!-- 右側グループ（コーポレートボタン + ハンバーガーメニュー） -->
+            <div class="header__right">
+                <div class="header__cta">
+                    <a href="https://10-5.jp/" class="btn btn--primary btn--small" target="_blank" rel="noopener">コーポレートサイト</a>
+                </div>
+                
+                <!-- ハンバーガーメニューボタン -->
+                <button class="header__hamburger" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                    <span class="hamburger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-section="hero">
+        <!-- Background Image Slider -->
+        <div class="hero__bg-slider">
+            <div class="hero__bg-slide hero__bg-slide--active">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/recruit-mainbg-01-sp.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/recruit-mainbg-01.jpg" alt="Tech × Wealth Well-being - より良い社会と未来の豊かさをデザインする" class="hero__bg-image">
+                </picture>
+            </div>
+            <div class="hero__bg-slide">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/recruit-mainbg-02-sp.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/recruit-mainbg-02.jpg" alt="人と技術、アイデアと実現をつなげる - 多様性を力に変える" class="hero__bg-image">
+                </picture>
+            </div>
+            <div class="hero__bg-slide">
+                <picture class="hero__bg-picture">
+                    <!-- タブレット・モバイル用縦型画像 -->
+                    <source media="(max-width: 1024px)" srcset="assets/images/home/recruit-mainbg-03-sp.jpg">
+                    <!-- PC用横長画像 -->
+                    <img src="assets/images/home/recruit-mainbg-03.jpg" alt="テンファイブで共に成長 - 確かな技術力と提案力" class="hero__bg-image">
+                </picture>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero__content">
+                <span class="hero__tag">人材採用ページ</span>
+                <h1 class="hero__title">
+                    <span class="hero__title--accent">Tech × Wealth</span><br>
+                    <span class="hero__title--accent">— </span><span class="hero__title--accent">Creating a Better Life for All</span>
+                </h1>
+                <p class="hero__subtitle">
+                    テクノロジーで創る、豊かさが循環する社会
+                </p>
+                <p class="hero__description">
+                    テクノロジーを通じて、人と社会、そして未来をつなぐ。豊かさが循環し、誰もが幸福を感じられる社会の実現を目指します。
+                </p>
+                <div class="hero__scroll">
+                    <span class="hero__scroll-text">SCROLL</span>
+                    <div class="hero__scroll-arrow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news" data-section="news" id="news">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">お知らせ</h2>
+                <p class="section__subtitle">News</p>
+            </div>
+            <div class="news__list">
+                <article class="news__item">
+                    <div class="news__meta-row">
+                        <div class="news__date">
+                            <time datetime="2025-01-15">2025.01.15</time>
+                        </div>
+                        <div class="news__badge news__badge--event">イベント</div>
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="./pages/news/2024-01-company-event.html" class="news__link">
+                                2025年社員総会を開催しました
+                            </a>
+                        </h3>
+                    </div>
+                </article>
+                <hr class="news__divider">
+                
+                <article class="news__item">
+                    <div class="news__meta-row">
+                        <div class="news__date">
+                            <time datetime="2025-02-01">2025.02.01</time>
+                        </div>
+                        <div class="news__badge news__badge--recruitment">採用</div>
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="./pages/news/2024-02-new-recruit.html" class="news__link">
+                                2025年新卒採用エントリー受付開始
+                            </a>
+                        </h3>
+                    </div>
+                </article>
+                <hr class="news__divider">
+                
+                <article class="news__item">
+                    <div class="news__meta-row">
+                        <div class="news__date">
+                            <time datetime="2025-03-10">2025.03.10</time>
+                        </div>
+                        <div class="news__badge news__badge--event">イベント</div>
+                    </div>
+                    <div class="news__content">
+                        <h3 class="news__title">
+                            <a href="./pages/news/2024-03-seminar.html" class="news__link">
+                                AI技術活用セミナーを開催
+                            </a>
+                        </h3>
+                    </div>
+                </article>
+            </div>
+            <div class="news__footer">
+                <a href="./pages/news/index.html" class="link-text">すべてのお知らせを見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" data-section="features" id="features">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">テンファイブの特徴</h2>
+                <p class="section__subtitle">Features</p>
+            </div>
+            <div class="cards-grid cards-grid--3">
+                <a href="./pages/in-numbers.html" class="image-card" aria-label="数字で見るテンファイブの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/numbers.png" alt="数字で見るテンファイブ" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">数字で見るテンファイブ</h3>
+                        </div>
+                        <p class="image-card__description">テンファイブで実際に働くメンバーの声を基に弊社を数字で表現してみました。</p>
+                    </div>
+                </a>
+                
+                <a href="./pages/ses-sier-industry-structure.html" class="image-card" aria-label="業界構造から見た強みの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/industry.png" alt="業界構造から見た強み" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">業界構造から見た強み</h3>
+                        </div>
+                        <p class="image-card__description">業界内でのポジションと独自の強みを分析。競合他社との差別化ポイントと、当社が持つ競争優位性をご説明します。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Style Section -->
+    <section class="workstyle" data-section="workstyle" id="workstyle">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">働き方・キャリアパス</h2>
+                <p class="section__subtitle">Work style & career path</p>
+            </div>
+            <div class="cards-grid cards-grid--3">
+                <a href="./pages/career-path.html" class="image-card" aria-label="キャリアパスの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/career-path/career-path-pc.jpg" alt="キャリアパス" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">キャリアパス</h3>
+                        </div>
+                        <p class="image-card__description">入社3年後のキャリアパスを具体的にご紹介。あなたの成長をサポートする制度と、描けるキャリアの可能性について説明します。</p>
+                    </div>
+                </a>
+                
+                <a href="./pages/schedule.html" class="image-card" aria-label="1週間のスケジュールの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/schedule.jpg" alt="1週間のスケジュール" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">1週間のスケジュール</h3>
+                        </div>
+                        <p class="image-card__description">実際の社員の1週間を通して、リアルな働き方をご紹介。ワークライフバランスと生産性を両立させる当社の取り組みをご覧ください。</p>
+                    </div>
+                </a>
+                
+                <a href="./pages/events.html" class="image-card" aria-label="社内イベントの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/events.webp" alt="社内イベント" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">社内イベント</h3>
+                        </div>
+                        <p class="image-card__description">多彩な社内イベント。仲間との絆を深め、スキルアップできる機会が豊富にあります。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection Section -->
+    <section class="selection" data-section="selection" id="selection">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">選考について</h2>
+                <p class="section__subtitle">Selection</p>
+            </div>
+            
+            <div class="cards-grid cards-grid--3">
+                <a href="./pages/ideal-candidate.html" class="image-card" aria-label="求める人物像の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/ideal-candidate-pc.jpg" alt="求める人物像" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">求める人物像</h3>
+                        </div>
+                        <p class="image-card__description">新卒・中途・共通して求める人物像をご紹介。当社の価値観に共感し、共に成長していただける方の特徴について詳しく説明します。</p>
+                    </div>
+                </a>
+                
+                <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="image-card" aria-label="新卒採用の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/new-grad-pc.jpg" alt="新卒採用" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">新卒採用</h3>
+                        </div>
+                        <p class="image-card__description">新卒の皆様には、テンファイブの価値観を深く理解し、長期的な成長を共に歩んでいただける方を求めています。技術的なスキルよりも、学習意欲と成長マインドセットを重視します。</p>
+                    </div>
+                </a>
+                
+                <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="image-card" aria-label="中途採用の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/mid-career-pc.jpg" alt="中途採用" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">中途採用</h3>
+                        </div>
+                        <p class="image-card__description">経験豊富な皆様には、既存のスキルを活かしながら、テンファイブの新しい挑戦に参加していただける方を求めています。専門性とリーダーシップを発揮できる環境を提供します。</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 新卒・キャリア別コンテンツ -->
+            <div class="selection__tabs">
+                <div class="selection__tab-buttons">
+                    <button class="selection__tab-button selection__tab-button--active" data-tab="newgrad">
+                        <svg class="selection__tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        新卒採用
+                    </button>
+                    <button class="selection__tab-button" data-tab="career">
+                        <svg class="selection__tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        キャリア採用
+                    </button>
+                </div>
+                
+                <div class="selection__tab-content">
+                    <!-- 新卒採用タブ -->
+                    <div class="selection__tab-panel selection__tab-panel--active" id="newgrad">
+                        <div class="selection__grid selection__grid--3">
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/faq.html#new-grad-faq" class="selection-card" aria-label="FAQページの新卒採用セクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">よくある質問</h3>
+                                    <p class="selection-card__description">新卒採用に関してよくいただく質問をまとめました。選考プロセス、待遇、働き方など、気になるポイントを事前にご確認いただけます。</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html#recruitment-process" class="selection-card" aria-label="新卒採用ページの選考プロセスセクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14,2 14,8 20,8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10,9 9,9 8,9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">選考プロセス</h3>
+                                    <p class="selection-card__description">新卒採用の応募から内定までの流れを分かりやすくご説明。各ステップでの評価ポイントと、準備していただきたい内容をご案内します。</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html#requirements" class="selection-card" aria-label="新卒採用ページの募集要項セクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 0 1 0 2.828l-7 7a2 2 0 0 1-2.828 0l-7-7A1.994 1.994 0 0 1 3 12V7a4 4 0 0 1 4-4z"></path>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">募集要項一覧</h3>
+                                    <p class="selection-card__description">新卒採用の募集要項を一覧でご確認いただけます。職種別の詳細な条件、給与、勤務地など、応募前に必要な情報をまとめました。</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- キャリア採用タブ -->
+                    <div class="selection__tab-panel" id="career">
+                        <div class="selection__grid selection__grid--3">
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/faq.html#mid-career-faq" class="selection-card" aria-label="FAQページのキャリア採用セクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">よくある質問</h3>
+                                    <p class="selection-card__description">キャリア採用に関してよくいただく質問をまとめました。選考プロセス、待遇、働き方など、気になるポイントを事前にご確認いただけます。</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html#recruitment-process" class="selection-card" aria-label="キャリア採用ページの選考プロセスセクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14,2 14,8 20,8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10,9 9,9 8,9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">選考プロセス</h3>
+                                    <p class="selection-card__description">キャリア採用の応募から内定までの流れを分かりやすくご説明。各ステップでの評価ポイントと、準備していただきたい内容をご案内します。</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html#requirements" class="selection-card" aria-label="キャリア採用ページの募集要項セクションへ">
+                                <div class="selection-card__icon">
+                                    <svg class="selection-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 0 1 0 2.828l-7 7a2 2 0 0 1-2.828 0l-7-7A1.994 1.994 0 0 1 3 12V7a4 4 0 0 1 4-4z"></path>
+                                    </svg>
+                                </div>
+                                <div class="selection-card__content">
+                                    <h3 class="selection-card__title">募集要項一覧</h3>
+                                    <p class="selection-card__description">キャリア採用の募集要項を一覧でご確認いただけます。職種別の詳細な条件、給与、勤務地など、応募前に必要な情報をまとめました。</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="company" data-section="company" id="company">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">会社情報</h2>
+                <p class="section__subtitle">Company</p>
+            </div>
+            
+            <div class="cards-grid cards-grid--3">
+                <a href="./pages/company.html" class="image-card" aria-label="会社概要の詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/company.jpg" alt="会社概要" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">会社概要</h3>
+                        </div>
+                        <p class="image-card__description">テンファイブの代表メッセージ、企業理念についてご紹介します。私たちが目指す未来と、その実現に向けた取り組みをご覧ください。</p>
+                    </div>
+                </a>
+                
+                <a href="./pages/members.html" class="image-card" aria-label="メンバーの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/member.jpg" alt="メンバー" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">メンバー</h3>
+                        </div>
+                        <p class="image-card__description">テンファイブで働く多様なメンバーをご紹介。それぞれの専門性と個性を活かしながら、チーム一丸となってプロジェクトに取り組んでいます。</p>
+                    </div>
+                </a>
+                
+                <a href="./pages/history.html" class="image-card" aria-label="ヒストリーの詳細ページへ">
+                    <div class="image-card__media">
+                        <img src="assets/images/home/company-history.jpg" alt="ヒストリー" class="image-card__image">
+                    </div>
+                    <div class="image-card__content">
+                        <div class="image-card__header">
+                            <h3 class="image-card__title">ヒストリー</h3>
+                        </div>
+                        <p class="image-card__description">テンファイブの歩みと成長の歴史をご紹介。創業から現在まで、どのような挑戦と成果を積み重ねてきたのかを振り返ります。</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <footer class="footer" data-component="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <img src="assets/images/common/tenfive-logo-txt-wh.svg" alt="テンファイブ" class="footer__logo">
+                </div>
+                <div class="footer__links">
+                    <div class="footer__section">
+                        <h4 class="footer__title">採用情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/new-grad/index.html" class="footer__link">新卒採用</a></li>
+                            <li><a href="https://shiroiro-web.xyz/10-5-recruit/pages/mid-career/index.html" class="footer__link">キャリア採用</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__section">
+                        <h4 class="footer__title">会社情報</h4>
+                        <ul class="footer__list">
+                            <li><a href="#company" class="footer__link">会社概要</a></li>
+                            <li><a href="#members" class="footer__link">メンバー</a></li>
+                            <li><a href="#history" class="footer__link">ヒストリー</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2025 テンファイブ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 共通ヒーロースライダー機能 -->
+    <script src="../shared-hero-slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

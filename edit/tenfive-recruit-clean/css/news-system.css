@@ -1,0 +1,240 @@
+/* お知らせセクション - デジタル庁デザインシステム準拠 */
+
+/* セクション共通padding - 統一管理 */
+section {
+  padding: var(--spacing-12) 0;
+}
+
+/* お知らせセクション */
+.news {
+  background-color: var(--color-neutral-50);
+}
+
+/* お知らせリスト */
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-news-item-gap);
+  margin-bottom: var(--spacing-8);
+}
+
+/* お知らせアイテム */
+.news__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-news-item-padding);
+  /* background: var(--color-neutral-white); */
+  border-radius: var(--radius-base);
+  transition: all var(--animation-duration-base) var(--animation-easing-ease);
+  position: relative;
+}
+
+/* お知らせディバイダー */
+.news__divider {
+  border: none;
+  height: 1px;
+  background-color: var(--color-neutral-200);
+  margin: var(--spacing-1) 0;
+  opacity: 0.6;
+}
+
+.news__item:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--elevation-2);
+  transform: translateY(-2px);
+}
+
+/* 日付 */
+.news__date {
+  flex-shrink: 0;
+  min-width: 100px;
+  text-align: center;
+}
+
+.news__date time {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-600);
+  background: var(--color-neutral-100);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* コンテンツエリア */
+.news__content {
+  flex: 1;
+  min-width: 0; /* テキストの折り返しを適切に処理 */
+}
+
+/* タイトル */
+.news__title {
+  margin: 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  flex: 1;
+}
+
+.news__link {
+  color: var(--color-neutral-900);
+  text-decoration: none;
+  transition: color var(--animation-duration-base) var(--animation-easing-ease);
+}
+
+.news__link:hover {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+}
+
+.news__link:focus {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* .news__excerpt は削除されました */
+
+/* バッジ */
+.news__badge {
+  flex-shrink: 0;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  min-width: 60px;
+}
+
+.news__badge--important {
+  background: var(--color-error-100);
+  color: var(--color-error-700);
+  border: 1px solid var(--color-error-200);
+}
+
+.news__badge--event {
+  background: var(--color-secondary-100);
+  color: var(--color-secondary-700);
+  border: 1px solid var(--color-secondary-200);
+}
+
+.news__badge--recruitment {
+  background: var(--color-primary-100);
+  color: var(--color-primary-700);
+  border: 1px solid var(--color-primary-200);
+}
+
+/* フッター */
+.news__footer {
+  text-align: right;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 1024px) {
+  .news {
+    /* paddingは.sectionで統一管理 */
+  }
+  
+  .news__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+    padding: var(--spacing-4);
+  }
+  
+  .news__title {
+    flex: none;
+  }
+  
+  /* タブレット表示での日付とバッジの横並び */
+  .news__date,
+  .news__badge {
+    align-self: flex-start;
+  }
+  
+  .news__date {
+    min-width: auto;
+    text-align: left;
+  }
+  
+  .news__date time {
+    font-size: var(--font-size-xs);
+  }
+  
+  .news__title {
+    font-size: var(--font-size-base);
+  }
+  
+  /* .news__excerpt は削除されました */
+}
+
+@media (max-width: 768px) {
+  .news {
+    /* paddingは.sectionで統一管理 */
+  }
+  
+  .news__list {
+    gap: var(--spacing-3);
+  }
+  
+  .news__item {
+    padding: var(--spacing-3);
+  }
+  
+  .news__badge {
+    align-self: flex-start;
+    min-width: 50px;
+    font-size: var(--font-size-xs);
+  }
+  
+  .news__divider {
+    margin: var(--spacing-1) 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .news {
+    padding: var(--spacing-8) 0;
+  }
+  
+  .news__item {
+    padding: var(--spacing-2);
+  }
+  
+  .news__title {
+    font-size: var(--font-size-sm);
+  }
+  
+  /* .news__excerpt は削除されました */
+}
+
+/* アクセシビリティ対応 */
+@media (prefers-reduced-motion: reduce) {
+  .news__item {
+    transition: none;
+  }
+  
+  .news__item:hover {
+    transform: none;
+  }
+  
+  .news__link {
+    transition: none;
+  }
+}
+
+/* 高コントラストモード対応 */
+@media (prefers-contrast: high) {
+  .news__item {
+    border-width: 2px;
+  }
+  
+  .news__item:hover {
+    border-color: var(--color-primary-600);
+  }
+  
+  .news__link:focus {
+    outline-width: 3px;
+  }
+}
